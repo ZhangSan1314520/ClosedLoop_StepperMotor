@@ -1,0 +1,36 @@
+{
+  "configurations": [
+    {
+      "name": "STM32",
+      "includePath": [
+        "Core/Inc",
+        "Drivers/CMSIS/Device/ST/STM32G0xx/Include",
+        "Drivers/CMSIS/Include",
+        "Drivers/STM32G0xx_HAL_Driver/Inc",
+        "Drivers/STM32G0xx_HAL_Driver/Inc/Legacy",
+        "Lib/compute",
+        "Lib/compute/pid",
+        "Lib/compute/wave",
+        "Lib/embedded-cli",
+        "Lib/parameter",
+        "Lib/protocol/xlink",
+        "Lib/serial",
+        "Lib/ulog",
+        "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
+        "Middlewares/Third_Party/FreeRTOS/Source/include",
+        "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0",
+        "My_Top/MC",
+        "My_Top/Modules",
+        "My_Top/Step_Motor",
+        "My_Top/System"
+      ],
+      "defines": [
+        "CMSIS_device_header='<stm32g0xx.h>'",
+        "STM32G071xx",
+        "USE_HAL_DRIVER"
+      ],
+      "compilerPath": "/opt/arm-gnu-toolchain-14.2/bin/arm-none-eabi-g++"
+    }
+  ],
+  "version": 4
+}
