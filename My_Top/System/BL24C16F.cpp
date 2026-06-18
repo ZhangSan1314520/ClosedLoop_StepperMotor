@@ -1,5 +1,7 @@
 #include "BL24C16F.hpp"
 
+I2C_HandleTypeDef* BL24C16F::_hi2c = nullptr;
+
 // ============================================================
 // 内部辅助：获取器件地址（含 block select）
 // BL24C16F 的 2048 字节分为 8 个 block，每个 block 256 字节
@@ -31,7 +33,7 @@ bool BL24C16F::init(void)
 {
     // 以写方式探测设备：发送起始位 + 器件地址(写) + 等待 ACK
     // HAL_I2C_IsDeviceReady: 尝试 3 次，每次间隔 100ms
-    if (HAL_I2C_IsDeviceReady(EEPROM_hi2c,
+    if (HAL_I2C_IsDeviceReady(_hi2c,
                               DEV_ADDR << 1,    // 8位地址(7位左移1位)
                               3,                // 重试次数
                               100) == HAL_OK)   // 超时时间(ms)
@@ -57,7 +59,7 @@ uint8_t BL24C16F::read_byte(uint16_t addr)
     // 使用 HAL_I2C_Mem_Read：先发器件地址(写)写偏移，再发器件地址(读)读数据
     // MemAddress 为页内偏移 (8位)
     // MemAddSize 为 8 位地址长度
-    if (HAL_I2C_Mem_Read(EEPROM_hi2c, dev_addr, offset,
+    if (HAL_I2C_Mem_Read(_hi2c, dev_addr, offset,
                          I2C_MEMADD_SIZE_8BIT,
                          &data, 1,
                          100) != HAL_OK)
@@ -78,7 +80,7 @@ bool BL24C16F::write_byte(uint16_t addr, uint8_t data)
     uint8_t dev_addr = _dev_addr(addr) << 1;
     uint8_t offset   = _page_offset(addr);
 
-    if (HAL_I2C_Mem_Write(EEPROM_hi2c, dev_addr, offset,
+    if (HAL_I2C_Mem_Write(_hi2c, dev_addr, offset,
                           I2C_MEMADD_SIZE_8BIT,
                           &data, 1,
                           100) != HAL_OK)
@@ -117,7 +119,7 @@ bool BL24C16F::read(uint16_t addr, uint8_t *buf, uint16_t len)
         if (chunk > len) chunk = len;
 
         // 从当前地址读取 chunk 个字节
-        if (HAL_I2C_Mem_Read(EEPROM_hi2c, dev_addr, offset,
+        if (HAL_I2C_Mem_Read(_hi2c, dev_addr, offset,
                              I2C_MEMADD_SIZE_8BIT,
                              buf, chunk,
                              100) != HAL_OK)
@@ -165,7 +167,7 @@ bool BL24C16F::write(uint16_t addr, const uint8_t *buf, uint16_t len)
         uint16_t chunk = (len < page_remain) ? len : page_remain;
 
         // 写入当前页的 chunk 个字节
-        if (HAL_I2C_Mem_Write(EEPROM_hi2c, dev_addr, offset,
+        if (HAL_I2C_Mem_Write(_hi2c, dev_addr, offset,
                               I2C_MEMADD_SIZE_8BIT,
                               (uint8_t *)buf, chunk,    // const → 非 const 转换
                               100) != HAL_OK)
@@ -199,7 +201,7 @@ void BL24C16F::_wait_write_complete(void)
 
     // 使用 HAL_I2C_IsDeviceReady 进行 ACK 轮询
     // 每 1ms 轮询一次
-    while (HAL_I2C_IsDeviceReady(EEPROM_hi2c,
+    while (HAL_I2C_IsDeviceReady(_hi2c,
                                  DEV_ADDR << 1,    // 8位器件地址(写)
                                  1,                // 每次尝试 1 次
                                  1) != HAL_OK)     // 每次超时 1ms

@@ -22,12 +22,23 @@
 #define M1_STEP_htim  &htim1  //M1电机 脉冲信号PWM定时器
 #define M1_STEP_TIM  TIM1  //M1电机 脉冲信号PWM定时器
 #define M1_STEP_CHANNEL  TIM_CHANNEL_1   //M1电机 脉冲信号PWM定时器通道
-#define M2_STEP_htim  &htim1  //M2电机 脉冲信号PWM定时器
-#define M2_STEP_TIM  TIM1  //M2电机 脉冲信号PWM定时器
+#define M1_STEP_CCER  TIM_CCER_CC1E 
+
+#define M2_STEP_htim  &htim2  //M2电机 脉冲信号PWM定时器
+#define M2_STEP_TIM  TIM2  //M2电机 脉冲信号PWM定时器
 #define M2_STEP_CHANNEL  TIM_CHANNEL_2   //M2电机 脉冲信号PWM定时器通道
+#define M2_STEP_CCER  TIM_CCER_CC2E  
+
+
+// #define M2_STEP_htim  &htim1  //M2电机 脉冲信号PWM定时器
+// #define M2_STEP_TIM  TIM1  //M2电机 脉冲信号PWM定时器
+// #define M2_STEP_CHANNEL  TIM_CHANNEL_2   //M2电机 脉冲信号PWM定时器通道
+// #define M2_STEP_CCER  TIM_CCER_CC2E  
+
+
+
 
 #define System_htim &htim15    //计时定时器
-
 
 #define Vofa_huart &huart2    //Vofa串口
 #define CLI_huart &huart3     //CLI串口和打印输出
@@ -77,5 +88,5 @@
 #define EEPROM_hi2c       &hi2c2      // BL24C16F EEPROM I2C句柄
 #define KTH7111_hspi1     &hspi1      // KTH7111编码器 SPI句柄
 #define KTH7111_hspi2     &hspi2      // KTH7111编码器 SPI句柄
-#define TIM2_htim         &htim2    //定时器2 闭环控制定时器
+#define TIM3_htim         &htim3    //定时器3 闭环控制定时器
 #define VM_hadc           &hadc1    //电压检测ADC句柄

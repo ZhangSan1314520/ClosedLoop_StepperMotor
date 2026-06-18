@@ -10,7 +10,7 @@ void start(EmbeddedCli *cli, char *args, void *context) //启动电机
     const char *arg_list[CLI_MODULE_MAX_ARGS_NUM]; //数据存放区 超限只保存前CLI_MODULE_MAX_ARGS_NUM个
     int argc = CLI_Module::init_arg_list(arg_list, args);
 
-    Motor_M1.Set_Motor_EN(1); //启动电机
+    // Motor_M1.Set_Motor_EN(1); //启动电机
     printf("启动电机\r\n");
 
 }

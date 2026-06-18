@@ -1,5 +1,5 @@
-build/debug/My_Vofa.o: My_Top/System/My_Vofa.cpp \
- My_Top/System/My_Vofa.hpp Core/Inc/usart.h Core/Inc/main.h \
+build/debug/My_Vofa.o: My_Top/MC/My_Vofa.cpp My_Top/MC/My_Vofa.hpp \
+ Core/Inc/usart.h Core/Inc/main.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h \
  Core/Inc/stm32g0xx_hal_conf.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h \
@@ -38,7 +38,7 @@ build/debug/My_Vofa.o: My_Top/System/My_Vofa.cpp \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim_ex.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h \
  Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart_ex.h
-My_Top/System/My_Vofa.hpp:
+My_Top/MC/My_Vofa.hpp:
 Core/Inc/usart.h:
 Core/Inc/main.h:
 Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal.h:

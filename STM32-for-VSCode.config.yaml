@@ -10,7 +10,7 @@ target: ClosedLoop_StepperMotor
 # Can be C or C++
 language: C++
 
-optimization: Os
+optimization: Og
 
 # MCU settings
 targetMCU: stm32g0x
@@ -37,12 +37,10 @@ cFlags:
   - -Wall
   - -fdata-sections
   - -ffunction-sections
-  - -flto
 
 cxxFlags: 
   - -fno-rtti
   - -fno-exceptions
-  - -flto
 
 assemblyFlags: 
   - -Wall
@@ -51,7 +49,6 @@ assemblyFlags:
 
 linkerFlags: 
   - -Wl,--print-memory-usage
-  - -flto
 
 
 # libraries to be included. The -l prefix to the library will be automatically added.
@@ -85,13 +82,7 @@ includeDirectories:
   - Core/Lib/**
   - Lib/**
   - My_Top/**
-  - Drivers/CMSIS/Device/ST/STM32G0xx/Include/**
-  - Drivers/CMSIS/Include/**
-  - Drivers/STM32G0xx_HAL_Driver/Inc/**
-  - Drivers/STM32G0xx_HAL_Driver/Inc/Legacy/**
-  - Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/**
-  - Middlewares/Third_Party/FreeRTOS/Source/include/**
-  - Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/**
+
 
 # Files that should be included in the compilation.
 # If a CubeMX makefile is present it will automatically include the  c and cpp/cxx files from that makefile.
@@ -104,7 +95,6 @@ sourceFiles:
   - Core/Lib/**
   - Lib/**
   - My_Top/**
-
 
 # When no makefile is present it will show a warning pop-up.
 # However when compilation without the CubeMX Makefile is desired, this can be turned of.
@@ -121,5 +111,5 @@ customMakefileRules:
 # Additional flags which will be used when invoking the make command
 makeFlags:
 # - -O  # use this option when the output of make is mixed up only works for make version 4.0 and upwards
-# - --silent # use this option to silence the output of the build
+  - --silent # use this option to silence the output of the build
     

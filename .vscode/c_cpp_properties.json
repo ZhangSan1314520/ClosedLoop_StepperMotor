@@ -25,7 +25,6 @@
         "My_Top/System"
       ],
       "defines": [
-        "CMSIS_device_header='<stm32g0xx.h>'",
         "STM32G071xx",
         "USE_HAL_DRIVER"
       ],

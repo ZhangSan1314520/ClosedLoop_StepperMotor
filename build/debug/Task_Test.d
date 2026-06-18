@@ -55,7 +55,11 @@ build/debug/Task_Test.o: My_Top/Task/Task_Test.cpp \
  Lib/serial/printf.h My_Top/Modules/CLI_Module.hpp \
  Lib/embedded-cli/embedded_cli.h My_Top/System/bsp.hpp Core/Inc/tim.h \
  Core/Inc/gpio.h Core/Inc/i2c.h Core/Inc/spi.h Core/Inc/adc.h \
- My_Top/System/My_Vofa.hpp
+ My_Top/MC/My_Vofa.hpp My_Top/Step_Motor/StepperMotor_Loop.hpp \
+ My_Top/System/pid_Increment.hpp My_Top/System/ADRC.hpp \
+ My_Top/System/pll.hpp Lib/compute/ex_math.hpp Lib/compute/fast_sin.h \
+ My_Top/System/kth_read.hpp My_Top/Step_Motor/Step.hpp \
+ My_Top/System/BL24C16F.hpp
 Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 Core/Inc/FreeRTOSConfig.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -122,4 +126,13 @@ Core/Inc/gpio.h:
 Core/Inc/i2c.h:
 Core/Inc/spi.h:
 Core/Inc/adc.h:
-My_Top/System/My_Vofa.hpp:
+My_Top/MC/My_Vofa.hpp:
+My_Top/Step_Motor/StepperMotor_Loop.hpp:
+My_Top/System/pid_Increment.hpp:
+My_Top/System/ADRC.hpp:
+My_Top/System/pll.hpp:
+Lib/compute/ex_math.hpp:
+Lib/compute/fast_sin.h:
+My_Top/System/kth_read.hpp:
+My_Top/Step_Motor/Step.hpp:
+My_Top/System/BL24C16F.hpp:

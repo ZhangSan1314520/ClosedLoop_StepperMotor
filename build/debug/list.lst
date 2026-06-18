@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccLi78Tg.s 			page 1
+ARM GAS  /tmp/ccwPBkpf.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -14,2497 +14,525 @@ ARM GAS  /tmp/ccLi78Tg.s 			page 1
   11              		.eabi_attribute 34, 0
   12              		.eabi_attribute 18, 4
   13              		.file	"list.c"
-  14              		.file 1 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
-  15              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
-  16              		.file 3 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
-  17              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/include/list.h"
-  18              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/list.c"
-  19              		.section	.gnu.debuglto_.debug_info,"e",%progbits
-  20              	.Ldebug_info0:
-  21              		.hidden	list.c.68b245d7
-  22              		.weak	list.c.68b245d7
-  23              	list.c.68b245d7:
-  24 0000 4C020000 		.4byte	0x24c
-  25 0004 0500     		.2byte	0x5
-  26 0006 01       		.byte	0x1
-  27 0007 04       		.byte	0x4
-  28 0008 00000000 		.4byte	.Ldebug_abbrev0
-  29 000c 0A       		.uleb128 0xa
-  30 000d 7C000000 		.4byte	.LASF38
-  31 0011 1D       		.byte	0x1d
-  32 0012 17000000 		.4byte	.LASF39
-  33 0016 02020000 		.4byte	.LASF40
-  34 001a 00000000 		.4byte	.Ldebug_line0
-  35 001e 01       		.uleb128 0x1
-  36 001f 04       		.byte	0x4
-  37 0020 07       		.byte	0x7
-  38 0021 9E010000 		.4byte	.LASF0
-  39 0025 0B       		.uleb128 0xb
-  40 0026 04       		.byte	0x4
-  41 0027 05       		.byte	0x5
-  42 0028 696E7400 		.ascii	"int\000"
-  43 002c 01       		.uleb128 0x1
-  44 002d 08       		.byte	0x8
-  45 002e 05       		.byte	0x5
-  46 002f 3E020000 		.4byte	.LASF1
-  47 0033 01       		.uleb128 0x1
-  48 0034 08       		.byte	0x8
-  49 0035 04       		.byte	0x4
-  50 0036 8B020000 		.4byte	.LASF2
-  51 003a 01       		.uleb128 0x1
-  52 003b 01       		.byte	0x1
-  53 003c 06       		.byte	0x6
-  54 003d A7020000 		.4byte	.LASF3
-  55 0041 01       		.uleb128 0x1
-  56 0042 01       		.byte	0x1
-  57 0043 08       		.byte	0x8
-ARM GAS  /tmp/ccLi78Tg.s 			page 2
-
-
-  58 0044 10010000 		.4byte	.LASF4
-  59 0048 01       		.uleb128 0x1
-  60 0049 02       		.byte	0x2
-  61 004a 05       		.byte	0x5
-  62 004b 5C020000 		.4byte	.LASF5
-  63 004f 01       		.uleb128 0x1
-  64 0050 02       		.byte	0x2
-  65 0051 07       		.byte	0x7
-  66 0052 3F010000 		.4byte	.LASF6
-  67 0056 01       		.uleb128 0x1
-  68 0057 04       		.byte	0x4
-  69 0058 05       		.byte	0x5
-  70 0059 82020000 		.4byte	.LASF7
-  71 005d 03       		.uleb128 0x3
-  72 005e 6D010000 		.4byte	.LASF11
-  73 0062 01       		.byte	0x1
-  74 0063 4F       		.byte	0x4f
-  75 0064 19       		.byte	0x19
-  76 0065 69000000 		.4byte	0x69
-  77 0069 01       		.uleb128 0x1
-  78 006a 04       		.byte	0x4
-  79 006b 07       		.byte	0x7
-  80 006c 1E010000 		.4byte	.LASF8
-  81 0070 01       		.uleb128 0x1
-  82 0071 08       		.byte	0x8
-  83 0072 07       		.byte	0x7
-  84 0073 CD010000 		.4byte	.LASF9
-  85 0077 0C       		.uleb128 0xc
-  86 0078 04       		.byte	0x4
-  87 0079 01       		.uleb128 0x1
-  88 007a 01       		.byte	0x1
-  89 007b 08       		.byte	0x8
-  90 007c 4C020000 		.4byte	.LASF10
-  91 0080 03       		.uleb128 0x3
-  92 0081 79020000 		.4byte	.LASF12
-  93 0085 02       		.byte	0x2
-  94 0086 30       		.byte	0x30
-  95 0087 14       		.byte	0x14
-  96 0088 5D000000 		.4byte	0x5d
-  97 008c 03       		.uleb128 0x3
-  98 008d EB010000 		.4byte	.LASF13
-  99 0091 03       		.byte	0x3
- 100 0092 39       		.byte	0x39
- 101 0093 17       		.byte	0x17
- 102 0094 69000000 		.4byte	0x69
- 103 0098 0D       		.uleb128 0xd
- 104 0099 8C000000 		.4byte	0x8c
- 105 009d 03       		.uleb128 0x3
- 106 009e 00000000 		.4byte	.LASF14
- 107 00a2 03       		.byte	0x3
- 108 00a3 3F       		.byte	0x3f
- 109 00a4 13       		.byte	0x13
- 110 00a5 80000000 		.4byte	0x80
- 111 00a9 07       		.uleb128 0x7
- 112 00aa 9D000000 		.4byte	0x9d
- 113 00ae 08       		.uleb128 0x8
- 114 00af 71000000 		.4byte	.LASF20
-ARM GAS  /tmp/ccLi78Tg.s 			page 3
-
-
- 115 00b3 14       		.byte	0x14
- 116 00b4 8C       		.byte	0x8c
- 117 00b5 08       		.byte	0x8
- 118 00b6 F7000000 		.4byte	0xf7
- 119 00ba 02       		.uleb128 0x2
- 120 00bb 55000000 		.4byte	.LASF15
- 121 00bf 8F       		.byte	0x8f
- 122 00c0 21       		.byte	0x21
- 123 00c1 9D000000 		.4byte	0x9d
- 124 00c5 00       		.byte	0
- 125 00c6 02       		.uleb128 0x2
- 126 00c7 97010000 		.4byte	.LASF16
- 127 00cb 90       		.byte	0x90
- 128 00cc 2A       		.byte	0x2a
- 129 00cd F7000000 		.4byte	0xf7
- 130 00d1 04       		.byte	0x4
- 131 00d2 02       		.uleb128 0x2
- 132 00d3 6E020000 		.4byte	.LASF17
- 133 00d7 91       		.byte	0x91
- 134 00d8 2A       		.byte	0x2a
- 135 00d9 F7000000 		.4byte	0xf7
- 136 00dd 08       		.byte	0x8
- 137 00de 02       		.uleb128 0x2
- 138 00df 69000000 		.4byte	.LASF18
- 139 00e3 92       		.byte	0x92
- 140 00e4 09       		.byte	0x9
- 141 00e5 77000000 		.4byte	0x77
- 142 00e9 0C       		.byte	0xc
- 143 00ea 02       		.uleb128 0x2
- 144 00eb 0B000000 		.4byte	.LASF19
- 145 00ef 93       		.byte	0x93
- 146 00f0 25       		.byte	0x25
- 147 00f1 2D010000 		.4byte	0x12d
- 148 00f5 10       		.byte	0x10
- 149 00f6 00       		.byte	0
- 150 00f7 05       		.uleb128 0x5
- 151 00f8 AE000000 		.4byte	0xae
- 152 00fc 08       		.uleb128 0x8
- 153 00fd BA020000 		.4byte	.LASF21
- 154 0101 14       		.byte	0x14
- 155 0102 A4       		.byte	0xa4
- 156 0103 10       		.byte	0x10
- 157 0104 2D010000 		.4byte	0x12d
- 158 0108 02       		.uleb128 0x2
- 159 0109 78010000 		.4byte	.LASF22
- 160 010d A7       		.byte	0xa7
- 161 010e 17       		.byte	0x17
- 162 010f 98000000 		.4byte	0x98
- 163 0113 00       		.byte	0
- 164 0114 02       		.uleb128 0x2
- 165 0115 66020000 		.4byte	.LASF23
- 166 0119 A8       		.byte	0xa8
- 167 011a 23       		.byte	0x23
- 168 011b 7B010000 		.4byte	0x17b
- 169 011f 04       		.byte	0x4
- 170 0120 02       		.uleb128 0x2
- 171 0121 60000000 		.4byte	.LASF24
-ARM GAS  /tmp/ccLi78Tg.s 			page 4
-
-
- 172 0125 A9       		.byte	0xa9
- 173 0126 11       		.byte	0x11
- 174 0127 6F010000 		.4byte	0x16f
- 175 012b 08       		.byte	0x8
- 176 012c 00       		.byte	0
- 177 012d 05       		.uleb128 0x5
- 178 012e FC000000 		.4byte	0xfc
- 179 0132 03       		.uleb128 0x3
- 180 0133 F7010000 		.4byte	.LASF25
- 181 0137 04       		.byte	0x4
- 182 0138 96       		.byte	0x96
- 183 0139 1B       		.byte	0x1b
- 184 013a AE000000 		.4byte	0xae
- 185 013e 08       		.uleb128 0x8
- 186 013f 97020000 		.4byte	.LASF26
- 187 0143 0C       		.byte	0xc
- 188 0144 98       		.byte	0x98
- 189 0145 08       		.byte	0x8
- 190 0146 6F010000 		.4byte	0x16f
- 191 014a 02       		.uleb128 0x2
- 192 014b 55000000 		.4byte	.LASF15
- 193 014f 9B       		.byte	0x9b
- 194 0150 21       		.byte	0x21
- 195 0151 9D000000 		.4byte	0x9d
- 196 0155 00       		.byte	0
- 197 0156 02       		.uleb128 0x2
- 198 0157 97010000 		.4byte	.LASF16
- 199 015b 9C       		.byte	0x9c
- 200 015c 2A       		.byte	0x2a
- 201 015d F7000000 		.4byte	0xf7
- 202 0161 04       		.byte	0x4
- 203 0162 02       		.uleb128 0x2
- 204 0163 6E020000 		.4byte	.LASF17
- 205 0167 9D       		.byte	0x9d
- 206 0168 2A       		.byte	0x2a
- 207 0169 F7000000 		.4byte	0xf7
- 208 016d 08       		.byte	0x8
- 209 016e 00       		.byte	0
- 210 016f 03       		.uleb128 0x3
- 211 0170 46000000 		.4byte	.LASF27
- 212 0174 04       		.byte	0x4
- 213 0175 9F       		.byte	0x9f
- 214 0176 20       		.byte	0x20
- 215 0177 3E010000 		.4byte	0x13e
- 216 017b 05       		.uleb128 0x5
- 217 017c 32010000 		.4byte	0x132
- 218 0180 07       		.uleb128 0x7
- 219 0181 7B010000 		.4byte	0x17b
- 220 0185 03       		.uleb128 0x3
- 221 0186 66010000 		.4byte	.LASF28
- 222 018a 04       		.byte	0x4
- 223 018b AB       		.byte	0xab
- 224 018c 03       		.byte	0x3
- 225 018d FC000000 		.4byte	0xfc
- 226 0191 0E       		.uleb128 0xe
- 227 0192 C0020000 		.4byte	.LASF41
- 228 0196 05       		.byte	0x5
-ARM GAS  /tmp/ccLi78Tg.s 			page 5
-
-
- 229 0197 AA       		.byte	0xaa
- 230 0198 0D       		.byte	0xd
- 231 0199 8C000000 		.4byte	0x8c
- 232 019d B8010000 		.4byte	0x1b8
- 233 01a1 04       		.uleb128 0x4
- 234 01a2 30010000 		.4byte	.LASF29
- 235 01a6 AA       		.byte	0xaa
- 236 01a7 2E       		.byte	0x2e
- 237 01a8 80010000 		.4byte	0x180
- 238 01ac 06       		.uleb128 0x6
- 239 01ad B3020000 		.4byte	.LASF30
- 240 01b1 AE       		.byte	0xae
- 241 01b2 10       		.byte	0x10
- 242 01b3 BD010000 		.4byte	0x1bd
- 243 01b7 00       		.byte	0
- 244 01b8 05       		.uleb128 0x5
- 245 01b9 85010000 		.4byte	0x185
- 246 01bd 07       		.uleb128 0x7
- 247 01be B8010000 		.4byte	0x1b8
- 248 01c2 09       		.uleb128 0x9
- 249 01c3 DB020000 		.4byte	.LASF34
- 250 01c7 67       		.byte	0x67
- 251 01c8 F9010000 		.4byte	0x1f9
- 252 01cc 04       		.uleb128 0x4
- 253 01cd B3020000 		.4byte	.LASF30
- 254 01d1 67       		.byte	0x67
- 255 01d2 22       		.byte	0x22
- 256 01d3 BD010000 		.4byte	0x1bd
- 257 01d7 04       		.uleb128 0x4
- 258 01d8 CD020000 		.4byte	.LASF31
- 259 01dc 67       		.byte	0x67
- 260 01dd 3D       		.byte	0x3d
- 261 01de 80010000 		.4byte	0x180
- 262 01e2 06       		.uleb128 0x6
- 263 01e3 51020000 		.4byte	.LASF32
- 264 01e7 69       		.byte	0x69
- 265 01e8 0D       		.byte	0xd
- 266 01e9 7B010000 		.4byte	0x17b
- 267 01ed 06       		.uleb128 0x6
- 268 01ee BB010000 		.4byte	.LASF33
- 269 01f2 6A       		.byte	0x6a
- 270 01f3 12       		.byte	0x12
- 271 01f4 A9000000 		.4byte	0xa9
- 272 01f8 00       		.byte	0
- 273 01f9 09       		.uleb128 0x9
- 274 01fa 88010000 		.4byte	.LASF35
- 275 01fe 4A       		.byte	0x4a
- 276 01ff 25020000 		.4byte	0x225
- 277 0203 04       		.uleb128 0x4
- 278 0204 B3020000 		.4byte	.LASF30
- 279 0208 4A       		.byte	0x4a
- 280 0209 25       		.byte	0x25
- 281 020a BD010000 		.4byte	0x1bd
- 282 020e 04       		.uleb128 0x4
- 283 020f CD020000 		.4byte	.LASF31
- 284 0213 4A       		.byte	0x4a
- 285 0214 40       		.byte	0x40
-ARM GAS  /tmp/ccLi78Tg.s 			page 6
-
-
- 286 0215 80010000 		.4byte	0x180
- 287 0219 06       		.uleb128 0x6
- 288 021a 66020000 		.4byte	.LASF23
- 289 021e 4C       		.byte	0x4c
- 290 021f 14       		.byte	0x14
- 291 0220 80010000 		.4byte	0x180
- 292 0224 00       		.byte	0
- 293 0225 09       		.uleb128 0x9
- 294 0226 52010000 		.4byte	.LASF36
- 295 022a 3E       		.byte	0x3e
- 296 022b 3B020000 		.4byte	0x23b
- 297 022f 04       		.uleb128 0x4
- 298 0230 E4010000 		.4byte	.LASF37
- 299 0234 3E       		.byte	0x3e
- 300 0235 2E       		.byte	0x2e
- 301 0236 80010000 		.4byte	0x180
- 302 023a 00       		.byte	0
- 303 023b 0F       		.uleb128 0xf
- 304 023c AB010000 		.4byte	.LASF42
- 305 0240 05       		.byte	0x5
- 306 0241 25       		.byte	0x25
- 307 0242 06       		.byte	0x6
- 308 0243 04       		.uleb128 0x4
- 309 0244 B3020000 		.4byte	.LASF30
- 310 0248 25       		.byte	0x25
- 311 0249 26       		.byte	0x26
- 312 024a BD010000 		.4byte	0x1bd
- 313 024e 00       		.byte	0
- 314 024f 00       		.byte	0
- 315              		.section	.gnu.debuglto_.debug_abbrev,"e",%progbits
- 316              	.Ldebug_abbrev0:
- 317 0000 01       		.uleb128 0x1
- 318 0001 24       		.uleb128 0x24
- 319 0002 00       		.byte	0
- 320 0003 0B       		.uleb128 0xb
- 321 0004 0B       		.uleb128 0xb
- 322 0005 3E       		.uleb128 0x3e
- 323 0006 0B       		.uleb128 0xb
- 324 0007 03       		.uleb128 0x3
- 325 0008 0E       		.uleb128 0xe
- 326 0009 00       		.byte	0
- 327 000a 00       		.byte	0
- 328 000b 02       		.uleb128 0x2
- 329 000c 0D       		.uleb128 0xd
- 330 000d 00       		.byte	0
- 331 000e 03       		.uleb128 0x3
- 332 000f 0E       		.uleb128 0xe
- 333 0010 3A       		.uleb128 0x3a
- 334 0011 21       		.uleb128 0x21
- 335 0012 04       		.sleb128 4
- 336 0013 3B       		.uleb128 0x3b
- 337 0014 0B       		.uleb128 0xb
- 338 0015 39       		.uleb128 0x39
- 339 0016 0B       		.uleb128 0xb
- 340 0017 49       		.uleb128 0x49
- 341 0018 13       		.uleb128 0x13
- 342 0019 38       		.uleb128 0x38
-ARM GAS  /tmp/ccLi78Tg.s 			page 7
-
-
- 343 001a 0B       		.uleb128 0xb
- 344 001b 00       		.byte	0
- 345 001c 00       		.byte	0
- 346 001d 03       		.uleb128 0x3
- 347 001e 16       		.uleb128 0x16
- 348 001f 00       		.byte	0
- 349 0020 03       		.uleb128 0x3
- 350 0021 0E       		.uleb128 0xe
- 351 0022 3A       		.uleb128 0x3a
- 352 0023 0B       		.uleb128 0xb
- 353 0024 3B       		.uleb128 0x3b
- 354 0025 0B       		.uleb128 0xb
- 355 0026 39       		.uleb128 0x39
- 356 0027 0B       		.uleb128 0xb
- 357 0028 49       		.uleb128 0x49
- 358 0029 13       		.uleb128 0x13
- 359 002a 00       		.byte	0
- 360 002b 00       		.byte	0
- 361 002c 04       		.uleb128 0x4
- 362 002d 05       		.uleb128 0x5
- 363 002e 00       		.byte	0
- 364 002f 03       		.uleb128 0x3
- 365 0030 0E       		.uleb128 0xe
- 366 0031 3A       		.uleb128 0x3a
- 367 0032 21       		.uleb128 0x21
- 368 0033 05       		.sleb128 5
- 369 0034 3B       		.uleb128 0x3b
- 370 0035 0B       		.uleb128 0xb
- 371 0036 39       		.uleb128 0x39
- 372 0037 0B       		.uleb128 0xb
- 373 0038 49       		.uleb128 0x49
- 374 0039 13       		.uleb128 0x13
- 375 003a 00       		.byte	0
- 376 003b 00       		.byte	0
- 377 003c 05       		.uleb128 0x5
- 378 003d 0F       		.uleb128 0xf
- 379 003e 00       		.byte	0
- 380 003f 0B       		.uleb128 0xb
- 381 0040 21       		.uleb128 0x21
- 382 0041 04       		.sleb128 4
- 383 0042 49       		.uleb128 0x49
- 384 0043 13       		.uleb128 0x13
- 385 0044 00       		.byte	0
- 386 0045 00       		.byte	0
- 387 0046 06       		.uleb128 0x6
- 388 0047 34       		.uleb128 0x34
- 389 0048 00       		.byte	0
- 390 0049 03       		.uleb128 0x3
- 391 004a 0E       		.uleb128 0xe
- 392 004b 3A       		.uleb128 0x3a
- 393 004c 21       		.uleb128 0x21
- 394 004d 05       		.sleb128 5
- 395 004e 3B       		.uleb128 0x3b
- 396 004f 0B       		.uleb128 0xb
- 397 0050 39       		.uleb128 0x39
- 398 0051 0B       		.uleb128 0xb
- 399 0052 49       		.uleb128 0x49
-ARM GAS  /tmp/ccLi78Tg.s 			page 8
-
-
- 400 0053 13       		.uleb128 0x13
- 401 0054 00       		.byte	0
- 402 0055 00       		.byte	0
- 403 0056 07       		.uleb128 0x7
- 404 0057 26       		.uleb128 0x26
- 405 0058 00       		.byte	0
- 406 0059 49       		.uleb128 0x49
- 407 005a 13       		.uleb128 0x13
- 408 005b 00       		.byte	0
- 409 005c 00       		.byte	0
- 410 005d 08       		.uleb128 0x8
- 411 005e 13       		.uleb128 0x13
- 412 005f 01       		.byte	0x1
- 413 0060 03       		.uleb128 0x3
- 414 0061 0E       		.uleb128 0xe
- 415 0062 0B       		.uleb128 0xb
- 416 0063 0B       		.uleb128 0xb
- 417 0064 3A       		.uleb128 0x3a
- 418 0065 21       		.uleb128 0x21
- 419 0066 04       		.sleb128 4
- 420 0067 3B       		.uleb128 0x3b
- 421 0068 0B       		.uleb128 0xb
- 422 0069 39       		.uleb128 0x39
- 423 006a 0B       		.uleb128 0xb
- 424 006b 01       		.uleb128 0x1
- 425 006c 13       		.uleb128 0x13
- 426 006d 00       		.byte	0
- 427 006e 00       		.byte	0
- 428 006f 09       		.uleb128 0x9
- 429 0070 2E       		.uleb128 0x2e
- 430 0071 01       		.byte	0x1
- 431 0072 3F       		.uleb128 0x3f
- 432 0073 19       		.uleb128 0x19
- 433 0074 03       		.uleb128 0x3
- 434 0075 0E       		.uleb128 0xe
- 435 0076 3A       		.uleb128 0x3a
- 436 0077 21       		.uleb128 0x21
- 437 0078 05       		.sleb128 5
- 438 0079 3B       		.uleb128 0x3b
- 439 007a 0B       		.uleb128 0xb
- 440 007b 39       		.uleb128 0x39
- 441 007c 21       		.uleb128 0x21
- 442 007d 06       		.sleb128 6
- 443 007e 27       		.uleb128 0x27
- 444 007f 19       		.uleb128 0x19
- 445 0080 01       		.uleb128 0x1
- 446 0081 13       		.uleb128 0x13
- 447 0082 00       		.byte	0
- 448 0083 00       		.byte	0
- 449 0084 0A       		.uleb128 0xa
- 450 0085 11       		.uleb128 0x11
- 451 0086 01       		.byte	0x1
- 452 0087 25       		.uleb128 0x25
- 453 0088 0E       		.uleb128 0xe
- 454 0089 13       		.uleb128 0x13
- 455 008a 0B       		.uleb128 0xb
- 456 008b 03       		.uleb128 0x3
-ARM GAS  /tmp/ccLi78Tg.s 			page 9
-
-
- 457 008c 0E       		.uleb128 0xe
- 458 008d 1B       		.uleb128 0x1b
- 459 008e 0E       		.uleb128 0xe
- 460 008f 10       		.uleb128 0x10
- 461 0090 17       		.uleb128 0x17
- 462 0091 00       		.byte	0
- 463 0092 00       		.byte	0
- 464 0093 0B       		.uleb128 0xb
- 465 0094 24       		.uleb128 0x24
- 466 0095 00       		.byte	0
- 467 0096 0B       		.uleb128 0xb
- 468 0097 0B       		.uleb128 0xb
- 469 0098 3E       		.uleb128 0x3e
- 470 0099 0B       		.uleb128 0xb
- 471 009a 03       		.uleb128 0x3
- 472 009b 08       		.uleb128 0x8
- 473 009c 00       		.byte	0
- 474 009d 00       		.byte	0
- 475 009e 0C       		.uleb128 0xc
- 476 009f 0F       		.uleb128 0xf
- 477 00a0 00       		.byte	0
- 478 00a1 0B       		.uleb128 0xb
- 479 00a2 0B       		.uleb128 0xb
- 480 00a3 00       		.byte	0
- 481 00a4 00       		.byte	0
- 482 00a5 0D       		.uleb128 0xd
- 483 00a6 35       		.uleb128 0x35
- 484 00a7 00       		.byte	0
- 485 00a8 49       		.uleb128 0x49
- 486 00a9 13       		.uleb128 0x13
- 487 00aa 00       		.byte	0
- 488 00ab 00       		.byte	0
- 489 00ac 0E       		.uleb128 0xe
- 490 00ad 2E       		.uleb128 0x2e
- 491 00ae 01       		.byte	0x1
- 492 00af 3F       		.uleb128 0x3f
- 493 00b0 19       		.uleb128 0x19
- 494 00b1 03       		.uleb128 0x3
- 495 00b2 0E       		.uleb128 0xe
- 496 00b3 3A       		.uleb128 0x3a
- 497 00b4 0B       		.uleb128 0xb
- 498 00b5 3B       		.uleb128 0x3b
- 499 00b6 0B       		.uleb128 0xb
- 500 00b7 39       		.uleb128 0x39
- 501 00b8 0B       		.uleb128 0xb
- 502 00b9 27       		.uleb128 0x27
- 503 00ba 19       		.uleb128 0x19
- 504 00bb 49       		.uleb128 0x49
- 505 00bc 13       		.uleb128 0x13
- 506 00bd 01       		.uleb128 0x1
- 507 00be 13       		.uleb128 0x13
- 508 00bf 00       		.byte	0
- 509 00c0 00       		.byte	0
- 510 00c1 0F       		.uleb128 0xf
- 511 00c2 2E       		.uleb128 0x2e
- 512 00c3 01       		.byte	0x1
- 513 00c4 3F       		.uleb128 0x3f
-ARM GAS  /tmp/ccLi78Tg.s 			page 10
-
-
- 514 00c5 19       		.uleb128 0x19
- 515 00c6 03       		.uleb128 0x3
- 516 00c7 0E       		.uleb128 0xe
- 517 00c8 3A       		.uleb128 0x3a
- 518 00c9 0B       		.uleb128 0xb
- 519 00ca 3B       		.uleb128 0x3b
- 520 00cb 0B       		.uleb128 0xb
- 521 00cc 39       		.uleb128 0x39
- 522 00cd 0B       		.uleb128 0xb
- 523 00ce 27       		.uleb128 0x27
- 524 00cf 19       		.uleb128 0x19
- 525 00d0 00       		.byte	0
- 526 00d1 00       		.byte	0
- 527 00d2 00       		.byte	0
- 528              		.section	.gnu.debuglto_.debug_line,"e",%progbits
- 529              	.Ldebug_line0:
- 530 0000 5A000000 		.4byte	.LELT0-.LSLT0
- 531              	.LSLT0:
- 532 0004 0500     		.2byte	0x5
- 533 0006 04       		.byte	0x4
- 534 0007 00       		.byte	0
- 535 0008 52000000 		.4byte	.LELTP0-.LASLTP0
- 536              	.LASLTP0:
- 537 000c 01       		.byte	0x1
- 538 000d 01       		.byte	0x1
- 539 000e 01       		.byte	0x1
- 540 000f F6       		.byte	0xf6
- 541 0010 F2       		.byte	0xf2
- 542 0011 0D       		.byte	0xd
- 543 0012 00       		.byte	0
- 544 0013 01       		.byte	0x1
- 545 0014 01       		.byte	0x1
- 546 0015 01       		.byte	0x1
- 547 0016 01       		.byte	0x1
- 548 0017 00       		.byte	0
- 549 0018 00       		.byte	0
- 550 0019 00       		.byte	0
- 551 001a 01       		.byte	0x1
- 552 001b 00       		.byte	0
- 553 001c 00       		.byte	0
- 554 001d 01       		.byte	0x1
- 555 001e 01       		.byte	0x1
- 556 001f 01       		.uleb128 0x1
- 557 0020 1F       		.uleb128 0x1f
- 558 0021 06       		.uleb128 0x6
- 559 0022 0A000000 		.4byte	.LASF43
- 560 0026 34010000 		.4byte	.LASF44
- 561 002a 4D000000 		.4byte	.LASF45
- 562 002e 8A000000 		.4byte	.LASF46
- 563 0032 6B010000 		.4byte	.LASF47
- 564 0036 CF000000 		.4byte	.LASF48
- 565 003a 02       		.byte	0x2
- 566 003b 01       		.uleb128 0x1
- 567 003c 1F       		.uleb128 0x1f
- 568 003d 02       		.uleb128 0x2
- 569 003e 0B       		.uleb128 0xb
- 570 003f 06       		.uleb128 0x6
-ARM GAS  /tmp/ccLi78Tg.s 			page 11
-
-
- 571 0040 05010000 		.4byte	.LASF49
- 572 0044 00       		.byte	0
- 573 0045 BE000000 		.4byte	.LASF50
- 574 0049 04       		.byte	0x4
- 575 004a 00000000 		.4byte	.LASF51
- 576 004e 05       		.byte	0x5
- 577 004f B2000000 		.4byte	.LASF52
- 578 0053 02       		.byte	0x2
- 579 0054 46000000 		.4byte	.LASF53
- 580 0058 01       		.byte	0x1
- 581 0059 64010000 		.4byte	.LASF54
- 582 005d 03       		.byte	0x3
- 583              	.LELTP0:
- 584              	.LELT0:
- 585              		.section	.gnu.debuglto_.debug_str,"eMS",%progbits,1
- 586              	.LASF14:
- 587 0000 5469636B 		.ascii	"TickType_t\000"
- 587      54797065 
- 587      5F7400
- 588              	.LASF19:
- 589 000b 7076436F 		.ascii	"pvContainer\000"
- 589      6E746169 
- 589      6E657200 
- 590              	.LASF39:
- 591 0017 4D696464 		.ascii	"Middlewares/Third_Party/FreeRTOS/Source/list.c\000"
- 591      6C657761 
- 591      7265732F 
- 591      54686972 
- 591      645F5061 
- 592              	.LASF27:
- 593 0046 4D696E69 		.ascii	"MiniListItem_t\000"
- 593      4C697374 
- 593      4974656D 
- 593      5F7400
- 594              	.LASF15:
- 595 0055 78497465 		.ascii	"xItemValue\000"
- 595      6D56616C 
- 595      756500
- 596              	.LASF24:
- 597 0060 784C6973 		.ascii	"xListEnd\000"
- 597      74456E64 
- 597      00
- 598              	.LASF18:
- 599 0069 70764F77 		.ascii	"pvOwner\000"
- 599      6E657200 
- 600              	.LASF20:
- 601 0071 784C4953 		.ascii	"xLIST_ITEM\000"
- 601      545F4954 
- 601      454D00
- 602              	.LASF38:
- 603 007c 474E5520 		.ascii	"GNU C17 14.2.1 20241119 -mcpu=cortex-m0plus -mthumb"
- 603      43313720 
- 603      31342E32 
- 603      2E312032 
- 603      30323431 
- 604 00af 202D6D66 		.ascii	" -mfloat-abi=soft -march=armv6s-m -g -gdwarf -ggdb "
- 604      6C6F6174 
-ARM GAS  /tmp/ccLi78Tg.s 			page 12
-
-
- 604      2D616269 
- 604      3D736F66 
- 604      74202D6D 
- 605 00e2 2D4F6720 		.ascii	"-Og -fdata-sections -ffunction-sections -flto\000"
- 605      2D666461 
- 605      74612D73 
- 605      65637469 
- 605      6F6E7320 
- 606              	.LASF4:
- 607 0110 756E7369 		.ascii	"unsigned char\000"
- 607      676E6564 
- 607      20636861 
- 607      7200
- 608              	.LASF8:
- 609 011e 6C6F6E67 		.ascii	"long unsigned int\000"
- 609      20756E73 
- 609      69676E65 
- 609      6420696E 
- 609      7400
- 610              	.LASF29:
- 611 0130 70784974 		.ascii	"pxItemToRemove\000"
- 611      656D546F 
- 611      52656D6F 
- 611      766500
- 612              	.LASF6:
- 613 013f 73686F72 		.ascii	"short unsigned int\000"
- 613      7420756E 
- 613      7369676E 
- 613      65642069 
- 613      6E7400
- 614              	.LASF36:
- 615 0152 764C6973 		.ascii	"vListInitialiseItem\000"
- 615      74496E69 
- 615      7469616C 
- 615      69736549 
- 615      74656D00 
- 616              	.LASF28:
- 617 0166 4C697374 		.ascii	"List_t\000"
- 617      5F7400
- 618              	.LASF11:
- 619 016d 5F5F7569 		.ascii	"__uint32_t\000"
- 619      6E743332 
- 619      5F7400
- 620              	.LASF22:
- 621 0178 75784E75 		.ascii	"uxNumberOfItems\000"
- 621      6D626572 
- 621      4F664974 
- 621      656D7300 
- 622              	.LASF35:
- 623 0188 764C6973 		.ascii	"vListInsertEnd\000"
- 623      74496E73 
- 623      65727445 
- 623      6E6400
- 624              	.LASF16:
- 625 0197 70784E65 		.ascii	"pxNext\000"
- 625      787400
- 626              	.LASF0:
-ARM GAS  /tmp/ccLi78Tg.s 			page 13
-
-
- 627 019e 756E7369 		.ascii	"unsigned int\000"
- 627      676E6564 
- 627      20696E74 
- 627      00
- 628              	.LASF42:
- 629 01ab 764C6973 		.ascii	"vListInitialise\000"
- 629      74496E69 
- 629      7469616C 
- 629      69736500 
- 630              	.LASF33:
- 631 01bb 7856616C 		.ascii	"xValueOfInsertion\000"
- 631      75654F66 
- 631      496E7365 
- 631      7274696F 
- 631      6E00
- 632              	.LASF9:
- 633 01cd 6C6F6E67 		.ascii	"long long unsigned int\000"
- 633      206C6F6E 
- 633      6720756E 
- 633      7369676E 
- 633      65642069 
- 634              	.LASF37:
- 635 01e4 70784974 		.ascii	"pxItem\000"
- 635      656D00
- 636              	.LASF13:
- 637 01eb 55426173 		.ascii	"UBaseType_t\000"
- 637      65547970 
- 637      655F7400 
- 638              	.LASF25:
- 639 01f7 4C697374 		.ascii	"ListItem_t\000"
- 639      4974656D 
- 639      5F7400
- 640              	.LASF40:
- 641 0202 2F686F6D 		.ascii	"/home/zgj/servo_project/zgj_project/ClosedLoop_Step"
- 641      652F7A67 
- 641      6A2F7365 
- 641      72766F5F 
- 641      70726F6A 
- 642 0235 7065724D 		.ascii	"perMotor\000"
- 642      6F746F72 
- 642      00
- 643              	.LASF1:
- 644 023e 6C6F6E67 		.ascii	"long long int\000"
- 644      206C6F6E 
- 644      6720696E 
- 644      7400
- 645              	.LASF10:
- 646 024c 63686172 		.ascii	"char\000"
- 646      00
- 647              	.LASF32:
- 648 0251 70784974 		.ascii	"pxIterator\000"
- 648      65726174 
- 648      6F7200
- 649              	.LASF5:
- 650 025c 73686F72 		.ascii	"short int\000"
- 650      7420696E 
- 650      7400
-ARM GAS  /tmp/ccLi78Tg.s 			page 14
-
-
- 651              	.LASF23:
- 652 0266 7078496E 		.ascii	"pxIndex\000"
- 652      64657800 
- 653              	.LASF17:
- 654 026e 70785072 		.ascii	"pxPrevious\000"
- 654      6576696F 
- 654      757300
- 655              	.LASF12:
- 656 0279 75696E74 		.ascii	"uint32_t\000"
- 656      33325F74 
- 656      00
- 657              	.LASF7:
- 658 0282 6C6F6E67 		.ascii	"long int\000"
- 658      20696E74 
- 658      00
- 659              	.LASF2:
- 660 028b 6C6F6E67 		.ascii	"long double\000"
- 660      20646F75 
- 660      626C6500 
- 661              	.LASF26:
- 662 0297 784D494E 		.ascii	"xMINI_LIST_ITEM\000"
- 662      495F4C49 
- 662      53545F49 
- 662      54454D00 
- 663              	.LASF3:
- 664 02a7 7369676E 		.ascii	"signed char\000"
- 664      65642063 
- 664      68617200 
- 665              	.LASF30:
- 666 02b3 70784C69 		.ascii	"pxList\000"
- 666      737400
- 667              	.LASF21:
- 668 02ba 784C4953 		.ascii	"xLIST\000"
- 668      5400
- 669              	.LASF41:
- 670 02c0 75784C69 		.ascii	"uxListRemove\000"
- 670      73745265 
- 670      6D6F7665 
- 670      00
- 671              	.LASF31:
- 672 02cd 70784E65 		.ascii	"pxNewListItem\000"
- 672      774C6973 
- 672      74497465 
- 672      6D00
- 673              	.LASF34:
- 674 02db 764C6973 		.ascii	"vListInsert\000"
- 674      74496E73 
- 674      65727400 
- 675              		.section	.gnu.debuglto_.debug_line_str,"eMS",%progbits,1
- 676              	.LASF51:
- 677 0000 5F737464 		.ascii	"_stdint.h\000"
- 677      696E742E 
- 677      6800
- 678              	.LASF43:
- 679 000a 2F686F6D 		.ascii	"/home/zgj/servo_project/zgj_project/ClosedLoop_Step"
- 679      652F7A67 
- 679      6A2F7365 
-ARM GAS  /tmp/ccLi78Tg.s 			page 15
-
-
- 679      72766F5F 
- 679      70726F6A 
- 680 003d 7065724D 		.ascii	"perMotor\000"
- 680      6F746F72 
- 680      00
- 681              	.LASF53:
- 682 0046 6C697374 		.ascii	"list.h\000"
- 682      2E6800
- 683              	.LASF45:
- 684 004d 4D696464 		.ascii	"Middlewares/Third_Party/FreeRTOS/Source/portable/GC"
- 684      6C657761 
- 684      7265732F 
- 684      54686972 
- 684      645F5061 
- 685 0080 432F4152 		.ascii	"C/ARM_CM0\000"
- 685      4D5F434D 
- 685      3000
- 686              	.LASF46:
- 687 008a 4D696464 		.ascii	"Middlewares/Third_Party/FreeRTOS/Source\000"
- 687      6C657761 
- 687      7265732F 
- 687      54686972 
- 687      645F5061 
- 688              	.LASF52:
- 689 00b2 706F7274 		.ascii	"portmacro.h\000"
- 689      6D616372 
- 689      6F2E6800 
- 690              	.LASF50:
- 691 00be 5F646566 		.ascii	"_default_types.h\000"
- 691      61756C74 
- 691      5F747970 
- 691      65732E68 
- 691      00
- 692              	.LASF48:
- 693 00cf 2F6F7074 		.ascii	"/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/s"
- 693      2F61726D 
- 693      2D676E75 
- 693      2D746F6F 
- 693      6C636861 
- 694 0102 797300   		.ascii	"ys\000"
- 695              	.LASF49:
- 696 0105 4D696464 		.ascii	"Middlewares/Third_Party/FreeRTOS/Source/list.c\000"
- 696      6C657761 
- 696      7265732F 
- 696      54686972 
- 696      645F5061 
- 697              	.LASF44:
- 698 0134 4D696464 		.ascii	"Middlewares/Third_Party/FreeRTOS/Source/include\000"
- 698      6C657761 
- 698      7265732F 
- 698      54686972 
- 698      645F5061 
- 699              	.LASF54:
- 700 0164 6C697374 		.ascii	"list.c\000"
- 700      2E6300
- 701              	.LASF47:
- 702 016b 2F6F7074 		.ascii	"/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/m"
-ARM GAS  /tmp/ccLi78Tg.s 			page 16
-
-
- 702      2F61726D 
- 702      2D676E75 
- 702      2D746F6F 
- 702      6C636861 
- 703 019e 61636869 		.ascii	"achine\000"
- 703      6E6500
- 704              		.text
- 705              		.section	.gnu.lto_.profile.714b0f7607defcf3,"e",%progbits
- 706 0000 28B52FFD 		.ascii	"(\265/\375 \0061\000\000\002\000\000\000\000\000"
- 706      20063100 
- 706      00020000 
- 706      000000
- 707              		.text
- 708              		.section	.gnu.lto_.inline.714b0f7607defcf3,"e",%progbits
- 709 0000 28B52FFD 		.ascii	"(\265/\375 \302U\004\000\362\306\031&\2209\303\001y"
- 709      20C25504 
- 709      00F2C619 
- 709      269039C3 
- 709      0179
- 710 0012 8826D749 		.ascii	"\210&\327I\222\364\367'R\242i8D\222Xw\004!J\261\273"
- 710      92F4F727 
- 710      52A26938 
- 710      44925877 
- 710      04214AB1 
- 711 0027 BB732AF7 		.ascii	"\273s*\367\362\304CE\332\226;\005;\260\354\212\236\342"
- 711      F2C44345 
- 711      DA963B05 
- 711      3BB0EC8A 
- 711      9EE2
- 712 0039 E65A580A 		.ascii	"\346ZX\012\010ZX\026\031\354T2\027\215\364\025\255G"
- 712      085A5816 
- 712      19EC5432 
- 712      178DF415 
- 712      AD47
- 713 004b 8261A808 		.ascii	"\202a\250\010\301(&\204]\364\317\011(iB\177`\343\267"
- 713      C1282684 
- 713      5DF4CF09 
- 713      2869427F 
- 713      60E3B7
- 714 005e C9B5AD73 		.ascii	"\311\265\255s\373\347|l\264\015\374\304\207\337\236"
- 714      FBE77C6C 
- 714      B40DFCC4 
- 714      87DF9E
- 715 006d A3B405FC 		.ascii	"\243\264\005\374\263$\016\000\240\024\010\307Q\245 "
- 715      B3240E00 
- 715      A01408C7 
- 715      51A520
- 716 007c DC120AB0 		.ascii	"\334\022\012\260\204\372\014\006B\200;Ge\000\325h\200"
- 716      84FA0C06 
- 716      42803B47 
- 716      6500D568 
- 716      80
- 717 008d 785C42DD 		.ascii	"x\\B\335@\033"
- 717      401B
- 718              		.text
- 719              		.section	.gnu.lto_.jmpfuncs.714b0f7607defcf3,"e",%progbits
- 720 0000 28B52FFD 		.ascii	"(\265/\375 \035\315\000\000\230\021\000\005\000\000"
-ARM GAS  /tmp/ccLi78Tg.s 			page 17
-
-
- 720      201DCD00 
- 720      00981100 
- 720      050000
- 721 000f 00010000 		.ascii	"\000\001\000\000\002\000\000\003\000\000\004\000\000"
- 721      02000003 
- 721      00000400 
- 721      00
- 722 001c 0001001B 		.ascii	"\000\001\000\033\300\002"
- 722      C002
- 723              		.text
- 724              		.section	.gnu.lto_.pureconst.714b0f7607defcf3,"e",%progbits
- 725 0000 28B52FFD 		.ascii	"(\265/\375 \024\241\000\000\020\000\000\000\005\000"
- 725      2014A100 
- 725      00100000 
- 725      000500
- 726 000f 9A04019A 		.ascii	"\232\004\001\232\004\002\232\004\003\232\004\004\232"
- 726      04029A04 
- 726      039A0404 
- 726      9A
- 727 001c 04       		.ascii	"\004"
- 728              		.text
- 729              		.section	.gnu.lto_.ipa_modref.714b0f7607defcf3,"e",%progbits
- 730 0000 28B52FFD 		.ascii	"(\265/\375 \016E\000\000\020\002\000\001\000\034\300"
- 730      200E4500 
- 730      00100200 
- 730      01001CC0 
- 731 0010 02       		.ascii	"\002"
- 732              		.text
- 733              		.section	.gnu.lto_.lto.714b0f7607defcf3,"e",%progbits
- 734 0000 0E000000 		.ascii	"\016\000\000\000\001\000\001\000"
- 734      01000100 
- 735              		.text
- 736              		.section	.gnu.lto_vListInitialise.0.714b0f7607defcf3,"e",%progbits
- 737 0000 28B52FFD 		.ascii	"(\265/\375`\225\001\315\016\0006\231`G\000\223\223\016"
- 737      609501CD 
- 737      0E003699 
- 737      60470093 
- 737      930E
- 738 0012 188D6872 		.ascii	"\030\215hr\207\245\317I{\330\355\246c\016@ N\356\207"
- 738      87A5CF49 
- 738      7BD8EDA6 
- 738      630E4020 
- 738      4EEE87
- 739 0025 05CFCF96 		.ascii	"\005\317\317\226\326\302D\376\304\240N\001\377#\002"
- 739      D6C244FE 
- 739      C4A04E01 
- 739      FF2302
- 740 0034 39B6287B 		.ascii	"9\266({\212j\261m\001\035\315\300\300\344\220(&K\225"
- 740      8A6AB16D 
- 740      011DCDC0 
- 740      C0E49028 
- 740      264B95
- 741 0047 B46502D5 		.ascii	"\264e\002\325\331\020y\261\206\210\264\275S\012F\000"
- 741      D91079B1 
- 741      8688B4BD 
- 741      530A4600 
- 742 0057 4A005200 		.ascii	"J\000R\000\227\366]\374\305\3527\037\034\332\3559\321"
-ARM GAS  /tmp/ccLi78Tg.s 			page 18
-
-
- 742      97F65DFC 
- 742      C5EA371F 
- 742      1CDAED39 
- 742      D1
- 743 0068 6377C6C8 		.ascii	"cw\306\310\025t\254\300\007d\307>\027e\307\274\262u"
- 743      1574ACC0 
- 743      0764C73E 
- 743      1765C7BC 
- 743      B275
- 744 007a 329058CC 		.ascii	"2\220X\314\004\016\016\236\335M0W|u\271\362\017\343"
- 744      040E0E9E 
- 744      DD4D3057 
- 744      7C75B9F2 
- 744      0FE3
- 745 008c 01C29998 		.ascii	"\001\302\231\230\313\021\011\273k\031\316\214\270\347"
- 745      CB1109BB 
- 745      6B19CE8C 
- 745      B8E7
- 746 009a 6D1BB01D 		.ascii	"m\033\260\035\302\276+\0040\232\360\345\307\360P\022"
- 746      C2BE2B04 
- 746      309AF0E5 
- 746      C7F05012 
- 747 00aa 617F67B1 		.ascii	"a\177g\261\200v\227\204\003\343\202A\2649\346\277d\307"
- 747      80769784 
- 747      03E38241 
- 747      B439E6BF 
- 747      64C7
- 748 00bc 3E433FC2 		.ascii	">C?\302\0222s-`H\220\225E\314\212\221S\364?;k\354\337"
- 748      1232732D 
- 748      60489095 
- 748      45CC8A91 
- 748      53F43F3B 
- 749 00d3 FC524A3F 		.ascii	"\374RJ?4u\200\210v\354\242\030y\326\205\371`a\373$\366"
- 749      34758088 
- 749      76ECA218 
- 749      79D685F9 
- 749      6061FB24 
- 750 00e8 A7D5121E 		.ascii	"\247\325\022\036\3754\025\024\030\215\256\324\024\015"
- 750      FD341514 
- 750      188DAED4 
- 750      140D
- 751 00f6 826DD6FE 		.ascii	"\202m\326\376\263\263\306$D\\2\023\204\247\220\254\225"
- 751      B3B3C624 
- 751      445C3213 
- 751      84A790AC 
- 751      95
- 752 0107 63D479A4 		.ascii	"c\324y\244@\273)H\017\304\035\031-\350u\344\310\011"
- 752      40BB2948 
- 752      0FC41D19 
- 752      2DE875E4 
- 752      C809
- 753 0119 5F221B94 		.ascii	"_\"\033\224\337\340l\214\320\204/\221\212\222q\034\307"
- 753      DFE06C8C 
- 753      D0842F91 
- 753      8A92711C 
- 753      C7
- 754 012a 1FC8EC0D 		.ascii	"\037\310\354\015\257\261\202@\244\021A\334\351\371\264"
-ARM GAS  /tmp/ccLi78Tg.s 			page 19
-
-
- 754      AFB18240 
- 754      A41141DC 
- 754      E9F9B4
- 755 0139 EB5B1C02 		.ascii	"\353[\034\002&m\014\026(\320\340\240\301\010\000\370"
- 755      266D0C16 
- 755      28D0E0A0 
- 755      C10800F8 
- 756 0149 71261DBA 		.ascii	"q&\035\272\314\251\021\370q*\215\246<\226j\322L\025"
- 756      CCA911F8 
- 756      712A8DA6 
- 756      3C966AD2 
- 756      4C15
- 757 015b 4E2E50EA 		.ascii	"N.P\352Q\320^@\017e\341\264y\\\312\211\366Q\017\345"
- 757      51D05E40 
- 757      0F65E1B4 
- 757      795CCA89 
- 757      F6510FE5 
- 758 016f 4255DBC6 		.ascii	"BU\333\306\2254{\025\254%\217v\035\005M\247\256V\223"
- 758      95347B15 
- 758      AC258F76 
- 758      1D054DA7 
- 758      AE5693
- 759 0182 8D7E5535 		.ascii	"\215~U5\001LQ\225\352u\247\332\022% \200\202\251\272"
- 759      014C5195 
- 759      EA75A7DA 
- 759      12252080 
- 759      82A9BA
- 760 0195 F29068C4 		.ascii	"\362\220h\304]\001%\342\225d`\022h\276\361\260]\021"
- 760      5D0125E2 
- 760      95646012 
- 760      68BEF1B0 
- 760      5D11
- 761 01a7 C2D10991 		.ascii	"\302\321\011\221]\364d\334]\0152\214_\023\266\033\240"
- 761      5DF464DC 
- 761      5D0D328C 
- 761      5F13B61B 
- 761      A0
- 762 01b8 C48101B9 		.ascii	"\304\201\001\2715\006\264\247\235\010l9\222;\346\370"
- 762      3506B4A7 
- 762      9D086C39 
- 762      923BE6F8 
- 763 01c8 DD227163 		.ascii	"\335\"qc\211\344\205f]\012\231FE\353\3521Y\020\236u"
- 763      89E48566 
- 763      5D0A9946 
- 763      45EBEA31 
- 763      59109E75 
- 764 01dc 4D111C5E 		.ascii	"M\021\034^\264\231\014"
- 764      B4990C
- 765              		.text
- 766              		.section	.gnu.lto_vListInitialiseItem.1.714b0f7607defcf3,"e",%progbits
- 767 0000 28B52FFD 		.ascii	"(\265/\375`\215\000%\013\000\346\024PE\020\213j:\000"
- 767      608D0025 
- 767      0B00E614 
- 767      5045108B 
- 767      6A3A00
- 768 0013 8E8C4100 		.ascii	"\216\214A\000\321\366\005U\240p\004\\ZS\2205\220/\257"
- 768      D1F60555 
-ARM GAS  /tmp/ccLi78Tg.s 			page 20
-
-
- 768      A070045C 
- 768      5A539035 
- 768      902FAF
- 769 0026 BA3269FF 		.ascii	"\2722i\377\330[\323X\355\332\254\335u\233\372\374\255"
- 769      D85BD358 
- 769      EDDAACDD 
- 769      759BFAFC 
- 769      AD
- 770 0037 C71720ED 		.ascii	"\307\027 \355\332\206\303\0252$\366\254\007\270\004"
- 770      DA86C315 
- 770      3224F6AC 
- 770      07B804
- 771 0046 146184AA 		.ascii	"\024a\204\252\241#\272\0057\021\262e\012;\000<\000="
- 771      A123BA05 
- 771      3711B265 
- 771      0A3B003C 
- 771      003D
- 772 0058 0025856E 		.ascii	"\000%\205n\011\336m\205\271\014\266\350\230\333\270"
- 772      09DE6D85 
- 772      B90CB6E8 
- 772      98DBB8
- 773 0067 A263EEE3 		.ascii	"\242c\356\343\237\001@\202\346f\257\011\262\356\336"
- 773      9F014082 
- 773      E666AF09 
- 773      B2EEDE
- 774 0076 D018F0C8 		.ascii	"\320\030\360\310s<\263\213)R\252\023\317\007\221\356"
- 774      733CB38B 
- 774      2952AA13 
- 774      CF0791EE 
- 775 0086 FE4CA910 		.ascii	"\376L\251\020\3605\376\257\361\377\300\177\013\001\004"
- 775      F035FEAF 
- 775      F1FFC07F 
- 775      0B0104
- 776 0095 3AE63CD6 		.ascii	":\346<\326\006\224\326\237\344\002\014=g\207\235\246"
- 776      0694D69F 
- 776      E4020C3D 
- 776      67879DA6 
- 777 00a5 C63A6FDD 		.ascii	"\306:o\335\335\327V?\227\314s\223(/`h\350V\320A\326"
- 777      DDD7563F 
- 777      97CC7393 
- 777      282F6068 
- 777      E856D041 
- 778 00ba 31AE42EB 		.ascii	"1\256B\353?G\374[k\304\363g\010\034a\344\262\300!\272"
- 778      3F47FC5B 
- 778      6BC4F367 
- 778      081C61E4 
- 778      B2C021BA 
- 779 00ce 3904D6E4 		.ascii	"9\004\326\344\253\241\005\215\210\234\372\261\027\324"
- 779      ABA1058D 
- 779      889CFAB1 
- 779      17D4
- 780 00dc D8D1AD21 		.ascii	"\330\321\255!\375\0100\321\032\262\035\032\362\037\326"
- 780      FD0830D1 
- 780      1AB21D1A 
- 780      F21FD6
- 781 00eb BCB5B6FA 		.ascii	"\274\265\266\372IW\014\245\031\270\211|P\"\035\234I"
- 781      49570CA5 
-ARM GAS  /tmp/ccLi78Tg.s 			page 21
-
-
- 781      19B8897C 
- 781      50221D9C 
- 781      49
- 782 00fc DD2F6218 		.ascii	"\335/b\030\251\322\335\226\363\313T\272`5`\356\034\267"
- 782      A9D2DD96 
- 782      F3CB54BA 
- 782      603560EE 
- 782      1CB7
- 783 010e 7C1E1D1C 		.ascii	"|\036\035\034\001@>\274\211P\025K\006\200\3359\236\030"
- 783      01403EBC 
- 783      8950154B 
- 783      0680DD39 
- 783      9E18
- 784 0120 7A40B472 		.ascii	"z@\264r\256\310b(\346$\223R\353%\241%\361nP4\337\365"
- 784      AEC86228 
- 784      E6249352 
- 784      EB25A125 
- 784      F16E5034 
- 785 0136 743234AC 		.ascii	"t24\254wC\252\240\357\363\\\350\257\025\355\345V\020"
- 785      7743AAA0 
- 785      EFF35CE8 
- 785      AF15EDE5 
- 785      5610
- 786 0148 AC224603 		.ascii	"\254\"F\003\332\014\000\220\314\021/\025P3\036\327 "
- 786      DA0C0090 
- 786      CC112F15 
- 786      50331ED7 
- 786      20
- 787 0159 7C08B472 		.ascii	"|\010\264rC\325n\222\314\032h\301\332Z\215\026wx\321"
- 787      43D56E92 
- 787      CC1A68C1 
- 787      DA5A8D16 
- 787      7778D1
- 788 016c 4E32     		.ascii	"N2"
- 789              		.text
- 790              		.section	.gnu.lto_vListInsertEnd.2.714b0f7607defcf3,"e",%progbits
- 791 0000 28B52FFD 		.ascii	"(\265/\375`n\002e\023\000V\241|I\320\226Mc\240x\307"
- 791      606E0265 
- 791      130056A1 
- 791      7C49D096 
- 791      4D63A078 
- 792 0015 CF0E8E14 		.ascii	"\317\016\216\024p\033\325wh\305\306+C\346\241\000\226"
- 792      701BD577 
- 792      68C5C62B 
- 792      43E6A100 
- 792      96
- 793 0026 2512A85A 		.ascii	"%\022\250Z<*\231:\240\264\231\321\232Bbw\243\227a\200"
- 793      3C2A993A 
- 793      A0B499D1 
- 793      9A426277 
- 793      A3976180 
- 794 003a 7F526326 		.ascii	"\177Rc&w\231<m\355\274)\326!\263c\370F\030\252R\007"
- 794      77993C6D 
- 794      EDBC29D6 
- 794      21B363F8 
- 794      4618AA52 
- 795 004f 9E75EFBD 		.ascii	"\236u\357\275\267\224)\005a\000d\000m\000\027\267r\317"
-ARM GAS  /tmp/ccLi78Tg.s 			page 22
-
-
- 795      B7942905 
- 795      61006400 
- 795      6D0017B7 
- 795      72CF
- 796 0061 6F11DEB3 		.ascii	"o\021\336\263\273\233\2142\365t)WE\220\320Q\204\367"
- 796      BB9B8C32 
- 796      F5742957 
- 796      4590D051 
- 796      84F7
- 797 0073 3A20D9A9 		.ascii	": \331\251}\035\337A\373\222\011\003\270\267\212(w\257"
- 797      7D1DDF41 
- 797      FB920903 
- 797      B8B78A28 
- 797      77AF
- 798 0085 D3CA6378 		.ascii	"\323\312cxo\301\017|\367\272\033\370\356\231f3\001\301"
- 798      6FC10F7C 
- 798      F7BA1BF8 
- 798      EE996633 
- 798      01C1
- 799 0097 E2BAE0E8 		.ascii	"\342\272\340\350\361Du\357}Pk\234vJ\363\337\364\002"
- 799      F14475EF 
- 799      7D506B9C 
- 799      764AF3DF 
- 799      F402
- 800 00a9 B5219F53 		.ascii	"\265!\237S\020\303\275\327\2646\264\342\256\267\315"
- 800      10C3BDD7 
- 800      B436B4E2 
- 800      AEB7CD
- 801 00b8 C0360C9B 		.ascii	"\3006\014\233\322\010\032lF_U\222\361C\241\330\036\357"
- 801      D2081A6C 
- 801      465F5592 
- 801      F143A1D8 
- 801      1EEF
- 802 00ca 9413DE7B 		.ascii	"\224\023\336{Y\374\037f\014\006)I\347\273\367\325\225"
- 802      59FC1F66 
- 802      0C062949 
- 802      E7BBF7D5 
- 802      95
- 803 00db 33F753AF 		.ascii	"3\367S\257\005H)\271\024\212q>\264\"\371\335\255G\366"
- 803      054829B9 
- 803      148A713E 
- 803      B422F9DD 
- 803      AD47F6
- 804 00ee 997EF0B8 		.ascii	"\231~\360\270\373\373\322\357u\324\265\243\246\225\372"
- 804      FBFBD2EF 
- 804      75D4B5A3 
- 804      A695FA
- 805 00fd 04BE24C5 		.ascii	"\004\276$\305P\003'\367\306\210Bu\243<(\033\307\375"
- 805      500327F7 
- 805      C6884275 
- 805      A33C281B 
- 805      C7FD
- 806 010f F6DFE400 		.ascii	"\366\337\344\000\335\013\231\215\353\011}\204\022\270"
- 806      DD0B998D 
- 806      EB097D84 
- 806      12B8
- 807 011d 08CA2175 		.ascii	"\010\312!u\003\025l\343\356\273[\217\374\233R\324O="
-ARM GAS  /tmp/ccLi78Tg.s 			page 23
-
-
- 807      03156CE3 
- 807      EEBB5B8F 
- 807      FC9B52D4 
- 807      4F3D
- 808 012f E15A91A8 		.ascii	"\341Z\221\250 \325\246\376\017\037\255\265\202G\202"
- 808      20D5A6FE 
- 808      0F1FADB5 
- 808      824782
- 809 013e 6E00B16E 		.ascii	"n\000\261n\204&\274w\006\255*g\316\307-\311\253v\353"
- 809      8426BC77 
- 809      06AD2A67 
- 809      CEC72DC9 
- 809      AB76EB
- 810 0151 50D6C2CD 		.ascii	"P\326\302\315(\207`u\026U\201E\210\224\250q\300\363"
- 810      28876075 
- 810      16558145 
- 810      8894A871 
- 810      C0F3
- 811 0163 DDBB7016 		.ascii	"\335\273p\026=\241`k\362\372\004\002\251M\331\257\017"
- 811      3DA1606B 
- 811      F2FA0402 
- 811      A94DD9AF 
- 811      0F
- 812 0174 2961E16B 		.ascii	")a\341k\314\231Kb\213\270\020\236 $LA\316w\257\345$"
- 812      CC994B62 
- 812      8BB8109E 
- 812      20244C41 
- 812      CE77AFE5 
- 813 0189 A2361E2C 		.ascii	"\2426\036,\333\0313\353\032\3612#A\2305_v\354\206\031"
- 813      DB1933EB 
- 813      1AF13223 
- 813      4198355F 
- 813      76EC8619 
- 814 019d 39C02C2E 		.ascii	"9\300,.\011\021 \204h\231\260J1c/\230\031\371\271\265"
- 814      09112084 
- 814      6899B04A 
- 814      31632F98 
- 814      19F9B9B5 
- 815 01b1 32632F1C 		.ascii	"2c/\034\321\266J\235QF\224\3410\343\301\332\322E\344"
- 815      D1B64A9D 
- 815      514694E1 
- 815      30E3C1DA 
- 815      D245E4
- 816 01c4 314B9A0E 		.ascii	"1K\232\016,W\371\262\231\021c\266\244\331\2618.\327"
- 816      2C57F9B2 
- 816      991163B6 
- 816      A4D9B138 
- 816      2ED7
- 817 01d6 2B467439 		.ascii	"+Ft9\232cLiI\322\2322,r\034a\\66\342d0[\366f,I\326("
- 817      9A634C69 
- 817      49D29A32 
- 817      2C721C61 
- 817      5C3636E2 
- 818 01f3 2B6D4CBC 		.ascii	"+mL\274\251!!Z\330h#\0066 \260\002\2319\353\\\302B\""
- 818      A921215A 
- 818      D8682306 
- 818      3620B002 
-ARM GAS  /tmp/ccLi78Tg.s 			page 24
-
-
- 818      9939EB5C 
- 819 020a C34E6551 		.ascii	"\303NeQ\033\3574\005F8\003\233l\232B\324\322\304\337"
- 819      1BEF3405 
- 819      4638039B 
- 819      6C9A42D4 
- 819      D2C4DF
- 820 021d EE652847 		.ascii	"\356e(GH\205\300\276\274\315Dr\3178\003\366\0143\254"
- 820      4885C0BE 
- 820      BCCD4472 
- 820      CF3803F6 
- 820      0C33AC
- 821 0230 41DC91EF 		.ascii	"A\334\221\3576\206\227\017\203v\005\336\265\215'\202"
- 821      3686970F 
- 821      837605DE 
- 821      B58D2782 
- 822 0240 E4803DA7 		.ascii	"\344\200=\247L`\332Y\217G\326\351\301\2062,\347\346"
- 822      4C60DA59 
- 822      8F47D6E9 
- 822      C186322C 
- 822      E7E6
- 823 0252 6B9E6C54 		.ascii	"k\236lT\033\243\014\377a\376\267A \023\022f[;\346\314"
- 823      1BA30CFF 
- 823      61FEB741 
- 823      20131266 
- 823      5B3BE6CC 
- 824 0266 0BF8E71E 		.ascii	"\013\370\347\036\020\210\243p\030p\240\330\215E+\310"
- 824      1088A370 
- 824      1870A0D8 
- 824      8D452BC8 
- 825              		.text
- 826              		.section	.gnu.lto_vListInsert.3.714b0f7607defcf3,"e",%progbits
- 827 0000 28B52FFD 		.ascii	"(\265/\375`\232\004\365\035\000f\363\274G\200jQ\007"
- 827      609A04F5 
- 827      1D0066F3 
- 827      BC47806A 
- 827      5107
- 828 0012 8A2FBEC0 		.ascii	"\212/\276\300#\313\316\007\003\220\332\355\233RCM\360"
- 828      23CBCE07 
- 828      0390DAED 
- 828      9B52434D 
- 828      F0
- 829 0023 38ADEA01 		.ascii	"8\255\352\001\237\003i\301V$`{\277\032\014\304\335\215"
- 829      9F0369C1 
- 829      5624607B 
- 829      BF1A0CC4 
- 829      DD8D
- 830 0035 E6E73F9A 		.ascii	"\346\347?\232\307km\223Y`\015\224\342z\214Jrh\007\273"
- 830      C76B6D93 
- 830      59600D94 
- 830      E27A8C4A 
- 830      726807BB 
- 831 0049 D932A420 		.ascii	"\3312\244 \321h\267\224;\311\224\002\245\000\243\000"
- 831      D168B794 
- 831      3BC99402 
- 831      A500A300 
- 832 0059 AF004E30 		.ascii	"\257\000N0\250\035\012\202SK\274r.B\360\333\036\204"
- 832      A81D0A82 
-ARM GAS  /tmp/ccLi78Tg.s 			page 25
-
-
- 832      534BBC72 
- 832      2E42F0DB 
- 832      1E84
- 833 006b F9ED7E2E 		.ascii	"\371\355~.&+e\306\227O\301\374>\027&\267\335\356\304"
- 833      262B65C6 
- 833      974FC1FC 
- 833      3E1726B7 
- 833      DDEEC4
- 834 007e 9F3C3994 		.ascii	"\237<9\224\032\335\223\263\235*d\316U\200:\205\371e"
- 834      1ADD93B3 
- 834      9D2A64CE 
- 834      55803A85 
- 834      F965
- 835 0090 E005B0DF 		.ascii	"\340\005\260\337\322\007`\277\375\324\375fEU\356 \234"
- 835      D20760BF 
- 835      FDD4FD66 
- 835      4555EE20 
- 835      9C
- 836 00a1 B2A54ECE 		.ascii	"\262\245N\316Y\302\023\351k\237\034\233\267|\373\324"
- 836      59C213E9 
- 836      6B9F1C9B 
- 836      B77CFBD4 
- 837 00b1 EE47DF00 		.ascii	"\356G\337\000\206\216\017\010\3458@V\320\315\322\224"
- 837      868E0F08 
- 837      E5384056 
- 837      D0CDD294 
- 838 00c1 FA1DF901 		.ascii	"\372\035\371\001\336(\205\276\274\264|\200S\366\312"
- 838      DE2885BE 
- 838      BCB47C80 
- 838      53F6CA
- 839 00d0 B6D6F880 		.ascii	"\266\326\370\200A/c@+\377\362\201pL\325\0170\252,\200"
- 839      412F6340 
- 839      2BFFF281 
- 839      704CD50F 
- 839      30AA2C80 
- 840 00e4 66C81B3F 		.ascii	"f\310\033?\272\305\001\264a\255\231!\347\334\326\007"
- 840      BAC501B4 
- 840      61AD9921 
- 840      E7DCD607 
- 841 00f4 E4E10DF3 		.ascii	"\344\341\015\363\356\316\335\235\325]\036\005\250kq"
- 841      EECEDD9D 
- 841      D55D1E05 
- 841      A86B71
- 842 0103 E1B73D4B 		.ascii	"\341\267=K\322\015\010\006\366;{\005\377\213\223\000"
- 842      D20D0806 
- 842      F63B7B05 
- 842      FF8B9300 
- 843 0113 2ACC93FF 		.ascii	"*\314\223\377a\003H&\223Iw\302\261opt\023e\357\264\375"
- 843      61034826 
- 843      934977C2 
- 843      B16F7074 
- 843      1365EFB4 
- 844 0128 B5A1FDAE 		.ascii	"\265\241\375\256<P\345\211=1H\317\342\351n%\277\222"
- 844      3C50E589 
- 844      3D3148CF 
- 844      E2E96E25 
- 844      BF92
-ARM GAS  /tmp/ccLi78Tg.s 			page 26
-
-
- 845 013a C272CE41 		.ascii	"\302r\316A\355VpK0\206F\232\260\337\330? \"{\237\373"
- 845      ED56704B 
- 845      3086469A 
- 845      B0DFD83F 
- 845      20227B9F 
- 846 014f 87CD4F9A 		.ascii	"\207\315O\232\256l\361t\021\312\376\260\275\267\210"
- 846      AE6CF174 
- 846      11CAFEB0 
- 846      BDB788
- 847 015e 6C15E9C7 		.ascii	"l\025\351\307\352\236\311\034\212\273\217\027\275c."
- 847      EA9EC91C 
- 847      8ABB8F17 
- 847      BD632E
- 848 016d C5BDC774 		.ascii	"\305\275\307t\2437\306\266/\266]^\333\217m\333k\333"
- 848      A337C6B6 
- 848      2FB65D5E 
- 848      DB8F6DDB 
- 848      6BDB
- 849 017f 09D8355C 		.ascii	"\011\3305\\\200\026\250r\006\222\254\223\317\\-$^t7"
- 849      8016A872 
- 849      0692AC93 
- 849      CF5C2D24 
- 849      5E7437
- 850 0192 3A153FB6 		.ascii	":\025?\266\317w\031\233\250\260(\301\202\303\324]\014"
- 850      CF77199B 
- 850      A8B028C1 
- 850      82C3D45D 
- 850      0C
- 851 01a3 468EC604 		.ascii	"F\216\306\004,\347\253\240\362\017\020\221\306&>\337"
- 851      2CE7ABA0 
- 851      F20F1091 
- 851      C6263EDF 
- 852 01b3 8DC2CDA4 		.ascii	"\215\302\315\244\300@\024Ze\221A\020\201(\264\2722\305"
- 852      C040145A 
- 852      65914110 
- 852      8128B4BA 
- 852      32C5
- 853 01c5 5C20FAC8 		.ascii	"\\ \372\310\323\363\335*\034\214\026\357\350,\"\012"
- 853      D3F3DD2A 
- 853      1C8C16EF 
- 853      E82C220A 
- 854 01d5 6DD0CE3F 		.ascii	"m\320\316?\327n\201)\345\233\263\265\263\222[\202\375"
- 854      D76E8129 
- 854      E59BB3B5 
- 854      B3925B82 
- 854      FD
- 855 01e6 17D95E90 		.ascii	"\027\331^\220N\227\211\177\350\376X\270\244v\230\217"
- 855      4E97897F 
- 855      E8FE58B8 
- 855      A476988F 
- 856 01f6 D506924E 		.ascii	"\325\006\222NL\377\330W){\3749bo\337\376Ps,\023e\357"
- 856      4CFFD857 
- 856      297BFC39 
- 856      626FDFFE 
- 856      50732C13 
- 857 020c 7CD1A271 		.ascii	"|\321\242q4\264\303~\355;\000\322\006\331{\232#w\352"
- 857      34B4C37E 
-ARM GAS  /tmp/ccLi78Tg.s 			page 27
-
-
- 857      ED3B00D2 
- 857      06D97B9A 
- 857      2377EA
- 858 021f D290FFFF 		.ascii	"\322\220\377\377\210H?\272\000\035r\204\340\317\320"
- 858      88483FBA 
- 858      001D7284 
- 858      E0CFD0
- 859 022e 2B73CEF9 		.ascii	"+s\316\371\312\334\210{\251\201\300\321\205&\373\313"
- 859      CADC887B 
- 859      A981C0D1 
- 859      8526FBCB 
- 860 023e C4D723D8 		.ascii	"\304\327#\330Dh\370\345U\316\336\215\356\204\344[vC"
- 860      4468F8E5 
- 860      55CEDE8D 
- 860      EE84E45B 
- 860      7643
- 861 0250 C30E6ABA 		.ascii	"\303\016j\272\326Tt%\342\345b1\322\333\252\242\272\030"
- 861      D6547425 
- 861      E2E56231 
- 861      D2DBAAA2 
- 861      BA18
- 862 0262 442D42A0 		.ascii	"D-B\240;\\\355\004O\200\022\272\0225\241 x\271Y\007"
- 862      3B5CED04 
- 862      4F8012BA 
- 862      1235A120 
- 862      78B95907 
- 863 0276 D92A5098 		.ascii	"\331*P\230\300B\310\002P\200Uw+\342\345p#\001\255\272"
- 863      C042C802 
- 863      50805577 
- 863      2BE2E570 
- 863      2301ADBA 
- 864 028a 1BEE4491 		.ascii	"\033\356D\221\324]jt\032\205(A\002EU\016\247\323\252"
- 864      D45D6A74 
- 864      1A852841 
- 864      0245550E 
- 864      A7D3AA
- 865 029d D644D06C 		.ascii	"\326D\320l\352-\251\304\251C\325Z\023\212\263\331n\037"
- 865      EA2DA9C4 
- 865      A943D55A 
- 865      138AB3D9 
- 865      6E1F
- 866 02af CE56D335 		.ascii	"\316V\3235\375\240\242\271\034\272\032\321riZdCu)N\303"
- 866      FDA0A2B9 
- 866      1CBA1AD1 
- 866      72695A64 
- 866      4375294E 
- 867 02c4 8A84BE48 		.ascii	"\212\204\276H\325\034-eRQ\335\371\302\205\214\023UJ"
- 867      D51C2D65 
- 867      5251DDF9 
- 867      C2858C13 
- 867      554A
- 868 02d6 93CE0BDD 		.ascii	"\223\316\013\335]\314^^\374\356\225\244\372\331\233"
- 868      5DCC5E5E 
- 868      FCEE95A4 
- 868      FAD99B
- 869 02e5 6E15E54C 		.ascii	"n\025\345L\357\243\372~\232\003C\337\034\243\217\300"
- 869      EFA3FA7E 
-ARM GAS  /tmp/ccLi78Tg.s 			page 28
-
-
- 869      9A0343DF 
- 869      1CA38FC0 
- 870 02f5 E5DF37B7 		.ascii	"\345\3377\267n$\261\361\271\273\003a\250Q,)\231Q\210"
- 870      6E24B1F1 
- 870      B9BB0361 
- 870      A8512C29 
- 870      995188
- 871 0308 44648248 		.ascii	"Dd\202H\222\264\332\260\002\031!3\017\021\000Q\247\024"
- 871      92B4DAB0 
- 871      02192133 
- 871      0F110051 
- 871      A714
- 872 031a 8DDA0D7C 		.ascii	"\215\332\015|A\202dC\235\032\252M\240H\232\217\"\003"
- 872      41826443 
- 872      9D1AAA4D 
- 872      A0489A8F 
- 872      2203
- 873 032c 214DA4BB 		.ascii	"!M\244\273\012\321W\373\272\266\367z\310,c\007WNt\021"
- 873      0AD157FB 
- 873      BAB6F77A 
- 873      C82C6307 
- 873      574E7411 
- 874 0340 91705B1B 		.ascii	"\221p[\033\274\273>(\347\346\241\233\332P6\021\2208"
- 874      BCBB3E28 
- 874      E7E6A19B 
- 874      DA503611 
- 874      9038
- 875 0352 740F88B1 		.ascii	"t\017\210\261\012#YX\370<3\032\033a0\000\272\205\232"
- 875      0A235958 
- 875      F83C331A 
- 875      1B613000 
- 875      BA859A
- 876 0365 74B29EC8 		.ascii	"t\262\236\310+\024\321\002\306;\011\262{\2543\207\025"
- 876      2B14D102 
- 876      C63B09B2 
- 876      7BAC3387 
- 876      15
- 877 0376 09BA6A25 		.ascii	"\011\272j%)\247U\337p\242l\312b\244\335A\216\254u\205"
- 877      29A755DF 
- 877      70A26CCA 
- 877      62A4DD41 
- 877      8EAC7585 
- 878 038a 880919F2 		.ascii	"\210\011\031\362\362\211\273\311\357\307y\000\253u\363"
- 878      F289BBC9 
- 878      EFC77900 
- 878      AB75F3
- 879 0399 0623D206 		.ascii	"\006#\322\006[Y\314\236j(\333\035\035\302\255\022\300"
- 879      5B59CC9E 
- 879      6A28DB1D 
- 879      1DC2AD12 
- 879      C0
- 880 03aa EA8F916E 		.ascii	"\352\217\221n\355\004f\030\233\002\261p\217\033\014"
- 880      ED046618 
- 880      9B02B170 
- 880      8F1B0C
- 881 03b9 FA17D5E3 		.ascii	"\372\027\325\343y\010\357\233\323\300\350\032u\376\003"
- 881      7908EF9B 
-ARM GAS  /tmp/ccLi78Tg.s 			page 29
-
-
- 881      D3C0E81A 
- 881      75FE03
- 882              		.text
- 883              		.section	.gnu.lto_uxListRemove.4.714b0f7607defcf3,"e",%progbits
- 884 0000 28B52FFD 		.ascii	"(\265/\375`.\003e\026\000fe\213J\300RR\007\300E\352"
- 884      602E0365 
- 884      16006665 
- 884      8B4AC052 
- 884      5207C045 
- 885 0015 01D1AC42 		.ascii	"\001\321\254B\241B\373\221\010\226\245\200\251\266\277"
- 885      A142FB91 
- 885      0896A580 
- 885      A9B6BF
- 886 0024 9DC94451 		.ascii	"\235\311DQ\023\230\226\274\223\372V,\263\032!V\210\334"
- 886      139896BC 
- 886      93FA562C 
- 886      B31A2156 
- 886      88DC
- 887 0036 6E26A39F 		.ascii	"n&\243\237\212\002\271\333\315\230PD\007\364\026\200"
- 887      8A02B9DB 
- 887      CD985044 
- 887      07F41680 
- 888 0046 13F13EE3 		.ascii	"\023\361>\343\217\2206=\024\343k<!{\313$S\012u\000m"
- 888      8F90363D 
- 888      14E36B3C 
- 888      217BCB24 
- 888      530A7500 
- 889 005b 007F00B1 		.ascii	"\000\177\000\261!\020\006\220\214\204>\376\207)=r\177"
- 889      21100690 
- 889      8C843EFE 
- 889      87293D72 
- 889      7F
- 890 006c 70A010A5 		.ascii	"p\240\020\245-\344\300\"\377_B\342?\225\012\337X\217"
- 890      2DE4C022 
- 890      FF5F42E2 
- 890      3F950ADF 
- 890      588F
- 891 007e CCCCEDA2 		.ascii	"\314\314\355\242_\004\361N\001oJ\213\304jE\224\225\327"
- 891      5F04F14E 
- 891      016F4A8B 
- 891      C46A4594 
- 891      95D7
- 892 0090 FF700182 		.ascii	"\377p\001\202\036@\366X\333\204\354\321M\364\256\253"
- 892      1E40F658 
- 892      DB84ECD1 
- 892      4DF4AEAB 
- 893 00a0 D31D37D0 		.ascii	"\323\0357\320\217\026=\337P\327\021\037R{M\341R1\202"
- 893      8F163DDF 
- 893      50D7111F 
- 893      527B4DE1 
- 893      523182
- 894 00b3 C457544D 		.ascii	"\304WTM\222\256\270:\252\251\221\217\210R\230\204\377"
- 894      92AEB83A 
- 894      AAA9918F 
- 894      88529884 
- 894      FF
- 895 00c4 67DAF31D 		.ascii	"g\332\363\0355\217\315\314\024\2309\004\263\277\004"
-ARM GAS  /tmp/ccLi78Tg.s 			page 30
-
-
- 895      358FCDCC 
- 895      14983904 
- 895      B3BF04
- 896 00d3 54BA58D3 		.ascii	"T\272X\323\037P\346@%\036\035\302\314\267\226\272\261"
- 896      1F50E640 
- 896      251E1DC2 
- 896      CCB796BA 
- 896      B1
- 897 00e4 FF67E18E 		.ascii	"\377g\341\216\221\263A&\370\377\355\264C\366(s\224&"
- 897      91B34126 
- 897      F8FFEDB4 
- 897      43F62873 
- 897      9426
- 898 00f6 22CF9F5B 		.ascii	"\"\317\237[\304\327\326\323!<\034\242\036\344\256\357"
- 898      C4D7D6D3 
- 898      213C1CA2 
- 898      1EE4AEEF 
- 899 0106 4CCC4CB9 		.ascii	"L\314L\271\244\241\232e-\354\036!)\303H\312d\245<\216"
- 899      A4A19A65 
- 899      2DEC1E21 
- 899      29C348CA 
- 899      64A53C8E 
- 900 011a 946BA5EC 		.ascii	"\224k\245\354\2252\255\224[\200Wy8Z\351\361_\242\350"
- 900      9532AD94 
- 900      5B805779 
- 900      385AE9F1 
- 900      5FA2E8
- 901 012d F55A2316 		.ascii	"\365Z#\026\212\206\352f\016\342\216b\231\237\020b\206"
- 901      8A86EA66 
- 901      0EE28E62 
- 901      999F1062 
- 901      86
- 902 013e F2097EA0 		.ascii	"\362\011~\240\211(\345\004\363\034'\301^\027\200b\261"
- 902      8928E504 
- 902      F31C27C1 
- 902      5E178062 
- 902      B1
- 903 014f 58EC1D49 		.ascii	"X\354\035I:\314aY\035\236\21004\216Y\354\037H\372I\023"
- 903      3ACC6159 
- 903      1D9E8830 
- 903      348E59EC 
- 903      1F48FA49 
- 904 0164 516A69EB 		.ascii	"Qji\353\373\2227.J\204`\020\022@\010? ut\033\004\202"
- 904      FB92372E 
- 904      4A846010 
- 904      1240083F 
- 904      2075741B 
- 905 017a 2CB046B7 		.ascii	",\260F\267\340\277\035\235t\305\365\344\036\344\021"
- 905      E0BF1D9D 
- 905      74C5F5E4 
- 905      1EE411
- 906 0189 AF9E608A 		.ascii	"\257\236`\212G\021\025\302\3146M\334\251\201C\213Y/"
- 906      471115C2 
- 906      CC364DDC 
- 906      A981438B 
- 906      592F
- 907 019b 00E3C12F 		.ascii	"\000\343\301/\205;\215\237\033\227\240\225\373m\211"
-ARM GAS  /tmp/ccLi78Tg.s 			page 31
-
-
- 907      853B8D9F 
- 907      1B97A095 
- 907      FB6D89
- 908 01aa FA0C9D0C 		.ascii	"\372\014\235\014\240\233\026\035\331\243HV\257\313\326"
- 908      A09B161D 
- 908      D9A34856 
- 908      AFCBD6
- 909 01b9 55D46FCC 		.ascii	"U\324o\314\032:g\316\006\323\203#\231\245\346\240\001"
- 909      1A3A67CE 
- 909      06D38323 
- 909      99A5E6A0 
- 909      01
- 910 01ca 830C2D2B 		.ascii	"\203\014-+*\001,\317\275\331\231[s\263\347K\017\216"
- 910      2A012CCF 
- 910      BDD9995B 
- 910      73B3E74B 
- 910      0F8E
- 911 01dc 84692A67 		.ascii	"\204i*g\316\246SZ\232\271siJ\032\231\232\031k\315\012"
- 911      CEA6535A 
- 911      9AB97369 
- 911      4A1A999A 
- 911      196BCD0A 
- 912 01f0 A5CF69DA 		.ascii	"\245\317i\332\\\230\325L\033NM\231\263\246\215\316\352"
- 912      5C98D54C 
- 912      1B4E4D99 
- 912      B3A68DCE 
- 912      EA
- 913 0201 D46AB698 		.ascii	"\324j\266\230\222\315{\336\030\323\342p\366\244\231"
- 913      92CD7BDE 
- 913      18D3E270 
- 913      F6A499
- 914 0210 E1EE85A9 		.ascii	"\341\356\205\251\331\334\325\231p\322l\3165q\263\313"
- 914      D9DCD599 
- 914      70D26CCE 
- 914      3571B3CB 
- 915 0220 63DA5C99 		.ascii	"c\332\\\231s\363S\332\333\305)]\230y\370]\337\231J\234"
- 915      73F353DA 
- 915      DBC5295D 
- 915      9879F85D 
- 915      DF994A9C 
- 916 0234 54E27991 		.ascii	"T\342y\221\216\222D\250a<m\221\320\220\2022SP\220\302"
- 916      8E9244A8 
- 916      613C6D91 
- 916      D0908232 
- 916      535090C2 
- 917 0248 01702291 		.ascii	"\001p\"\221s\347\001\021\000A\247,*\206\272\003\230"
- 917      73E70111 
- 917      0041A72C 
- 917      2A86BA03 
- 917      98
- 918 0259 06AD2B01 		.ascii	"\006\255+\001T\030-A\306\320&G\264\304\216K\351\245"
- 918      54182D41 
- 918      C6D02647 
- 918      B4C48E4B 
- 918      E9A5
- 919 026b AB2E1AF7 		.ascii	"\253.\032\367\036!\002\316\020A}(W\011\325B\322rX\257"
- 919      1E2102CE 
-ARM GAS  /tmp/ccLi78Tg.s 			page 32
-
-
- 919      10417D28 
- 919      5709D542 
- 919      D27258AF 
- 920 027f 5E235735 		.ascii	"^#W5v\2029jo\\\316\205H\241\355\320p\032(8\325g\275"
- 920      7682396A 
- 920      6F5CCE85 
- 920      48A1EDD0 
- 920      701A2838 
- 921 0296 406D62E7 		.ascii	"@mb\347\366\244\034;\357\023\273\220\366\204S\337T\305"
- 921      F6A41C3B 
- 921      EF13BB90 
- 921      F68453DF 
- 921      54C5
- 922 02a8 C03DACF6 		.ascii	"\300=\254\366\240\350\216d\000\030\352d\275`t\274\234"
- 922      A0E88E64 
- 922      0018EA64 
- 922      BD6074BC 
- 922      9C
- 923 02b9 511A9F7D 		.ascii	"Q\032\237}=6\235a\361\225]\344\245\272\003R\204'\262"
- 923      3D369D61 
- 923      F1955DE4 
- 923      A5BA0352 
- 923      8427B2
- 924 02cc 920C1F50 		.ascii	"\222\014\037PPQ\015\344\375\001"
- 924      50510DE4 
- 924      FD01
- 925              		.text
- 926              		.section	.gnu.lto_.symbol_nodes.714b0f7607defcf3,"e",%progbits
- 927 0000 28B52FFD 		.ascii	"(\265/\375 ~\345\001\000\304\002z\000\000\000\000\002"
- 927      207EE501 
- 927      00C4027A 
- 927      00000000 
- 927      02
- 928 0011 007F0080 		.ascii	"\000\177\000\200\200\200\200\004\001\220\316\000\000"
- 928      80808004 
- 928      0190CE00 
- 928      00
- 929 001e 7F0000BA 		.ascii	"\177\000\000\272\220\202\002\001\177\001\002\177\002"
- 929      90820201 
- 929      7F01027F 
- 929      02
- 930 002b 037F03AB 		.ascii	"\003\177\003\253\325\252\325\000\004\177\004\000\005"
- 930      D5AAD500 
- 930      047F0400 
- 930      05
- 931 0038 0063A007 		.ascii	"\000c\240\007@8\370\006\370\341Zs\014"
- 931      4038F806 
- 931      F8E15A73 
- 931      0C
- 932              		.text
- 933              		.section	.gnu.lto_.refs.714b0f7607defcf3,"e",%progbits
- 934 0000 28B52FFD 		.ascii	"(\265/\375 \005)\000\000\001\000\000\000\000"
- 934      20052900 
- 934      00010000 
- 934      0000
- 935              		.text
- 936              		.section	.gnu.lto_.decls.714b0f7607defcf3,"e",%progbits
-ARM GAS  /tmp/ccLi78Tg.s 			page 33
-
-
- 937 0000 28B52FFD 		.ascii	"(\265/\375`\202\012M5\000\372Y\364\023F`\246U\0073a"
- 937      60820A4D 
- 937      3500FA59 
- 937      F4134660 
- 937      A6550733 
- 938 0015 CE1F30A3 		.ascii	"\316\0370\243\2744\216Ri 5d\203\254bI\013\013\347\345"
- 938      BC348E52 
- 938      69203564 
- 938      83AC6249 
- 938      0B0BE7E5 
- 939 0029 AD083AEC 		.ascii	"\255\010:\354\306\331\277\030\316\227\357\353\266\003"
- 939      C6D9BF18 
- 939      CE97EFEB 
- 939      B603
- 940 0037 F97B6483 		.ascii	"\371{d\203wp\225\030\337h\313',\302\355\013\031~\027"
- 940      77709518 
- 940      DF68CB27 
- 940      2CC2ED0B 
- 940      197E17
- 941 004a 179246B5 		.ascii	"\027\222F\265\363\265\271\273\233L)\003\001,\0015\001"
- 941      F3B5B9BB 
- 941      9B4C2903 
- 941      012C0135 
- 941      01
- 942 005b 2FFD28F4 		.ascii	"/\375(\364\375\250;\337\345\263q\3100\274\013\215\341"
- 942      FDA83BDF 
- 942      E5B371C8 
- 942      30BC0B8D 
- 942      E1
- 943 006c F78F9FEC 		.ascii	"\367\217\237\354\245\377<g\274\374\374\357\234\222*"
- 943      A5FF3C67 
- 943      BCFCFCEF 
- 943      9C922A
- 944 007b BE74F974 		.ascii	"\276t\371t\235o\324\200o\306\377M8\312\277\371\357:"
- 944      9D6FD480 
- 944      6FC6FF4D 
- 944      38CABFF9 
- 944      EF3A
- 945 008d 9F590405 		.ascii	"\237Y\004\005[\342x0w,\310\311\215\343B\377\337\304"
- 945      5BE27830 
- 945      772CC8C9 
- 945      8DE342FF 
- 945      DFC4
- 946 009f FF37AB60 		.ascii	"\3777\253`\337\372\367\335\370\310+U\364o\305\374\267"
- 946      DFFAF7DD 
- 946      F8C82B55 
- 946      F46FC5FC 
- 946      B7
- 947 00b0 FAA0FF77 		.ascii	"\372\240\377w\035~6\247~\300\363\337\375\177\251\365"
- 947      1D7E36A7 
- 947      7EC0F3DF 
- 947      FD7FA9F5 
- 948 00c0 850BF81B 		.ascii	"\205\013\370\033E\0253\253`]\223\011;\275\025\225\377"
- 948      451533AB 
- 948      605D9309 
- 948      3BBD1595 
- 948      FF
-ARM GAS  /tmp/ccLi78Tg.s 			page 34
-
-
- 949 00d1 FF479D52 		.ascii	"\377G\235R\330u8\012\314\015\014u\362Q\356J\277\371"
- 949      D875380A 
- 949      CC0D0C75 
- 949      F251EE4A 
- 949      BFF9
- 950 00e3 33DE1ECF 		.ascii	"3\336\036\317J\335\330\371\376\277\217\345hL\251ue5"
- 950      4ADDD8F9 
- 950      FEBF8FE5 
- 950      684CA975 
- 950      6535
- 951 00f5 0D6765F5 		.ascii	"\015ge\365\037\241\001\335\216\244\273\325\250\335~"
- 951      1FA101DD 
- 951      8EA4BBD5 
- 951      A8DD7E
- 952 0104 5310A0DB 		.ascii	"S\020\240\333\213t\273\255\333\203\272\035\310u\335"
- 952      8B74BBAD 
- 952      DB83BA1D 
- 952      C875DD
- 953 0113 5ED5DDD3 		.ascii	"^\325\335\323\356\216\323\335f\335]\326\355\271\356"
- 953      EE8ED3DD 
- 953      66DD5DD6 
- 953      EDB9EE
- 954 0122 3EEB6EB1 		.ascii	">\353n\261\356N\353v\\w\243uw\236\356V\353\356=\335"
- 954      EE4EEB76 
- 954      5C77A375 
- 954      779EEE56 
- 954      EBEE3DDD 
- 955 0136 DDA7BBF9 		.ascii	"\335\247\273\371\360\272=\332\335_\335\355\325\335]"
- 955      F0BA3DDA 
- 955      DD5FDDED 
- 955      D5DD5D
- 956 0145 DDCDD5DD 		.ascii	"\335\315\325\335Z\272\373\326\335d\272{][[[\353vh\267"
- 956      5ABAFBD6 
- 956      DD64BA7B 
- 956      5D5B5B5B 
- 956      EB7668B7 
- 957 0159 AF75FFB8 		.ascii	"\257u\377\270\011\276`U\302\332\256\274\274\234vxM\341"
- 957      09BE6055 
- 957      C2DAAEBC 
- 957      BC9C7678 
- 957      4DE1
- 958 016b 911684B5 		.ascii	"\221\026\204\265\241\205\011\343]\274\207jZ\375\330"
- 958      A18509E3 
- 958      5DBC876A 
- 958      5AFDD8
- 959 017a 71526B32 		.ascii	"qRk2\246\275K\350\264r#\253.f\305s\306d\032\305\252"
- 959      A6BD4BE8 
- 959      B47223AB 
- 959      2E66C573 
- 959      C6641AC5 
- 960 018f 3FB2B29C 		.ascii	"?\262\262\234\353\366\217\266\347\010P\034\235\202\263"
- 960      EBF68FB6 
- 960      E708501C 
- 960      9D82B3
- 961 019e D5CE8593 		.ascii	"\325\316\205\223VAy\263\332f\376\345V\006\004J\354\213"
- 961      564179B3 
- 961      DA66FEE5 
-ARM GAS  /tmp/ccLi78Tg.s 			page 35
-
-
- 961      5606044A 
- 961      EC8B
- 962 01b0 17A01AD0 		.ascii	"\027\240\032\32069\262\332E(k\216\020w\006\313\305\265"
- 962      3639B2DA 
- 962      45286B8E 
- 962      107706CB 
- 962      C5B5
- 963 01c2 D61835A2 		.ascii	"\326\0305\242XY\355\274d\333\305X5\312\317\2378\224"
- 963      5859EDBC 
- 963      64DBC558 
- 963      35CACF9F 
- 963      3894
- 964 01d4 F628533C 		.ascii	"\366(S<\212k\351e\374R\232\011\260\372\330\0102\375"
- 964      8A6BE965 
- 964      FC529A09 
- 964      B0FAD808 
- 964      32FD
- 965 01e6 A8280699 		.ascii	"\250(\006\231\216\021\035Q\254v-\335\216\305\263t\230"
- 965      8E111D51 
- 965      AC762DDD 
- 965      8EC5B374 
- 965      98
- 966 01f7 80FFB3FF 		.ascii	"\200\377\263\377?\340T\357\223MVyN\264f\037Z\333\254"
- 966      3FE054EF 
- 966      934D5679 
- 966      4EB4661F 
- 966      5ADBAC
- 967 020a 817635C8 		.ascii	"\201v5\310dQei\267S\361*~%SA\177\372\037\007\320\335"
- 967      64516569 
- 967      B753F12A 
- 967      7E255341 
- 967      7FFA1F07 
- 968 0220 B892A126 		.ascii	"\270\222\241&\253W\216\2055\203,\253\375\202\355\366"
- 968      AB578E85 
- 968      35832CAB 
- 968      FD82EDF6 
- 969 0230 38FE2790 		.ascii	"8\376'\220\243:\322\270\262\332H\266\310\211V\325\207"
- 969      A33AD2B8 
- 969      B2DA48B6 
- 969      C88956D5 
- 969      87
- 970 0241 56DD4F4A 		.ascii	"V\335OJ\037Q}\2056b\333\000\313\303}7\006(\221\1779"
- 970      1F517D85 
- 970      3662DB00 
- 970      CBC37D37 
- 970      0628917F 
- 971 0256 C97051E6 		.ascii	"\311pQ\346\2324Y\355\242\377w\351\362\376\037\372\017"
- 971      9A3459ED 
- 971      A2FF77E9 
- 971      F2FE1FFA 
- 971      0F
- 972 0267 3FCF297D 		.ascii	"?\317)}\250\363{\340`\343\036\331)}\027\372K\227}8\352"
- 972      A8F37BE0 
- 972      60E31ED9 
- 972      297D17FA 
- 972      4B977D38 
- 973 027c FFCB7F69 		.ascii	"\377\313\177i\217(\200\367?\027\303\317\313\0011\262"
-ARM GAS  /tmp/ccLi78Tg.s 			page 36
-
-
- 973      8F2880F7 
- 973      3F17C3CF 
- 973      CB0131B2 
- 974 028c 536E6667 		.ascii	"Snfgg\030\256\225?\303\310\313\314\004\222\325ed\344"
- 974      6718AE95 
- 974      3FC3C8CB 
- 974      CC0492D5 
- 974      6564E4
- 975 029f 5DA68674 		.ascii	"]\246\206t\351\324\356\314\264b\253\262\241\005u\306"
- 975      E9D4EECC 
- 975      B462ABB2 
- 975      A10575C6 
- 976 02af B62D8CE5 		.ascii	"\266-\214\345\371\320\252'\027]\3220\203oY\212p\225"
- 976      F9D0AA27 
- 976      175DD230 
- 976      836F598A 
- 976      7095
- 977 02c1 F1D9B3DA 		.ascii	"\361\331\263\332(c$IV\257rR\256\210\264\311j{\0258\376"
- 977      28632449 
- 977      56AF7252 
- 977      AE88B4C9 
- 977      6A7B1538 
- 978 02d6 E587D611 		.ascii	"\345\207\326\021\237:\035\327\3436\264\222\214\375\377"
- 978      9F3A1DD7 
- 978      E336B492 
- 978      8CFDFF
- 979 02e5 D4E3B81C 		.ascii	"\324\343\270\034\034Z;\306\376\331\244\271\232\243\265"
- 979      1C5A3BC6 
- 979      FED9A4B9 
- 979      9AA3B5
- 980 02f4 4F3D6E07 		.ascii	"O=n\007\36397\2613hd\254\232\207\000\256)eR\225\325"
- 980      F33937B1 
- 980      336864AC 
- 980      9A8700AE 
- 980      29655295 
- 981 0309 B6A56121 		.ascii	"\266\245a!\330\361;\316t\241\010|d\345\031\223\320\355"
- 981      D8F13BCE 
- 981      74A1087C 
- 981      64E51993 
- 981      D0ED
- 982 031b 6DC83C4C 		.ascii	"m\310<L}\276\274\207zJ;\342U\272!\224y\035\017\313\315"
- 982      7DBEBC87 
- 982      7A4A3BE2 
- 982      55BA2194 
- 982      791D0FCB 
- 983 0330 25FC3B1A 		.ascii	"%\374;\032<M\231X\235\271\231\343i/\363\261v7\376\246"
- 983      3C4D9958 
- 983      9DB999E3 
- 983      692FF3B1 
- 983      7637FEA6 
- 984 0344 D5F8DFC8 		.ascii	"\325\370\337\310\310\210@\026\263d\213\024\253\266M"
- 984      C8884016 
- 984      B3648B14 
- 984      ABB64D
- 985 0353 8A6DDB13 		.ascii	"\212m\333\023+\266\323\341\371\202\002\266\306v>c\273"
- 985      2BB6D3E1 
- 985      F98202B6 
-ARM GAS  /tmp/ccLi78Tg.s 			page 37
-
-
- 985      C6763E63 
- 985      BB
- 986 0364 3D8C4B90 		.ascii	"=\214K\220\0209J\212\330a;\277a\035v\242U\200\017\255"
- 986      10394A8A 
- 986      D8613BBF 
- 986      611D76A2 
- 986      55800FAD 
- 987 0378 5F3B87F2 		.ascii	"_;\207\362\245\316\0151lg.l\1779\321\252\363\241\225"
- 987      A5CE0D31 
- 987      6C672E6C 
- 987      7F39D1AA 
- 987      F3A195
- 988 038b F5A1D516 		.ascii	"\365\241\325\0265c\306\277\362\026\002\032ZVc\356L2"
- 988      3563C6BF 
- 988      F216021A 
- 988      5A5663EE 
- 988      4C32
- 989 039d E6CE99F6 		.ascii	"\346\316\231\366/_\023&\306T\216\254:\032O\323\013\\"
- 989      2F5F1326 
- 989      C6548EAC 
- 989      3A1A4FD3 
- 989      0B5C
- 990 03af 4DAB57F0 		.ascii	"M\253W\360\356V\306\313\222i\314\266/Xw\001\306v\030"
- 990      EE56C6CB 
- 990      9269CCB6 
- 990      2F587701 
- 990      C67618
- 991 03c2 5C420E89 		.ascii	"\\B\016\211\032\232\2129c;l\001\242\251\370\023\034"
- 991      1A9A8A39 
- 991      633B6C01 
- 991      A2A9F813 
- 991      1C
- 992 03d3 0693845A 		.ascii	"\006\223\204Z\0050\311\364\033\006\217\216Ib\260\251"
- 992      0530C9F4 
- 992      1B068F8E 
- 992      4962B0A9 
- 993 03e3 35865016 		.ascii	"5\206P\026}H\037\220\222\224;\026\277\240\022\256M2"
- 993      7D481F90 
- 993      92943B16 
- 993      BFA012AE 
- 993      4D32
- 994 03f5 2D9550E2 		.ascii	"-\225P\342\220\312\366\203\262\270\002\207\033\330#"
- 994      90CAF683 
- 994      B2B80287 
- 994      1BD823
- 995 0404 0A10C6F6 		.ascii	"\012\020\306\366\2040\371A\231\334)[\340\020IY\374A"
- 995      8430F941 
- 995      99DC295B 
- 995      E0104959 
- 995      FC41
- 996 0416 FADAA20B 		.ascii	"\372\332\242\013\245\366\270\224\201D\256m\"\012[\021"
- 996      A5F6B894 
- 996      8144AE6D 
- 996      220A5B11 
- 997 0426 CAA42E07 		.ascii	"\312\244.\007\034n@\032\333\243\020\322\207K\332\240"
- 997      1C6E401A 
- 997      DBA310D2 
-ARM GAS  /tmp/ccLi78Tg.s 			page 38
-
-
- 997      874BDAA0 
- 998 0436 84E4C309 		.ascii	"\204\344\303\011[$\322P\367\332HD\022\223\214m\261\330"
- 998      5B24D250 
- 998      F7DA4844 
- 998      12938C6D 
- 998      B1D8
- 999 0448 2247F88A 		.ascii	"\"G\370\212D\242\007`{$2i@\376\332\025Dc\321Gl2\266"
- 999      44A20760 
- 999      7B243269 
- 999      40FEDA15 
- 999      4463D147 
- 1000 045f C7DE8A14 		.ascii	"\307\336\212\024/z\255\220\250\242w\001\351[\225F y"
- 1000      2F7AAD90 
- 1000      A8A27701 
- 1000      E95B9546 
- 1000      2079
- 1001 0471 50DEFA08 		.ascii	"P\336\372\010HaB\204\023\026*8\340\365\021\004\015E"
- 1001      48614284 
- 1001      13162A38 
- 1001      E0F51104 
- 1001      0D45
- 1002 0483 243E7460 		.ascii	"$>t`\177\016\220\307 S\257\375\031\223\304\021\275\021"
- 1002      7F0E90C7 
- 1002      2053AFFD 
- 1002      1993C411 
- 1002      BD11
- 1003 0495 209444B4 		.ascii	" \224D\264\255\221C\317\005\322\270\024\302\0074\006"
- 1003      AD9143CF 
- 1003      05D2B814 
- 1003      C2073406 
- 1004 04a5 5528F58E 		.ascii	"U(\365\216\255q\251E\313\004\004\006\223\034\264\307"
- 1004      AD71A945 
- 1004      CB040406 
- 1004      931CB4C7 
- 1005 04b5 20D35210 		.ascii	" \323R\020\031\034\"!\217A\017M\273>&\231\212\017\204"
- 1005      191C2221 
- 1005      8F410F4D 
- 1005      BB3E2699 
- 1005      8A0F84
- 1006 04c8 0D942DD2 		.ascii	"\015\224-\322H\374\011\265\260\301\261B\223\320\270"
- 1006      48FC09B5 
- 1006      B0C1B142 
- 1006      93D0B8
- 1007 04d7 04D43B5B 		.ascii	"\004\324;[\226=[1\215U\215\214\327\362\346\004#\012"
- 1007      963D5B31 
- 1007      8D558D8C 
- 1007      D7F2E604 
- 1007      230A
- 1008 04e9 F5444BF3 		.ascii	"\365DK\3636\3112\362S\037\251\027OV\273xy\222\211\221"
- 1008      36C932F2 
- 1008      531FA917 
- 1008      4F56BB78 
- 1008      79928991 
- 1009 04fd DDAEF3CC 		.ascii	"\335\256\363\314\022C\005L\221\247\255\261\374\346\200"
- 1009      1243054C 
- 1009      91A7ADB1 
- 1009      FCE680
-ARM GAS  /tmp/ccLi78Tg.s 			page 39
-
-
- 1010 050c D1A8C12C 		.ascii	"\321\250\301,\244\224SfddD\222\026$\303\001p\002\221"
- 1010      A4945366 
- 1010      64644492 
- 1010      1624C301 
- 1010      700291
- 1011 051f A9BB3A12 		.ascii	"\251\273:\022\240u\035P:\306\246F[*\354\037c\327\315"
- 1011      A0751D50 
- 1011      3AC6A646 
- 1011      5B2AEC1F 
- 1011      63D7CD
- 1012 0532 0BE934D5 		.ascii	"\013\3514\325\321\033\262\344\000*\012\315,G\241\377"
- 1012      D11BB2E4 
- 1012      002A0ACD 
- 1012      2C47A1FF 
- 1013 0542 656FCA45 		.ascii	"eo\312Em\367\035,\177#L\202U\225\243-\250\363@\260\226"
- 1013      6DF71D2C 
- 1013      7F234C82 
- 1013      5595A32D 
- 1013      A8F340B0 
- 1014 0557 0E9DF7E3 		.ascii	"\016\235\367\343`\246\247\322\361m\003\002\020\002\306"
- 1014      60A6A7D2 
- 1014      F16D0302 
- 1014      1002C6
- 1015 0566 B7DF103E 		.ascii	"\267\337\020>\363\3034@\016\271%\024b\306j\231\375\032"
- 1015      F3C33440 
- 1015      0EB92514 
- 1015      62C66A99 
- 1015      FD1A
- 1016 0578 E1D8A799 		.ascii	"\341\330\247\231\317s\205\252\340\234\005\016\317\305"
- 1016      CF7385AA 
- 1016      E09C050E 
- 1016      CFC5
- 1017 0586 8230F24B 		.ascii	"\2020\362K\204\000~\367\374\310C\313;\3278\233\035}"
- 1017      84007EF7 
- 1017      FCC843CB 
- 1017      3BD7389B 
- 1017      1D7D
- 1018 0598 5303750C 		.ascii	"S\003u\014\222P\257=*\260B\264\373\320\235n4\\\000\350"
- 1018      9250AF3D 
- 1018      2AB042B4 
- 1018      FBD09D6E 
- 1018      345C00E8 
- 1019 05ac 7F4700C1 		.ascii	"\177G\000\301\323\3434\013\036\200\007N_\300\027\331"
- 1019      D3E3340B 
- 1019      1E80074E 
- 1019      5FC017D9 
- 1020 05bc A18A17BE 		.ascii	"\241\212\027\276\301\200$v\275\353lH\327\\\271x\270"
- 1020      C1802476 
- 1020      BDEB6C48 
- 1020      D75CB978 
- 1020      B8
- 1021 05cd 066D9359 		.ascii	"\006m\223Y\330\300\214P,\"j-\2345\034Okk\300\022\245"
- 1021      D8C08C50 
- 1021      2C226A2D 
- 1021      9C351C4F 
- 1021      6B6BC012 
- 1022 05e2 C0EDD468 		.ascii	"\300\355\324hb6\201R\267\034\256\357\246Iw\0129\033"
-ARM GAS  /tmp/ccLi78Tg.s 			page 40
-
-
- 1022      62368152 
- 1022      B71CAEEF 
- 1022      A649770A 
- 1022      391B
- 1023 05f4 62422187 		.ascii	"bB!\2077w.\234\346\031\347\342YSc\032\231\356\016\274"
- 1023      37772E9C 
- 1023      E619E7E2 
- 1023      5953631A 
- 1023      99EE0EBC 
- 1024 0608 FA256EDD 		.ascii	"\372%n\335\205\312\"\031\361A\327K\255\336\303\314\234"
- 1024      85CA2219 
- 1024      F141D74B 
- 1024      ADDEC3CC 
- 1024      9C
- 1025 0619 EE514904 		.ascii	"\356QI\004 \307\321]l\036\247\374f\015Rz}\214\005\207"
- 1025      20C7D15D 
- 1025      6C1EA7FC 
- 1025      660D527A 
- 1025      7D8C0587 
- 1026 062d E331FD9A 		.ascii	"\3431\375\232t:\011\342\341\252\366\213\367\227\027"
- 1026      743A09E2 
- 1026      E1AAF68B 
- 1026      F79717
- 1027 063c 992A29E0 		.ascii	"\231*)\340Yx\2443R|6\376.\204\311\353r\220\206\366\036"
- 1027      5978A433 
- 1027      527C36FE 
- 1027      2E84C9EB 
- 1027      729086F6 
- 1028 0651 30545D38 		.ascii	"0T]84J\036\007\374?\254~\3337\351\237\246b,\203M?/\350"
- 1028      344A1E07 
- 1028      FC3FAC7E 
- 1028      DB37E99F 
- 1028      A6622C83 
- 1029 0669 5357226E 		.ascii	"SW\"n\007\330\001\254E\277\216\263avv\374L\371v\335"
- 1029      07D801AC 
- 1029      45BF8EB3 
- 1029      617676FC 
- 1029      4CF976DD 
- 1030 067d D1E19A9D 		.ascii	"\321\341\232\235\203\265x\337?\336\327\243\234\337["
- 1030      83B578DF 
- 1030      3FDED7A3 
- 1030      9CDF5B
- 1031 068c B0C86FA8 		.ascii	"\260\310o\250w5\023\012,W\275\250v\350\023j3\260\212"
- 1031      7735130A 
- 1031      2C57BDA8 
- 1031      76E8136A 
- 1031      33B08A
- 1032 069f CC988B70 		.ascii	"\314\230\213p\374\265q\377\032\375\372\261a\300+\251"
- 1032      FCB571FF 
- 1032      1AFDFAB1 
- 1032      61C02BA9 
- 1033 06af EA494F0D 		.ascii	"\352IO\015"
- 1034              		.text
- 1035              		.section	.gnu.lto_.symtab.714b0f7607defcf3,"e",%progbits
- 1036 0000 764C6973 		.ascii	"vListInitialise\000"
- 1036      74496E69 
- 1036      7469616C 
-ARM GAS  /tmp/ccLi78Tg.s 			page 41
-
-
- 1036      69736500 
- 1037 0010 00       		.ascii	"\000"
- 1038 0011 00       		.ascii	"\000"
- 1039 0012 00       		.ascii	"\000"
- 1040 0013 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
- 1040      00000000 
- 1041 001b C8000000 		.ascii	"\310\000\000\000"
- 1042 001f 764C6973 		.ascii	"vListInitialiseItem\000"
- 1042      74496E69 
- 1042      7469616C 
- 1042      69736549 
- 1042      74656D00 
- 1043 0033 00       		.ascii	"\000"
- 1044 0034 00       		.ascii	"\000"
- 1045 0035 00       		.ascii	"\000"
- 1046 0036 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
- 1046      00000000 
- 1047 003e D1000000 		.ascii	"\321\000\000\000"
- 1048 0042 764C6973 		.ascii	"vListInsertEnd\000"
- 1048      74496E73 
- 1048      65727445 
- 1048      6E6400
- 1049 0051 00       		.ascii	"\000"
- 1050 0052 00       		.ascii	"\000"
- 1051 0053 00       		.ascii	"\000"
- 1052 0054 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
- 1052      00000000 
- 1053 005c D6000000 		.ascii	"\326\000\000\000"
- 1054 0060 764C6973 		.ascii	"vListInsert\000"
- 1054      74496E73 
- 1054      65727400 
- 1055 006c 00       		.ascii	"\000"
- 1056 006d 00       		.ascii	"\000"
- 1057 006e 00       		.ascii	"\000"
- 1058 006f 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
- 1058      00000000 
- 1059 0077 D8000000 		.ascii	"\330\000\000\000"
- 1060 007b 75784C69 		.ascii	"uxListRemove\000"
- 1060      73745265 
- 1060      6D6F7665 
- 1060      00
- 1061 0088 00       		.ascii	"\000"
- 1062 0089 00       		.ascii	"\000"
- 1063 008a 00       		.ascii	"\000"
- 1064 008b 00000000 		.ascii	"\000\000\000\000\000\000\000\000"
- 1064      00000000 
- 1065 0093 E0000000 		.ascii	"\340\000\000\000"
- 1066              		.text
- 1067              		.section	.gnu.lto_.ext_symtab.714b0f7607defcf3,"e",%progbits
- 1068 0000 01       		.ascii	"\001"
- 1069 0001 01       		.ascii	"\001"
- 1070 0002 00       		.ascii	"\000"
- 1071 0003 01       		.ascii	"\001"
- 1072 0004 00       		.ascii	"\000"
- 1073 0005 01       		.ascii	"\001"
- 1074 0006 00       		.ascii	"\000"
- 1075 0007 01       		.ascii	"\001"
-ARM GAS  /tmp/ccLi78Tg.s 			page 42
-
-
- 1076 0008 00       		.ascii	"\000"
- 1077 0009 01       		.ascii	"\001"
- 1078 000a 00       		.ascii	"\000"
- 1079              		.text
- 1080              		.section	.gnu.lto_.opts,"e",%progbits
- 1081 0000 272D666E 		.ascii	"'-fno-openmp' '-fno-openacc' '-fno-pie' '-fcf-prote"
- 1081      6F2D6F70 
- 1081      656E6D70 
- 1081      2720272D 
- 1081      666E6F2D 
- 1082 0033 6374696F 		.ascii	"ction=none' '-g' '-mcpu=cortex-m0plus' '-mthumb' '-"
- 1082      6E3D6E6F 
- 1082      6E652720 
- 1082      272D6727 
- 1082      20272D6D 
- 1083 0066 6D666C6F 		.ascii	"mfloat-abi=soft' '-mlibarch=armv6s-m' '-march=armv6"
- 1083      61742D61 
- 1083      62693D73 
- 1083      6F667427 
- 1083      20272D6D 
- 1084 0099 732D6D27 		.ascii	"s-m' '-Og' '-fdata-sections' '-ffunction-sections' "
- 1084      20272D4F 
- 1084      67272027 
- 1084      2D666461 
- 1084      74612D73 
- 1085 00cc 272D666C 		.ascii	"'-flto' '-Xassembler' '-a' '-Xassembler' '-ad' '-Xa"
- 1085      746F2720 
- 1085      272D5861 
- 1085      7373656D 
- 1085      626C6572 
- 1086 00ff 7373656D 		.ascii	"ssembler' '-alms=build/debug/list.lst'\000"
- 1086      626C6572 
- 1086      2720272D 
- 1086      616C6D73 
- 1086      3D627569 
- 1087              		.text
- 1088              		.comm	__gnu_lto_slim,1,1
- 1089              		.ident	"GCC: (Arm GNU Toolchain 14.2.Rel1 (Build arm-14.52)) 14.2.1 20241119"
-ARM GAS  /tmp/ccLi78Tg.s 			page 43
+  14              		.text
+  15              	.Ltext0:
+  16              		.cfi_sections	.debug_frame
+  17              		.file 1 "Middlewares/Third_Party/FreeRTOS/Source/list.c"
+  18              		.section	.text.vListInitialise,"ax",%progbits
+  19              		.align	1
+  20              		.global	vListInitialise
+  21              		.syntax unified
+  22              		.code	16
+  23              		.thumb_func
+  25              	vListInitialise:
+  26              	.LVL0:
+  27              	.LFB0:
+   1:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*
+   2:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * FreeRTOS Kernel V10.3.1
+   3:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * Copyright (C) 2020 Amazon.com, Inc. or its affiliates.  All Rights Reserved.
+   4:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *
+   5:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * Permission is hereby granted, free of charge, to any person obtaining a copy of
+   6:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * this software and associated documentation files (the "Software"), to deal in
+   7:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * the Software without restriction, including without limitation the rights to
+   8:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of
+   9:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * the Software, and to permit persons to whom the Software is furnished to do so,
+  10:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * subject to the following conditions:
+  11:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *
+  12:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * The above copyright notice and this permission notice shall be included in all
+  13:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * copies or substantial portions of the Software.
+  14:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *
+  15:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+  16:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS
+  17:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR
+  18:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER
+  19:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN
+  20:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  21:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *
+  22:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * http://www.FreeRTOS.org
+  23:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * http://aws.amazon.com/freertos
+  24:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *
+  25:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * 1 tab == 4 spaces!
+  26:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  */
+  27:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  28:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  29:Middlewares/Third_Party/FreeRTOS/Source/list.c **** #include <stdlib.h>
+  30:Middlewares/Third_Party/FreeRTOS/Source/list.c **** #include "FreeRTOS.h"
+  31:Middlewares/Third_Party/FreeRTOS/Source/list.c **** #include "list.h"
+ARM GAS  /tmp/ccwPBkpf.s 			page 2
+
+
+  32:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  33:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------
+  34:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  * PUBLIC LIST API documented in list.h
+  35:Middlewares/Third_Party/FreeRTOS/Source/list.c ****  *----------------------------------------------------------*/
+  36:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  37:Middlewares/Third_Party/FreeRTOS/Source/list.c **** void vListInitialise( List_t * const pxList )
+  38:Middlewares/Third_Party/FreeRTOS/Source/list.c **** {
+  28              		.loc 1 38 1 view -0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  39:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* The list structure contains a list item which is used to mark the
+  40:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	end of the list.  To initialise the list the list end is inserted
+  41:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	as the only list entry. */
+  42:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxList->pxIndex = ( ListItem_t * ) &( pxList->xListEnd );			/*lint !e826 !e740 !e9087 The mini lis
+  33              		.loc 1 42 2 view .LVU1
+  34              		.loc 1 42 37 is_stmt 0 view .LVU2
+  35 0000 0300     		movs	r3, r0
+  36 0002 0833     		adds	r3, r3, #8
+  37              		.loc 1 42 18 view .LVU3
+  38 0004 4360     		str	r3, [r0, #4]
+  43:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  44:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* The list end value is the highest possible value in the list to
+  45:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	ensure it remains at the end of the list. */
+  46:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxList->xListEnd.xItemValue = portMAX_DELAY;
+  39              		.loc 1 46 2 is_stmt 1 view .LVU4
+  40              		.loc 1 46 30 is_stmt 0 view .LVU5
+  41 0006 0122     		movs	r2, #1
+  42 0008 5242     		rsbs	r2, r2, #0
+  43 000a 8260     		str	r2, [r0, #8]
+  47:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  48:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* The list end next and previous pointers point to itself so we know
+  49:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	when the list is empty. */
+  50:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxList->xListEnd.pxNext = ( ListItem_t * ) &( pxList->xListEnd );	/*lint !e826 !e740 !e9087 The mi
+  44              		.loc 1 50 2 is_stmt 1 view .LVU6
+  45              		.loc 1 50 26 is_stmt 0 view .LVU7
+  46 000c C360     		str	r3, [r0, #12]
+  51:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxList->xListEnd.pxPrevious = ( ListItem_t * ) &( pxList->xListEnd );/*lint !e826 !e740 !e9087 The
+  47              		.loc 1 51 2 is_stmt 1 view .LVU8
+  48              		.loc 1 51 30 is_stmt 0 view .LVU9
+  49 000e 0361     		str	r3, [r0, #16]
+  52:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  53:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxList->uxNumberOfItems = ( UBaseType_t ) 0U;
+  50              		.loc 1 53 2 is_stmt 1 view .LVU10
+  51              		.loc 1 53 26 is_stmt 0 view .LVU11
+  52 0010 0023     		movs	r3, #0
+  53 0012 0360     		str	r3, [r0]
+  54:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  55:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Write known values into the list if
+  56:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+  57:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_LIST_INTEGRITY_CHECK_1_VALUE( pxList );
+  54              		.loc 1 57 48 is_stmt 1 view .LVU12
+  58:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_LIST_INTEGRITY_CHECK_2_VALUE( pxList );
+  55              		.loc 1 58 48 view .LVU13
+  59:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+  56              		.loc 1 59 1 is_stmt 0 view .LVU14
+ARM GAS  /tmp/ccwPBkpf.s 			page 3
+
+
+  57              		@ sp needed
+  58 0014 7047     		bx	lr
+  59              		.cfi_endproc
+  60              	.LFE0:
+  62              		.section	.text.vListInitialiseItem,"ax",%progbits
+  63              		.align	1
+  64              		.global	vListInitialiseItem
+  65              		.syntax unified
+  66              		.code	16
+  67              		.thumb_func
+  69              	vListInitialiseItem:
+  70              	.LVL1:
+  71              	.LFB1:
+  60:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------*/
+  61:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  62:Middlewares/Third_Party/FreeRTOS/Source/list.c **** void vListInitialiseItem( ListItem_t * const pxItem )
+  63:Middlewares/Third_Party/FreeRTOS/Source/list.c **** {
+  72              		.loc 1 63 1 is_stmt 1 view -0
+  73              		.cfi_startproc
+  74              		@ args = 0, pretend = 0, frame = 0
+  75              		@ frame_needed = 0, uses_anonymous_args = 0
+  76              		@ link register save eliminated.
+  64:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Make sure the list item is not recorded as being on a list. */
+  65:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxItem->pxContainer = NULL;
+  77              		.loc 1 65 2 view .LVU16
+  78              		.loc 1 65 22 is_stmt 0 view .LVU17
+  79 0000 0023     		movs	r3, #0
+  80 0002 0361     		str	r3, [r0, #16]
+  66:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  67:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Write known values into the list item if
+  68:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	configUSE_LIST_DATA_INTEGRITY_CHECK_BYTES is set to 1. */
+  69:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_FIRST_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+  81              		.loc 1 69 57 is_stmt 1 view .LVU18
+  70:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listSET_SECOND_LIST_ITEM_INTEGRITY_CHECK_VALUE( pxItem );
+  82              		.loc 1 70 58 view .LVU19
+  71:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+  83              		.loc 1 71 1 is_stmt 0 view .LVU20
+  84              		@ sp needed
+  85 0004 7047     		bx	lr
+  86              		.cfi_endproc
+  87              	.LFE1:
+  89              		.section	.text.vListInsertEnd,"ax",%progbits
+  90              		.align	1
+  91              		.global	vListInsertEnd
+  92              		.syntax unified
+  93              		.code	16
+  94              		.thumb_func
+  96              	vListInsertEnd:
+  97              	.LVL2:
+  98              	.LFB2:
+  72:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------*/
+  73:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  74:Middlewares/Third_Party/FreeRTOS/Source/list.c **** void vListInsertEnd( List_t * const pxList, ListItem_t * const pxNewListItem )
+  75:Middlewares/Third_Party/FreeRTOS/Source/list.c **** {
+  99              		.loc 1 75 1 is_stmt 1 view -0
+ 100              		.cfi_startproc
+ 101              		@ args = 0, pretend = 0, frame = 0
+ARM GAS  /tmp/ccwPBkpf.s 			page 4
+
+
+ 102              		@ frame_needed = 0, uses_anonymous_args = 0
+ 103              		@ link register save eliminated.
+  76:Middlewares/Third_Party/FreeRTOS/Source/list.c **** ListItem_t * const pxIndex = pxList->pxIndex;
+ 104              		.loc 1 76 1 view .LVU22
+ 105              		.loc 1 76 20 is_stmt 0 view .LVU23
+ 106 0000 4368     		ldr	r3, [r0, #4]
+ 107              	.LVL3:
+  77:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  78:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Only effective when configASSERT() is also defined, these tests may catch
+  79:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	the list data structures being overwritten in memory.  They will not catch
+  80:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	data errors caused by incorrect configuration or use of FreeRTOS. */
+  81:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listTEST_LIST_INTEGRITY( pxList );
+ 108              		.loc 1 81 35 is_stmt 1 view .LVU24
+  82:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 109              		.loc 1 82 47 view .LVU25
+  83:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  84:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Insert a new list item into pxList, but rather than sort the list,
+  85:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	makes the new list item the last item to be removed by a call to
+  86:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listGET_OWNER_OF_NEXT_ENTRY(). */
+  87:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxNext = pxIndex;
+ 110              		.loc 1 87 2 view .LVU26
+ 111              		.loc 1 87 24 is_stmt 0 view .LVU27
+ 112 0002 4B60     		str	r3, [r1, #4]
+  88:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxPrevious = pxIndex->pxPrevious;
+ 113              		.loc 1 88 2 is_stmt 1 view .LVU28
+ 114              		.loc 1 88 37 is_stmt 0 view .LVU29
+ 115 0004 9A68     		ldr	r2, [r3, #8]
+ 116              		.loc 1 88 28 view .LVU30
+ 117 0006 8A60     		str	r2, [r1, #8]
+  89:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  90:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Only used during decision coverage testing. */
+  91:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	mtCOVERAGE_TEST_DELAY();
+ 118              		.loc 1 91 25 is_stmt 1 view .LVU31
+  92:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  93:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxIndex->pxPrevious->pxNext = pxNewListItem;
+ 119              		.loc 1 93 2 view .LVU32
+ 120              		.loc 1 93 30 is_stmt 0 view .LVU33
+ 121 0008 5160     		str	r1, [r2, #4]
+  94:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxIndex->pxPrevious = pxNewListItem;
+ 122              		.loc 1 94 2 is_stmt 1 view .LVU34
+ 123              		.loc 1 94 22 is_stmt 0 view .LVU35
+ 124 000a 9960     		str	r1, [r3, #8]
+  95:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  96:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Remember which list the item is in. */
+  97:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxContainer = pxList;
+ 125              		.loc 1 97 2 is_stmt 1 view .LVU36
+ 126              		.loc 1 97 29 is_stmt 0 view .LVU37
+ 127 000c 0861     		str	r0, [r1, #16]
+  98:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+  99:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	( pxList->uxNumberOfItems )++;
+ 128              		.loc 1 99 2 is_stmt 1 view .LVU38
+ 129              		.loc 1 99 10 is_stmt 0 view .LVU39
+ 130 000e 0368     		ldr	r3, [r0]
+ 131              	.LVL4:
+ 132              		.loc 1 99 29 view .LVU40
+ 133 0010 0133     		adds	r3, r3, #1
+ 134 0012 0360     		str	r3, [r0]
+ARM GAS  /tmp/ccwPBkpf.s 			page 5
+
+
+ 100:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+ 135              		.loc 1 100 1 view .LVU41
+ 136              		@ sp needed
+ 137 0014 7047     		bx	lr
+ 138              		.cfi_endproc
+ 139              	.LFE2:
+ 141              		.section	.text.vListInsert,"ax",%progbits
+ 142              		.align	1
+ 143              		.global	vListInsert
+ 144              		.syntax unified
+ 145              		.code	16
+ 146              		.thumb_func
+ 148              	vListInsert:
+ 149              	.LVL5:
+ 150              	.LFB3:
+ 101:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------*/
+ 102:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 103:Middlewares/Third_Party/FreeRTOS/Source/list.c **** void vListInsert( List_t * const pxList, ListItem_t * const pxNewListItem )
+ 104:Middlewares/Third_Party/FreeRTOS/Source/list.c **** {
+ 151              		.loc 1 104 1 is_stmt 1 view -0
+ 152              		.cfi_startproc
+ 153              		@ args = 0, pretend = 0, frame = 0
+ 154              		@ frame_needed = 0, uses_anonymous_args = 0
+ 155              		.loc 1 104 1 is_stmt 0 view .LVU43
+ 156 0000 30B5     		push	{r4, r5, lr}
+ 157              		.cfi_def_cfa_offset 12
+ 158              		.cfi_offset 4, -12
+ 159              		.cfi_offset 5, -8
+ 160              		.cfi_offset 14, -4
+ 105:Middlewares/Third_Party/FreeRTOS/Source/list.c **** ListItem_t *pxIterator;
+ 161              		.loc 1 105 1 is_stmt 1 view .LVU44
+ 106:Middlewares/Third_Party/FreeRTOS/Source/list.c **** const TickType_t xValueOfInsertion = pxNewListItem->xItemValue;
+ 162              		.loc 1 106 1 view .LVU45
+ 163              		.loc 1 106 18 is_stmt 0 view .LVU46
+ 164 0002 0D68     		ldr	r5, [r1]
+ 165              	.LVL6:
+ 107:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 108:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Only effective when configASSERT() is also defined, these tests may catch
+ 109:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	the list data structures being overwritten in memory.  They will not catch
+ 110:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	data errors caused by incorrect configuration or use of FreeRTOS. */
+ 111:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listTEST_LIST_INTEGRITY( pxList );
+ 166              		.loc 1 111 35 is_stmt 1 view .LVU47
+ 112:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	listTEST_LIST_ITEM_INTEGRITY( pxNewListItem );
+ 167              		.loc 1 112 47 view .LVU48
+ 113:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 114:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Insert the new list item into the list, sorted in xItemValue order.
+ 115:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 116:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	If the list already contains a list item with the same item value then the
+ 117:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	new list item should be placed after it.  This ensures that TCBs which are
+ 118:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	stored in ready lists (all of which have the same xItemValue value) get a
+ 119:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	share of the CPU.  However, if the xItemValue is the same as the back marker
+ 120:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	the iteration loop below will not end.  Therefore the value is checked
+ 121:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	first, and the algorithm slightly modified if necessary. */
+ 122:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	if( xValueOfInsertion == portMAX_DELAY )
+ 168              		.loc 1 122 2 view .LVU49
+ 169              		.loc 1 122 4 is_stmt 0 view .LVU50
+ 170 0004 6B1C     		adds	r3, r5, #1
+ARM GAS  /tmp/ccwPBkpf.s 			page 6
+
+
+ 171 0006 10D0     		beq	.L8
+ 123:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	{
+ 124:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		pxIterator = pxList->xListEnd.pxPrevious;
+ 125:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 126:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	else
+ 127:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	{
+ 128:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		/* *** NOTE ***********************************************************
+ 129:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		If you find your application is crashing here then likely causes are
+ 130:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		listed below.  In addition see https://www.freertos.org/FAQHelp.html for
+ 131:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		more tips, and ensure configASSERT() is defined!
+ 132:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		https://www.freertos.org/a00110.html#configASSERT
+ 133:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 134:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			1) Stack overflow -
+ 135:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   see https://www.freertos.org/Stacks-and-stack-overflow-checking.html
+ 136:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			2) Incorrect interrupt priority assignment, especially on Cortex-M
+ 137:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   parts where numerically high priority values denote low actual
+ 138:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   interrupt priorities, which can seem counter intuitive.  See
+ 139:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   https://www.freertos.org/RTOS-Cortex-M3-M4.html and the definition
+ 140:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   of configMAX_SYSCALL_INTERRUPT_PRIORITY on
+ 141:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   https://www.freertos.org/a00110.html
+ 142:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			3) Calling an API function from within a critical section or when
+ 143:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   the scheduler is suspended, or calling an API function that does
+ 144:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   not end in "FromISR" from an interrupt.
+ 145:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			4) Using a queue or semaphore before it has been initialised or
+ 146:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   before the scheduler has been started (are interrupts firing
+ 147:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			   before vTaskStartScheduler() has been called?).
+ 148:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		**********************************************************************/
+ 149:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 150:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		for( pxIterator = ( ListItem_t * ) &( pxList->xListEnd ); pxIterator->pxNext->xItemValue <= xValu
+ 172              		.loc 1 150 3 is_stmt 1 view .LVU51
+ 173              		.loc 1 150 19 is_stmt 0 view .LVU52
+ 174 0008 0300     		movs	r3, r0
+ 175 000a 0833     		adds	r3, r3, #8
+ 176              	.L7:
+ 177              	.LVL7:
+ 178              		.loc 1 150 92 is_stmt 1 discriminator 1 view .LVU53
+ 179 000c 1C00     		movs	r4, r3
+ 180              		.loc 1 150 71 is_stmt 0 discriminator 1 view .LVU54
+ 181 000e 5B68     		ldr	r3, [r3, #4]
+ 182              	.LVL8:
+ 183              		.loc 1 150 79 discriminator 1 view .LVU55
+ 184 0010 1A68     		ldr	r2, [r3]
+ 185              		.loc 1 150 92 discriminator 1 view .LVU56
+ 186 0012 AA42     		cmp	r2, r5
+ 187 0014 FAD9     		bls	.L7
+ 188              	.L6:
+ 151:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		{
+ 152:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			/* There is nothing to do here, just iterating to the wanted
+ 153:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 			insertion position. */
+ 154:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		}
+ 155:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 156:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 157:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxNext = pxIterator->pxNext;
+ 189              		.loc 1 157 2 is_stmt 1 view .LVU57
+ 190              		.loc 1 157 36 is_stmt 0 view .LVU58
+ 191 0016 6368     		ldr	r3, [r4, #4]
+ 192              		.loc 1 157 24 view .LVU59
+ARM GAS  /tmp/ccwPBkpf.s 			page 7
+
+
+ 193 0018 4B60     		str	r3, [r1, #4]
+ 158:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxNext->pxPrevious = pxNewListItem;
+ 194              		.loc 1 158 2 is_stmt 1 view .LVU60
+ 195              		.loc 1 158 36 is_stmt 0 view .LVU61
+ 196 001a 9960     		str	r1, [r3, #8]
+ 159:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxPrevious = pxIterator;
+ 197              		.loc 1 159 2 is_stmt 1 view .LVU62
+ 198              		.loc 1 159 28 is_stmt 0 view .LVU63
+ 199 001c 8C60     		str	r4, [r1, #8]
+ 160:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxIterator->pxNext = pxNewListItem;
+ 200              		.loc 1 160 2 is_stmt 1 view .LVU64
+ 201              		.loc 1 160 21 is_stmt 0 view .LVU65
+ 202 001e 6160     		str	r1, [r4, #4]
+ 161:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 162:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Remember which list the item is in.  This allows fast removal of the
+ 163:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	item later. */
+ 164:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxNewListItem->pxContainer = pxList;
+ 203              		.loc 1 164 2 is_stmt 1 view .LVU66
+ 204              		.loc 1 164 29 is_stmt 0 view .LVU67
+ 205 0020 0861     		str	r0, [r1, #16]
+ 165:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 166:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	( pxList->uxNumberOfItems )++;
+ 206              		.loc 1 166 2 is_stmt 1 view .LVU68
+ 207              		.loc 1 166 10 is_stmt 0 view .LVU69
+ 208 0022 0368     		ldr	r3, [r0]
+ 209              		.loc 1 166 29 view .LVU70
+ 210 0024 0133     		adds	r3, r3, #1
+ 211 0026 0360     		str	r3, [r0]
+ 167:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+ 212              		.loc 1 167 1 view .LVU71
+ 213              		@ sp needed
+ 214              	.LVL9:
+ 215              	.LVL10:
+ 216              		.loc 1 167 1 view .LVU72
+ 217 0028 30BD     		pop	{r4, r5, pc}
+ 218              	.LVL11:
+ 219              	.L8:
+ 124:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 220              		.loc 1 124 3 is_stmt 1 view .LVU73
+ 124:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 221              		.loc 1 124 14 is_stmt 0 view .LVU74
+ 222 002a 0469     		ldr	r4, [r0, #16]
+ 223              	.LVL12:
+ 124:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 224              		.loc 1 124 14 view .LVU75
+ 225 002c F3E7     		b	.L6
+ 226              		.cfi_endproc
+ 227              	.LFE3:
+ 229              		.section	.text.uxListRemove,"ax",%progbits
+ 230              		.align	1
+ 231              		.global	uxListRemove
+ 232              		.syntax unified
+ 233              		.code	16
+ 234              		.thumb_func
+ 236              	uxListRemove:
+ 237              	.LVL13:
+ 238              	.LFB4:
+ARM GAS  /tmp/ccwPBkpf.s 			page 8
+
+
+ 168:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /*-----------------------------------------------------------*/
+ 169:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 170:Middlewares/Third_Party/FreeRTOS/Source/list.c **** UBaseType_t uxListRemove( ListItem_t * const pxItemToRemove )
+ 171:Middlewares/Third_Party/FreeRTOS/Source/list.c **** {
+ 239              		.loc 1 171 1 is_stmt 1 view -0
+ 240              		.cfi_startproc
+ 241              		@ args = 0, pretend = 0, frame = 0
+ 242              		@ frame_needed = 0, uses_anonymous_args = 0
+ 243              		@ link register save eliminated.
+ 172:Middlewares/Third_Party/FreeRTOS/Source/list.c **** /* The list item knows which list it is in.  Obtain the list from the list
+ 173:Middlewares/Third_Party/FreeRTOS/Source/list.c **** item. */
+ 174:Middlewares/Third_Party/FreeRTOS/Source/list.c **** List_t * const pxList = pxItemToRemove->pxContainer;
+ 244              		.loc 1 174 1 view .LVU77
+ 245              		.loc 1 174 16 is_stmt 0 view .LVU78
+ 246 0000 0369     		ldr	r3, [r0, #16]
+ 247              	.LVL14:
+ 175:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 176:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxItemToRemove->pxNext->pxPrevious = pxItemToRemove->pxPrevious;
+ 248              		.loc 1 176 2 is_stmt 1 view .LVU79
+ 249              		.loc 1 176 16 is_stmt 0 view .LVU80
+ 250 0002 4168     		ldr	r1, [r0, #4]
+ 251              		.loc 1 176 53 view .LVU81
+ 252 0004 8268     		ldr	r2, [r0, #8]
+ 253              		.loc 1 176 37 view .LVU82
+ 254 0006 8A60     		str	r2, [r1, #8]
+ 177:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxItemToRemove->pxPrevious->pxNext = pxItemToRemove->pxNext;
+ 255              		.loc 1 177 2 is_stmt 1 view .LVU83
+ 256              		.loc 1 177 53 is_stmt 0 view .LVU84
+ 257 0008 4168     		ldr	r1, [r0, #4]
+ 258              		.loc 1 177 37 view .LVU85
+ 259 000a 5160     		str	r1, [r2, #4]
+ 178:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 179:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Only used during decision coverage testing. */
+ 180:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	mtCOVERAGE_TEST_DELAY();
+ 260              		.loc 1 180 25 is_stmt 1 view .LVU86
+ 181:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 182:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	/* Make sure the index is left pointing to a valid item. */
+ 183:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	if( pxList->pxIndex == pxItemToRemove )
+ 261              		.loc 1 183 2 view .LVU87
+ 262              		.loc 1 183 12 is_stmt 0 view .LVU88
+ 263 000c 5A68     		ldr	r2, [r3, #4]
+ 264              		.loc 1 183 4 view .LVU89
+ 265 000e 8242     		cmp	r2, r0
+ 266 0010 06D0     		beq	.L11
+ 267              	.L10:
+ 184:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	{
+ 185:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		pxList->pxIndex = pxItemToRemove->pxPrevious;
+ 186:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 187:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	else
+ 188:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	{
+ 189:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 		mtCOVERAGE_TEST_MARKER();
+ 268              		.loc 1 189 27 is_stmt 1 view .LVU90
+ 190:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 191:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 192:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	pxItemToRemove->pxContainer = NULL;
+ 269              		.loc 1 192 2 view .LVU91
+ 270              		.loc 1 192 30 is_stmt 0 view .LVU92
+ARM GAS  /tmp/ccwPBkpf.s 			page 9
+
+
+ 271 0012 0022     		movs	r2, #0
+ 272 0014 0261     		str	r2, [r0, #16]
+ 193:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	( pxList->uxNumberOfItems )--;
+ 273              		.loc 1 193 2 is_stmt 1 view .LVU93
+ 274              		.loc 1 193 10 is_stmt 0 view .LVU94
+ 275 0016 1A68     		ldr	r2, [r3]
+ 276              		.loc 1 193 29 view .LVU95
+ 277 0018 013A     		subs	r2, r2, #1
+ 278 001a 1A60     		str	r2, [r3]
+ 194:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 
+ 195:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	return pxList->uxNumberOfItems;
+ 279              		.loc 1 195 2 is_stmt 1 view .LVU96
+ 280              		.loc 1 195 15 is_stmt 0 view .LVU97
+ 281 001c 1868     		ldr	r0, [r3]
+ 282              	.LVL15:
+ 196:Middlewares/Third_Party/FreeRTOS/Source/list.c **** }
+ 283              		.loc 1 196 1 view .LVU98
+ 284              		@ sp needed
+ 285 001e 7047     		bx	lr
+ 286              	.LVL16:
+ 287              	.L11:
+ 185:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 288              		.loc 1 185 3 is_stmt 1 view .LVU99
+ 185:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 289              		.loc 1 185 35 is_stmt 0 view .LVU100
+ 290 0020 8268     		ldr	r2, [r0, #8]
+ 185:Middlewares/Third_Party/FreeRTOS/Source/list.c **** 	}
+ 291              		.loc 1 185 19 view .LVU101
+ 292 0022 5A60     		str	r2, [r3, #4]
+ 293 0024 F5E7     		b	.L10
+ 294              		.cfi_endproc
+ 295              	.LFE4:
+ 297              		.text
+ 298              	.Letext0:
+ 299              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ 300              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+ 301              		.file 4 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
+ 302              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/include/list.h"
+ARM GAS  /tmp/ccwPBkpf.s 			page 10
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 list.c
-     /tmp/ccLi78Tg.s:23     .gnu.debuglto_.debug_info:00000000 list.c.68b245d7
-                            *COM*:00000001 __gnu_lto_slim
+     /tmp/ccwPBkpf.s:19     .text.vListInitialise:00000000 $t
+     /tmp/ccwPBkpf.s:25     .text.vListInitialise:00000000 vListInitialise
+     /tmp/ccwPBkpf.s:63     .text.vListInitialiseItem:00000000 $t
+     /tmp/ccwPBkpf.s:69     .text.vListInitialiseItem:00000000 vListInitialiseItem
+     /tmp/ccwPBkpf.s:90     .text.vListInsertEnd:00000000 $t
+     /tmp/ccwPBkpf.s:96     .text.vListInsertEnd:00000000 vListInsertEnd
+     /tmp/ccwPBkpf.s:142    .text.vListInsert:00000000 $t
+     /tmp/ccwPBkpf.s:148    .text.vListInsert:00000000 vListInsert
+     /tmp/ccwPBkpf.s:230    .text.uxListRemove:00000000 $t
+     /tmp/ccwPBkpf.s:236    .text.uxListRemove:00000000 uxListRemove
 
 NO UNDEFINED SYMBOLS

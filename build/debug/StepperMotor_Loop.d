@@ -51,7 +51,7 @@ build/debug/StepperMotor_Loop.o: My_Top/Step_Motor/StepperMotor_Loop.cpp \
  Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
- My_Top/Step_Motor/Step.hpp
+ My_Top/Step_Motor/Step.hpp My_Top/System/BL24C16F.hpp
 My_Top/Step_Motor/StepperMotor_Loop.hpp:
 My_Top/System/pid_Increment.hpp:
 My_Top/System/ADRC.hpp:
@@ -116,3 +116,4 @@ Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
 My_Top/Step_Motor/Step.hpp:
+My_Top/System/BL24C16F.hpp:

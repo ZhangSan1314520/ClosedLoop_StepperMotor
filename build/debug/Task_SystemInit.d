@@ -60,7 +60,8 @@ build/debug/Task_SystemInit.o: My_Top/Task/Task_SystemInit.cpp \
  Lib/embedded-cli/embedded_cli.h My_Top/Step_Motor/Step.hpp \
  My_Top/Step_Motor/StepperMotor_Loop.hpp My_Top/System/pid_Increment.hpp \
  My_Top/System/ADRC.hpp My_Top/System/pll.hpp My_Top/System/kth_read.hpp \
- My_Top/Step_Motor/my_tim.hpp
+ My_Top/System/BL24C16F.hpp My_Top/Step_Motor/my_tim.hpp \
+ My_Top/MC/My_Vofa.hpp
 Middlewares/Third_Party/FreeRTOS/Source/include/FreeRTOS.h:
 Core/Inc/FreeRTOSConfig.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/projdefs.h:
@@ -136,4 +137,6 @@ My_Top/System/pid_Increment.hpp:
 My_Top/System/ADRC.hpp:
 My_Top/System/pll.hpp:
 My_Top/System/kth_read.hpp:
+My_Top/System/BL24C16F.hpp:
 My_Top/Step_Motor/my_tim.hpp:
+My_Top/MC/My_Vofa.hpp:

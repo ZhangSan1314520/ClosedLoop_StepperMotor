@@ -56,7 +56,7 @@ BUILD_DIRECTORY ?= build
 DEBUG ?= 1
 
 # debug flags when debug is defined
-OPTIMIZATION ?= -Os
+OPTIMIZATION ?= -Og
 
 RELEASE_DIRECTORY = $(BUILD_DIRECTORY)/debug
 ifeq ($(DEBUG),1)
@@ -139,6 +139,7 @@ Lib/compute/wave/wave_generator.cpp \
 Lib/parameter/parameter.cpp \
 Lib/serial/serial.cpp \
 My_Top/MC/MC_Serial.cpp \
+My_Top/MC/My_Vofa.cpp \
 My_Top/Modules/CLI_Module.cpp \
 My_Top/Step_Motor/Step.cpp \
 My_Top/Step_Motor/StepperMotor_Loop.cpp \
@@ -154,6 +155,7 @@ My_Top/Task/Task_CLI.cpp \
 My_Top/Task/Task_Launch.cpp \
 My_Top/Task/Task_SystemInit.cpp \
 My_Top/Task/Task_Test.cpp \
+My_Top/Task/Task_Vofa.cpp \
 build/main.cpp
 
 
@@ -229,14 +231,12 @@ AS_DEFS =
 
 # C defines
 C_DEFS =  \
--DCMSIS_device_header='<stm32g0xx.h>' \
 -DSTM32G071xx \
 -DUSE_HAL_DRIVER
 
 
 # CXX defines
 CXX_DEFS =  \
--DCMSIS_device_header='<stm32g0xx.h>' \
 -DSTM32G071xx \
 -DUSE_HAL_DRIVER
 
@@ -277,9 +277,9 @@ CFLAGS = $(MCU) $(C_DEFS) $(C_INCLUDES) $(OPTIMIZATION_FLAGS)
 CXXFLAGS = $(MCU) $(CXX_DEFS) $(C_INCLUDES) $(OPTIMIZATION_FLAGS)
 
 # Add additional flags
-CFLAGS += -Wall -fdata-sections -ffunction-sections -flto 
+CFLAGS += -Wall -fdata-sections -ffunction-sections 
 ASFLAGS += -Wall -fdata-sections -ffunction-sections 
-CXXFLAGS += -flto -fno-exceptions -fno-rtti 
+CXXFLAGS += -fno-exceptions -fno-rtti 
 
 # Generate dependency information
 CFLAGS += -MMD -MP -MF"$(@:%.o=%.d)"
@@ -303,7 +303,7 @@ LIBDIR = \
 
 
 # Additional LD Flags from config file
-ADDITIONALLDFLAGS = -Wl,--print-memory-usage -flto -specs=nano.specs 
+ADDITIONALLDFLAGS = -Wl,--print-memory-usage -specs=nano.specs 
 
 LDFLAGS = $(MCU) $(ADDITIONALLDFLAGS) -T$(LDSCRIPT) $(LIBDIR) $(LIBS) -Wl,-Map=$(BUILD_DIRECTORY)/$(TARGET).map,--cref -Wl,--gc-sections
 

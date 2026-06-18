@@ -47,7 +47,15 @@ build/debug/Step.o: My_Top/Step_Motor/Step.cpp My_Top/Step_Motor/Step.hpp \
  Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h \
  Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
- Middlewares/Third_Party/FreeRTOS/Source/include/list.h
+ Middlewares/Third_Party/FreeRTOS/Source/include/list.h \
+ My_Top/MC/MC_Serial.hpp Lib/serial/serial.hpp \
+ Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/task.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h \
+ Middlewares/Third_Party/FreeRTOS/Source/include/queue.h \
+ Lib/serial/printf.h My_Top/Modules/CLI_Module.hpp \
+ Lib/embedded-cli/embedded_cli.h
 My_Top/Step_Motor/Step.hpp:
 My_Top/System/bsp.hpp:
 Core/Inc/usart.h:
@@ -105,3 +113,13 @@ Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/mpu_wrappers.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
 Middlewares/Third_Party/FreeRTOS/Source/include/list.h:
+My_Top/MC/MC_Serial.hpp:
+Lib/serial/serial.hpp:
+Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.h:
+Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+Middlewares/Third_Party/FreeRTOS/Source/include/task.h:
+Middlewares/Third_Party/FreeRTOS/Source/include/semphr.h:
+Middlewares/Third_Party/FreeRTOS/Source/include/queue.h:
+Lib/serial/printf.h:
+My_Top/Modules/CLI_Module.hpp:
+Lib/embedded-cli/embedded_cli.h:
