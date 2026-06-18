@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccL1O0iT.s 			page 1
+ARM GAS  /tmp/ccURCaXh.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
   35              		.cfi_offset 14, -4
   36 0002 041C     		adds	r4, r0, #0
   22:Lib/compute/fast_sin.h ****     float u = 1.3528548e-10f;
-ARM GAS  /tmp/ccL1O0iT.s 			page 2
+ARM GAS  /tmp/ccURCaXh.s 			page 2
 
 
   37              		.loc 2 22 5 is_stmt 1 view .LVU2
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
   87 003a 011C     		adds	r1, r0, #0
   88              	.LVL16:
   27:Lib/compute/fast_sin.h ****     return u * x + -0.16666666f;
-ARM GAS  /tmp/ccL1O0iT.s 			page 3
+ARM GAS  /tmp/ccURCaXh.s 			page 3
 
 
   89              		.loc 2 27 5 is_stmt 1 view .LVU18
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  128              		@ frame_needed = 0, uses_anonymous_args = 0
  129              		.loc 2 44 1 is_stmt 0 view .LVU25
  130 0064 70B5     		push	{r4, r5, r6, lr}
-ARM GAS  /tmp/ccL1O0iT.s 			page 4
+ARM GAS  /tmp/ccURCaXh.s 			page 4
 
 
  131              		.cfi_def_cfa_offset 16
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  179 009e 041C     		adds	r4, r0, #0
  180              	.LVL32:
  181              	.L5:
-ARM GAS  /tmp/ccL1O0iT.s 			page 5
+ARM GAS  /tmp/ccURCaXh.s 			page 5
 
 
   51:Lib/compute/fast_sin.h ****     }
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  232              		.global	_ZN13WaveGenerator14_update_statusEt
  233              		.syntax unified
  234              		.code	16
-ARM GAS  /tmp/ccL1O0iT.s 			page 6
+ARM GAS  /tmp/ccURCaXh.s 			page 6
 
 
  235              		.thumb_func
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
   12:Lib/compute/wave/wave_generator.cpp **** 
   13:Lib/compute/wave/wave_generator.cpp ****     _current_tick = (_current_tick < _period_tick)
  279              		.loc 1 13 5 is_stmt 1 view .LVU65
-ARM GAS  /tmp/ccL1O0iT.s 			page 7
+ARM GAS  /tmp/ccURCaXh.s 			page 7
 
 
  280              		.loc 1 13 38 is_stmt 0 view .LVU66
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  327              		.cfi_offset 6, -8
  328              		.cfi_offset 14, -4
  329 0110 0400     		movs	r4, r0
-ARM GAS  /tmp/ccL1O0iT.s 			page 8
+ARM GAS  /tmp/ccURCaXh.s 			page 8
 
 
   20:Lib/compute/wave/wave_generator.cpp ****     float ret_val;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  379              		.global	_ZN13WaveGenerator21_generate_square_waveEv
  380              		.syntax unified
  381              		.code	16
-ARM GAS  /tmp/ccL1O0iT.s 			page 9
+ARM GAS  /tmp/ccURCaXh.s 			page 9
 
 
  382              		.thumb_func
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  421              	.LVL61:
  422              	.L21:
   37:Lib/compute/wave/wave_generator.cpp ****     }
-ARM GAS  /tmp/ccL1O0iT.s 			page 10
+ARM GAS  /tmp/ccURCaXh.s 			page 10
 
 
  423              		.loc 1 37 9 is_stmt 1 view .LVU103
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  468              		.loc 1 47 39 view .LVU115
  469 0172 6B08     		lsrs	r3, r5, #1
  470              		.loc 1 47 5 view .LVU116
-ARM GAS  /tmp/ccL1O0iT.s 			page 11
+ARM GAS  /tmp/ccURCaXh.s 			page 11
 
 
  471 0174 9842     		cmp	r0, r3
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
   53:Lib/compute/wave/wave_generator.cpp ****     }
  515              		.loc 1 53 9 is_stmt 1 view .LVU127
   53:Lib/compute/wave/wave_generator.cpp ****     }
-ARM GAS  /tmp/ccL1O0iT.s 			page 12
+ARM GAS  /tmp/ccURCaXh.s 			page 12
 
 
  516              		.loc 1 53 19 is_stmt 0 view .LVU128
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  563              	_ZN13WaveGenerator23_generate_sawtooth_waveEv:
  564              	.LVL82:
  565              	.LFB999:
-ARM GAS  /tmp/ccL1O0iT.s 			page 13
+ARM GAS  /tmp/ccURCaXh.s 			page 13
 
 
   58:Lib/compute/wave/wave_generator.cpp **** 
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  614 021a FFF7FEFF 		bl	__aeabi_fadd
  615              	.LVL90:
   64:Lib/compute/wave/wave_generator.cpp **** 
-ARM GAS  /tmp/ccL1O0iT.s 			page 14
+ARM GAS  /tmp/ccURCaXh.s 			page 14
 
 
   65:Lib/compute/wave/wave_generator.cpp ****     return ret_val;
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  662              	.LVL93:
  663              		.loc 1 74 47 view .LVU164
  664 0234 FFF7FEFF 		bl	__aeabi_uidiv
-ARM GAS  /tmp/ccL1O0iT.s 			page 15
+ARM GAS  /tmp/ccURCaXh.s 			page 15
 
 
  665              	.LVL94:
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  713              		.syntax unified
  714              		.code	16
  715              		.thumb_func
-ARM GAS  /tmp/ccL1O0iT.s 			page 16
+ARM GAS  /tmp/ccURCaXh.s 			page 16
 
 
  717              	_ZN13WaveGenerator20_generate_const_waveEv:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  760              		.loc 1 90 5 is_stmt 1 view .LVU187
  761              		.loc 1 90 13 is_stmt 0 view .LVU188
  762 0268 A369     		ldr	r3, [r4, #24]
-ARM GAS  /tmp/ccL1O0iT.s 			page 17
+ARM GAS  /tmp/ccURCaXh.s 			page 17
 
 
  763              		.loc 1 90 5 view .LVU189
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  118:Lib/compute/wave/wave_generator.cpp ****     return ret_val;
  119:Lib/compute/wave/wave_generator.cpp **** }...
  790              		.loc 1 119 1 is_stmt 0 view .LVU194
-ARM GAS  /tmp/ccL1O0iT.s 			page 18
+ARM GAS  /tmp/ccURCaXh.s 			page 18
 
 
  791              		@ sp needed
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  830 0296 2000     		movs	r0, r4
  831 0298 FFF7FEFF 		bl	_ZN13WaveGenerator19_generate_step_waveEv
  832              	.LVL119:
-ARM GAS  /tmp/ccL1O0iT.s 			page 19
+ARM GAS  /tmp/ccURCaXh.s 			page 19
 
 
  109:Lib/compute/wave/wave_generator.cpp ****         break;
@@ -1126,30 +1126,30 @@ ARM GAS  /tmp/ccL1O0iT.s 			page 1
  868              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
  869              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
  870              		.file 13 "Lib/compute/wave/wave_generator.hpp"
-ARM GAS  /tmp/ccL1O0iT.s 			page 20
+ARM GAS  /tmp/ccURCaXh.s 			page 20
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 wave_generator.cpp
-     /tmp/ccL1O0iT.s:18     .text:00000000 $t
-     /tmp/ccL1O0iT.s:23     .text:00000000 f1
-     /tmp/ccL1O0iT.s:108    .text:0000004c $d
-     /tmp/ccL1O0iT.s:117    .text:00000064 $t
-     /tmp/ccL1O0iT.s:122    .text:00000064 fast_sin
-     /tmp/ccL1O0iT.s:226    .text:000000d4 $d
-     /tmp/ccL1O0iT.s:231    .text:000000dc $t
-     /tmp/ccL1O0iT.s:237    .text:000000dc _ZN13WaveGenerator14_update_statusEt
-     /tmp/ccL1O0iT.s:315    .text:0000010e _ZN13WaveGenerator19_generate_sine_waveEv
-     /tmp/ccL1O0iT.s:374    .text:00000144 $d
-     /tmp/ccL1O0iT.s:378    .text:00000148 $t
-     /tmp/ccL1O0iT.s:384    .text:00000148 _ZN13WaveGenerator21_generate_square_waveEv
-     /tmp/ccL1O0iT.s:444    .text:0000016a _ZN13WaveGenerator23_generate_triangle_waveEv
-     /tmp/ccL1O0iT.s:563    .text:000001e6 _ZN13WaveGenerator23_generate_sawtooth_waveEv
-     /tmp/ccL1O0iT.s:631    .text:00000220 _ZN13WaveGenerator19_generate_step_waveEv
-     /tmp/ccL1O0iT.s:717    .text:0000025c _ZN13WaveGenerator20_generate_const_waveEv
-     /tmp/ccL1O0iT.s:741    .text:00000260 _ZN13WaveGenerator4nextEt
-     /tmp/ccL1O0iT.s:771    .rodata:00000000 $d
-     /tmp/ccL1O0iT.s:855    .text:000002ac $d
+     /tmp/ccURCaXh.s:18     .text:00000000 $t
+     /tmp/ccURCaXh.s:23     .text:00000000 f1
+     /tmp/ccURCaXh.s:108    .text:0000004c $d
+     /tmp/ccURCaXh.s:117    .text:00000064 $t
+     /tmp/ccURCaXh.s:122    .text:00000064 fast_sin
+     /tmp/ccURCaXh.s:226    .text:000000d4 $d
+     /tmp/ccURCaXh.s:231    .text:000000dc $t
+     /tmp/ccURCaXh.s:237    .text:000000dc _ZN13WaveGenerator14_update_statusEt
+     /tmp/ccURCaXh.s:315    .text:0000010e _ZN13WaveGenerator19_generate_sine_waveEv
+     /tmp/ccURCaXh.s:374    .text:00000144 $d
+     /tmp/ccURCaXh.s:378    .text:00000148 $t
+     /tmp/ccURCaXh.s:384    .text:00000148 _ZN13WaveGenerator21_generate_square_waveEv
+     /tmp/ccURCaXh.s:444    .text:0000016a _ZN13WaveGenerator23_generate_triangle_waveEv
+     /tmp/ccURCaXh.s:563    .text:000001e6 _ZN13WaveGenerator23_generate_sawtooth_waveEv
+     /tmp/ccURCaXh.s:631    .text:00000220 _ZN13WaveGenerator19_generate_step_waveEv
+     /tmp/ccURCaXh.s:717    .text:0000025c _ZN13WaveGenerator20_generate_const_waveEv
+     /tmp/ccURCaXh.s:741    .text:00000260 _ZN13WaveGenerator4nextEt
+     /tmp/ccURCaXh.s:771    .rodata:00000000 $d
+     /tmp/ccURCaXh.s:855    .text:000002ac $d
 
 UNDEFINED SYMBOLS
 __aeabi_fmul

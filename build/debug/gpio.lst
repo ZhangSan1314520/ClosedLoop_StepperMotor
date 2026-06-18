@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccImSe34.s 			page 1
+ARM GAS  /tmp/ccKeFST6.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  /tmp/ccImSe34.s 			page 2
+ARM GAS  /tmp/ccKeFST6.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
   65 0020 1143     		orrs	r1, r2
   66 0022 5963     		str	r1, [r3, #52]
   67              		.loc 1 48 3 view .LVU6
-ARM GAS  /tmp/ccImSe34.s 			page 3
+ARM GAS  /tmp/ccKeFST6.s 			page 3
 
 
   68 0024 596B     		ldr	r1, [r3, #52]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
   55:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
   56:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, SP1_CS_Pin|SPI2_CS_Pin, GPIO_PIN_SET);
  116              		.loc 1 56 3 view .LVU22
-ARM GAS  /tmp/ccImSe34.s 			page 4
+ARM GAS  /tmp/ccKeFST6.s 			page 4
 
 
  117 005c 234B     		ldr	r3, .L2+12
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
  158              	.LVL5:
   70:Core/Src/gpio.c **** 
   71:Core/Src/gpio.c ****   /*Configure GPIO pins : SP1_CS_Pin SPI2_CS_Pin */
-ARM GAS  /tmp/ccImSe34.s 			page 5
+ARM GAS  /tmp/ccKeFST6.s 			page 5
 
 
   72:Core/Src/gpio.c ****   GPIO_InitStruct.Pin = SP1_CS_Pin|SPI2_CS_Pin;
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
  198 00c0 0393     		str	r3, [sp, #12]
   87:Core/Src/gpio.c ****   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
  199              		.loc 1 87 3 is_stmt 1 view .LVU54
-ARM GAS  /tmp/ccImSe34.s 			page 6
+ARM GAS  /tmp/ccKeFST6.s 			page 6
 
 
  200              		.loc 1 87 24 is_stmt 0 view .LVU55
@@ -346,14 +346,14 @@ ARM GAS  /tmp/ccImSe34.s 			page 1
  238              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
  239              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  240              		.file 7 "<built-in>"
-ARM GAS  /tmp/ccImSe34.s 			page 7
+ARM GAS  /tmp/ccKeFST6.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-     /tmp/ccImSe34.s:19     .text.MX_GPIO_Init:00000000 $t
-     /tmp/ccImSe34.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-     /tmp/ccImSe34.s:225    .text.MX_GPIO_Init:000000e0 $d
+     /tmp/ccKeFST6.s:19     .text.MX_GPIO_Init:00000000 $t
+     /tmp/ccKeFST6.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+     /tmp/ccKeFST6.s:225    .text.MX_GPIO_Init:000000e0 $d
 
 UNDEFINED SYMBOLS
 memset

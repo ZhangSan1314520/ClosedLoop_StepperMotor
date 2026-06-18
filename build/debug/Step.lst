@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc59Fz2V.s 			page 1
+ARM GAS  /tmp/ccTcAm9r.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   32:My_Top/Step_Motor/Step.cpp **** 
   33:My_Top/Step_Motor/Step.cpp **** 
   34:My_Top/Step_Motor/Step.cpp **** void Step_Motor::Set_Motor_DutyCycle(float DutyCycle)   //设置占空比
-ARM GAS  /tmp/cc59Fz2V.s 			page 2
+ARM GAS  /tmp/ccTcAm9r.s 			page 2
 
 
   35:My_Top/Step_Motor/Step.cpp **** {
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   89:My_Top/Step_Motor/Step.cpp ****     // 5. 16位定时器保护: ARR 最大 65535，最小 1
   90:My_Top/Step_Motor/Step.cpp ****     if (arr >= 65535) arr = 65535;
   91:My_Top/Step_Motor/Step.cpp **** 
-ARM GAS  /tmp/cc59Fz2V.s 			page 3
+ARM GAS  /tmp/ccTcAm9r.s 			page 3
 
 
   92:My_Top/Step_Motor/Step.cpp ****     if (arr == 0) arr = 1;
@@ -136,7 +136,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  104:My_Top/Step_Motor/Step.cpp **** {
  105:My_Top/Step_Motor/Step.cpp ****     uint32_t sysclk = HAL_RCC_GetSysClockFreq();  // 返回 64000000 ???
  106:My_Top/Step_Motor/Step.cpp ****     timer_clock_freq_ = sysclk / (htim_->Instance->PSC + 1);  //获取定时器时钟频率
- 107:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 107:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  108:My_Top/Step_Motor/Step.cpp ****     __HAL_TIM_SET_COMPARE(htim_, channel_, 0);//默认占空比为0
  109:My_Top/Step_Motor/Step.cpp ****     HAL_TIM_PWM_Start(htim_, channel_); //启动PWM输出和中断
  110:My_Top/Step_Motor/Step.cpp ****     Set_Motor_EN(false);//默认关闭电机
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   10:My_Top/Step_Motor/Step.hpp ****     
   11:My_Top/Step_Motor/Step.hpp ****     bool motor_direction = true; //电机方向，true:正转，false:反转
   12:My_Top/Step_Motor/Step.hpp ****     uint16_t motor_frequency = 0; //电机频率
-ARM GAS  /tmp/cc59Fz2V.s 			page 4
+ARM GAS  /tmp/ccTcAm9r.s 			page 4
 
 
   13:My_Top/Step_Motor/Step.hpp ****     float motor_duty_cycle = 0.5; //占空比
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   82              		.loc 2 22 50 view .LVU12
   83 0038 FF24     		movs	r4, #255
   84 003a A046     		mov	r8, r4
-ARM GAS  /tmp/cc59Fz2V.s 			page 5
+ARM GAS  /tmp/ccTcAm9r.s 			page 5
 
 
   85 003c 9C85     		strh	r4, [r3, #44]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  132 0070 9952     		strh	r1, [r3, r2]
  133              	.LVL2:
  134              		.loc 2 22 50 view .LVU26
-ARM GAS  /tmp/cc59Fz2V.s 			page 6
+ARM GAS  /tmp/ccTcAm9r.s 			page 6
 
 
  135              	.LBE13:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  184 0098 0022     		movs	r2, #0
  185              	.L5:
   16:My_Top/Step_Motor/Step.cpp ****     for(int i=0;i<200;i++){__asm("nop");} //短暂延时，确保方向信号稳定
-ARM GAS  /tmp/cc59Fz2V.s 			page 7
+ARM GAS  /tmp/ccTcAm9r.s 			page 7
 
 
  186              		.loc 1 16 22 discriminator 4 view .LVU35
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  231              		.syntax unified
  232              		.code	16
  233              		.thumb_func
-ARM GAS  /tmp/cc59Fz2V.s 			page 8
+ARM GAS  /tmp/ccTcAm9r.s 			page 8
 
 
  235              	_ZN10Step_Motor12Set_Motor_ENEb:
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  277              	.LBB16:
   29:My_Top/Step_Motor/Step.cpp ****     
  278              		.loc 1 29 13 is_stmt 0 view .LVU58
-ARM GAS  /tmp/cc59Fz2V.s 			page 9
+ARM GAS  /tmp/ccTcAm9r.s 			page 9
 
 
  279 00d2 0023     		movs	r3, #0
@@ -538,7 +538,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   31:My_Top/Step_Motor/Step.cpp **** 
  322              		.loc 1 31 1 is_stmt 0 view .LVU70
  323              		@ sp needed
-ARM GAS  /tmp/cc59Fz2V.s 			page 10
+ARM GAS  /tmp/ccTcAm9r.s 			page 10
 
 
  324 00ee 10BD     		pop	{r4, pc}
@@ -598,7 +598,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  371              		.loc 1 38 5 is_stmt 1 view .LVU79
   38:My_Top/Step_Motor/Step.cpp ****     CCR_VAL = (uint32_t)(Motor_ARR*DutyCycle);
  372              		.loc 1 38 17 is_stmt 0 view .LVU80
-ARM GAS  /tmp/cc59Fz2V.s 			page 11
+ARM GAS  /tmp/ccTcAm9r.s 			page 11
 
 
  373 0108 AB68     		ldr	r3, [r5, #8]
@@ -658,7 +658,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  420              		.loc 1 37 23 is_stmt 0 discriminator 2 view .LVU87
  421 012a 0021     		movs	r1, #0
  422 012c 201C     		adds	r0, r4, #0
-ARM GAS  /tmp/cc59Fz2V.s 			page 12
+ARM GAS  /tmp/ccTcAm9r.s 			page 12
 
 
  423 012e FFF7FEFF 		bl	__aeabi_fcmplt
@@ -718,7 +718,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  467 0154 00000000 		.word	.L20
  468              		.cfi_endproc
  469              	.LFE462:
-ARM GAS  /tmp/cc59Fz2V.s 			page 13
+ARM GAS  /tmp/ccTcAm9r.s 			page 13
 
 
  471              		.align	1
@@ -778,7 +778,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
   56:My_Top/Step_Motor/Step.cpp **** 
  514              		.loc 1 56 14 is_stmt 0 view .LVU110
  515 016e A585     		strh	r5, [r4, #44]
-ARM GAS  /tmp/cc59Fz2V.s 			page 14
+ARM GAS  /tmp/ccTcAm9r.s 			page 14
 
 
   59:My_Top/Step_Motor/Step.cpp ****     {
@@ -838,7 +838,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  555 0194 2F4B     		ldr	r3, .L52
  556 0196 9842     		cmp	r0, r3
  557 0198 16D8     		bhi	.L47
-ARM GAS  /tmp/cc59Fz2V.s 			page 15
+ARM GAS  /tmp/ccTcAm9r.s 			page 15
 
 
   92:My_Top/Step_Motor/Step.cpp ****     htim_->Instance->CNT = 0; // 清零计数器
@@ -898,7 +898,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  597              		.loc 1 75 17 view .LVU140
  598 01ba E3E7     		b	.L35
  599              	.LVL56:
-ARM GAS  /tmp/cc59Fz2V.s 			page 16
+ARM GAS  /tmp/ccTcAm9r.s 			page 16
 
 
  600              	.L50:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  641 01ea D358     		ldr	r3, [r2, r3]
  642 01ec 9F46     		mov	pc, r3
  643              		.section	.rodata
-ARM GAS  /tmp/cc59Fz2V.s 			page 17
+ARM GAS  /tmp/ccTcAm9r.s 			page 17
 
 
  644              		.align	2
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  692              	.L42:
   95:My_Top/Step_Motor/Step.cpp ****     return true;
  693              		.loc 1 95 5 discriminator 5 view .LVU160
-ARM GAS  /tmp/cc59Fz2V.s 			page 18
+ARM GAS  /tmp/ccTcAm9r.s 			page 18
 
 
  694 020e 4308     		lsrs	r3, r0, #1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  738              		.loc 1 95 5 discriminator 10 view .LVU170
  739 0240 A368     		ldr	r3, [r4, #8]
  740 0242 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/cc59Fz2V.s 			page 19
+ARM GAS  /tmp/ccTcAm9r.s 			page 19
 
 
  741 0244 0004     		lsls	r0, r0, #16
@@ -1136,28 +1136,28 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  787              		.loc 1 105 46 is_stmt 0 view .LVU178
  788 0264 FFF7FEFF 		bl	HAL_RCC_GetSysClockFreq
  789              	.LVL75:
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  790              		.loc 1 106 5 is_stmt 1 view .LVU179
-ARM GAS  /tmp/cc59Fz2V.s 			page 20
+ARM GAS  /tmp/ccTcAm9r.s 			page 20
 
 
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  791              		.loc 1 106 35 is_stmt 0 view .LVU180
  792 0268 A368     		ldr	r3, [r4, #8]
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  793              		.loc 1 106 42 view .LVU181
  794 026a 1B68     		ldr	r3, [r3]
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  795              		.loc 1 106 52 view .LVU182
  796 026c 996A     		ldr	r1, [r3, #40]
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  797              		.loc 1 106 56 view .LVU183
  798 026e 0131     		adds	r1, r1, #1
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  799              		.loc 1 106 32 view .LVU184
  800 0270 FFF7FEFF 		bl	__aeabi_uidiv
  801              	.LVL76:
- 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认1000Hz频率
+ 106:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  802              		.loc 1 106 23 view .LVU185
  803 0274 2062     		str	r0, [r4, #32]
  107:My_Top/Step_Motor/Step.cpp ****     __HAL_TIM_SET_COMPARE(htim_, channel_, 0);//默认占空比为0
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  835 00b0 C4020000 		.word	.L55
  836 00b4 C4020000 		.word	.L55
  837 00b8 B0020000 		.word	.L58
-ARM GAS  /tmp/cc59Fz2V.s 			page 21
+ARM GAS  /tmp/ccTcAm9r.s 			page 21
 
 
  838 00bc C4020000 		.word	.L55
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  885              		.loc 1 109 5 is_stmt 1 view .LVU196
  109:My_Top/Step_Motor/Step.cpp ****     Set_Motor_EN(false);//默认关闭电机
  886              		.loc 1 109 22 is_stmt 0 view .LVU197
-ARM GAS  /tmp/cc59Fz2V.s 			page 22
+ARM GAS  /tmp/ccTcAm9r.s 			page 22
 
 
  887 02cc E168     		ldr	r1, [r4, #12]
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  114:My_Top/Step_Motor/Step.cpp ****         
  931              		.loc 1 114 29 is_stmt 1 discriminator 1 view .LVU210
  932 02fe A168     		ldr	r1, [r4, #8]
-ARM GAS  /tmp/cc59Fz2V.s 			page 23
+ARM GAS  /tmp/ccTcAm9r.s 			page 23
 
 
  114:My_Top/Step_Motor/Step.cpp ****         
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  987      00000000 
  987      00000000 
  987      00000000 
-ARM GAS  /tmp/cc59Fz2V.s 			page 24
+ARM GAS  /tmp/ccTcAm9r.s 			page 24
 
 
  988              		.text
@@ -1394,32 +1394,32 @@ ARM GAS  /tmp/cc59Fz2V.s 			page 1
  998              		.file 11 "Core/Inc/tim.h"
  999              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  1000              		.file 13 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h"
-ARM GAS  /tmp/cc59Fz2V.s 			page 25
+ARM GAS  /tmp/ccTcAm9r.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Step.cpp
-     /tmp/cc59Fz2V.s:18     .text:00000000 $t
-     /tmp/cc59Fz2V.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/cc59Fz2V.s:146    .text:00000078 $d
-     /tmp/cc59Fz2V.s:154    .text:0000008c $t
-     /tmp/cc59Fz2V.s:160    .text:0000008c _ZN10Step_Motor13Set_Motor_DTREb
-     /tmp/cc59Fz2V.s:235    .text:000000b2 _ZN10Step_Motor12Set_Motor_ENEb
-     /tmp/cc59Fz2V.s:334    .text:000000f0 _ZN10Step_Motor19Set_Motor_DutyCycleEf
-     /tmp/cc59Fz2V.s:398    .rodata:00000000 $d
-     /tmp/cc59Fz2V.s:467    .text:00000154 $d
-     /tmp/cc59Fz2V.s:471    .text:00000158 $t
-     /tmp/cc59Fz2V.s:477    .text:00000158 _ZN10Step_Motor19Set_Motor_FrequencyEf
-     /tmp/cc59Fz2V.s:761    .text:00000254 $d
-     /tmp/cc59Fz2V.s:767    .text:00000260 $t
-     /tmp/cc59Fz2V.s:773    .text:00000260 _ZN10Step_Motor10Motor_InitEv
-     /tmp/cc59Fz2V.s:941    .text:00000308 $d
-     /tmp/cc59Fz2V.s:949    .text:0000031c $t
-     /tmp/cc59Fz2V.s:954    .text:0000031c _GLOBAL__sub_I_Motor_M1
-     /tmp/cc59Fz2V.s:973    .init_array:00000000 $d
-     /tmp/cc59Fz2V.s:986    .bss:00000030 Motor_M2
-     /tmp/cc59Fz2V.s:982    .bss:00000000 Motor_M1
-     /tmp/cc59Fz2V.s:978    .bss:00000000 $d
+     /tmp/ccTcAm9r.s:18     .text:00000000 $t
+     /tmp/ccTcAm9r.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccTcAm9r.s:146    .text:00000078 $d
+     /tmp/ccTcAm9r.s:154    .text:0000008c $t
+     /tmp/ccTcAm9r.s:160    .text:0000008c _ZN10Step_Motor13Set_Motor_DTREb
+     /tmp/ccTcAm9r.s:235    .text:000000b2 _ZN10Step_Motor12Set_Motor_ENEb
+     /tmp/ccTcAm9r.s:334    .text:000000f0 _ZN10Step_Motor19Set_Motor_DutyCycleEf
+     /tmp/ccTcAm9r.s:398    .rodata:00000000 $d
+     /tmp/ccTcAm9r.s:467    .text:00000154 $d
+     /tmp/ccTcAm9r.s:471    .text:00000158 $t
+     /tmp/ccTcAm9r.s:477    .text:00000158 _ZN10Step_Motor19Set_Motor_FrequencyEf
+     /tmp/ccTcAm9r.s:761    .text:00000254 $d
+     /tmp/ccTcAm9r.s:767    .text:00000260 $t
+     /tmp/ccTcAm9r.s:773    .text:00000260 _ZN10Step_Motor10Motor_InitEv
+     /tmp/ccTcAm9r.s:941    .text:00000308 $d
+     /tmp/ccTcAm9r.s:949    .text:0000031c $t
+     /tmp/ccTcAm9r.s:954    .text:0000031c _GLOBAL__sub_I_Motor_M1
+     /tmp/ccTcAm9r.s:973    .init_array:00000000 $d
+     /tmp/ccTcAm9r.s:986    .bss:00000030 Motor_M2
+     /tmp/ccTcAm9r.s:982    .bss:00000000 Motor_M1
+     /tmp/ccTcAm9r.s:978    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 htim1

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc0iTtyI.s 			page 1
+ARM GAS  /tmp/ccjljYQi.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,14 +58,14 @@ ARM GAS  /tmp/cc0iTtyI.s 			page 1
   32:My_Top/Task/Task_Test.cpp **** void Task_Test(void *argument)
   33:My_Top/Task/Task_Test.cpp **** {
   34:My_Top/Task/Task_Test.cpp ****     // 程序RAM占用10752/1024 = 10.5KB的RAM，剩余RAM 36KB-10.5KB  = 25.5KB 可分配给操�
-ARM GAS  /tmp/cc0iTtyI.s 			page 2
+ARM GAS  /tmp/ccjljYQi.s 			page 2
 
 
   35:My_Top/Task/Task_Test.cpp **** 
   36:My_Top/Task/Task_Test.cpp ****     // lajio();
   37:My_Top/Task/Task_Test.cpp ****     while (1)
   38:My_Top/Task/Task_Test.cpp ****     {
-  39:My_Top/Task/Task_Test.cpp ****         printf("laji1:%d laji2:%d \r\n",M1.laji,M2.laji);
+  39:My_Top/Task/Task_Test.cpp ****         // printf("laji1:%d laji2:%d \r\n",M1.laji,M2.laji);
   40:My_Top/Task/Task_Test.cpp ****         vTaskDelay(pdMS_TO_TICKS(500));
   41:My_Top/Task/Task_Test.cpp ****     }
   42:My_Top/Task/Task_Test.cpp **** }
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc0iTtyI.s 			page 1
   44              	.LBE5:
   45              		.loc 1 42 1 view .LVU5
   46              		@ sp needed
-ARM GAS  /tmp/cc0iTtyI.s 			page 3
+ARM GAS  /tmp/ccjljYQi.s 			page 3
 
 
   47 0006 7047     		bx	lr
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc0iTtyI.s 			page 1
   94 0028 0022     		movs	r2, #0
   95 002a 0221     		movs	r1, #2
   96 002c 3000     		movs	r0, r6
-ARM GAS  /tmp/cc0iTtyI.s 			page 4
+ARM GAS  /tmp/ccjljYQi.s 			page 4
 
 
   97 002e FFF7FEFF 		bl	HAL_GPIO_WritePin
@@ -234,184 +234,146 @@ ARM GAS  /tmp/cc0iTtyI.s 			page 1
  134 005c 00040050 		.word	1342178304
  135              		.cfi_endproc
  136              	.LFE1479:
- 138              		.section	.rodata.str1.4,"aMS",%progbits,1
- 139              		.align	2
- 140              	.LC6:
- 141 0000 6C616A69 		.ascii	"laji1:%d laji2:%d \015\012\000"
-ARM GAS  /tmp/cc0iTtyI.s 			page 5
+ 138              		.align	1
+ 139              		.global	_Z9Task_TestPv
+ 140              		.syntax unified
+ 141              		.code	16
+ARM GAS  /tmp/ccjljYQi.s 			page 5
 
 
- 141      313A2564 
- 141      206C616A 
- 141      69323A25 
- 141      64200D0A 
- 142              		.text
- 143              		.align	1
- 144              		.global	_Z9Task_TestPv
- 145              		.syntax unified
- 146              		.code	16
- 147              		.thumb_func
- 149              	_Z9Task_TestPv:
- 150              	.LFB1480:
+ 142              		.thumb_func
+ 144              	_Z9Task_TestPv:
+ 145              	.LFB1480:
   33:My_Top/Task/Task_Test.cpp ****     // 程序RAM占用10752/1024 = 10.5KB的RAM，剩余RAM 36KB-10.5KB  = 25.5KB 可分配给操�
- 151              		.loc 1 33 1 is_stmt 1 view -0
- 152              		.cfi_startproc
- 153              		@ Volatile: function does not return.
- 154              		@ args = 0, pretend = 0, frame = 0
- 155              		@ frame_needed = 0, uses_anonymous_args = 0
- 156              	.LVL7:
+ 146              		.loc 1 33 1 is_stmt 1 view -0
+ 147              		.cfi_startproc
+ 148              		@ Volatile: function does not return.
+ 149              		@ args = 0, pretend = 0, frame = 0
+ 150              		@ frame_needed = 0, uses_anonymous_args = 0
+ 151              	.LVL7:
   33:My_Top/Task/Task_Test.cpp ****     // 程序RAM占用10752/1024 = 10.5KB的RAM，剩余RAM 36KB-10.5KB  = 25.5KB 可分配给操�
- 157              		.loc 1 33 1 is_stmt 0 view .LVU29
- 158 0060 10B5     		push	{r4, lr}
- 159              		.cfi_def_cfa_offset 8
- 160              		.cfi_offset 4, -8
- 161              		.cfi_offset 14, -4
- 162              	.LVL8:
- 163              	.L8:
+ 152              		.loc 1 33 1 is_stmt 0 view .LVU29
+ 153 0060 10B5     		push	{r4, lr}
+ 154              		.cfi_def_cfa_offset 8
+ 155              		.cfi_offset 4, -8
+ 156              		.cfi_offset 14, -4
+ 157              	.LVL8:
+ 158              	.L8:
   37:My_Top/Task/Task_Test.cpp ****     {
- 164              		.loc 1 37 5 is_stmt 1 view .LVU30
-  39:My_Top/Task/Task_Test.cpp ****         vTaskDelay(pdMS_TO_TICKS(500));
- 165              		.loc 1 39 9 view .LVU31
-  39:My_Top/Task/Task_Test.cpp ****         vTaskDelay(pdMS_TO_TICKS(500));
- 166              		.loc 1 39 15 is_stmt 0 view .LVU32
- 167 0062 064B     		ldr	r3, .L9
- 168 0064 1A6D     		ldr	r2, [r3, #80]
- 169 0066 064B     		ldr	r3, .L9+4
- 170 0068 196D     		ldr	r1, [r3, #80]
- 171 006a 0648     		ldr	r0, .L9+8
- 172 006c FFF7FEFF 		bl	printf_
- 173              	.LVL9:
+ 159              		.loc 1 37 5 is_stmt 1 view .LVU30
   40:My_Top/Task/Task_Test.cpp ****     }
- 174              		.loc 1 40 9 is_stmt 1 discriminator 1 view .LVU33
+ 160              		.loc 1 40 9 discriminator 1 view .LVU31
   40:My_Top/Task/Task_Test.cpp ****     }
- 175              		.loc 1 40 19 is_stmt 0 discriminator 1 view .LVU34
- 176 0070 FA20     		movs	r0, #250
- 177 0072 4000     		lsls	r0, r0, #1
- 178 0074 FFF7FEFF 		bl	vTaskDelay
- 179              	.LVL10:
+ 161              		.loc 1 40 19 is_stmt 0 discriminator 1 view .LVU32
+ 162 0062 FA20     		movs	r0, #250
+ 163 0064 4000     		lsls	r0, r0, #1
+ 164 0066 FFF7FEFF 		bl	vTaskDelay
+ 165              	.LVL9:
   37:My_Top/Task/Task_Test.cpp ****     {
- 180              		.loc 1 37 5 is_stmt 1 view .LVU35
- 181 0078 F3E7     		b	.L8
- 182              	.L10:
- 183 007a C046     		.align	2
- 184              	.L9:
- 185 007c 00000000 		.word	M2
- 186 0080 00000000 		.word	M1
- 187 0084 00000000 		.word	.LC6
-ARM GAS  /tmp/cc0iTtyI.s 			page 6
+ 166              		.loc 1 37 5 is_stmt 1 view .LVU33
+ 167 006a FAE7     		b	.L8
+ 168              		.cfi_endproc
+ 169              	.LFE1480:
+ 171              		.align	1
+ 172              		.syntax unified
+ 173              		.code	16
+ 174              		.thumb_func
+ 176              	_GLOBAL__sub_I_EEPROM1:
+ 177              	.LFB1632:
+ 178              		.loc 1 42 1 view -0
+ 179              		.cfi_startproc
+ 180              		@ args = 0, pretend = 0, frame = 0
+ 181              		@ frame_needed = 0, uses_anonymous_args = 0
+ 182 006c 10B5     		push	{r4, lr}
+ 183              		.cfi_def_cfa_offset 8
+ 184              		.cfi_offset 4, -8
+ 185              		.cfi_offset 14, -4
+ 186              		.loc 1 42 1 is_stmt 0 view .LVU35
+ 187 006e FFF7C7FF 		bl	_Z41__static_initialization_and_destruction_0v
+ 188              	.LVL10:
+ 189              		@ sp needed
+ 190 0072 10BD     		pop	{r4, pc}
+ 191              		.cfi_endproc
+ 192              	.LFE1632:
+ 194              		.section	.init_array,"aw",%init_array
+ 195              		.align	2
+ 196 0000 00000000 		.word	_GLOBAL__sub_I_EEPROM1(target1)
+ARM GAS  /tmp/ccjljYQi.s 			page 6
 
 
- 188              		.cfi_endproc
- 189              	.LFE1480:
- 191              		.align	1
- 192              		.syntax unified
- 193              		.code	16
- 194              		.thumb_func
- 196              	_GLOBAL__sub_I_EEPROM1:
- 197              	.LFB1632:
- 198              		.loc 1 42 1 view -0
- 199              		.cfi_startproc
- 200              		@ args = 0, pretend = 0, frame = 0
- 201              		@ frame_needed = 0, uses_anonymous_args = 0
- 202 0088 10B5     		push	{r4, lr}
- 203              		.cfi_def_cfa_offset 8
- 204              		.cfi_offset 4, -8
- 205              		.cfi_offset 14, -4
- 206              		.loc 1 42 1 is_stmt 0 view .LVU37
- 207 008a FFF7B9FF 		bl	_Z41__static_initialization_and_destruction_0v
- 208              	.LVL11:
- 209              		@ sp needed
- 210 008e 10BD     		pop	{r4, pc}
- 211              		.cfi_endproc
- 212              	.LFE1632:
- 214              		.section	.init_array,"aw",%init_array
- 215              		.align	2
- 216 0000 00000000 		.word	_GLOBAL__sub_I_EEPROM1(target1)
- 217              		.global	bufff_rx
- 218              		.global	bufff_tx
- 219              		.global	test2
- 220              		.global	test1
- 221              		.global	EEPROM1
- 222              		.data
- 223              		.align	2
- 226              	bufff_tx:
- 227 0000 0102A3B4 		.ascii	"\001\002\243\264\005\006\307\370\011\012"
- 227      0506C7F8 
- 227      090A
- 228              		.bss
- 229              		.align	2
- 232              	bufff_rx:
- 233 0000 00000000 		.space	10
- 233      00000000 
- 233      0000
- 236              	test2:
- 237 000a 00       		.space	1
- 240              	test1:
- 241 000b 00       		.space	1
- 244              	EEPROM1:
- 245 000c 00       		.space	1
- 246              		.text
- 247              	.Letext0:
- 248              		.file 3 "/opt/arm-gnu-toolchain-14.2/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h"
- 249              		.file 4 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
- 250              		.file 5 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
- 251              		.file 6 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
- 252              		.file 7 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 253              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
-ARM GAS  /tmp/cc0iTtyI.s 			page 7
-
-
- 254              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 255              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 256              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h"
- 257              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 258              		.file 13 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
- 259              		.file 14 "Core/Inc/tim.h"
- 260              		.file 15 "Core/Inc/i2c.h"
- 261              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/stdlib.h"
- 262              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cstdlib"
- 263              		.file 18 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
- 264              		.file 19 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
- 265              		.file 20 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
- 266              		.file 21 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
- 267              		.file 22 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
- 268              		.file 23 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/stdlib.h"
- 269              		.file 24 "My_Top/System/pid_Increment.hpp"
- 270              		.file 25 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
- 271              		.file 26 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
- 272              		.file 27 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
- 273              		.file 28 "Lib/compute/ex_math.hpp"
- 274              		.file 29 "My_Top/System/kth_read.hpp"
- 275              		.file 30 "My_Top/Step_Motor/Step.hpp"
- 276              		.file 31 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
- 277              		.file 32 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
- 278              		.file 33 "Lib/serial/printf.h"
- 279              		.file 34 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/cc0iTtyI.s 			page 8
+ 197              		.global	bufff_rx
+ 198              		.global	bufff_tx
+ 199              		.global	test2
+ 200              		.global	test1
+ 201              		.global	EEPROM1
+ 202              		.data
+ 203              		.align	2
+ 206              	bufff_tx:
+ 207 0000 0102A3B4 		.ascii	"\001\002\243\264\005\006\307\370\011\012"
+ 207      0506C7F8 
+ 207      090A
+ 208              		.bss
+ 209              		.align	2
+ 212              	bufff_rx:
+ 213 0000 00000000 		.space	10
+ 213      00000000 
+ 213      0000
+ 216              	test2:
+ 217 000a 00       		.space	1
+ 220              	test1:
+ 221 000b 00       		.space	1
+ 224              	EEPROM1:
+ 225 000c 00       		.space	1
+ 226              		.text
+ 227              	.Letext0:
+ 228              		.file 3 "/opt/arm-gnu-toolchain-14.2/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h"
+ 229              		.file 4 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ 230              		.file 5 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+ 231              		.file 6 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
+ 232              		.file 7 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 233              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 234              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 235              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 236              		.file 11 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_i2c.h"
+ 237              		.file 12 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
+ 238              		.file 13 "Core/Inc/tim.h"
+ 239              		.file 14 "Core/Inc/i2c.h"
+ 240              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/stdlib.h"
+ 241              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cstdlib"
+ 242              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
+ 243              		.file 18 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
+ 244              		.file 19 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
+ 245              		.file 20 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
+ 246              		.file 21 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
+ 247              		.file 22 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/stdlib.h"
+ 248              		.file 23 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
+ 249              		.file 24 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
+ 250              		.file 25 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
+ 251              		.file 26 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 252              		.file 27 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ 253              		.file 28 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
+ARM GAS  /tmp/ccjljYQi.s 			page 7
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Task_Test.cpp
-     /tmp/cc0iTtyI.s:18     .text:00000000 $t
-     /tmp/cc0iTtyI.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/cc0iTtyI.s:51     .text:00000008 $d
-     /tmp/cc0iTtyI.s:56     .text:00000010 $t
-     /tmp/cc0iTtyI.s:62     .text:00000010 _Z5lajiov
-     /tmp/cc0iTtyI.s:132    .text:00000054 $d
-     /tmp/cc0iTtyI.s:139    .rodata.str1.4:00000000 $d
-     /tmp/cc0iTtyI.s:143    .text:00000060 $t
-     /tmp/cc0iTtyI.s:149    .text:00000060 _Z9Task_TestPv
-     /tmp/cc0iTtyI.s:185    .text:0000007c $d
-     /tmp/cc0iTtyI.s:191    .text:00000088 $t
-     /tmp/cc0iTtyI.s:196    .text:00000088 _GLOBAL__sub_I_EEPROM1
-     /tmp/cc0iTtyI.s:215    .init_array:00000000 $d
-     /tmp/cc0iTtyI.s:232    .bss:00000000 bufff_rx
-     /tmp/cc0iTtyI.s:226    .data:00000000 bufff_tx
-     /tmp/cc0iTtyI.s:236    .bss:0000000a test2
-     /tmp/cc0iTtyI.s:240    .bss:0000000b test1
-     /tmp/cc0iTtyI.s:244    .bss:0000000c EEPROM1
-     /tmp/cc0iTtyI.s:223    .data:00000000 $d
-     /tmp/cc0iTtyI.s:229    .bss:00000000 $d
+     /tmp/ccjljYQi.s:18     .text:00000000 $t
+     /tmp/ccjljYQi.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccjljYQi.s:51     .text:00000008 $d
+     /tmp/ccjljYQi.s:56     .text:00000010 $t
+     /tmp/ccjljYQi.s:62     .text:00000010 _Z5lajiov
+     /tmp/ccjljYQi.s:132    .text:00000054 $d
+     /tmp/ccjljYQi.s:138    .text:00000060 $t
+     /tmp/ccjljYQi.s:144    .text:00000060 _Z9Task_TestPv
+     /tmp/ccjljYQi.s:176    .text:0000006c _GLOBAL__sub_I_EEPROM1
+     /tmp/ccjljYQi.s:195    .init_array:00000000 $d
+     /tmp/ccjljYQi.s:212    .bss:00000000 bufff_rx
+     /tmp/ccjljYQi.s:206    .data:00000000 bufff_tx
+     /tmp/ccjljYQi.s:216    .bss:0000000a test2
+     /tmp/ccjljYQi.s:220    .bss:0000000b test1
+     /tmp/ccjljYQi.s:224    .bss:0000000c EEPROM1
+     /tmp/ccjljYQi.s:203    .data:00000000 $d
+     /tmp/ccjljYQi.s:209    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZN8BL24C16F5_hi2cE
@@ -420,7 +382,4 @@ HAL_TIM_PWM_Start
 HAL_GPIO_WritePin
 htim1
 htim2
-printf_
 vTaskDelay
-M2
-M1

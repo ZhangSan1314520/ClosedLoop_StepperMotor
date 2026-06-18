@@ -71,6 +71,9 @@ public:
     float motor_step_max = 0; //步进电机最大步数(0表示不停转)
 
     Step_Motor *_motor; //步进电机
+    PID_Increment pid_speed; //速度环PID
+    PID_Increment pid_location; //位置环PID
+    // ADRC adrc; //线性自抗扰控制器
 private:
     
     LowpassFilter speed_lpf;     // 速度低通滤波器
@@ -78,11 +81,7 @@ private:
     AvgFilter speed_avg;     // 速度平均值滤波器
     KTH7111   *_encoder; //编码器
     
-    PID_Increment pid_speed; //速度环PID
-    PID_Increment pid_location; //位置环PID
 
-
-    // ADRC adrc; //线性自抗扰控制器
 
     GPIO_TypeDef* MS_FULL_PORT_;  
     uint16_t MS_FULL_PIN_;

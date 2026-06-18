@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccYdrV0b.s 			page 1
+ARM GAS  /tmp/ccNe6E36.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   28:My_Top/System/pid_Increment.hpp **** public:
   29:My_Top/System/pid_Increment.hpp ****     float _kp, _ki, _kd;
   30:My_Top/System/pid_Increment.hpp ****     PID_Increment(void) //定义时无参的构造函数格式
-ARM GAS  /tmp/ccYdrV0b.s 			page 2
+ARM GAS  /tmp/ccNe6E36.s 			page 2
 
 
   31:My_Top/System/pid_Increment.hpp ****     {
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   54 000e 8769     		ldr	r7, [r0, #24]
   55              		.loc 2 59 37 view .LVU5
   56 0010 391C     		adds	r1, r7, #0
-ARM GAS  /tmp/ccYdrV0b.s 			page 3
+ARM GAS  /tmp/ccNe6E36.s 			page 3
 
 
   57              	.LVL1:
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  109 0050 FFF7FEFF 		bl	__aeabi_fadd
  110              	.LVL14:
  111 0054 011C     		adds	r1, r0, #0
-ARM GAS  /tmp/ccYdrV0b.s 			page 4
+ARM GAS  /tmp/ccNe6E36.s 			page 4
 
 
  112              		.loc 2 61 15 view .LVU21
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  154              		.loc 2 73 18 is_stmt 0 view .LVU35
  155 0084 A561     		str	r5, [r4, #24]
   74:My_Top/System/pid_Increment.hpp **** 
-ARM GAS  /tmp/ccYdrV0b.s 			page 5
+ARM GAS  /tmp/ccNe6E36.s 			page 5
 
 
   75:My_Top/System/pid_Increment.hpp ****         return _delta_u; // 返回增量输出
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
    5:My_Top/Step_Motor/StepperMotor_Loop.hpp **** #include "kth_read.hpp"
    6:My_Top/Step_Motor/StepperMotor_Loop.hpp **** #include "ex_math.hpp"
    7:My_Top/Step_Motor/StepperMotor_Loop.hpp **** #include "Step.hpp" 
-ARM GAS  /tmp/ccYdrV0b.s 			page 6
+ARM GAS  /tmp/ccNe6E36.s 			page 6
 
 
    8:My_Top/Step_Motor/StepperMotor_Loop.hpp **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  233              		.loc 3 29 85 view .LVU51
  234 0014 0470     		strb	r4, [r0]
  235 0016 0025     		movs	r5, #0
-ARM GAS  /tmp/ccYdrV0b.s 			page 7
+ARM GAS  /tmp/ccNe6E36.s 			page 7
 
 
  236 0018 4570     		strb	r5, [r0, #1]
@@ -398,209 +398,199 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   26:My_Top/Step_Motor/StepperMotor_Loop.hpp ****         pid_speed(skp, ski, skd, 1.0/Stepper_VELOCITY_LOOP_FREQ_HZ, 200.0f, -200.0f),
  270              		.loc 3 26 11 view .LVU55
  271 0054 C165     		str	r1, [r0, #92]
-  26:My_Top/Step_Motor/StepperMotor_Loop.hpp ****         pid_speed(skp, ski, skd, 1.0/Stepper_VELOCITY_LOOP_FREQ_HZ, 200.0f, -200.0f),
- 272              		.loc 3 26 26 view .LVU56
- 273 0056 8C21     		movs	r1, #140
- 274              	.LVL34:
-  26:My_Top/Step_Motor/StepperMotor_Loop.hpp ****         pid_speed(skp, ski, skd, 1.0/Stepper_VELOCITY_LOOP_FREQ_HZ, 200.0f, -200.0f),
- 275              		.loc 3 26 26 view .LVU57
- 276 0058 4250     		str	r2, [r0, r1]
- 277              	.LVL35:
- 278              	.LBB19:
- 279              	.LBI19:
+ 272              	.LVL34:
+ 273              	.LBB19:
+ 274              	.LBI19:
   38:My_Top/System/pid_Increment.hpp ****     {
- 280              		.loc 2 38 5 is_stmt 1 view .LVU58
- 281              	.LBB20:
- 282              	.LBB21:
+ 275              		.loc 2 38 5 is_stmt 1 view .LVU56
+ 276              	.LBB20:
+ 277              	.LBB21:
   40:My_Top/System/pid_Increment.hpp ****         _ki = ki;
- 283              		.loc 2 40 9 view .LVU59
+ 278              		.loc 2 40 9 view .LVU57
   40:My_Top/System/pid_Increment.hpp ****         _ki = ki;
- 284              		.loc 2 40 13 is_stmt 0 view .LVU60
- 285 005a 9022     		movs	r2, #144
- 286              	.LVL36:
-ARM GAS  /tmp/ccYdrV0b.s 			page 8
-
-
-  40:My_Top/System/pid_Increment.hpp ****         _ki = ki;
- 287              		.loc 2 40 13 view .LVU61
- 288 005c 4346     		mov	r3, r8
- 289 005e 8350     		str	r3, [r0, r2]
- 290              	.LVL37:
+ 279              		.loc 2 40 13 is_stmt 0 view .LVU58
+ 280 0056 4346     		mov	r3, r8
+ 281 0058 0366     		str	r3, [r0, #96]
   41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 291              		.loc 2 41 9 is_stmt 1 view .LVU62
+ 282              		.loc 2 41 9 is_stmt 1 view .LVU59
   41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 292              		.loc 2 41 13 is_stmt 0 view .LVU63
- 293 0060 0300     		movs	r3, r0
- 294 0062 9033     		adds	r3, r3, #144
- 295              	.LVL38:
-  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 296              		.loc 2 41 13 view .LVU64
- 297 0064 069A     		ldr	r2, [sp, #24]
- 298 0066 5A60     		str	r2, [r3, #4]
+ 283              		.loc 2 41 13 is_stmt 0 view .LVU60
+ 284 005a 069B     		ldr	r3, [sp, #24]
+ 285 005c 4366     		str	r3, [r0, #100]
   42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
- 299              		.loc 2 42 9 is_stmt 1 view .LVU65
+ARM GAS  /tmp/ccNe6E36.s 			page 8
+
+
+ 286              		.loc 2 42 9 is_stmt 1 view .LVU61
   42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
- 300              		.loc 2 42 13 is_stmt 0 view .LVU66
- 301 0068 079A     		ldr	r2, [sp, #28]
- 302 006a 9A60     		str	r2, [r3, #8]
+ 287              		.loc 2 42 13 is_stmt 0 view .LVU62
+ 288 005e 079B     		ldr	r3, [sp, #28]
+ 289 0060 8366     		str	r3, [r0, #104]
   43:My_Top/System/pid_Increment.hpp ****         _max = max;
- 303              		.loc 2 43 9 is_stmt 1 view .LVU67
+ 290              		.loc 2 43 9 is_stmt 1 view .LVU63
   43:My_Top/System/pid_Increment.hpp ****         _max = max;
- 304              		.loc 2 43 13 is_stmt 0 view .LVU68
- 305 006c 134A     		ldr	r2, .L10
- 306 006e DA60     		str	r2, [r3, #12]
+ 291              		.loc 2 43 13 is_stmt 0 view .LVU64
+ 292 0062 1549     		ldr	r1, .L10
+ 293              	.LVL35:
+  43:My_Top/System/pid_Increment.hpp ****         _max = max;
+ 294              		.loc 2 43 13 view .LVU65
+ 295 0064 C166     		str	r1, [r0, #108]
   44:My_Top/System/pid_Increment.hpp ****         _min = min;
- 307              		.loc 2 44 9 is_stmt 1 view .LVU69
+ 296              		.loc 2 44 9 is_stmt 1 view .LVU66
   44:My_Top/System/pid_Increment.hpp ****         _min = min;
- 308              		.loc 2 44 14 is_stmt 0 view .LVU70
- 309 0070 1349     		ldr	r1, .L10+4
- 310 0072 1961     		str	r1, [r3, #16]
+ 297              		.loc 2 44 14 is_stmt 0 view .LVU67
+ 298 0066 154B     		ldr	r3, .L10+4
+ 299 0068 0367     		str	r3, [r0, #112]
   45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
- 311              		.loc 2 45 9 is_stmt 1 view .LVU71
+ 300              		.loc 2 45 9 is_stmt 1 view .LVU68
   45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
- 312              		.loc 2 45 14 is_stmt 0 view .LVU72
- 313 0074 1349     		ldr	r1, .L10+8
- 314 0076 5961     		str	r1, [r3, #20]
+ 301              		.loc 2 45 14 is_stmt 0 view .LVU69
+ 302 006a 154B     		ldr	r3, .L10+8
+ 303 006c 4367     		str	r3, [r0, #116]
   46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 315              		.loc 2 46 9 is_stmt 1 view .LVU73
+ 304              		.loc 2 46 9 is_stmt 1 view .LVU70
   46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 316              		.loc 2 46 28 is_stmt 0 view .LVU74
- 317 0078 DC61     		str	r4, [r3, #28]
+ 305              		.loc 2 46 28 is_stmt 0 view .LVU71
+ 306 006e C467     		str	r4, [r0, #124]
   46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 318              		.loc 2 46 17 view .LVU75
- 319 007a 9C61     		str	r4, [r3, #24]
+ 307              		.loc 2 46 17 view .LVU72
+ 308 0070 8467     		str	r4, [r0, #120]
   47:My_Top/System/pid_Increment.hpp ****     }
- 320              		.loc 2 47 9 is_stmt 1 view .LVU76
+ 309              		.loc 2 47 9 is_stmt 1 view .LVU73
   47:My_Top/System/pid_Increment.hpp ****     }
- 321              		.loc 2 47 18 is_stmt 0 view .LVU77
- 322 007c 1C62     		str	r4, [r3, #32]
- 323              	.LVL39:
+ 310              		.loc 2 47 18 is_stmt 0 view .LVU74
+ 311 0072 8023     		movs	r3, #128
+ 312 0074 C450     		str	r4, [r0, r3]
+ 313              	.LVL36:
   47:My_Top/System/pid_Increment.hpp ****     }
- 324              		.loc 2 47 18 view .LVU78
- 325              	.LBE21:
-ARM GAS  /tmp/ccYdrV0b.s 			page 9
-
-
- 326              	.LBE20:
- 327              	.LBE19:
- 328              	.LBB22:
- 329              	.LBI22:
+ 314              		.loc 2 47 18 view .LVU75
+ 315              	.LBE21:
+ 316              	.LBE20:
+ 317              	.LBE19:
+ 318              	.LBB22:
+ 319              	.LBI22:
   38:My_Top/System/pid_Increment.hpp ****     {
- 330              		.loc 2 38 5 is_stmt 1 view .LVU79
- 331              	.LBB23:
- 332              	.LBB24:
+ 320              		.loc 2 38 5 is_stmt 1 view .LVU76
+ 321              	.LBB23:
+ 322              	.LBB24:
   40:My_Top/System/pid_Increment.hpp ****         _ki = ki;
- 333              		.loc 2 40 9 view .LVU80
+ 323              		.loc 2 40 9 view .LVU77
   40:My_Top/System/pid_Increment.hpp ****         _ki = ki;
- 334              		.loc 2 40 13 is_stmt 0 view .LVU81
- 335 007e B423     		movs	r3, #180
- 336 0080 0899     		ldr	r1, [sp, #32]
- 337 0082 C150     		str	r1, [r0, r3]
-  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 338              		.loc 2 41 9 is_stmt 1 view .LVU82
-  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 339              		.loc 2 41 13 is_stmt 0 view .LVU83
- 340 0084 0300     		movs	r3, r0
- 341 0086 B433     		adds	r3, r3, #180
- 342              	.LVL40:
-  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
- 343              		.loc 2 41 13 view .LVU84
- 344 0088 0999     		ldr	r1, [sp, #36]
- 345 008a 5960     		str	r1, [r3, #4]
-  42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
- 346              		.loc 2 42 9 is_stmt 1 view .LVU85
-  42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
- 347              		.loc 2 42 13 is_stmt 0 view .LVU86
- 348 008c 0A99     		ldr	r1, [sp, #40]
- 349 008e 9960     		str	r1, [r3, #8]
-  43:My_Top/System/pid_Increment.hpp ****         _max = max;
- 350              		.loc 2 43 9 is_stmt 1 view .LVU87
-  43:My_Top/System/pid_Increment.hpp ****         _max = max;
- 351              		.loc 2 43 13 is_stmt 0 view .LVU88
- 352 0090 DA60     		str	r2, [r3, #12]
-  44:My_Top/System/pid_Increment.hpp ****         _min = min;
- 353              		.loc 2 44 9 is_stmt 1 view .LVU89
-  44:My_Top/System/pid_Increment.hpp ****         _min = min;
- 354              		.loc 2 44 14 is_stmt 0 view .LVU90
- 355 0092 0D4A     		ldr	r2, .L10+12
- 356 0094 1A61     		str	r2, [r3, #16]
-  45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
- 357              		.loc 2 45 9 is_stmt 1 view .LVU91
-  45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
- 358              		.loc 2 45 14 is_stmt 0 view .LVU92
- 359 0096 0D4A     		ldr	r2, .L10+16
- 360 0098 5A61     		str	r2, [r3, #20]
-  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 361              		.loc 2 46 9 is_stmt 1 view .LVU93
-  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 362              		.loc 2 46 28 is_stmt 0 view .LVU94
- 363 009a DC61     		str	r4, [r3, #28]
-  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
- 364              		.loc 2 46 17 view .LVU95
- 365 009c 9C61     		str	r4, [r3, #24]
-ARM GAS  /tmp/ccYdrV0b.s 			page 10
+ 324              		.loc 2 40 13 is_stmt 0 view .LVU78
+ 325 0076 0433     		adds	r3, r3, #4
+ARM GAS  /tmp/ccNe6E36.s 			page 9
 
 
+ 326 0078 089F     		ldr	r7, [sp, #32]
+ 327 007a C750     		str	r7, [r0, r3]
+  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
+ 328              		.loc 2 41 9 is_stmt 1 view .LVU79
+  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
+ 329              		.loc 2 41 13 is_stmt 0 view .LVU80
+ 330 007c 0300     		movs	r3, r0
+ 331 007e 8433     		adds	r3, r3, #132
+ 332              	.LVL37:
+  41:My_Top/System/pid_Increment.hpp ****         _kd = kd;
+ 333              		.loc 2 41 13 view .LVU81
+ 334 0080 099F     		ldr	r7, [sp, #36]
+ 335 0082 5F60     		str	r7, [r3, #4]
+  42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
+ 336              		.loc 2 42 9 is_stmt 1 view .LVU82
+  42:My_Top/System/pid_Increment.hpp ****         _dt = dt;
+ 337              		.loc 2 42 13 is_stmt 0 view .LVU83
+ 338 0084 0A9F     		ldr	r7, [sp, #40]
+ 339 0086 9F60     		str	r7, [r3, #8]
+  43:My_Top/System/pid_Increment.hpp ****         _max = max;
+ 340              		.loc 2 43 9 is_stmt 1 view .LVU84
+  43:My_Top/System/pid_Increment.hpp ****         _max = max;
+ 341              		.loc 2 43 13 is_stmt 0 view .LVU85
+ 342 0088 D960     		str	r1, [r3, #12]
+  44:My_Top/System/pid_Increment.hpp ****         _min = min;
+ 343              		.loc 2 44 9 is_stmt 1 view .LVU86
+  44:My_Top/System/pid_Increment.hpp ****         _min = min;
+ 344              		.loc 2 44 14 is_stmt 0 view .LVU87
+ 345 008a 0E49     		ldr	r1, .L10+12
+ 346 008c 1961     		str	r1, [r3, #16]
+  45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
+ 347              		.loc 2 45 9 is_stmt 1 view .LVU88
+  45:My_Top/System/pid_Increment.hpp ****         _e_prev = _e_prev2 = 0.0f;
+ 348              		.loc 2 45 14 is_stmt 0 view .LVU89
+ 349 008e 0E49     		ldr	r1, .L10+16
+ 350 0090 5961     		str	r1, [r3, #20]
+  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
+ 351              		.loc 2 46 9 is_stmt 1 view .LVU90
+  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
+ 352              		.loc 2 46 28 is_stmt 0 view .LVU91
+ 353 0092 DC61     		str	r4, [r3, #28]
+  46:My_Top/System/pid_Increment.hpp ****         _delta_u = 0.0f;
+ 354              		.loc 2 46 17 view .LVU92
+ 355 0094 9C61     		str	r4, [r3, #24]
   47:My_Top/System/pid_Increment.hpp ****     }
- 366              		.loc 2 47 9 is_stmt 1 view .LVU96
+ 356              		.loc 2 47 9 is_stmt 1 view .LVU93
   47:My_Top/System/pid_Increment.hpp ****     }
- 367              		.loc 2 47 18 is_stmt 0 view .LVU97
- 368 009e 1C62     		str	r4, [r3, #32]
- 369              	.LVL41:
+ 357              		.loc 2 47 18 is_stmt 0 view .LVU94
+ 358 0096 1C62     		str	r4, [r3, #32]
+ 359              	.LVL38:
   47:My_Top/System/pid_Increment.hpp ****     }
- 370              		.loc 2 47 18 view .LVU98
- 371              	.LBE24:
- 372              	.LBE23:
- 373              	.LBE22:
- 374              		.loc 3 29 32 view .LVU99
- 375 00a0 D823     		movs	r3, #216
- 376 00a2 0C9A     		ldr	r2, [sp, #48]
- 377 00a4 C250     		str	r2, [r0, r3]
- 378              		.loc 3 29 61 view .LVU100
- 379 00a6 0433     		adds	r3, r3, #4
- 380 00a8 C652     		strh	r6, [r0, r3]
- 381              		.loc 3 29 85 view .LVU101
- 382 00aa 0233     		adds	r3, r3, #2
- 383 00ac FF22     		movs	r2, #255
- 384 00ae C252     		strh	r2, [r0, r3]
- 385 00b0 0233     		adds	r3, r3, #2
- 386 00b2 C550     		str	r5, [r0, r3]
- 387              	.LBE18:
+ 360              		.loc 2 47 18 view .LVU95
+ 361              	.LBE24:
+ 362              	.LBE23:
+ 363              	.LBE22:
+  26:My_Top/Step_Motor/StepperMotor_Loop.hpp ****         pid_speed(skp, ski, skd, 1.0/Stepper_VELOCITY_LOOP_FREQ_HZ, 200.0f, -200.0f),
+ 364              		.loc 3 26 26 view .LVU96
+ARM GAS  /tmp/ccNe6E36.s 			page 10
+
+
+ 365 0098 D423     		movs	r3, #212
+ 366 009a C250     		str	r2, [r0, r3]
+ 367              		.loc 3 29 32 view .LVU97
+ 368 009c 0433     		adds	r3, r3, #4
+ 369 009e 0C9A     		ldr	r2, [sp, #48]
+ 370              	.LVL39:
+ 371              		.loc 3 29 32 view .LVU98
+ 372 00a0 C250     		str	r2, [r0, r3]
+ 373              		.loc 3 29 61 view .LVU99
+ 374 00a2 0433     		adds	r3, r3, #4
+ 375 00a4 C652     		strh	r6, [r0, r3]
+ 376              		.loc 3 29 85 view .LVU100
+ 377 00a6 0233     		adds	r3, r3, #2
+ 378 00a8 FF22     		movs	r2, #255
+ 379 00aa C252     		strh	r2, [r0, r3]
+ 380 00ac 0233     		adds	r3, r3, #2
+ 381 00ae C550     		str	r5, [r0, r3]
+ 382              	.LBE18:
   30:My_Top/Step_Motor/StepperMotor_Loop.hpp ****         {}
- 388              		.loc 3 30 10 view .LVU102
- 389              		@ sp needed
- 390              	.LVL42:
- 391              		.loc 3 30 10 view .LVU103
- 392 00b4 80BC     		pop	{r7}
- 393 00b6 B846     		mov	r8, r7
- 394 00b8 F0BD     		pop	{r4, r5, r6, r7, pc}
- 395              	.L11:
- 396 00ba C046     		.align	2
- 397              	.L10:
- 398 00bc 6F128339 		.word	964891247
- 399 00c0 00004843 		.word	1128792064
- 400 00c4 000048C3 		.word	-1018691584
- 401 00c8 0000C040 		.word	1086324736
- 402 00cc 0000C0C0 		.word	-1061158912
- 403              		.cfi_endproc
- 404              	.LFE1464:
- 406              		.weak	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
- 407              		.thumb_set _ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft,_ZN12StepperMotorC2EP
- 408              		.text
- 409              		.align	1
- 410              		.syntax unified
- 411              		.code	16
- 412              		.thumb_func
- 414              	_Z41__static_initialization_and_destruction_0v:
- 415              	.LFB1622:
+ 383              		.loc 3 30 10 view .LVU101
+ 384              		@ sp needed
+ 385              	.LVL40:
+ 386              		.loc 3 30 10 view .LVU102
+ 387 00b0 80BC     		pop	{r7}
+ 388 00b2 B846     		mov	r8, r7
+ 389 00b4 F0BD     		pop	{r4, r5, r6, r7, pc}
+ 390              	.L11:
+ 391 00b6 C046     		.align	2
+ 392              	.L10:
+ 393 00b8 6F128339 		.word	964891247
+ 394 00bc 00004843 		.word	1128792064
+ 395 00c0 000048C3 		.word	-1018691584
+ 396 00c4 0000C040 		.word	1086324736
+ 397 00c8 0000C0C0 		.word	-1061158912
+ 398              		.cfi_endproc
+ 399              	.LFE1464:
+ 401              		.weak	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
+ 402              		.thumb_set _ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft,_ZN12StepperMotorC2EP
+ 403              		.text
+ 404              		.align	1
+ 405              		.syntax unified
+ 406              		.code	16
+ 407              		.thumb_func
+ 409              	_Z41__static_initialization_and_destruction_0v:
+ 410              	.LFB1622:
    1:My_Top/Step_Motor/StepperMotor_Loop.cpp **** #include "StepperMotor_Loop.hpp"
    2:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
    3:My_Top/Step_Motor/StepperMotor_Loop.cpp **** PLL_Parameter pll_conf(FOC_PLL_KP, FOC_PLL_KI);
    4:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
    5:My_Top/Step_Motor/StepperMotor_Loop.cpp **** KTH7111 kth7111_A(KTH7111_hspi1, SP1_CS_PORT, SP1_CS_PIN); //编码器对象，使用SPI通信，�
-ARM GAS  /tmp/ccYdrV0b.s 			page 11
-
-
    6:My_Top/Step_Motor/StepperMotor_Loop.cpp **** KTH7111 kth7111_B(KTH7111_hspi2, SP2_CS_PORT, SP2_CS_PIN); //编码器对象，使用SPI通信，�
    7:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
    8:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
@@ -608,6 +598,9 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   10:My_Top/Step_Motor/StepperMotor_Loop.cpp **** StepperMotor M2(&Motor_M2, &kth7111_B, 1.0f,0.5f,0.1f,  1.0f,0.0f,0.0f,true,M2_MS1_GPIO_Port, M2_MS
   11:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
   12:My_Top/Step_Motor/StepperMotor_Loop.cpp **** // StepperMotor M1(&Motor_M2, &kth7111_B, 1.0f,0.5f,0.1f,  1.0f,0.0f,0.0f,true,M2_MS1_GPIO_Port, M2
+ARM GAS  /tmp/ccNe6E36.s 			page 11
+
+
   13:My_Top/Step_Motor/StepperMotor_Loop.cpp **** // StepperMotor M2(&Motor_M1, &kth7111_A, 1.0f,0.5f,0.1f,  1.0f,0.0f,0.0f,true,M1_MS1_GPIO_Port, M1
   14:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
   15:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
@@ -658,9 +651,6 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   60:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
   61:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
   62:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }else if (LPFAndPLL == true)
-ARM GAS  /tmp/ccYdrV0b.s 			page 12
-
-
   63:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
   64:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       // 方式2PLL锁相环 更新PLL锁相环的输出角度和角速度
   65:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       foc_pll_run(theta_m,PLL_FREQ_Dt,&_pll_reg_out,&_pll_Angular_velocity,&pll_conf); //更新PLL�
@@ -668,6 +658,9 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   67:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
   68:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = _pll_Angular_velocity; //将最终速度赋值给最终角速度
   69:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
+ARM GAS  /tmp/ccNe6E36.s 			page 12
+
+
   70:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
   71:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
   72:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
@@ -718,9 +711,6 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  117:My_Top/Step_Motor/StepperMotor_Loop.cpp **** // void StepperMotor::Position_Loop(void)
  118:My_Top/Step_Motor/StepperMotor_Loop.cpp **** // {
  119:My_Top/Step_Motor/StepperMotor_Loop.cpp **** //     motor_fre = (int16_t)adrc.update(_target_location1, reg_final);
-ARM GAS  /tmp/ccYdrV0b.s 			page 13
-
-
  120:My_Top/Step_Motor/StepperMotor_Loop.cpp **** //     if(motor_fre >  2000) motor_fre =  2000;
  121:My_Top/Step_Motor/StepperMotor_Loop.cpp **** //     if(motor_fre < -2000) motor_fre = -2000;
  122:My_Top/Step_Motor/StepperMotor_Loop.cpp **** //     setFre();
@@ -728,6 +718,9 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  124:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
  125:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
  126:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
+ARM GAS  /tmp/ccNe6E36.s 			page 13
+
+
  127:My_Top/Step_Motor/StepperMotor_Loop.cpp **** void StepperMotor::Step_Handler()//电机计步计数控制
  128:My_Top/Step_Motor/StepperMotor_Loop.cpp **** {
  129:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if (!control_init_flag) return;
@@ -748,39 +741,36 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
  144:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         _motor->Set_Motor_EN(false);
  145:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
  146:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 416              		.loc 1 146 1 is_stmt 1 view -0
- 417              		.cfi_startproc
- 418              		@ args = 0, pretend = 0, frame = 0
- 419              		@ frame_needed = 0, uses_anonymous_args = 0
- 420 0000 F0B5     		push	{r4, r5, r6, r7, lr}
- 421              		.cfi_def_cfa_offset 20
- 422              		.cfi_offset 4, -20
- 423              		.cfi_offset 5, -16
- 424              		.cfi_offset 6, -12
- 425              		.cfi_offset 7, -8
- 426              		.cfi_offset 14, -4
- 427 0002 D646     		mov	lr, r10
- 428 0004 4F46     		mov	r7, r9
- 429 0006 4646     		mov	r6, r8
- 430 0008 C0B5     		push	{r6, r7, lr}
- 431              		.cfi_def_cfa_offset 32
- 432              		.cfi_offset 8, -32
- 433              		.cfi_offset 9, -28
- 434              		.cfi_offset 10, -24
- 435 000a 88B0     		sub	sp, sp, #32
- 436              		.cfi_def_cfa_offset 64
- 437              	.LVL43:
- 438              	.LBB25:
- 439              	.LBI25:
- 440              		.file 4 "My_Top/System/pll.hpp"
+ 411              		.loc 1 146 1 is_stmt 1 view -0
+ 412              		.cfi_startproc
+ 413              		@ args = 0, pretend = 0, frame = 0
+ 414              		@ frame_needed = 0, uses_anonymous_args = 0
+ 415 0000 F0B5     		push	{r4, r5, r6, r7, lr}
+ 416              		.cfi_def_cfa_offset 20
+ 417              		.cfi_offset 4, -20
+ 418              		.cfi_offset 5, -16
+ 419              		.cfi_offset 6, -12
+ 420              		.cfi_offset 7, -8
+ 421              		.cfi_offset 14, -4
+ 422 0002 D646     		mov	lr, r10
+ 423 0004 4F46     		mov	r7, r9
+ 424 0006 4646     		mov	r6, r8
+ 425 0008 C0B5     		push	{r6, r7, lr}
+ 426              		.cfi_def_cfa_offset 32
+ 427              		.cfi_offset 8, -32
+ 428              		.cfi_offset 9, -28
+ 429              		.cfi_offset 10, -24
+ 430 000a 88B0     		sub	sp, sp, #32
+ 431              		.cfi_def_cfa_offset 64
+ 432              	.LVL41:
+ 433              	.LBB25:
+ 434              	.LBI25:
+ 435              		.file 4 "My_Top/System/pll.hpp"
    1:My_Top/System/pll.hpp **** #pragma once
    2:My_Top/System/pll.hpp **** #include "ex_math.hpp"
    3:My_Top/System/pll.hpp **** 
    4:My_Top/System/pll.hpp **** #include "bsp.hpp"
    5:My_Top/System/pll.hpp **** 
-ARM GAS  /tmp/ccYdrV0b.s 			page 14
-
-
    6:My_Top/System/pll.hpp **** 
    7:My_Top/System/pll.hpp **** #define Motor_RPM (3000) //电机最大转速 实测电机最高38.2圈/s =2292rpm
    8:My_Top/System/pll.hpp **** #define Motor_PolesNub (7) //极对数
@@ -788,6 +778,9 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   10:My_Top/System/pll.hpp **** #define Wn_min  (M_2PI*Motor_Fe/10) //最小自然频率 = 2pi*Fe/10 = 219.911482 
   11:My_Top/System/pll.hpp **** #define Wn_max  (M_2PI*PLL_FREQ_HZ/10) //最大自然频率 = 2pi*采样周期/10   2513.2 
   12:My_Top/System/pll.hpp **** #define Ts_min  (3.0/(PLL_ZETA*Wn_max)*1000) //最小收敛时间 Ts = 3/(ζ*Wn_max) = 0.0016883480
+ARM GAS  /tmp/ccNe6E36.s 			page 14
+
+
   13:My_Top/System/pll.hpp **** #define Ts_max  (3.0/(PLL_ZETA*Wn_min)*1000) //最大收敛时间 Ts = 3/(ζ*Wn_min) = 0.0192954s =
   14:My_Top/System/pll.hpp **** 
   15:My_Top/System/pll.hpp **** 
@@ -808,28 +801,28 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   30:My_Top/System/pll.hpp **** struct PLL_Parameter
   31:My_Top/System/pll.hpp **** {
   32:My_Top/System/pll.hpp ****     PLL_Parameter(double kp, double ki) : foc_pll_kp(kp), foc_pll_ki(ki) {}
- 441              		.loc 4 32 5 view .LVU105
- 442              	.LBB26:
- 443              	.LBB27:
- 444              		.loc 4 32 43 is_stmt 0 view .LVU106
- 445 000c 284C     		ldr	r4, .L13
- 446 000e 2948     		ldr	r0, .L13+4
- 447 0010 2949     		ldr	r1, .L13+8
- 448 0012 2060     		str	r0, [r4]
- 449 0014 6160     		str	r1, [r4, #4]
- 450              		.loc 4 32 59 view .LVU107
- 451 0016 294A     		ldr	r2, .L13+12
- 452 0018 294B     		ldr	r3, .L13+16
- 453 001a A260     		str	r2, [r4, #8]
- 454 001c E360     		str	r3, [r4, #12]
- 455              	.LVL44:
- 456              		.loc 4 32 59 view .LVU108
- 457              	.LBE27:
- 458              	.LBE26:
- 459              	.LBE25:
- 460              	.LBB28:
- 461              	.LBI28:
- 462              		.file 5 "My_Top/System/kth_read.hpp"
+ 436              		.loc 4 32 5 view .LVU104
+ 437              	.LBB26:
+ 438              	.LBB27:
+ 439              		.loc 4 32 43 is_stmt 0 view .LVU105
+ 440 000c 284C     		ldr	r4, .L13
+ 441 000e 2948     		ldr	r0, .L13+4
+ 442 0010 2949     		ldr	r1, .L13+8
+ 443 0012 2060     		str	r0, [r4]
+ 444 0014 6160     		str	r1, [r4, #4]
+ 445              		.loc 4 32 59 view .LVU106
+ 446 0016 294A     		ldr	r2, .L13+12
+ 447 0018 294B     		ldr	r3, .L13+16
+ 448 001a A260     		str	r2, [r4, #8]
+ 449 001c E360     		str	r3, [r4, #12]
+ 450              	.LVL42:
+ 451              		.loc 4 32 59 view .LVU107
+ 452              	.LBE27:
+ 453              	.LBE26:
+ 454              	.LBE25:
+ 455              	.LBB28:
+ 456              	.LBI28:
+ 457              		.file 5 "My_Top/System/kth_read.hpp"
    1:My_Top/System/kth_read.hpp **** #pragma once
    2:My_Top/System/kth_read.hpp **** 
    3:My_Top/System/kth_read.hpp **** #include <stdbool.h>
@@ -838,9 +831,6 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
    6:My_Top/System/kth_read.hpp **** #include "task.h"
    7:My_Top/System/kth_read.hpp **** #include "bsp.hpp"
    8:My_Top/System/kth_read.hpp **** 
-ARM GAS  /tmp/ccYdrV0b.s 			page 15
-
-
    9:My_Top/System/kth_read.hpp **** #define KTH7111_PRECISION (65535.0f) // 2^16-1，编码器分辨率
   10:My_Top/System/kth_read.hpp **** #define RAW_TO_RAD  (6.28318530717f / KTH7111_PRECISION)// 编码器原始值转弧度系数：2π 
   11:My_Top/System/kth_read.hpp **** #define RAD_TO_DEG  (180.0f / 3.14159265358979323846f)// 弧度转角度系数：180 / π ≈ 57.29
@@ -848,6 +838,9 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   13:My_Top/System/kth_read.hpp **** 
   14:My_Top/System/kth_read.hpp **** 
   15:My_Top/System/kth_read.hpp **** class KTH7111
+ARM GAS  /tmp/ccNe6E36.s 			page 15
+
+
   16:My_Top/System/kth_read.hpp **** {
   17:My_Top/System/kth_read.hpp **** public:
   18:My_Top/System/kth_read.hpp ****     uint16_t single_turn; // 单圈原始值16位
@@ -855,1285 +848,1285 @@ ARM GAS  /tmp/ccYdrV0b.s 			page 1
   20:My_Top/System/kth_read.hpp ****     float angle;          // 转换后的角度 (0 ~ 360)
   21:My_Top/System/kth_read.hpp ****     bool  encoder_dir; // 编码器方向
   22:My_Top/System/kth_read.hpp ****     KTH7111(SPI_HandleTypeDef *hspi, GPIO_TypeDef *cs_port, uint16_t cs_pin)
- 463              		.loc 5 22 5 is_stmt 1 view .LVU109
- 464              	.LBB29:
- 465              	.LBB30:
+ 458              		.loc 5 22 5 is_stmt 1 view .LVU108
+ 459              	.LBB29:
+ 460              	.LBB30:
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
   24:My_Top/System/kth_read.hpp ****       single_turn(0), theta(0.0f), angle(0.0f) {}
- 466              		.loc 5 24 7 is_stmt 0 view .LVU110
- 467 001e 0022     		movs	r2, #0
- 468 0020 2282     		strh	r2, [r4, #16]
- 469              		.loc 5 24 23 view .LVU111
- 470 0022 0025     		movs	r5, #0
- 471 0024 6561     		str	r5, [r4, #20]
- 472              		.loc 5 24 36 view .LVU112
- 473 0026 A561     		str	r5, [r4, #24]
+ 461              		.loc 5 24 7 is_stmt 0 view .LVU109
+ 462 001e 0022     		movs	r2, #0
+ 463 0020 2282     		strh	r2, [r4, #16]
+ 464              		.loc 5 24 23 view .LVU110
+ 465 0022 0025     		movs	r5, #0
+ 466 0024 6561     		str	r5, [r4, #20]
+ 467              		.loc 5 24 36 view .LVU111
+ 468 0026 A561     		str	r5, [r4, #24]
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 474              		.loc 5 23 7 view .LVU113
- 475 0028 264B     		ldr	r3, .L13+20
- 476 002a 2362     		str	r3, [r4, #32]
+ 469              		.loc 5 23 7 view .LVU112
+ 470 0028 264B     		ldr	r3, .L13+20
+ 471 002a 2362     		str	r3, [r4, #32]
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 477              		.loc 5 23 20 view .LVU114
- 478 002c A023     		movs	r3, #160
- 479 002e DB05     		lsls	r3, r3, #23
- 480 0030 6362     		str	r3, [r4, #36]
+ 472              		.loc 5 23 20 view .LVU113
+ 473 002c A023     		movs	r3, #160
+ 474 002e DB05     		lsls	r3, r3, #23
+ 475 0030 6362     		str	r3, [r4, #36]
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 481              		.loc 5 23 39 view .LVU115
- 482 0032 1021     		movs	r1, #16
- 483 0034 2185     		strh	r1, [r4, #40]
- 484              	.LVL45:
+ 476              		.loc 5 23 39 view .LVU114
+ 477 0032 1021     		movs	r1, #16
+ 478 0034 2185     		strh	r1, [r4, #40]
+ 479              	.LVL43:
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 485              		.loc 5 23 39 view .LVU116
- 486              	.LBE30:
- 487              	.LBE29:
- 488              	.LBE28:
- 489              	.LBB31:
- 490              	.LBI31:
+ 480              		.loc 5 23 39 view .LVU115
+ 481              	.LBE30:
+ 482              	.LBE29:
+ 483              	.LBE28:
+ 484              	.LBB31:
+ 485              	.LBI31:
   22:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 491              		.loc 5 22 5 is_stmt 1 view .LVU117
- 492              	.LBB32:
- 493              	.LBB33:
- 494              		.loc 5 24 7 is_stmt 0 view .LVU118
- 495 0036 A285     		strh	r2, [r4, #44]
- 496              		.loc 5 24 23 view .LVU119
- 497 0038 2563     		str	r5, [r4, #48]
- 498              		.loc 5 24 36 view .LVU120
-ARM GAS  /tmp/ccYdrV0b.s 			page 16
+ 486              		.loc 5 22 5 is_stmt 1 view .LVU116
+ 487              	.LBB32:
+ 488              	.LBB33:
+ 489              		.loc 5 24 7 is_stmt 0 view .LVU117
+ 490 0036 A285     		strh	r2, [r4, #44]
+ 491              		.loc 5 24 23 view .LVU118
+ 492 0038 2563     		str	r5, [r4, #48]
+ 493              		.loc 5 24 36 view .LVU119
+ 494 003a 6563     		str	r5, [r4, #52]
+  23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
+ 495              		.loc 5 23 7 view .LVU120
+ 496 003c 224A     		ldr	r2, .L13+24
+ 497 003e E263     		str	r2, [r4, #60]
+  23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
+ 498              		.loc 5 23 20 view .LVU121
+ARM GAS  /tmp/ccNe6E36.s 			page 16
 
 
- 499 003a 6563     		str	r5, [r4, #52]
+ 499 0040 2364     		str	r3, [r4, #64]
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 500              		.loc 5 23 7 view .LVU121
- 501 003c 224A     		ldr	r2, .L13+24
- 502 003e E263     		str	r2, [r4, #60]
-  23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 503              		.loc 5 23 20 view .LVU122
- 504 0040 2364     		str	r3, [r4, #64]
+ 500              		.loc 5 23 39 view .LVU122
+ 501 0042 4423     		movs	r3, #68
+ 502 0044 214A     		ldr	r2, .L13+28
+ 503 0046 E252     		strh	r2, [r4, r3]
+ 504              	.LVL44:
   23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
  505              		.loc 5 23 39 view .LVU123
- 506 0042 4423     		movs	r3, #68
- 507 0044 214A     		ldr	r2, .L13+28
- 508 0046 E252     		strh	r2, [r4, r3]
- 509              	.LVL46:
-  23:My_Top/System/kth_read.hpp ****     : _hspi(hspi), _cs_port(cs_port), _cs_pin(cs_pin),
- 510              		.loc 5 23 39 view .LVU124
- 511              	.LBE33:
- 512              	.LBE32:
- 513              	.LBE31:
+ 506              	.LBE33:
+ 507              	.LBE32:
+ 508              	.LBE31:
    9:My_Top/Step_Motor/StepperMotor_Loop.cpp **** StepperMotor M2(&Motor_M2, &kth7111_B, 1.0f,0.5f,0.1f,  1.0f,0.0f,0.0f,true,M2_MS1_GPIO_Port, M2_MS
- 514              		.loc 1 9 105 view .LVU125
- 515 0048 FE26     		movs	r6, #254
- 516 004a B605     		lsls	r6, r6, #22
- 517 004c 2200     		movs	r2, r4
- 518 004e 1032     		adds	r2, r2, #16
- 519 0050 1F49     		ldr	r1, .L13+32
- 520 0052 2048     		ldr	r0, .L13+36
- 521 0054 043B     		subs	r3, r3, #4
- 522 0056 0793     		str	r3, [sp, #28]
- 523 0058 1F4B     		ldr	r3, .L13+40
- 524 005a 9A46     		mov	r10, r3
- 525 005c 0693     		str	r3, [sp, #24]
- 526 005e 0123     		movs	r3, #1
- 527 0060 9946     		mov	r9, r3
- 528 0062 0593     		str	r3, [sp, #20]
- 529 0064 0495     		str	r5, [sp, #16]
- 530 0066 0395     		str	r5, [sp, #12]
- 531 0068 0296     		str	r6, [sp, #8]
- 532 006a 1C4B     		ldr	r3, .L13+44
- 533 006c 9846     		mov	r8, r3
- 534 006e 0193     		str	r3, [sp, #4]
- 535 0070 FC27     		movs	r7, #252
- 536 0072 BF05     		lsls	r7, r7, #22
- 537 0074 0097     		str	r7, [sp]
- 538 0076 331C     		adds	r3, r6, #0
- 539 0078 FFF7FEFF 		bl	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
- 540              	.LVL47:
+ 509              		.loc 1 9 105 view .LVU124
+ 510 0048 FE26     		movs	r6, #254
+ 511 004a B605     		lsls	r6, r6, #22
+ 512 004c 2200     		movs	r2, r4
+ 513 004e 1032     		adds	r2, r2, #16
+ 514 0050 1F49     		ldr	r1, .L13+32
+ 515 0052 2048     		ldr	r0, .L13+36
+ 516 0054 043B     		subs	r3, r3, #4
+ 517 0056 0793     		str	r3, [sp, #28]
+ 518 0058 1F4B     		ldr	r3, .L13+40
+ 519 005a 9A46     		mov	r10, r3
+ 520 005c 0693     		str	r3, [sp, #24]
+ 521 005e 0123     		movs	r3, #1
+ 522 0060 9946     		mov	r9, r3
+ 523 0062 0593     		str	r3, [sp, #20]
+ 524 0064 0495     		str	r5, [sp, #16]
+ 525 0066 0395     		str	r5, [sp, #12]
+ 526 0068 0296     		str	r6, [sp, #8]
+ 527 006a 1C4B     		ldr	r3, .L13+44
+ 528 006c 9846     		mov	r8, r3
+ 529 006e 0193     		str	r3, [sp, #4]
+ 530 0070 FC27     		movs	r7, #252
+ 531 0072 BF05     		lsls	r7, r7, #22
+ 532 0074 0097     		str	r7, [sp]
+ 533 0076 331C     		adds	r3, r6, #0
+ 534 0078 FFF7FEFF 		bl	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
+ 535              	.LVL45:
   10:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 541              		.loc 1 10 105 view .LVU126
- 542 007c 2200     		movs	r2, r4
- 543 007e 2C32     		adds	r2, r2, #44
- 544 0080 1749     		ldr	r1, .L13+48
- 545 0082 1848     		ldr	r0, .L13+52
- 546 0084 8023     		movs	r3, #128
- 547 0086 DB01     		lsls	r3, r3, #7
- 548 0088 0793     		str	r3, [sp, #28]
- 549 008a 5346     		mov	r3, r10
-ARM GAS  /tmp/ccYdrV0b.s 			page 17
+ 536              		.loc 1 10 105 view .LVU125
+ 537 007c 2200     		movs	r2, r4
+ 538 007e 2C32     		adds	r2, r2, #44
+ 539 0080 1749     		ldr	r1, .L13+48
+ 540 0082 1848     		ldr	r0, .L13+52
+ 541 0084 8023     		movs	r3, #128
+ 542 0086 DB01     		lsls	r3, r3, #7
+ 543 0088 0793     		str	r3, [sp, #28]
+ 544 008a 5346     		mov	r3, r10
+ 545 008c 0693     		str	r3, [sp, #24]
+ 546 008e 4B46     		mov	r3, r9
+ 547 0090 0593     		str	r3, [sp, #20]
+ 548 0092 0495     		str	r5, [sp, #16]
+ 549 0094 0395     		str	r5, [sp, #12]
+ 550 0096 0296     		str	r6, [sp, #8]
+ 551 0098 4346     		mov	r3, r8
+ARM GAS  /tmp/ccNe6E36.s 			page 17
 
 
- 550 008c 0693     		str	r3, [sp, #24]
- 551 008e 4B46     		mov	r3, r9
- 552 0090 0593     		str	r3, [sp, #20]
- 553 0092 0495     		str	r5, [sp, #16]
- 554 0094 0395     		str	r5, [sp, #12]
- 555 0096 0296     		str	r6, [sp, #8]
- 556 0098 4346     		mov	r3, r8
- 557 009a 0193     		str	r3, [sp, #4]
- 558 009c 0097     		str	r7, [sp]
- 559 009e 331C     		adds	r3, r6, #0
- 560 00a0 FFF7FEFF 		bl	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
- 561              	.LVL48:
- 562              		.loc 1 146 1 view .LVU127
- 563 00a4 08B0     		add	sp, sp, #32
- 564              		@ sp needed
- 565 00a6 E0BC     		pop	{r5, r6, r7}
- 566 00a8 BA46     		mov	r10, r7
- 567 00aa B146     		mov	r9, r6
- 568 00ac A846     		mov	r8, r5
- 569 00ae F0BD     		pop	{r4, r5, r6, r7, pc}
- 570              	.L14:
- 571              		.align	2
- 572              	.L13:
- 573 00b0 00000000 		.word	.LANCHOR0
- 574 00b4 F004EC71 		.word	1911293168
- 575 00b8 476F7340 		.word	1081306951
- 576 00bc 5260AEFB 		.word	-72458158
- 577 00c0 229DE740 		.word	1088920866
- 578 00c4 00000000 		.word	hspi1
- 579 00c8 00000000 		.word	hspi2
- 580 00cc 0080FFFF 		.word	-32768
- 581 00d0 00000000 		.word	Motor_M1
- 582 00d4 00000000 		.word	M1
- 583 00d8 00080050 		.word	1342179328
- 584 00dc CDCCCC3D 		.word	1036831949
- 585 00e0 00000000 		.word	Motor_M2
- 586 00e4 00000000 		.word	M2
- 587              		.cfi_endproc
- 588              	.LFE1622:
- 590              		.align	1
- 591              		.global	_ZN12StepperMotor15My_Stepper_InitEv
- 592              		.syntax unified
- 593              		.code	16
- 594              		.thumb_func
- 596              	_ZN12StepperMotor15My_Stepper_InitEv:
- 597              	.LVL49:
- 598              	.LFB1466:
+ 552 009a 0193     		str	r3, [sp, #4]
+ 553 009c 0097     		str	r7, [sp]
+ 554 009e 331C     		adds	r3, r6, #0
+ 555 00a0 FFF7FEFF 		bl	_ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
+ 556              	.LVL46:
+ 557              		.loc 1 146 1 view .LVU126
+ 558 00a4 08B0     		add	sp, sp, #32
+ 559              		@ sp needed
+ 560 00a6 E0BC     		pop	{r5, r6, r7}
+ 561 00a8 BA46     		mov	r10, r7
+ 562 00aa B146     		mov	r9, r6
+ 563 00ac A846     		mov	r8, r5
+ 564 00ae F0BD     		pop	{r4, r5, r6, r7, pc}
+ 565              	.L14:
+ 566              		.align	2
+ 567              	.L13:
+ 568 00b0 00000000 		.word	.LANCHOR0
+ 569 00b4 F004EC71 		.word	1911293168
+ 570 00b8 476F7340 		.word	1081306951
+ 571 00bc 5260AEFB 		.word	-72458158
+ 572 00c0 229DE740 		.word	1088920866
+ 573 00c4 00000000 		.word	hspi1
+ 574 00c8 00000000 		.word	hspi2
+ 575 00cc 0080FFFF 		.word	-32768
+ 576 00d0 00000000 		.word	Motor_M1
+ 577 00d4 00000000 		.word	M1
+ 578 00d8 00080050 		.word	1342179328
+ 579 00dc CDCCCC3D 		.word	1036831949
+ 580 00e0 00000000 		.word	Motor_M2
+ 581 00e4 00000000 		.word	M2
+ 582              		.cfi_endproc
+ 583              	.LFE1622:
+ 585              		.align	1
+ 586              		.global	_ZN12StepperMotor15My_Stepper_InitEv
+ 587              		.syntax unified
+ 588              		.code	16
+ 589              		.thumb_func
+ 591              	_ZN12StepperMotor15My_Stepper_InitEv:
+ 592              	.LVL47:
+ 593              	.LFB1466:
   18:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     
- 599              		.loc 1 18 1 is_stmt 1 view -0
- 600              		.cfi_startproc
- 601              		@ args = 0, pretend = 0, frame = 0
- 602              		@ frame_needed = 0, uses_anonymous_args = 0
+ 594              		.loc 1 18 1 is_stmt 1 view -0
+ 595              		.cfi_startproc
+ 596              		@ args = 0, pretend = 0, frame = 0
+ 597              		@ frame_needed = 0, uses_anonymous_args = 0
   18:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     
- 603              		.loc 1 18 1 is_stmt 0 view .LVU129
- 604 00e8 70B5     		push	{r4, r5, r6, lr}
- 605              		.cfi_def_cfa_offset 16
- 606              		.cfi_offset 4, -16
-ARM GAS  /tmp/ccYdrV0b.s 			page 18
-
-
- 607              		.cfi_offset 5, -12
- 608              		.cfi_offset 6, -8
- 609              		.cfi_offset 14, -4
- 610 00ea 0400     		movs	r4, r0
+ 598              		.loc 1 18 1 is_stmt 0 view .LVU128
+ 599 00e8 70B5     		push	{r4, r5, r6, lr}
+ 600              		.cfi_def_cfa_offset 16
+ 601              		.cfi_offset 4, -16
+ 602              		.cfi_offset 5, -12
+ 603              		.cfi_offset 6, -8
+ 604              		.cfi_offset 14, -4
+ 605 00ea 0400     		movs	r4, r0
   20:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     speed_lpf.init(0.7); //初始化速度低通滤波器
- 611              		.loc 1 20 5 is_stmt 1 view .LVU130
+ 606              		.loc 1 20 5 is_stmt 1 view .LVU129
   20:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     speed_lpf.init(0.7); //初始化速度低通滤波器
- 612              		.loc 1 20 15 is_stmt 0 view .LVU131
- 613 00ec 0023     		movs	r3, #0
- 614 00ee 8370     		strb	r3, [r0, #2]
+ARM GAS  /tmp/ccNe6E36.s 			page 18
+
+
+ 607              		.loc 1 20 15 is_stmt 0 view .LVU130
+ 608 00ec 0023     		movs	r3, #0
+ 609 00ee 8370     		strb	r3, [r0, #2]
   21:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     error_lpf.init(0.7); //初始化误差低通滤波器
- 615              		.loc 1 21 5 is_stmt 1 view .LVU132
+ 610              		.loc 1 21 5 is_stmt 1 view .LVU131
   21:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     error_lpf.init(0.7); //初始化误差低通滤波器
- 616              		.loc 1 21 19 is_stmt 0 view .LVU133
- 617 00f0 154D     		ldr	r5, .L17
- 618 00f2 6030     		adds	r0, r0, #96
- 619              	.LVL50:
+ 611              		.loc 1 21 19 is_stmt 0 view .LVU132
+ 612 00f0 154D     		ldr	r5, .L17
+ 613 00f2 A830     		adds	r0, r0, #168
+ 614              	.LVL48:
   21:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     error_lpf.init(0.7); //初始化误差低通滤波器
- 620              		.loc 1 21 19 view .LVU134
- 621 00f4 291C     		adds	r1, r5, #0
- 622 00f6 FFF7FEFF 		bl	_ZN13LowpassFilter4initEf
- 623              	.LVL51:
+ 615              		.loc 1 21 19 view .LVU133
+ 616 00f4 291C     		adds	r1, r5, #0
+ 617 00f6 FFF7FEFF 		bl	_ZN13LowpassFilter4initEf
+ 618              	.LVL49:
   22:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     speed_avg.init(5); //初始化速度平均值滤波器
- 624              		.loc 1 22 5 is_stmt 1 view .LVU135
+ 619              		.loc 1 22 5 is_stmt 1 view .LVU134
   22:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     speed_avg.init(5); //初始化速度平均值滤波器
- 625              		.loc 1 22 19 is_stmt 0 view .LVU136
- 626 00fa 2000     		movs	r0, r4
- 627 00fc 6830     		adds	r0, r0, #104
- 628 00fe 291C     		adds	r1, r5, #0
- 629 0100 FFF7FEFF 		bl	_ZN13LowpassFilter4initEf
- 630              	.LVL52:
+ 620              		.loc 1 22 19 is_stmt 0 view .LVU135
+ 621 00fa 2000     		movs	r0, r4
+ 622 00fc B030     		adds	r0, r0, #176
+ 623 00fe 291C     		adds	r1, r5, #0
+ 624 0100 FFF7FEFF 		bl	_ZN13LowpassFilter4initEf
+ 625              	.LVL50:
   23:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _encoder->KTH7111_Init(motor_encoder_dir); //初始化编码器 
- 631              		.loc 1 23 5 is_stmt 1 view .LVU137
+ 626              		.loc 1 23 5 is_stmt 1 view .LVU136
   23:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _encoder->KTH7111_Init(motor_encoder_dir); //初始化编码器 
- 632              		.loc 1 23 19 is_stmt 0 view .LVU138
- 633 0104 2000     		movs	r0, r4
- 634 0106 7030     		adds	r0, r0, #112
- 635 0108 0521     		movs	r1, #5
- 636 010a FFF7FEFF 		bl	_ZN9AvgFilter4initEh
- 637              	.LVL53:
+ 627              		.loc 1 23 19 is_stmt 0 view .LVU137
+ 628 0104 2000     		movs	r0, r4
+ 629 0106 B830     		adds	r0, r0, #184
+ 630 0108 0521     		movs	r1, #5
+ 631 010a FFF7FEFF 		bl	_ZN9AvgFilter4initEh
+ 632              	.LVL51:
   24:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _motor->Motor_Init(); //初始化电机
- 638              		.loc 1 24 5 is_stmt 1 view .LVU139
- 639 010e 8C23     		movs	r3, #140
- 640 0110 E058     		ldr	r0, [r4, r3]
+ 633              		.loc 1 24 5 is_stmt 1 view .LVU138
+ 634 010e D423     		movs	r3, #212
+ 635 0110 E058     		ldr	r0, [r4, r3]
   24:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _motor->Motor_Init(); //初始化电机
- 641              		.loc 1 24 27 is_stmt 0 view .LVU140
- 642 0112 543B     		subs	r3, r3, #84
- 643 0114 E15C     		ldrb	r1, [r4, r3]
- 644 0116 FFF7FEFF 		bl	_ZN7KTH711112KTH7111_InitEb
- 645              	.LVL54:
+ 636              		.loc 1 24 27 is_stmt 0 view .LVU139
+ 637 0112 9C3B     		subs	r3, r3, #156
+ 638 0114 E15C     		ldrb	r1, [r4, r3]
+ 639 0116 FFF7FEFF 		bl	_ZN7KTH711112KTH7111_InitEb
+ 640              	.LVL52:
   25:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     HAL_GPIO_WritePin(MS_FULL_PORT_, MS_FULL_PIN_, MS_FULL ? GPIO_PIN_RESET : GPIO_PIN_SET);
- 646              		.loc 1 25 5 is_stmt 1 view .LVU141
- 647 011a E06D     		ldr	r0, [r4, #92]
+ 641              		.loc 1 25 5 is_stmt 1 view .LVU140
+ 642 011a E06D     		ldr	r0, [r4, #92]
   25:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     HAL_GPIO_WritePin(MS_FULL_PORT_, MS_FULL_PIN_, MS_FULL ? GPIO_PIN_RESET : GPIO_PIN_SET);
- 648              		.loc 1 25 23 is_stmt 0 view .LVU142
- 649 011c FFF7FEFF 		bl	_ZN10Step_Motor10Motor_InitEv
- 650              	.LVL55:
-ARM GAS  /tmp/ccYdrV0b.s 			page 19
+ 643              		.loc 1 25 23 is_stmt 0 view .LVU141
+ 644 011c FFF7FEFF 		bl	_ZN10Step_Motor10Motor_InitEv
+ 645              	.LVL53:
+  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
+ 646              		.loc 1 26 5 is_stmt 1 view .LVU142
+  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
+ 647              		.loc 1 26 52 is_stmt 0 view .LVU143
+ 648 0120 E06B     		ldr	r0, [r4, #60]
+  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
+ 649              		.loc 1 26 60 view .LVU144
+ARM GAS  /tmp/ccNe6E36.s 			page 19
 
 
+ 650 0122 0125     		movs	r5, #1
+ 651 0124 0021     		movs	r1, #0
+ 652 0126 FFF7FEFF 		bl	__aeabi_fcmpeq
+ 653              	.LVL54:
+ 654 012a 0028     		cmp	r0, #0
+ 655 012c 00D1     		bne	.L16
+ 656 012e 0025     		movs	r5, #0
+ 657              	.L16:
+ 658 0130 EAB2     		uxtb	r2, r5
   26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
- 651              		.loc 1 26 5 is_stmt 1 view .LVU143
-  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
- 652              		.loc 1 26 52 is_stmt 0 view .LVU144
- 653 0120 E06B     		ldr	r0, [r4, #60]
-  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
- 654              		.loc 1 26 60 view .LVU145
- 655 0122 0125     		movs	r5, #1
- 656 0124 0021     		movs	r1, #0
- 657 0126 FFF7FEFF 		bl	__aeabi_fcmpeq
- 658              	.LVL56:
- 659 012a 0028     		cmp	r0, #0
- 660 012c 00D1     		bne	.L16
- 661 012e 0025     		movs	r5, #0
- 662              	.L16:
- 663 0130 EAB2     		uxtb	r2, r5
-  26:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre = 0;
- 664              		.loc 1 26 22 view .LVU146
- 665 0132 DC23     		movs	r3, #220
- 666 0134 E15A     		ldrh	r1, [r4, r3]
- 667 0136 043B     		subs	r3, r3, #4
- 668 0138 E058     		ldr	r0, [r4, r3]
- 669 013a FFF7FEFF 		bl	HAL_GPIO_WritePin
- 670              	.LVL57:
+ 659              		.loc 1 26 22 view .LVU145
+ 660 0132 DC23     		movs	r3, #220
+ 661 0134 E15A     		ldrh	r1, [r4, r3]
+ 662 0136 043B     		subs	r3, r3, #4
+ 663 0138 E058     		ldr	r0, [r4, r3]
+ 664 013a FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 665              	.LVL55:
   27:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     control_init_flag = true;
- 671              		.loc 1 27 5 is_stmt 1 view .LVU147
+ 666              		.loc 1 27 5 is_stmt 1 view .LVU146
   27:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     control_init_flag = true;
- 672              		.loc 1 27 15 is_stmt 0 view .LVU148
- 673 013e 0023     		movs	r3, #0
- 674 0140 6363     		str	r3, [r4, #52]
+ 667              		.loc 1 27 15 is_stmt 0 view .LVU147
+ 668 013e 0023     		movs	r3, #0
+ 669 0140 6363     		str	r3, [r4, #52]
   28:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 675              		.loc 1 28 5 is_stmt 1 view .LVU149
+ 670              		.loc 1 28 5 is_stmt 1 view .LVU148
   28:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 676              		.loc 1 28 23 is_stmt 0 view .LVU150
- 677 0142 0123     		movs	r3, #1
- 678 0144 6370     		strb	r3, [r4, #1]
+ 671              		.loc 1 28 23 is_stmt 0 view .LVU149
+ 672 0142 0123     		movs	r3, #1
+ 673 0144 6370     		strb	r3, [r4, #1]
   29:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 679              		.loc 1 29 1 view .LVU151
- 680              		@ sp needed
- 681              	.LVL58:
+ 674              		.loc 1 29 1 view .LVU150
+ 675              		@ sp needed
+ 676              	.LVL56:
   29:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 682              		.loc 1 29 1 view .LVU152
- 683 0146 70BD     		pop	{r4, r5, r6, pc}
- 684              	.L18:
- 685              		.align	2
- 686              	.L17:
- 687 0148 3333333F 		.word	1060320051
- 688              		.cfi_endproc
- 689              	.LFE1466:
- 691              		.align	1
- 692              		.global	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
- 693              		.syntax unified
- 694              		.code	16
- 695              		.thumb_func
- 697              	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv:
- 698              	.LVL59:
- 699              	.LFB1467:
-ARM GAS  /tmp/ccYdrV0b.s 			page 20
+ 677              		.loc 1 29 1 view .LVU151
+ 678 0146 70BD     		pop	{r4, r5, r6, pc}
+ 679              	.L18:
+ 680              		.align	2
+ 681              	.L17:
+ 682 0148 3333333F 		.word	1060320051
+ 683              		.cfi_endproc
+ 684              	.LFE1466:
+ 686              		.align	1
+ 687              		.global	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
+ 688              		.syntax unified
+ 689              		.code	16
+ 690              		.thumb_func
+ 692              	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv:
+ 693              	.LVL57:
+ 694              	.LFB1467:
+  36:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 静态变量，用于临时存储角度值和上一次的角度值
+ 695              		.loc 1 36 1 is_stmt 1 view -0
+ 696              		.cfi_startproc
+ 697              		@ args = 0, pretend = 0, frame = 0
+ 698              		@ frame_needed = 0, uses_anonymous_args = 0
+  36:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 静态变量，用于临时存储角度值和上一次的角度值
+ 699              		.loc 1 36 1 is_stmt 0 view .LVU153
+ARM GAS  /tmp/ccNe6E36.s 			page 20
 
 
-  36:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 静态变量，用于临时存储角度值和上一次的角度值
- 700              		.loc 1 36 1 is_stmt 1 view -0
- 701              		.cfi_startproc
- 702              		@ args = 0, pretend = 0, frame = 0
- 703              		@ frame_needed = 0, uses_anonymous_args = 0
-  36:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 静态变量，用于临时存储角度值和上一次的角度值
- 704              		.loc 1 36 1 is_stmt 0 view .LVU154
- 705 014c 30B5     		push	{r4, r5, lr}
- 706              		.cfi_def_cfa_offset 12
- 707              		.cfi_offset 4, -12
- 708              		.cfi_offset 5, -8
- 709              		.cfi_offset 14, -4
- 710 014e 83B0     		sub	sp, sp, #12
- 711              		.cfi_def_cfa_offset 24
- 712 0150 0400     		movs	r4, r0
+ 700 014c 30B5     		push	{r4, r5, lr}
+ 701              		.cfi_def_cfa_offset 12
+ 702              		.cfi_offset 4, -12
+ 703              		.cfi_offset 5, -8
+ 704              		.cfi_offset 14, -4
+ 705 014e 83B0     		sub	sp, sp, #12
+ 706              		.cfi_def_cfa_offset 24
+ 707 0150 0400     		movs	r4, r0
   38:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     static float theta_m_offic_temp = 0.0;
- 713              		.loc 1 38 5 is_stmt 1 view .LVU155
+ 708              		.loc 1 38 5 is_stmt 1 view .LVU154
   39:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 714              		.loc 1 39 5 view .LVU156
+ 709              		.loc 1 39 5 view .LVU155
   41:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     fudu_test = _encoder->Get_KTH7111_Radian();//获取编码器角度
- 715              		.loc 1 41 5 view .LVU157
- 716 0152 8C25     		movs	r5, #140
- 717 0154 4059     		ldr	r0, [r0, r5]
- 718              	.LVL60:
+ 710              		.loc 1 41 5 view .LVU156
+ 711 0152 D425     		movs	r5, #212
+ 712 0154 4059     		ldr	r0, [r0, r5]
+ 713              	.LVL58:
   41:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     fudu_test = _encoder->Get_KTH7111_Radian();//获取编码器角度
- 719              		.loc 1 41 36 is_stmt 0 view .LVU158
- 720 0156 FFF7FEFF 		bl	_ZN7KTH711121KTH7111_Send_JIAO_CMDEv
- 721              	.LVL61:
+ 714              		.loc 1 41 36 is_stmt 0 view .LVU157
+ 715 0156 FFF7FEFF 		bl	_ZN7KTH711121KTH7111_Send_JIAO_CMDEv
+ 716              	.LVL59:
   42:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 722              		.loc 1 42 5 is_stmt 1 view .LVU159
+ 717              		.loc 1 42 5 is_stmt 1 view .LVU158
   42:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 723              		.loc 1 42 17 is_stmt 0 view .LVU160
- 724 015a 6059     		ldr	r0, [r4, r5]
+ 718              		.loc 1 42 17 is_stmt 0 view .LVU159
+ 719 015a 6059     		ldr	r0, [r4, r5]
   42:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 725              		.loc 1 42 45 view .LVU161
- 726 015c FFF7FEFF 		bl	_ZN7KTH711118Get_KTH7111_RadianEv
- 727              	.LVL62:
+ 720              		.loc 1 42 45 view .LVU160
+ 721 015c FFF7FEFF 		bl	_ZN7KTH711118Get_KTH7111_RadianEv
+ 722              	.LVL60:
   42:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 728              		.loc 1 42 15 discriminator 1 view .LVU162
- 729 0160 454B     		ldr	r3, .L30
- 730 0162 9864     		str	r0, [r3, #72]
+ 723              		.loc 1 42 15 discriminator 1 view .LVU161
+ 724 0160 454B     		ldr	r3, .L30
+ 725 0162 9864     		str	r0, [r3, #72]
   44:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     
- 731              		.loc 1 44 5 is_stmt 1 view .LVU163
+ 726              		.loc 1 44 5 is_stmt 1 view .LVU162
   44:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     
- 732              		.loc 1 44 13 is_stmt 0 view .LVU164
- 733 0164 6060     		str	r0, [r4, #4]
+ 727              		.loc 1 44 13 is_stmt 0 view .LVU163
+ 728 0164 6060     		str	r0, [r4, #4]
   46:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 734              		.loc 1 46 5 is_stmt 1 view .LVU165
- 735              	.LBB34:
+ 729              		.loc 1 46 5 is_stmt 1 view .LVU164
+ 730              	.LBB34:
   46:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 736              		.loc 1 46 9 is_stmt 0 view .LVU166
- 737 0166 A378     		ldrb	r3, [r4, #2]
+ 731              		.loc 1 46 9 is_stmt 0 view .LVU165
+ 732 0166 A378     		ldrb	r3, [r4, #2]
   46:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 738              		.loc 1 46 5 view .LVU167
- 739 0168 002B     		cmp	r3, #0
- 740 016a 00D0     		beq	.LCB622
- 741 016c 6DE0     		b	.L20	@long jump
-ARM GAS  /tmp/ccYdrV0b.s 			page 21
+ 733              		.loc 1 46 5 view .LVU166
+ 734 0168 002B     		cmp	r3, #0
+ 735 016a 00D0     		beq	.LCB618
+ 736 016c 6DE0     		b	.L20	@long jump
+ 737              	.LCB618:
+ 738              	.LBB35:
+  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
+ 739              		.loc 1 48 7 is_stmt 1 view .LVU167
+ 740              	.LBB36:
+  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
+ 741              		.loc 1 48 17 view .LVU168
+ARM GAS  /tmp/ccNe6E36.s 			page 21
 
 
- 742              	.LCB622:
- 743              	.LBB35:
-  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 744              		.loc 1 48 7 is_stmt 1 view .LVU168
- 745              	.LBB36:
-  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 746              		.loc 1 48 17 view .LVU169
- 747 016e FFF7FEFF 		bl	__aeabi_f2d
- 748              	.LVL63:
- 749 0172 424A     		ldr	r2, .L30+4
- 750 0174 424B     		ldr	r3, .L30+8
- 751 0176 FFF7FEFF 		bl	__aeabi_dadd
+ 742 016e FFF7FEFF 		bl	__aeabi_f2d
+ 743              	.LVL61:
+ 744 0172 424A     		ldr	r2, .L30+4
+ 745 0174 424B     		ldr	r3, .L30+8
+ 746 0176 FFF7FEFF 		bl	__aeabi_dadd
+ 747              	.LVL62:
+ 748 017a FFF7FEFF 		bl	__aeabi_d2f
+ 749              	.LVL63:
+ 750 017e 4149     		ldr	r1, .L30+12
+ 751 0180 FFF7FEFF 		bl	fmodf
  752              	.LVL64:
- 753 017a FFF7FEFF 		bl	__aeabi_d2f
+ 753 0184 051C     		adds	r5, r0, #0
  754              	.LVL65:
- 755 017e 4149     		ldr	r1, .L30+12
- 756 0180 FFF7FEFF 		bl	fmodf
- 757              	.LVL66:
- 758 0184 051C     		adds	r5, r0, #0
- 759              	.LVL67:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 760              		.loc 1 48 17 discriminator 1 view .LVU170
- 761 0186 0021     		movs	r1, #0
- 762 0188 FFF7FEFF 		bl	__aeabi_fcmplt
- 763              	.LVL68:
+ 755              		.loc 1 48 17 discriminator 1 view .LVU169
+ 756 0186 0021     		movs	r1, #0
+ 757 0188 FFF7FEFF 		bl	__aeabi_fcmplt
+ 758              	.LVL66:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 764              		.loc 1 48 17 is_stmt 0 discriminator 1 view .LVU171
- 765 018c 0028     		cmp	r0, #0
- 766 018e 50D1     		bne	.L28
- 767              	.LVL69:
- 768              	.L21:
+ 759              		.loc 1 48 17 is_stmt 0 discriminator 1 view .LVU170
+ 760 018c 0028     		cmp	r0, #0
+ 761 018e 50D1     		bne	.L28
+ 762              	.LVL67:
+ 763              	.L21:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 769              		.loc 1 48 17 is_stmt 1 discriminator 3 view .LVU172
- 770 0190 281C     		adds	r0, r5, #0
- 771 0192 FFF7FEFF 		bl	__aeabi_f2d
- 772              	.LVL70:
- 773 0196 394A     		ldr	r2, .L30+4
- 774 0198 394B     		ldr	r3, .L30+8
- 775 019a FFF7FEFF 		bl	__aeabi_dsub
+ 764              		.loc 1 48 17 is_stmt 1 discriminator 3 view .LVU171
+ 765 0190 281C     		adds	r0, r5, #0
+ 766 0192 FFF7FEFF 		bl	__aeabi_f2d
+ 767              	.LVL68:
+ 768 0196 394A     		ldr	r2, .L30+4
+ 769 0198 394B     		ldr	r3, .L30+8
+ 770 019a FFF7FEFF 		bl	__aeabi_dsub
+ 771              	.LVL69:
+ 772              	.LBE36:
+ 773 019e FFF7FEFF 		bl	__aeabi_d2f
+ 774              	.LVL70:
+ 775 01a2 051C     		adds	r5, r0, #0
  776              	.LVL71:
- 777              	.LBE36:
- 778 019e FFF7FEFF 		bl	__aeabi_d2f
- 779              	.LVL72:
- 780 01a2 051C     		adds	r5, r0, #0
- 781              	.LVL73:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 782              		.loc 1 48 15 is_stmt 0 discriminator 3 view .LVU173
- 783 01a4 6060     		str	r0, [r4, #4]
+ 777              		.loc 1 48 15 is_stmt 0 discriminator 3 view .LVU172
+ 778 01a4 6060     		str	r0, [r4, #4]
   50:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_last = theta_m; // 更新上一次的机械角度
- 784              		.loc 1 50 7 is_stmt 1 view .LVU174
+ 779              		.loc 1 50 7 is_stmt 1 view .LVU173
   50:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_last = theta_m; // 更新上一次的机械角度
- 785              		.loc 1 50 38 is_stmt 0 view .LVU175
- 786 01a6 A168     		ldr	r1, [r4, #8]
+ 780              		.loc 1 50 38 is_stmt 0 view .LVU174
+ 781 01a6 A168     		ldr	r1, [r4, #8]
   50:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_last = theta_m; // 更新上一次的机械角度
- 787              		.loc 1 50 36 view .LVU176
- 788 01a8 FFF7FEFF 		bl	__aeabi_fsub
- 789              	.LVL74:
-ARM GAS  /tmp/ccYdrV0b.s 			page 22
+ 782              		.loc 1 50 36 view .LVU175
+ 783 01a8 FFF7FEFF 		bl	__aeabi_fsub
+ 784              	.LVL72:
+  50:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_last = theta_m; // 更新上一次的机械角度
+ 785              		.loc 1 50 26 view .LVU176
+ 786 01ac 324B     		ldr	r3, .L30
+ 787 01ae D864     		str	r0, [r3, #76]
+  51:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_offic = wrap_to_PI(theta_m_offic_temp);// 将差值规整到 [-PI, PI) 区间
+ 788              		.loc 1 51 7 is_stmt 1 view .LVU177
+  51:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_offic = wrap_to_PI(theta_m_offic_temp);// 将差值规整到 [-PI, PI) 区间
+ARM GAS  /tmp/ccNe6E36.s 			page 22
 
 
-  50:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_last = theta_m; // 更新上一次的机械角度
- 790              		.loc 1 50 26 view .LVU177
- 791 01ac 324B     		ldr	r3, .L30
- 792 01ae D864     		str	r0, [r3, #76]
-  51:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_offic = wrap_to_PI(theta_m_offic_temp);// 将差值规整到 [-PI, PI) 区间
- 793              		.loc 1 51 7 is_stmt 1 view .LVU178
-  51:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_offic = wrap_to_PI(theta_m_offic_temp);// 将差值规整到 [-PI, PI) 区间
- 794              		.loc 1 51 20 is_stmt 0 view .LVU179
- 795 01b0 A560     		str	r5, [r4, #8]
+ 789              		.loc 1 51 20 is_stmt 0 view .LVU178
+ 790 01b0 A560     		str	r5, [r4, #8]
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 796              		.loc 1 52 7 is_stmt 1 view .LVU180
- 797              	.LBB37:
+ 791              		.loc 1 52 7 is_stmt 1 view .LVU179
+ 792              	.LBB37:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 798              		.loc 1 52 23 view .LVU181
- 799 01b2 FFF7FEFF 		bl	__aeabi_f2d
- 800              	.LVL75:
- 801 01b6 314A     		ldr	r2, .L30+4
- 802 01b8 314B     		ldr	r3, .L30+8
- 803 01ba FFF7FEFF 		bl	__aeabi_dadd
+ 793              		.loc 1 52 23 view .LVU180
+ 794 01b2 FFF7FEFF 		bl	__aeabi_f2d
+ 795              	.LVL73:
+ 796 01b6 314A     		ldr	r2, .L30+4
+ 797 01b8 314B     		ldr	r3, .L30+8
+ 798 01ba FFF7FEFF 		bl	__aeabi_dadd
+ 799              	.LVL74:
+ 800 01be FFF7FEFF 		bl	__aeabi_d2f
+ 801              	.LVL75:
+ 802 01c2 3049     		ldr	r1, .L30+12
+ 803 01c4 FFF7FEFF 		bl	fmodf
  804              	.LVL76:
- 805 01be FFF7FEFF 		bl	__aeabi_d2f
+ 805 01c8 051C     		adds	r5, r0, #0
  806              	.LVL77:
- 807 01c2 3049     		ldr	r1, .L30+12
- 808 01c4 FFF7FEFF 		bl	fmodf
- 809              	.LVL78:
- 810 01c8 051C     		adds	r5, r0, #0
- 811              	.LVL79:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 812              		.loc 1 52 23 discriminator 1 view .LVU182
- 813 01ca 0021     		movs	r1, #0
- 814 01cc FFF7FEFF 		bl	__aeabi_fcmplt
- 815              	.LVL80:
+ 807              		.loc 1 52 23 discriminator 1 view .LVU181
+ 808 01ca 0021     		movs	r1, #0
+ 809 01cc FFF7FEFF 		bl	__aeabi_fcmplt
+ 810              	.LVL78:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 816              		.loc 1 52 23 is_stmt 0 discriminator 1 view .LVU183
- 817 01d0 0028     		cmp	r0, #0
- 818 01d2 34D1     		bne	.L29
- 819              	.LVL81:
- 820              	.L23:
+ 811              		.loc 1 52 23 is_stmt 0 discriminator 1 view .LVU182
+ 812 01d0 0028     		cmp	r0, #0
+ 813 01d2 34D1     		bne	.L29
+ 814              	.LVL79:
+ 815              	.L23:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 821              		.loc 1 52 23 is_stmt 1 discriminator 3 view .LVU184
- 822 01d4 281C     		adds	r0, r5, #0
- 823 01d6 FFF7FEFF 		bl	__aeabi_f2d
- 824              	.LVL82:
- 825 01da 284A     		ldr	r2, .L30+4
- 826 01dc 284B     		ldr	r3, .L30+8
- 827 01de FFF7FEFF 		bl	__aeabi_dsub
- 828              	.LVL83:
- 829              	.LBE37:
- 830 01e2 FFF7FEFF 		bl	__aeabi_d2f
- 831              	.LVL84:
- 832 01e6 011C     		adds	r1, r0, #0
+ 816              		.loc 1 52 23 is_stmt 1 discriminator 3 view .LVU183
+ 817 01d4 281C     		adds	r0, r5, #0
+ 818 01d6 FFF7FEFF 		bl	__aeabi_f2d
+ 819              	.LVL80:
+ 820 01da 284A     		ldr	r2, .L30+4
+ 821 01dc 284B     		ldr	r3, .L30+8
+ 822 01de FFF7FEFF 		bl	__aeabi_dsub
+ 823              	.LVL81:
+ 824              	.LBE37:
+ 825 01e2 FFF7FEFF 		bl	__aeabi_d2f
+ 826              	.LVL82:
+ 827 01e6 011C     		adds	r1, r0, #0
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 833              		.loc 1 52 21 is_stmt 0 discriminator 3 view .LVU185
- 834 01e8 E060     		str	r0, [r4, #12]
+ 828              		.loc 1 52 21 is_stmt 0 discriminator 3 view .LVU184
+ 829 01e8 E060     		str	r0, [r4, #12]
   54:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_speed = theta_m_offic_filtered*Stepper_VELOCITY_LOOP_FREQ_HZ;//speed=路程/t 
- 835              		.loc 1 54 7 is_stmt 1 view .LVU186
+ 830              		.loc 1 54 7 is_stmt 1 view .LVU185
   54:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_speed = theta_m_offic_filtered*Stepper_VELOCITY_LOOP_FREQ_HZ;//speed=路程/t 
-ARM GAS  /tmp/ccYdrV0b.s 			page 23
-
-
- 836              		.loc 1 54 48 is_stmt 0 view .LVU187
- 837 01ea 2000     		movs	r0, r4
- 838 01ec 6830     		adds	r0, r0, #104
- 839 01ee FFF7FEFF 		bl	_ZN13LowpassFilter6filterEf
- 840              	.LVL85:
+ 831              		.loc 1 54 48 is_stmt 0 view .LVU186
+ 832 01ea 2000     		movs	r0, r4
+ 833 01ec B030     		adds	r0, r0, #176
+ 834 01ee FFF7FEFF 		bl	_ZN13LowpassFilter6filterEf
+ 835              	.LVL83:
   54:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_m_speed = theta_m_offic_filtered*Stepper_VELOCITY_LOOP_FREQ_HZ;//speed=路程/t 
- 841              		.loc 1 54 30 discriminator 1 view .LVU188
- 842 01f2 2061     		str	r0, [r4, #16]
-  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
- 843              		.loc 1 55 7 is_stmt 1 view .LVU189
-  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
- 844              		.loc 1 55 45 is_stmt 0 view .LVU190
- 845 01f4 2449     		ldr	r1, .L30+16
- 846 01f6 FFF7FEFF 		bl	__aeabi_fmul
- 847              	.LVL86:
- 848 01fa 011C     		adds	r1, r0, #0
-  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
- 849              		.loc 1 55 21 view .LVU191
- 850 01fc 6061     		str	r0, [r4, #20]
-  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
- 851              		.loc 1 56 7 is_stmt 1 view .LVU192
-  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
- 852              		.loc 1 56 40 is_stmt 0 view .LVU193
- 853 01fe 2000     		movs	r0, r4
- 854 0200 7030     		adds	r0, r0, #112
- 855 0202 FFF7FEFF 		bl	_ZN9AvgFilter6filterEf
- 856              	.LVL87:
- 857 0206 011C     		adds	r1, r0, #0
-  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
- 858              		.loc 1 56 22 discriminator 1 view .LVU194
- 859 0208 A061     		str	r0, [r4, #24]
-  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
- 860              		.loc 1 57 7 is_stmt 1 view .LVU195
-  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
- 861              		.loc 1 57 40 is_stmt 0 view .LVU196
- 862 020a 2000     		movs	r0, r4
- 863 020c 6030     		adds	r0, r0, #96
- 864 020e FFF7FEFF 		bl	_ZN13LowpassFilter6filterEf
- 865              	.LVL88:
- 866 0212 051C     		adds	r5, r0, #0
- 867              	.LVL89:
-  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
- 868              		.loc 1 57 22 discriminator 1 view .LVU197
- 869 0214 E061     		str	r0, [r4, #28]
-  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 870              		.loc 1 58 7 is_stmt 1 view .LVU198
-  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 871              		.loc 1 58 19 is_stmt 0 view .LVU199
- 872 0216 6068     		ldr	r0, [r4, #4]
-  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 873              		.loc 1 58 17 view .LVU200
- 874 0218 A062     		str	r0, [r4, #40]
-  59:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
- 875              		.loc 1 59 7 is_stmt 1 view .LVU201
-  59:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
- 876              		.loc 1 59 25 is_stmt 0 view .LVU202
- 877 021a FFF7FEFF 		bl	__aeabi_f2d
-ARM GAS  /tmp/ccYdrV0b.s 			page 24
+ 836              		.loc 1 54 30 discriminator 1 view .LVU187
+ARM GAS  /tmp/ccNe6E36.s 			page 23
 
 
- 878              	.LVL90:
- 879 021e 1B4A     		ldr	r2, .L30+20
- 880 0220 1B4B     		ldr	r3, .L30+24
- 881 0222 FFF7FEFF 		bl	__aeabi_dmul
- 882              	.LVL91:
- 883 0226 FFF7FEFF 		bl	__aeabi_d2f
- 884              	.LVL92:
+ 837 01f2 2061     		str	r0, [r4, #16]
+  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
+ 838              		.loc 1 55 7 is_stmt 1 view .LVU188
+  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
+ 839              		.loc 1 55 45 is_stmt 0 view .LVU189
+ 840 01f4 2449     		ldr	r1, .L30+16
+ 841 01f6 FFF7FEFF 		bl	__aeabi_fmul
+ 842              	.LVL84:
+ 843 01fa 011C     		adds	r1, r0, #0
+  55:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_av_speed = speed_avg.filter(theta_m_speed);//对速度进行平均值滤波
+ 844              		.loc 1 55 21 view .LVU190
+ 845 01fc 6061     		str	r0, [r4, #20]
+  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
+ 846              		.loc 1 56 7 is_stmt 1 view .LVU191
+  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
+ 847              		.loc 1 56 40 is_stmt 0 view .LVU192
+ 848 01fe 2000     		movs	r0, r4
+ 849 0200 B830     		adds	r0, r0, #184
+ 850 0202 FFF7FEFF 		bl	_ZN9AvgFilter6filterEf
+ 851              	.LVL85:
+ 852 0206 011C     		adds	r1, r0, #0
+  56:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       filtered_speed = speed_lpf.filter(theta_av_speed);//对速度进行低通滤波
+ 853              		.loc 1 56 22 discriminator 1 view .LVU193
+ 854 0208 A061     		str	r0, [r4, #24]
+  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
+ 855              		.loc 1 57 7 is_stmt 1 view .LVU194
+  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
+ 856              		.loc 1 57 40 is_stmt 0 view .LVU195
+ 857 020a 2000     		movs	r0, r4
+ 858 020c A830     		adds	r0, r0, #168
+ 859 020e FFF7FEFF 		bl	_ZN13LowpassFilter6filterEf
+ 860              	.LVL86:
+ 861 0212 051C     		adds	r5, r0, #0
+ 862              	.LVL87:
+  57:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = theta_m; //将机械角度赋值给最终角度
+ 863              		.loc 1 57 22 discriminator 1 view .LVU196
+ 864 0214 E061     		str	r0, [r4, #28]
+  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
+ 865              		.loc 1 58 7 is_stmt 1 view .LVU197
+  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
+ 866              		.loc 1 58 19 is_stmt 0 view .LVU198
+ 867 0216 6068     		ldr	r0, [r4, #4]
+  58:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
+ 868              		.loc 1 58 17 view .LVU199
+ 869 0218 A062     		str	r0, [r4, #40]
   59:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
- 885              		.loc 1 59 23 view .LVU203
- 886 022a E062     		str	r0, [r4, #44]
+ 870              		.loc 1 59 7 is_stmt 1 view .LVU200
+  59:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
+ 871              		.loc 1 59 25 is_stmt 0 view .LVU201
+ 872 021a FFF7FEFF 		bl	__aeabi_f2d
+ 873              	.LVL88:
+ 874 021e 1B4A     		ldr	r2, .L30+20
+ 875 0220 1B4B     		ldr	r3, .L30+24
+ 876 0222 FFF7FEFF 		bl	__aeabi_dmul
+ 877              	.LVL89:
+ 878 0226 FFF7FEFF 		bl	__aeabi_d2f
+ 879              	.LVL90:
+ARM GAS  /tmp/ccNe6E36.s 			page 24
+
+
+  59:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = filtered_speed;  //将最终速度赋值给最终角速度
+ 880              		.loc 1 59 23 view .LVU202
+ 881 022a E062     		str	r0, [r4, #44]
   60:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 887              		.loc 1 60 7 is_stmt 1 view .LVU204
+ 882              		.loc 1 60 7 is_stmt 1 view .LVU203
   60:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 888              		.loc 1 60 30 is_stmt 0 view .LVU205
- 889 022c 2563     		str	r5, [r4, #48]
- 890              	.LVL93:
- 891              	.L19:
+ 883              		.loc 1 60 30 is_stmt 0 view .LVU204
+ 884 022c 2563     		str	r5, [r4, #48]
+ 885              	.LVL91:
+ 886              	.L19:
   60:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 892              		.loc 1 60 30 view .LVU206
- 893              	.LBE35:
- 894              	.LBE34:
+ 887              		.loc 1 60 30 view .LVU205
+ 888              	.LBE35:
+ 889              	.LBE34:
   72:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 895              		.loc 1 72 1 view .LVU207
- 896 022e 03B0     		add	sp, sp, #12
- 897              		@ sp needed
- 898              	.LVL94:
+ 890              		.loc 1 72 1 view .LVU206
+ 891 022e 03B0     		add	sp, sp, #12
+ 892              		@ sp needed
+ 893              	.LVL92:
   72:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 899              		.loc 1 72 1 view .LVU208
- 900 0230 30BD     		pop	{r4, r5, pc}
- 901              	.LVL95:
- 902              	.L28:
- 903              	.LBB41:
- 904              	.LBB40:
- 905              	.LBB38:
+ 894              		.loc 1 72 1 view .LVU207
+ 895 0230 30BD     		pop	{r4, r5, pc}
+ 896              	.LVL93:
+ 897              	.L28:
+ 898              	.LBB41:
+ 899              	.LBB40:
+ 900              	.LBB38:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 906              		.loc 1 48 17 is_stmt 1 discriminator 1 view .LVU209
- 907 0232 1449     		ldr	r1, .L30+12
- 908 0234 281C     		adds	r0, r5, #0
- 909 0236 FFF7FEFF 		bl	__aeabi_fadd
+ 901              		.loc 1 48 17 is_stmt 1 discriminator 1 view .LVU208
+ 902 0232 1449     		ldr	r1, .L30+12
+ 903 0234 281C     		adds	r0, r5, #0
+ 904 0236 FFF7FEFF 		bl	__aeabi_fadd
+ 905              	.LVL94:
+ 906 023a 051C     		adds	r5, r0, #0
+ 907              	.LVL95:
+  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
+ 908              		.loc 1 48 17 is_stmt 0 discriminator 1 view .LVU209
+ 909 023c A8E7     		b	.L21
  910              	.LVL96:
- 911 023a 051C     		adds	r5, r0, #0
- 912              	.LVL97:
+ 911              	.L29:
   48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 913              		.loc 1 48 17 is_stmt 0 discriminator 1 view .LVU210
- 914 023c A8E7     		b	.L21
- 915              	.LVL98:
- 916              	.L29:
-  48:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       //方式1 低通滤波 更新机械角度速度
- 917              		.loc 1 48 17 discriminator 1 view .LVU211
- 918              	.LBE38:
- 919              	.LBB39:
+ 912              		.loc 1 48 17 discriminator 1 view .LVU210
+ 913              	.LBE38:
+ 914              	.LBB39:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 920              		.loc 1 52 23 is_stmt 1 discriminator 1 view .LVU212
- 921 023e 1149     		ldr	r1, .L30+12
- 922 0240 281C     		adds	r0, r5, #0
- 923 0242 FFF7FEFF 		bl	__aeabi_fadd
+ 915              		.loc 1 52 23 is_stmt 1 discriminator 1 view .LVU211
+ 916 023e 1149     		ldr	r1, .L30+12
+ 917 0240 281C     		adds	r0, r5, #0
+ 918 0242 FFF7FEFF 		bl	__aeabi_fadd
+ 919              	.LVL97:
+ 920 0246 051C     		adds	r5, r0, #0
+ 921              	.LVL98:
+  52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
+ 922              		.loc 1 52 23 is_stmt 0 discriminator 1 view .LVU212
+ 923 0248 C4E7     		b	.L23
  924              	.LVL99:
-ARM GAS  /tmp/ccYdrV0b.s 			page 25
+ 925              	.L20:
+ARM GAS  /tmp/ccNe6E36.s 			page 25
 
 
- 925 0246 051C     		adds	r5, r0, #0
- 926              	.LVL100:
   52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 927              		.loc 1 52 23 is_stmt 0 discriminator 1 view .LVU213
- 928 0248 C4E7     		b	.L23
- 929              	.LVL101:
- 930              	.L20:
-  52:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 931              		.loc 1 52 23 discriminator 1 view .LVU214
- 932              	.LBE39:
- 933              	.LBE40:
+ 926              		.loc 1 52 23 discriminator 1 view .LVU213
+ 927              	.LBE39:
+ 928              	.LBE40:
   62:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 934              		.loc 1 62 11 is_stmt 1 view .LVU215
+ 929              		.loc 1 62 11 is_stmt 1 view .LVU214
   65:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = _pll_reg_out; //将PLL锁相环的输出角度赋值给最终角度
- 935              		.loc 1 65 7 view .LVU216
+ 930              		.loc 1 65 7 view .LVU215
   65:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       reg_final = _pll_reg_out; //将PLL锁相环的输出角度赋值给最终角度
- 936              		.loc 1 65 18 is_stmt 0 view .LVU217
- 937 024a 2300     		movs	r3, r4
- 938 024c 2433     		adds	r3, r3, #36
- 939 024e 2200     		movs	r2, r4
- 940 0250 2032     		adds	r2, r2, #32
- 941 0252 0949     		ldr	r1, .L30
- 942 0254 0091     		str	r1, [sp]
- 943 0256 0F49     		ldr	r1, .L30+28
- 944 0258 FFF7FEFF 		bl	_Z11foc_pll_runffPfS_P13PLL_Parameter
- 945              	.LVL102:
+ 931              		.loc 1 65 18 is_stmt 0 view .LVU216
+ 932 024a 2300     		movs	r3, r4
+ 933 024c 2433     		adds	r3, r3, #36
+ 934 024e 2200     		movs	r2, r4
+ 935 0250 2032     		adds	r2, r2, #32
+ 936 0252 0949     		ldr	r1, .L30
+ 937 0254 0091     		str	r1, [sp]
+ 938 0256 0F49     		ldr	r1, .L30+28
+ 939 0258 FFF7FEFF 		bl	_Z11foc_pll_runffPfS_P13PLL_Parameter
+ 940              	.LVL100:
   66:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 946              		.loc 1 66 7 is_stmt 1 view .LVU218
+ 941              		.loc 1 66 7 is_stmt 1 view .LVU217
   66:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 947              		.loc 1 66 19 is_stmt 0 view .LVU219
- 948 025c 206A     		ldr	r0, [r4, #32]
+ 942              		.loc 1 66 19 is_stmt 0 view .LVU218
+ 943 025c 206A     		ldr	r0, [r4, #32]
   66:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       theta_deg_final = rad2deg(reg_final); //将弧度转换为360度
- 949              		.loc 1 66 17 view .LVU220
- 950 025e A062     		str	r0, [r4, #40]
+ 944              		.loc 1 66 17 view .LVU219
+ 945 025e A062     		str	r0, [r4, #40]
   67:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = _pll_Angular_velocity; //将最终速度赋值给最终角速度
- 951              		.loc 1 67 7 is_stmt 1 view .LVU221
+ 946              		.loc 1 67 7 is_stmt 1 view .LVU220
   67:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = _pll_Angular_velocity; //将最终速度赋值给最终角速度
- 952              		.loc 1 67 25 is_stmt 0 view .LVU222
- 953 0260 FFF7FEFF 		bl	__aeabi_f2d
- 954              	.LVL103:
- 955 0264 094A     		ldr	r2, .L30+20
- 956 0266 0A4B     		ldr	r3, .L30+24
- 957 0268 FFF7FEFF 		bl	__aeabi_dmul
- 958              	.LVL104:
- 959 026c FFF7FEFF 		bl	__aeabi_d2f
- 960              	.LVL105:
+ 947              		.loc 1 67 25 is_stmt 0 view .LVU221
+ 948 0260 FFF7FEFF 		bl	__aeabi_f2d
+ 949              	.LVL101:
+ 950 0264 094A     		ldr	r2, .L30+20
+ 951 0266 0A4B     		ldr	r3, .L30+24
+ 952 0268 FFF7FEFF 		bl	__aeabi_dmul
+ 953              	.LVL102:
+ 954 026c FFF7FEFF 		bl	__aeabi_d2f
+ 955              	.LVL103:
   67:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       Angular_velocity_final = _pll_Angular_velocity; //将最终速度赋值给最终角速度
- 961              		.loc 1 67 23 view .LVU223
- 962 0270 E062     		str	r0, [r4, #44]
+ 956              		.loc 1 67 23 view .LVU222
+ 957 0270 E062     		str	r0, [r4, #44]
   68:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 963              		.loc 1 68 7 is_stmt 1 view .LVU224
+ 958              		.loc 1 68 7 is_stmt 1 view .LVU223
   68:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 964              		.loc 1 68 32 is_stmt 0 view .LVU225
- 965 0272 636A     		ldr	r3, [r4, #36]
+ 959              		.loc 1 68 32 is_stmt 0 view .LVU224
+ 960 0272 636A     		ldr	r3, [r4, #36]
   68:My_Top/Step_Motor/StepperMotor_Loop.cpp ****       
- 966              		.loc 1 68 30 view .LVU226
- 967 0274 2363     		str	r3, [r4, #48]
-ARM GAS  /tmp/ccYdrV0b.s 			page 26
-
-
- 968              	.LBE41:
+ 961              		.loc 1 68 30 view .LVU225
+ 962 0274 2363     		str	r3, [r4, #48]
+ 963              	.LBE41:
   72:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 969              		.loc 1 72 1 view .LVU227
- 970 0276 DAE7     		b	.L19
- 971              	.L31:
- 972              		.align	2
- 973              	.L30:
- 974 0278 00000000 		.word	.LANCHOR0
- 975 027c 182D4454 		.word	1413754136
- 976 0280 FB210940 		.word	1074340347
- 977 0284 DB0FC940 		.word	1086918619
- 978 0288 00007A45 		.word	1165623296
- 979 028c F8C1631A 		.word	442745336
- 980 0290 DCA54C40 		.word	1078765020
- 981 0294 6F128339 		.word	964891247
- 982              		.cfi_endproc
- 983              	.LFE1467:
- 985              		.align	1
- 986              		.global	_ZN12StepperMotor6setFreEv
- 987              		.syntax unified
- 988              		.code	16
- 989              		.thumb_func
- 991              	_ZN12StepperMotor6setFreEv:
- 992              	.LVL106:
- 993              	.LFB1468:
+ 964              		.loc 1 72 1 view .LVU226
+ 965 0276 DAE7     		b	.L19
+ 966              	.L31:
+ 967              		.align	2
+ 968              	.L30:
+ARM GAS  /tmp/ccNe6E36.s 			page 26
+
+
+ 969 0278 00000000 		.word	.LANCHOR0
+ 970 027c 182D4454 		.word	1413754136
+ 971 0280 FB210940 		.word	1074340347
+ 972 0284 DB0FC940 		.word	1086918619
+ 973 0288 00007A45 		.word	1165623296
+ 974 028c F8C1631A 		.word	442745336
+ 975 0290 DCA54C40 		.word	1078765020
+ 976 0294 6F128339 		.word	964891247
+ 977              		.cfi_endproc
+ 978              	.LFE1467:
+ 980              		.align	1
+ 981              		.global	_ZN12StepperMotor6setFreEv
+ 982              		.syntax unified
+ 983              		.code	16
+ 984              		.thumb_func
+ 986              	_ZN12StepperMotor6setFreEv:
+ 987              	.LVL104:
+ 988              	.LFB1468:
   76:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(MS_FULL_Last != (uint16_t)MS_FULL)
- 994              		.loc 1 76 1 is_stmt 1 view -0
- 995              		.cfi_startproc
- 996              		@ args = 0, pretend = 0, frame = 0
- 997              		@ frame_needed = 0, uses_anonymous_args = 0
+ 989              		.loc 1 76 1 is_stmt 1 view -0
+ 990              		.cfi_startproc
+ 991              		@ args = 0, pretend = 0, frame = 0
+ 992              		@ frame_needed = 0, uses_anonymous_args = 0
   76:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(MS_FULL_Last != (uint16_t)MS_FULL)
- 998              		.loc 1 76 1 is_stmt 0 view .LVU229
- 999 0298 70B5     		push	{r4, r5, r6, lr}
- 1000              		.cfi_def_cfa_offset 16
- 1001              		.cfi_offset 4, -16
- 1002              		.cfi_offset 5, -12
- 1003              		.cfi_offset 6, -8
- 1004              		.cfi_offset 14, -4
- 1005 029a 0400     		movs	r4, r0
+ 993              		.loc 1 76 1 is_stmt 0 view .LVU228
+ 994 0298 70B5     		push	{r4, r5, r6, lr}
+ 995              		.cfi_def_cfa_offset 16
+ 996              		.cfi_offset 4, -16
+ 997              		.cfi_offset 5, -12
+ 998              		.cfi_offset 6, -8
+ 999              		.cfi_offset 14, -4
+ 1000 029a 0400     		movs	r4, r0
   77:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1006              		.loc 1 77 5 is_stmt 1 view .LVU230
+ 1001              		.loc 1 77 5 is_stmt 1 view .LVU229
   77:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1007              		.loc 1 77 8 is_stmt 0 view .LVU231
- 1008 029c DE23     		movs	r3, #222
- 1009 029e C55A     		ldrh	r5, [r0, r3]
+ 1002              		.loc 1 77 8 is_stmt 0 view .LVU230
+ 1003 029c DE23     		movs	r3, #222
+ 1004 029e C55A     		ldrh	r5, [r0, r3]
   77:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1010              		.loc 1 77 34 view .LVU232
- 1011 02a0 C06B     		ldr	r0, [r0, #60]
- 1012              	.LVL107:
+ 1005              		.loc 1 77 34 view .LVU231
+ 1006 02a0 C06B     		ldr	r0, [r0, #60]
+ 1007              	.LVL105:
   77:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1013              		.loc 1 77 24 view .LVU233
- 1014 02a2 FFF7FEFF 		bl	__aeabi_f2uiz
- 1015              	.LVL108:
- 1016 02a6 80B2     		uxth	r0, r0
+ 1008              		.loc 1 77 24 view .LVU232
+ 1009 02a2 FFF7FEFF 		bl	__aeabi_f2uiz
+ 1010              	.LVL106:
+ 1011 02a6 80B2     		uxth	r0, r0
   77:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1017              		.loc 1 77 5 view .LVU234
- 1018 02a8 8542     		cmp	r5, r0
-ARM GAS  /tmp/ccYdrV0b.s 			page 27
+ 1012              		.loc 1 77 5 view .LVU233
+ 1013 02a8 8542     		cmp	r5, r0
+ 1014 02aa 09D1     		bne	.L35
+ 1015              	.L33:
+  82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
+ 1016              		.loc 1 82 5 is_stmt 1 view .LVU234
+  82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
+ 1017              		.loc 1 82 9 is_stmt 0 view .LVU235
+ 1018 02ac E06D     		ldr	r0, [r4, #92]
+ARM GAS  /tmp/ccNe6E36.s 			page 27
 
 
- 1019 02aa 09D1     		bne	.L35
- 1020              	.L33:
   82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1021              		.loc 1 82 5 is_stmt 1 view .LVU235
+ 1019              		.loc 1 82 36 view .LVU236
+ 1020 02ae 616B     		ldr	r1, [r4, #52]
+ 1021 02b0 FFF7FEFF 		bl	_ZN10Step_Motor19Set_Motor_FrequencyEf
+ 1022              	.LVL107:
   82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1022              		.loc 1 82 9 is_stmt 0 view .LVU236
- 1023 02ac E06D     		ldr	r0, [r4, #92]
-  82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1024              		.loc 1 82 36 view .LVU237
- 1025 02ae 616B     		ldr	r1, [r4, #52]
- 1026 02b0 FFF7FEFF 		bl	_ZN10Step_Motor19Set_Motor_FrequencyEf
- 1027              	.LVL109:
-  82:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1028              		.loc 1 82 5 discriminator 1 view .LVU238
- 1029 02b4 0028     		cmp	r0, #0
- 1030 02b6 02D0     		beq	.L32
+ 1023              		.loc 1 82 5 discriminator 1 view .LVU237
+ 1024 02b4 0028     		cmp	r0, #0
+ 1025 02b6 02D0     		beq	.L32
   84:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1031              		.loc 1 84 9 is_stmt 1 view .LVU239
+ 1026              		.loc 1 84 9 is_stmt 1 view .LVU238
   84:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1032              		.loc 1 84 24 is_stmt 0 view .LVU240
- 1033 02b8 5423     		movs	r3, #84
- 1034 02ba 0022     		movs	r2, #0
- 1035 02bc E252     		strh	r2, [r4, r3]
- 1036              	.L32:
+ 1027              		.loc 1 84 24 is_stmt 0 view .LVU239
+ 1028 02b8 5423     		movs	r3, #84
+ 1029 02ba 0022     		movs	r2, #0
+ 1030 02bc E252     		strh	r2, [r4, r3]
+ 1031              	.L32:
   86:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1037              		.loc 1 86 1 view .LVU241
- 1038              		@ sp needed
- 1039              	.LVL110:
+ 1032              		.loc 1 86 1 view .LVU240
+ 1033              		@ sp needed
+ 1034              	.LVL108:
   86:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1040              		.loc 1 86 1 view .LVU242
- 1041 02be 70BD     		pop	{r4, r5, r6, pc}
- 1042              	.LVL111:
- 1043              	.L35:
+ 1035              		.loc 1 86 1 view .LVU241
+ 1036 02be 70BD     		pop	{r4, r5, r6, pc}
+ 1037              	.LVL109:
+ 1038              	.L35:
   79:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         MS_FULL_Last = (uint16_t)MS_FULL;
- 1044              		.loc 1 79 9 is_stmt 1 view .LVU243
+ 1039              		.loc 1 79 9 is_stmt 1 view .LVU242
   79:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         MS_FULL_Last = (uint16_t)MS_FULL;
- 1045              		.loc 1 79 74 is_stmt 0 view .LVU244
- 1046 02c0 4342     		rsbs	r3, r0, #0
- 1047 02c2 5841     		adcs	r0, r0, r3
- 1048 02c4 C2B2     		uxtb	r2, r0
+ 1040              		.loc 1 79 74 is_stmt 0 view .LVU243
+ 1041 02c0 4342     		rsbs	r3, r0, #0
+ 1042 02c2 5841     		adcs	r0, r0, r3
+ 1043 02c4 C2B2     		uxtb	r2, r0
   79:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         MS_FULL_Last = (uint16_t)MS_FULL;
- 1049              		.loc 1 79 26 view .LVU245
- 1050 02c6 DC23     		movs	r3, #220
- 1051 02c8 E15A     		ldrh	r1, [r4, r3]
- 1052 02ca 043B     		subs	r3, r3, #4
- 1053 02cc E058     		ldr	r0, [r4, r3]
- 1054 02ce FFF7FEFF 		bl	HAL_GPIO_WritePin
- 1055              	.LVL112:
+ 1044              		.loc 1 79 26 view .LVU244
+ 1045 02c6 DC23     		movs	r3, #220
+ 1046 02c8 E15A     		ldrh	r1, [r4, r3]
+ 1047 02ca 043B     		subs	r3, r3, #4
+ 1048 02cc E058     		ldr	r0, [r4, r3]
+ 1049 02ce FFF7FEFF 		bl	HAL_GPIO_WritePin
+ 1050              	.LVL110:
   80:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1056              		.loc 1 80 9 is_stmt 1 view .LVU246
+ 1051              		.loc 1 80 9 is_stmt 1 view .LVU245
   80:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1057              		.loc 1 80 34 is_stmt 0 view .LVU247
- 1058 02d2 E06B     		ldr	r0, [r4, #60]
+ 1052              		.loc 1 80 34 is_stmt 0 view .LVU246
+ 1053 02d2 E06B     		ldr	r0, [r4, #60]
   80:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1059              		.loc 1 80 24 view .LVU248
- 1060 02d4 FFF7FEFF 		bl	__aeabi_f2uiz
- 1061              	.LVL113:
-ARM GAS  /tmp/ccYdrV0b.s 			page 28
+ 1054              		.loc 1 80 24 view .LVU247
+ 1055 02d4 FFF7FEFF 		bl	__aeabi_f2uiz
+ 1056              	.LVL111:
+  80:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
+ 1057              		.loc 1 80 22 view .LVU248
+ 1058 02d8 DE23     		movs	r3, #222
+ 1059 02da E052     		strh	r0, [r4, r3]
+ 1060 02dc E6E7     		b	.L33
+ 1061              		.cfi_endproc
+ 1062              	.LFE1468:
+ARM GAS  /tmp/ccNe6E36.s 			page 28
 
 
-  80:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1062              		.loc 1 80 22 view .LVU249
- 1063 02d8 DE23     		movs	r3, #222
- 1064 02da E052     		strh	r0, [r4, r3]
- 1065 02dc E6E7     		b	.L33
- 1066              		.cfi_endproc
- 1067              	.LFE1468:
- 1069              		.align	1
- 1070              		.global	_ZN12StepperMotor10Speed_LoopEv
- 1071              		.syntax unified
- 1072              		.code	16
- 1073              		.thumb_func
- 1075              	_ZN12StepperMotor10Speed_LoopEv:
- 1076              	.LVL114:
- 1077              	.LFB1469:
+ 1064              		.align	1
+ 1065              		.global	_ZN12StepperMotor10Speed_LoopEv
+ 1066              		.syntax unified
+ 1067              		.code	16
+ 1068              		.thumb_func
+ 1070              	_ZN12StepperMotor10Speed_LoopEv:
+ 1071              	.LVL112:
+ 1072              	.LFB1469:
   91:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     float _delta_fre = 0.0f;
- 1078              		.loc 1 91 1 is_stmt 1 view -0
- 1079              		.cfi_startproc
- 1080              		@ args = 0, pretend = 0, frame = 0
- 1081              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1073              		.loc 1 91 1 is_stmt 1 view -0
+ 1074              		.cfi_startproc
+ 1075              		@ args = 0, pretend = 0, frame = 0
+ 1076              		@ frame_needed = 0, uses_anonymous_args = 0
   91:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     float _delta_fre = 0.0f;
- 1082              		.loc 1 91 1 is_stmt 0 view .LVU251
- 1083 02de 10B5     		push	{r4, lr}
- 1084              		.cfi_def_cfa_offset 8
- 1085              		.cfi_offset 4, -8
- 1086              		.cfi_offset 14, -4
- 1087 02e0 0400     		movs	r4, r0
+ 1077              		.loc 1 91 1 is_stmt 0 view .LVU250
+ 1078 02de 10B5     		push	{r4, lr}
+ 1079              		.cfi_def_cfa_offset 8
+ 1080              		.cfi_offset 4, -8
+ 1081              		.cfi_offset 14, -4
+ 1082 02e0 0400     		movs	r4, r0
   92:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _error_speed = _target_speed - Angular_velocity_final; //计算速度误差
- 1088              		.loc 1 92 5 is_stmt 1 view .LVU252
- 1089              	.LVL115:
+ 1083              		.loc 1 92 5 is_stmt 1 view .LVU251
+ 1084              	.LVL113:
   93:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_speed.update(_error_speed); //计算PID增量
- 1090              		.loc 1 93 5 view .LVU253
+ 1085              		.loc 1 93 5 view .LVU252
   93:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_speed.update(_error_speed); //计算PID增量
- 1091              		.loc 1 93 20 is_stmt 0 view .LVU254
- 1092 02e2 406C     		ldr	r0, [r0, #68]
- 1093              	.LVL116:
+ 1086              		.loc 1 93 20 is_stmt 0 view .LVU253
+ 1087 02e2 406C     		ldr	r0, [r0, #68]
+ 1088              	.LVL114:
   93:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_speed.update(_error_speed); //计算PID增量
- 1094              		.loc 1 93 36 view .LVU255
- 1095 02e4 216B     		ldr	r1, [r4, #48]
+ 1089              		.loc 1 93 36 view .LVU254
+ 1090 02e4 216B     		ldr	r1, [r4, #48]
   93:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_speed.update(_error_speed); //计算PID增量
- 1096              		.loc 1 93 34 view .LVU256
- 1097 02e6 FFF7FEFF 		bl	__aeabi_fsub
- 1098              	.LVL117:
- 1099 02ea 011C     		adds	r1, r0, #0
+ 1091              		.loc 1 93 34 view .LVU255
+ 1092 02e6 FFF7FEFF 		bl	__aeabi_fsub
+ 1093              	.LVL115:
+ 1094 02ea 011C     		adds	r1, r0, #0
   93:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_speed.update(_error_speed); //计算PID增量
- 1100              		.loc 1 93 18 view .LVU257
- 1101 02ec 2064     		str	r0, [r4, #64]
+ 1095              		.loc 1 93 18 view .LVU256
+ 1096 02ec 2064     		str	r0, [r4, #64]
   94:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre += _delta_fre; //更新电机频率
- 1102              		.loc 1 94 5 is_stmt 1 view .LVU258
+ 1097              		.loc 1 94 5 is_stmt 1 view .LVU257
   94:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_fre += _delta_fre; //更新电机频率
- 1103              		.loc 1 94 34 is_stmt 0 view .LVU259
- 1104 02ee 2000     		movs	r0, r4
- 1105 02f0 9030     		adds	r0, r0, #144
- 1106 02f2 FFF7FEFF 		bl	_ZN13PID_Increment6updateEf
+ 1098              		.loc 1 94 34 is_stmt 0 view .LVU258
+ 1099 02ee 2000     		movs	r0, r4
+ 1100 02f0 6030     		adds	r0, r0, #96
+ 1101 02f2 FFF7FEFF 		bl	_ZN13PID_Increment6updateEf
+ 1102              	.LVL116:
+ 1103 02f6 011C     		adds	r1, r0, #0
+ 1104              	.LVL117:
+  95:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre > 3000) motor_fre = 3000;
+ 1105              		.loc 1 95 5 is_stmt 1 view .LVU259
+ 1106 02f8 606B     		ldr	r0, [r4, #52]
  1107              	.LVL118:
- 1108 02f6 011C     		adds	r1, r0, #0
- 1109              	.LVL119:
-ARM GAS  /tmp/ccYdrV0b.s 			page 29
+  95:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre > 3000) motor_fre = 3000;
+ 1108              		.loc 1 95 15 is_stmt 0 view .LVU260
+ 1109 02fa FFF7FEFF 		bl	__aeabi_fadd
+ARM GAS  /tmp/ccNe6E36.s 			page 29
 
 
+ 1110              	.LVL119:
   95:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre > 3000) motor_fre = 3000;
- 1110              		.loc 1 95 5 is_stmt 1 view .LVU260
- 1111 02f8 606B     		ldr	r0, [r4, #52]
- 1112              	.LVL120:
-  95:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre > 3000) motor_fre = 3000;
- 1113              		.loc 1 95 15 is_stmt 0 view .LVU261
- 1114 02fa FFF7FEFF 		bl	__aeabi_fadd
- 1115              	.LVL121:
-  95:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre > 3000) motor_fre = 3000;
- 1116              		.loc 1 95 15 view .LVU262
- 1117 02fe 6063     		str	r0, [r4, #52]
+ 1111              		.loc 1 95 15 view .LVU261
+ 1112 02fe 6063     		str	r0, [r4, #52]
   96:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre < -3000) motor_fre = -3000;
- 1118              		.loc 1 96 5 is_stmt 1 view .LVU263
- 1119 0300 0949     		ldr	r1, .L43
- 1120 0302 FFF7FEFF 		bl	__aeabi_fcmpgt
- 1121              	.LVL122:
- 1122 0306 0028     		cmp	r0, #0
- 1123 0308 01D0     		beq	.L37
+ 1113              		.loc 1 96 5 is_stmt 1 view .LVU262
+ 1114 0300 0949     		ldr	r1, .L43
+ 1115 0302 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 1116              	.LVL120:
+ 1117 0306 0028     		cmp	r0, #0
+ 1118 0308 01D0     		beq	.L37
   96:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre < -3000) motor_fre = -3000;
- 1124              		.loc 1 96 26 discriminator 1 view .LVU264
+ 1119              		.loc 1 96 26 discriminator 1 view .LVU263
   96:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(motor_fre < -3000) motor_fre = -3000;
- 1125              		.loc 1 96 36 is_stmt 0 discriminator 1 view .LVU265
- 1126 030a 074B     		ldr	r3, .L43
- 1127 030c 6363     		str	r3, [r4, #52]
- 1128              	.L37:
+ 1120              		.loc 1 96 36 is_stmt 0 discriminator 1 view .LVU264
+ 1121 030a 074B     		ldr	r3, .L43
+ 1122 030c 6363     		str	r3, [r4, #52]
+ 1123              	.L37:
   97:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     setFre(); //设置电机频率
- 1129              		.loc 1 97 5 is_stmt 1 view .LVU266
+ 1124              		.loc 1 97 5 is_stmt 1 view .LVU265
   97:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     setFre(); //设置电机频率
- 1130              		.loc 1 97 8 is_stmt 0 view .LVU267
- 1131 030e 606B     		ldr	r0, [r4, #52]
+ 1125              		.loc 1 97 8 is_stmt 0 view .LVU266
+ 1126 030e 606B     		ldr	r0, [r4, #52]
   97:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     setFre(); //设置电机频率
- 1132              		.loc 1 97 5 view .LVU268
- 1133 0310 0649     		ldr	r1, .L43+4
- 1134 0312 FFF7FEFF 		bl	__aeabi_fcmplt
- 1135              	.LVL123:
- 1136 0316 0028     		cmp	r0, #0
- 1137 0318 01D0     		beq	.L39
+ 1127              		.loc 1 97 5 view .LVU267
+ 1128 0310 0649     		ldr	r1, .L43+4
+ 1129 0312 FFF7FEFF 		bl	__aeabi_fcmplt
+ 1130              	.LVL121:
+ 1131 0316 0028     		cmp	r0, #0
+ 1132 0318 01D0     		beq	.L39
   97:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     setFre(); //设置电机频率
- 1138              		.loc 1 97 27 is_stmt 1 discriminator 1 view .LVU269
+ 1133              		.loc 1 97 27 is_stmt 1 discriminator 1 view .LVU268
   97:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     setFre(); //设置电机频率
- 1139              		.loc 1 97 37 is_stmt 0 discriminator 1 view .LVU270
- 1140 031a 044B     		ldr	r3, .L43+4
- 1141 031c 6363     		str	r3, [r4, #52]
- 1142              	.L39:
+ 1134              		.loc 1 97 37 is_stmt 0 discriminator 1 view .LVU269
+ 1135 031a 044B     		ldr	r3, .L43+4
+ 1136 031c 6363     		str	r3, [r4, #52]
+ 1137              	.L39:
   98:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 1143              		.loc 1 98 5 is_stmt 1 view .LVU271
+ 1138              		.loc 1 98 5 is_stmt 1 view .LVU270
   98:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 1144              		.loc 1 98 11 is_stmt 0 view .LVU272
- 1145 031e 2000     		movs	r0, r4
- 1146 0320 FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
- 1147              	.LVL124:
+ 1139              		.loc 1 98 11 is_stmt 0 view .LVU271
+ 1140 031e 2000     		movs	r0, r4
+ 1141 0320 FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
+ 1142              	.LVL122:
   99:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1148              		.loc 1 99 1 view .LVU273
- 1149              		@ sp needed
- 1150              	.LVL125:
+ 1143              		.loc 1 99 1 view .LVU272
+ 1144              		@ sp needed
+ 1145              	.LVL123:
   99:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1151              		.loc 1 99 1 view .LVU274
-ARM GAS  /tmp/ccYdrV0b.s 			page 30
+ 1146              		.loc 1 99 1 view .LVU273
+ 1147 0324 10BD     		pop	{r4, pc}
+ 1148              	.L44:
+ 1149 0326 C046     		.align	2
+ 1150              	.L43:
+ 1151 0328 00803B45 		.word	1161527296
+ 1152 032c 00803BC5 		.word	-985956352
+ 1153              		.cfi_endproc
+ARM GAS  /tmp/ccNe6E36.s 			page 30
 
 
- 1152 0324 10BD     		pop	{r4, pc}
- 1153              	.L44:
- 1154 0326 C046     		.align	2
- 1155              	.L43:
- 1156 0328 00803B45 		.word	1161527296
- 1157 032c 00803BC5 		.word	-985956352
- 1158              		.cfi_endproc
- 1159              	.LFE1469:
- 1161              		.align	1
- 1162              		.global	_ZN12StepperMotor13Position_LoopEv
- 1163              		.syntax unified
- 1164              		.code	16
- 1165              		.thumb_func
- 1167              	_ZN12StepperMotor13Position_LoopEv:
- 1168              	.LVL126:
- 1169              	.LFB1470:
+ 1154              	.LFE1469:
+ 1156              		.align	1
+ 1157              		.global	_ZN12StepperMotor13Position_LoopEv
+ 1158              		.syntax unified
+ 1159              		.code	16
+ 1160              		.thumb_func
+ 1162              	_ZN12StepperMotor13Position_LoopEv:
+ 1163              	.LVL124:
+ 1164              	.LFB1470:
  103:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     float _delta_fre = 0.0f;
- 1170              		.loc 1 103 1 is_stmt 1 view -0
- 1171              		.cfi_startproc
- 1172              		@ args = 0, pretend = 0, frame = 0
- 1173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1165              		.loc 1 103 1 is_stmt 1 view -0
+ 1166              		.cfi_startproc
+ 1167              		@ args = 0, pretend = 0, frame = 0
+ 1168              		@ frame_needed = 0, uses_anonymous_args = 0
  103:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     float _delta_fre = 0.0f;
- 1174              		.loc 1 103 1 is_stmt 0 view .LVU276
- 1175 0330 10B5     		push	{r4, lr}
- 1176              		.cfi_def_cfa_offset 8
- 1177              		.cfi_offset 4, -8
- 1178              		.cfi_offset 14, -4
- 1179 0332 0400     		movs	r4, r0
+ 1169              		.loc 1 103 1 is_stmt 0 view .LVU275
+ 1170 0330 10B5     		push	{r4, lr}
+ 1171              		.cfi_def_cfa_offset 8
+ 1172              		.cfi_offset 4, -8
+ 1173              		.cfi_offset 14, -4
+ 1174 0332 0400     		movs	r4, r0
  104:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _target_error_location = _target_location1 - reg_final; //计算位置误差
- 1180              		.loc 1 104 5 is_stmt 1 view .LVU277
- 1181              	.LVL127:
+ 1175              		.loc 1 104 5 is_stmt 1 view .LVU276
+ 1176              	.LVL125:
  105:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_location.update(_target_error_location); //计算PID增量
- 1182              		.loc 1 105 5 view .LVU278
+ 1177              		.loc 1 105 5 view .LVU277
  105:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_location.update(_target_error_location); //计算PID增量
- 1183              		.loc 1 105 30 is_stmt 0 view .LVU279
- 1184 0334 806C     		ldr	r0, [r0, #72]
- 1185              	.LVL128:
+ 1178              		.loc 1 105 30 is_stmt 0 view .LVU278
+ 1179 0334 806C     		ldr	r0, [r0, #72]
+ 1180              	.LVL126:
  105:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_location.update(_target_error_location); //计算PID增量
- 1186              		.loc 1 105 50 view .LVU280
- 1187 0336 A16A     		ldr	r1, [r4, #40]
+ 1181              		.loc 1 105 50 view .LVU279
+ 1182 0336 A16A     		ldr	r1, [r4, #40]
  105:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_location.update(_target_error_location); //计算PID增量
- 1188              		.loc 1 105 48 view .LVU281
- 1189 0338 FFF7FEFF 		bl	__aeabi_fsub
- 1190              	.LVL129:
- 1191 033c 011C     		adds	r1, r0, #0
+ 1183              		.loc 1 105 48 view .LVU280
+ 1184 0338 FFF7FEFF 		bl	__aeabi_fsub
+ 1185              	.LVL127:
+ 1186 033c 011C     		adds	r1, r0, #0
  105:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _delta_fre = pid_location.update(_target_error_location); //计算PID增量
- 1192              		.loc 1 105 28 view .LVU282
- 1193 033e E064     		str	r0, [r4, #76]
+ 1187              		.loc 1 105 28 view .LVU281
+ 1188 033e E064     		str	r0, [r4, #76]
  106:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _target_speed +=_delta_fre; //更新目标速度
- 1194              		.loc 1 106 5 is_stmt 1 view .LVU283
+ 1189              		.loc 1 106 5 is_stmt 1 view .LVU282
  106:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     _target_speed +=_delta_fre; //更新目标速度
- 1195              		.loc 1 106 37 is_stmt 0 view .LVU284
- 1196 0340 2000     		movs	r0, r4
- 1197 0342 B430     		adds	r0, r0, #180
- 1198 0344 FFF7FEFF 		bl	_ZN13PID_Increment6updateEf
+ 1190              		.loc 1 106 37 is_stmt 0 view .LVU283
+ 1191 0340 2000     		movs	r0, r4
+ 1192 0342 8430     		adds	r0, r0, #132
+ 1193 0344 FFF7FEFF 		bl	_ZN13PID_Increment6updateEf
+ 1194              	.LVL128:
+ 1195 0348 011C     		adds	r1, r0, #0
+ 1196              	.LVL129:
+ 107:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed > 60.0f) _target_speed = 60.0f;
+ 1197              		.loc 1 107 5 is_stmt 1 view .LVU284
+ 1198 034a 606C     		ldr	r0, [r4, #68]
  1199              	.LVL130:
- 1200 0348 011C     		adds	r1, r0, #0
-ARM GAS  /tmp/ccYdrV0b.s 			page 31
+ 107:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed > 60.0f) _target_speed = 60.0f;
+ 1200              		.loc 1 107 19 is_stmt 0 view .LVU285
+ARM GAS  /tmp/ccNe6E36.s 			page 31
 
 
- 1201              	.LVL131:
+ 1201 034c FFF7FEFF 		bl	__aeabi_fadd
+ 1202              	.LVL131:
  107:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed > 60.0f) _target_speed = 60.0f;
- 1202              		.loc 1 107 5 is_stmt 1 view .LVU285
- 1203 034a 606C     		ldr	r0, [r4, #68]
- 1204              	.LVL132:
- 107:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed > 60.0f) _target_speed = 60.0f;
- 1205              		.loc 1 107 19 is_stmt 0 view .LVU286
- 1206 034c FFF7FEFF 		bl	__aeabi_fadd
- 1207              	.LVL133:
- 107:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed > 60.0f) _target_speed = 60.0f;
- 1208              		.loc 1 107 19 view .LVU287
- 1209 0350 6064     		str	r0, [r4, #68]
+ 1203              		.loc 1 107 19 view .LVU286
+ 1204 0350 6064     		str	r0, [r4, #68]
  108:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed < -60.0f) _target_speed = -60.0f;
- 1210              		.loc 1 108 5 is_stmt 1 view .LVU288
- 1211 0352 0949     		ldr	r1, .L52
- 1212 0354 FFF7FEFF 		bl	__aeabi_fcmpgt
- 1213              	.LVL134:
- 1214 0358 0028     		cmp	r0, #0
- 1215 035a 01D0     		beq	.L46
+ 1205              		.loc 1 108 5 is_stmt 1 view .LVU287
+ 1206 0352 0949     		ldr	r1, .L52
+ 1207 0354 FFF7FEFF 		bl	__aeabi_fcmpgt
+ 1208              	.LVL132:
+ 1209 0358 0028     		cmp	r0, #0
+ 1210 035a 01D0     		beq	.L46
  108:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed < -60.0f) _target_speed = -60.0f;
- 1216              		.loc 1 108 31 discriminator 1 view .LVU289
+ 1211              		.loc 1 108 31 discriminator 1 view .LVU288
  108:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if(_target_speed < -60.0f) _target_speed = -60.0f;
- 1217              		.loc 1 108 45 is_stmt 0 discriminator 1 view .LVU290
- 1218 035c 064B     		ldr	r3, .L52
- 1219 035e 6364     		str	r3, [r4, #68]
- 1220              	.L46:
+ 1212              		.loc 1 108 45 is_stmt 0 discriminator 1 view .LVU289
+ 1213 035c 064B     		ldr	r3, .L52
+ 1214 035e 6364     		str	r3, [r4, #68]
+ 1215              	.L46:
  109:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     Speed_Loop(); //位置环内部调用速度环控制
- 1221              		.loc 1 109 5 is_stmt 1 view .LVU291
+ 1216              		.loc 1 109 5 is_stmt 1 view .LVU290
  109:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     Speed_Loop(); //位置环内部调用速度环控制
- 1222              		.loc 1 109 8 is_stmt 0 view .LVU292
- 1223 0360 606C     		ldr	r0, [r4, #68]
+ 1217              		.loc 1 109 8 is_stmt 0 view .LVU291
+ 1218 0360 606C     		ldr	r0, [r4, #68]
  109:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     Speed_Loop(); //位置环内部调用速度环控制
- 1224              		.loc 1 109 5 view .LVU293
- 1225 0362 0649     		ldr	r1, .L52+4
- 1226 0364 FFF7FEFF 		bl	__aeabi_fcmplt
- 1227              	.LVL135:
- 1228 0368 0028     		cmp	r0, #0
- 1229 036a 01D0     		beq	.L48
+ 1219              		.loc 1 109 5 view .LVU292
+ 1220 0362 0649     		ldr	r1, .L52+4
+ 1221 0364 FFF7FEFF 		bl	__aeabi_fcmplt
+ 1222              	.LVL133:
+ 1223 0368 0028     		cmp	r0, #0
+ 1224 036a 01D0     		beq	.L48
  109:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     Speed_Loop(); //位置环内部调用速度环控制
- 1230              		.loc 1 109 32 is_stmt 1 discriminator 1 view .LVU294
+ 1225              		.loc 1 109 32 is_stmt 1 discriminator 1 view .LVU293
  109:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     Speed_Loop(); //位置环内部调用速度环控制
- 1231              		.loc 1 109 46 is_stmt 0 discriminator 1 view .LVU295
- 1232 036c 034B     		ldr	r3, .L52+4
- 1233 036e 6364     		str	r3, [r4, #68]
- 1234              	.L48:
+ 1226              		.loc 1 109 46 is_stmt 0 discriminator 1 view .LVU294
+ 1227 036c 034B     		ldr	r3, .L52+4
+ 1228 036e 6364     		str	r3, [r4, #68]
+ 1229              	.L48:
  110:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 1235              		.loc 1 110 5 is_stmt 1 view .LVU296
+ 1230              		.loc 1 110 5 is_stmt 1 view .LVU295
  110:My_Top/Step_Motor/StepperMotor_Loop.cpp **** }
- 1236              		.loc 1 110 15 is_stmt 0 view .LVU297
- 1237 0370 2000     		movs	r0, r4
- 1238 0372 FFF7FEFF 		bl	_ZN12StepperMotor10Speed_LoopEv
- 1239              	.LVL136:
+ 1231              		.loc 1 110 15 is_stmt 0 view .LVU296
+ 1232 0370 2000     		movs	r0, r4
+ 1233 0372 FFF7FEFF 		bl	_ZN12StepperMotor10Speed_LoopEv
+ 1234              	.LVL134:
  111:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1240              		.loc 1 111 1 view .LVU298
- 1241              		@ sp needed
- 1242              	.LVL137:
+ 1235              		.loc 1 111 1 view .LVU297
+ 1236              		@ sp needed
+ 1237              	.LVL135:
  111:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
-ARM GAS  /tmp/ccYdrV0b.s 			page 32
+ 1238              		.loc 1 111 1 view .LVU298
+ 1239 0376 10BD     		pop	{r4, pc}
+ 1240              	.L53:
+ 1241              		.align	2
+ 1242              	.L52:
+ 1243 0378 00007042 		.word	1114636288
+ 1244 037c 000070C2 		.word	-1032847360
+ARM GAS  /tmp/ccNe6E36.s 			page 32
 
 
- 1243              		.loc 1 111 1 view .LVU299
- 1244 0376 10BD     		pop	{r4, pc}
- 1245              	.L53:
- 1246              		.align	2
- 1247              	.L52:
- 1248 0378 00007042 		.word	1114636288
- 1249 037c 000070C2 		.word	-1032847360
- 1250              		.cfi_endproc
- 1251              	.LFE1470:
- 1253              		.align	1
- 1254              		.global	_ZN12StepperMotor12Step_HandlerEv
- 1255              		.syntax unified
- 1256              		.code	16
- 1257              		.thumb_func
- 1259              	_ZN12StepperMotor12Step_HandlerEv:
- 1260              	.LVL138:
- 1261              	.LFB1471:
+ 1245              		.cfi_endproc
+ 1246              	.LFE1470:
+ 1248              		.align	1
+ 1249              		.global	_ZN12StepperMotor12Step_HandlerEv
+ 1250              		.syntax unified
+ 1251              		.code	16
+ 1252              		.thumb_func
+ 1254              	_ZN12StepperMotor12Step_HandlerEv:
+ 1255              	.LVL136:
+ 1256              	.LFB1471:
  128:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if (!control_init_flag) return;
- 1262              		.loc 1 128 1 is_stmt 1 view -0
- 1263              		.cfi_startproc
- 1264              		@ args = 0, pretend = 0, frame = 0
- 1265              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1257              		.loc 1 128 1 is_stmt 1 view -0
+ 1258              		.cfi_startproc
+ 1259              		@ args = 0, pretend = 0, frame = 0
+ 1260              		@ frame_needed = 0, uses_anonymous_args = 0
  128:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     if (!control_init_flag) return;
- 1266              		.loc 1 128 1 is_stmt 0 view .LVU301
- 1267 0380 10B5     		push	{r4, lr}
- 1268              		.cfi_def_cfa_offset 8
- 1269              		.cfi_offset 4, -8
- 1270              		.cfi_offset 14, -4
- 1271 0382 0400     		movs	r4, r0
+ 1261              		.loc 1 128 1 is_stmt 0 view .LVU300
+ 1262 0380 10B5     		push	{r4, lr}
+ 1263              		.cfi_def_cfa_offset 8
+ 1264              		.cfi_offset 4, -8
+ 1265              		.cfi_offset 14, -4
+ 1266 0382 0400     		movs	r4, r0
  129:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1272              		.loc 1 129 5 is_stmt 1 view .LVU302
+ 1267              		.loc 1 129 5 is_stmt 1 view .LVU301
  129:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1273              		.loc 1 129 10 is_stmt 0 view .LVU303
- 1274 0384 4378     		ldrb	r3, [r0, #1]
+ 1268              		.loc 1 129 10 is_stmt 0 view .LVU302
+ 1269 0384 4378     		ldrb	r3, [r0, #1]
  129:My_Top/Step_Motor/StepperMotor_Loop.cpp **** 
- 1275              		.loc 1 129 5 view .LVU304
- 1276 0386 002B     		cmp	r3, #0
- 1277 0388 18D0     		beq	.L54
+ 1270              		.loc 1 129 5 view .LVU303
+ 1271 0386 002B     		cmp	r3, #0
+ 1272 0388 18D0     		beq	.L54
  131:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1278              		.loc 1 131 5 is_stmt 1 view .LVU305
+ 1273              		.loc 1 131 5 is_stmt 1 view .LVU304
  131:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1279              		.loc 1 131 19 is_stmt 0 view .LVU306
- 1280 038a 806D     		ldr	r0, [r0, #88]
- 1281              	.LVL139:
+ 1274              		.loc 1 131 19 is_stmt 0 view .LVU305
+ 1275 038a 806D     		ldr	r0, [r0, #88]
+ 1276              	.LVL137:
  131:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1282              		.loc 1 131 9 view .LVU307
- 1283 038c FFF7FEFF 		bl	__aeabi_f2uiz
- 1284              	.LVL140:
+ 1277              		.loc 1 131 9 view .LVU306
+ 1278 038c FFF7FEFF 		bl	__aeabi_f2uiz
+ 1279              	.LVL138:
  131:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1285              		.loc 1 131 37 view .LVU308
- 1286 0390 E023     		movs	r3, #224
- 1287 0392 E358     		ldr	r3, [r4, r3]
+ 1280              		.loc 1 131 37 view .LVU307
+ 1281 0390 E023     		movs	r3, #224
+ 1282 0392 E358     		ldr	r3, [r4, r3]
  131:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1288              		.loc 1 131 5 view .LVU309
- 1289 0394 9842     		cmp	r0, r3
- 1290 0396 12D1     		bne	.L58
- 1291              	.L56:
-ARM GAS  /tmp/ccYdrV0b.s 			page 33
+ 1283              		.loc 1 131 5 view .LVU308
+ 1284 0394 9842     		cmp	r0, r3
+ 1285 0396 12D1     		bne	.L58
+ 1286              	.L56:
+ 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
+ 1287              		.loc 1 139 5 is_stmt 1 view .LVU309
+ 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
+ 1288              		.loc 1 139 19 is_stmt 0 view .LVU310
+ 1289 0398 A06D     		ldr	r0, [r4, #88]
+ 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
+ 1290              		.loc 1 139 9 view .LVU311
+ARM GAS  /tmp/ccNe6E36.s 			page 33
 
 
+ 1291 039a FFF7FEFF 		bl	__aeabi_f2uiz
+ 1292              	.LVL139:
  139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1292              		.loc 1 139 5 is_stmt 1 view .LVU310
+ 1293              		.loc 1 139 5 view .LVU312
+ 1294 039e 0028     		cmp	r0, #0
+ 1295 03a0 03D0     		beq	.L57
  139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1293              		.loc 1 139 19 is_stmt 0 view .LVU311
- 1294 0398 A06D     		ldr	r0, [r4, #88]
+ 1296              		.loc 1 139 42 discriminator 1 view .LVU313
+ 1297 03a2 5423     		movs	r3, #84
+ 1298 03a4 E35A     		ldrh	r3, [r4, r3]
  139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1295              		.loc 1 139 9 view .LVU312
- 1296 039a FFF7FEFF 		bl	__aeabi_f2uiz
- 1297              	.LVL141:
- 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1298              		.loc 1 139 5 view .LVU313
- 1299 039e 0028     		cmp	r0, #0
- 1300 03a0 03D0     		beq	.L57
- 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1301              		.loc 1 139 42 discriminator 1 view .LVU314
- 1302 03a2 5423     		movs	r3, #84
- 1303 03a4 E35A     		ldrh	r3, [r4, r3]
- 139:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     motor_step_cnt++;//计步
- 1304              		.loc 1 139 39 discriminator 1 view .LVU315
- 1305 03a6 9842     		cmp	r0, r3
- 1306 03a8 08D9     		bls	.L54
- 1307              	.L57:
+ 1299              		.loc 1 139 39 discriminator 1 view .LVU314
+ 1300 03a6 9842     		cmp	r0, r3
+ 1301 03a8 08D9     		bls	.L54
+ 1302              	.L57:
  140:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 刚到上限 → 关电机
- 1308              		.loc 1 140 5 is_stmt 1 view .LVU316
- 1309 03aa 5422     		movs	r2, #84
- 1310 03ac A35A     		ldrh	r3, [r4, r2]
+ 1303              		.loc 1 140 5 is_stmt 1 view .LVU315
+ 1304 03aa 5422     		movs	r2, #84
+ 1305 03ac A35A     		ldrh	r3, [r4, r2]
  140:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     // 刚到上限 → 关电机
- 1311              		.loc 1 140 19 is_stmt 0 view .LVU317
- 1312 03ae 0133     		adds	r3, r3, #1
- 1313 03b0 9BB2     		uxth	r3, r3
- 1314 03b2 A352     		strh	r3, [r4, r2]
+ 1306              		.loc 1 140 19 is_stmt 0 view .LVU316
+ 1307 03ae 0133     		adds	r3, r3, #1
+ 1308 03b0 9BB2     		uxth	r3, r3
+ 1309 03b2 A352     		strh	r3, [r4, r2]
  142:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1315              		.loc 1 142 5 is_stmt 1 view .LVU318
- 1316 03b4 0028     		cmp	r0, #0
- 1317 03b6 01D0     		beq	.L54
+ 1310              		.loc 1 142 5 is_stmt 1 view .LVU317
+ 1311 03b4 0028     		cmp	r0, #0
+ 1312 03b6 01D0     		beq	.L54
  142:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     {
- 1318              		.loc 1 142 39 is_stmt 0 discriminator 1 view .LVU319
- 1319 03b8 9842     		cmp	r0, r3
- 1320 03ba 0AD9     		bls	.L59
- 1321              	.L54:
- 1322              		.loc 1 146 1 view .LVU320
- 1323              		@ sp needed
- 1324              	.LVL142:
- 1325              		.loc 1 146 1 view .LVU321
- 1326 03bc 10BD     		pop	{r4, pc}
- 1327              	.LVL143:
- 1328              	.L58:
+ 1313              		.loc 1 142 39 is_stmt 0 discriminator 1 view .LVU318
+ 1314 03b8 9842     		cmp	r0, r3
+ 1315 03ba 0AD9     		bls	.L59
+ 1316              	.L54:
+ 1317              		.loc 1 146 1 view .LVU319
+ 1318              		@ sp needed
+ 1319              	.LVL140:
+ 1320              		.loc 1 146 1 view .LVU320
+ 1321 03bc 10BD     		pop	{r4, pc}
+ 1322              	.LVL141:
+ 1323              	.L58:
  133:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         motor_step_max_last_ = (uint32_t)motor_step_max;
- 1329              		.loc 1 133 9 is_stmt 1 view .LVU322
+ 1324              		.loc 1 133 9 is_stmt 1 view .LVU321
  133:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         motor_step_max_last_ = (uint32_t)motor_step_max;
- 1330              		.loc 1 133 24 is_stmt 0 view .LVU323
- 1331 03be 5423     		movs	r3, #84
- 1332 03c0 0022     		movs	r2, #0
- 1333 03c2 E252     		strh	r2, [r4, r3]
+ 1325              		.loc 1 133 24 is_stmt 0 view .LVU322
+ 1326 03be 5423     		movs	r3, #84
+ 1327 03c0 0022     		movs	r2, #0
+ 1328 03c2 E252     		strh	r2, [r4, r3]
  134:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         _motor->Set_Motor_EN(true);//电机使能
- 1334              		.loc 1 134 9 is_stmt 1 view .LVU324
+ 1329              		.loc 1 134 9 is_stmt 1 view .LVU323
  134:My_Top/Step_Motor/StepperMotor_Loop.cpp ****         _motor->Set_Motor_EN(true);//电机使能
-ARM GAS  /tmp/ccYdrV0b.s 			page 34
-
-
- 1335              		.loc 1 134 30 is_stmt 0 view .LVU325
- 1336 03c4 8C33     		adds	r3, r3, #140
- 1337 03c6 E050     		str	r0, [r4, r3]
+ 1330              		.loc 1 134 30 is_stmt 0 view .LVU324
+ 1331 03c4 8C33     		adds	r3, r3, #140
+ 1332 03c6 E050     		str	r0, [r4, r3]
  135:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1338              		.loc 1 135 9 is_stmt 1 view .LVU326
- 1339 03c8 E06D     		ldr	r0, [r4, #92]
+ 1333              		.loc 1 135 9 is_stmt 1 view .LVU325
+ 1334 03c8 E06D     		ldr	r0, [r4, #92]
  135:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1340              		.loc 1 135 29 is_stmt 0 view .LVU327
- 1341 03ca 0121     		movs	r1, #1
- 1342 03cc FFF7FEFF 		bl	_ZN10Step_Motor12Set_Motor_ENEb
- 1343              	.LVL144:
- 1344 03d0 E2E7     		b	.L56
- 1345              	.L59:
- 144:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1346              		.loc 1 144 9 is_stmt 1 view .LVU328
- 1347 03d2 E06D     		ldr	r0, [r4, #92]
- 144:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
- 1348              		.loc 1 144 29 is_stmt 0 view .LVU329
- 1349 03d4 0021     		movs	r1, #0
- 1350 03d6 FFF7FEFF 		bl	_ZN10Step_Motor12Set_Motor_ENEb
- 1351              	.LVL145:
- 1352 03da EFE7     		b	.L54
- 1353              		.cfi_endproc
- 1354              	.LFE1471:
- 1356              		.align	1
- 1357              		.syntax unified
- 1358              		.code	16
- 1359              		.thumb_func
- 1361              	_GLOBAL__sub_I_pll_conf:
- 1362              	.LFB1623:
- 1363              		.loc 1 146 1 is_stmt 1 view -0
- 1364              		.cfi_startproc
- 1365              		@ args = 0, pretend = 0, frame = 0
- 1366              		@ frame_needed = 0, uses_anonymous_args = 0
- 1367 03dc 10B5     		push	{r4, lr}
- 1368              		.cfi_def_cfa_offset 8
- 1369              		.cfi_offset 4, -8
- 1370              		.cfi_offset 14, -4
- 1371              		.loc 1 146 1 is_stmt 0 view .LVU331
- 1372 03de FFF70FFE 		bl	_Z41__static_initialization_and_destruction_0v
- 1373              	.LVL146:
- 1374              		@ sp needed
- 1375 03e2 10BD     		pop	{r4, pc}
- 1376              		.cfi_endproc
- 1377              	.LFE1623:
- 1379              		.section	.init_array,"aw",%init_array
- 1380              		.align	2
- 1381 0000 00000000 		.word	_GLOBAL__sub_I_pll_conf(target1)
- 1382              		.global	M2
- 1383              		.global	M1
- 1384              		.global	kth7111_B
- 1385              		.global	kth7111_A
- 1386              		.global	pll_conf
- 1387              		.bss
- 1388              		.align	3
- 1389              		.set	.LANCHOR0,. + 0
- 1392              	pll_conf:
-ARM GAS  /tmp/ccYdrV0b.s 			page 35
+ARM GAS  /tmp/ccNe6E36.s 			page 34
 
 
- 1393 0000 00000000 		.space	16
- 1393      00000000 
- 1393      00000000 
- 1393      00000000 
- 1396              	kth7111_A:
- 1397 0010 00000000 		.space	28
- 1397      00000000 
- 1397      00000000 
- 1397      00000000 
- 1397      00000000 
- 1400              	kth7111_B:
- 1401 002c 00000000 		.space	28
- 1401      00000000 
- 1401      00000000 
- 1401      00000000 
- 1401      00000000 
- 1404              	_ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE9fudu_test:
- 1405 0048 00000000 		.space	4
- 1408              	_ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE18theta_m_offic_temp:
- 1409 004c 00000000 		.space	4
- 1412              	M2:
- 1413 0050 00000000 		.space	228
- 1413      00000000 
- 1413      00000000 
- 1413      00000000 
- 1413      00000000 
- 1416              	M1:
- 1417 0134 00000000 		.space	228
- 1417      00000000 
- 1417      00000000 
- 1417      00000000 
- 1417      00000000 
- 1418              		.text
- 1419              	.Letext0:
- 1420              		.file 6 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
- 1421              		.file 7 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
- 1422              		.file 8 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
- 1423              		.file 9 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
- 1424              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
- 1425              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
- 1426              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
- 1427              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
- 1428              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
- 1429              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
- 1430              		.file 16 "Lib/compute/ex_math.hpp"
- 1431              		.file 17 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 1432              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 1433              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 1434              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 1435              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 1436              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
- 1437              		.file 23 "Core/Inc/spi.h"
- 1438              		.file 24 "My_Top/Step_Motor/Step.hpp"
- 1439              		.file 25 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccYdrV0b.s 			page 36
+ 1335              		.loc 1 135 29 is_stmt 0 view .LVU326
+ 1336 03ca 0121     		movs	r1, #1
+ 1337 03cc FFF7FEFF 		bl	_ZN10Step_Motor12Set_Motor_ENEb
+ 1338              	.LVL142:
+ 1339 03d0 E2E7     		b	.L56
+ 1340              	.L59:
+ 144:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
+ 1341              		.loc 1 144 9 is_stmt 1 view .LVU327
+ 1342 03d2 E06D     		ldr	r0, [r4, #92]
+ 144:My_Top/Step_Motor/StepperMotor_Loop.cpp ****     }
+ 1343              		.loc 1 144 29 is_stmt 0 view .LVU328
+ 1344 03d4 0021     		movs	r1, #0
+ 1345 03d6 FFF7FEFF 		bl	_ZN10Step_Motor12Set_Motor_ENEb
+ 1346              	.LVL143:
+ 1347 03da EFE7     		b	.L54
+ 1348              		.cfi_endproc
+ 1349              	.LFE1471:
+ 1351              		.align	1
+ 1352              		.syntax unified
+ 1353              		.code	16
+ 1354              		.thumb_func
+ 1356              	_GLOBAL__sub_I_pll_conf:
+ 1357              	.LFB1623:
+ 1358              		.loc 1 146 1 is_stmt 1 view -0
+ 1359              		.cfi_startproc
+ 1360              		@ args = 0, pretend = 0, frame = 0
+ 1361              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1362 03dc 10B5     		push	{r4, lr}
+ 1363              		.cfi_def_cfa_offset 8
+ 1364              		.cfi_offset 4, -8
+ 1365              		.cfi_offset 14, -4
+ 1366              		.loc 1 146 1 is_stmt 0 view .LVU330
+ 1367 03de FFF70FFE 		bl	_Z41__static_initialization_and_destruction_0v
+ 1368              	.LVL144:
+ 1369              		@ sp needed
+ 1370 03e2 10BD     		pop	{r4, pc}
+ 1371              		.cfi_endproc
+ 1372              	.LFE1623:
+ 1374              		.section	.init_array,"aw",%init_array
+ 1375              		.align	2
+ 1376 0000 00000000 		.word	_GLOBAL__sub_I_pll_conf(target1)
+ 1377              		.global	M2
+ 1378              		.global	M1
+ 1379              		.global	kth7111_B
+ 1380              		.global	kth7111_A
+ 1381              		.global	pll_conf
+ 1382              		.bss
+ 1383              		.align	3
+ 1384              		.set	.LANCHOR0,. + 0
+ 1387              	pll_conf:
+ 1388 0000 00000000 		.space	16
+ 1388      00000000 
+ 1388      00000000 
+ 1388      00000000 
+ 1391              	kth7111_A:
+ 1392 0010 00000000 		.space	28
+ 1392      00000000 
+ARM GAS  /tmp/ccNe6E36.s 			page 35
+
+
+ 1392      00000000 
+ 1392      00000000 
+ 1392      00000000 
+ 1395              	kth7111_B:
+ 1396 002c 00000000 		.space	28
+ 1396      00000000 
+ 1396      00000000 
+ 1396      00000000 
+ 1396      00000000 
+ 1399              	_ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE9fudu_test:
+ 1400 0048 00000000 		.space	4
+ 1403              	_ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE18theta_m_offic_temp:
+ 1404 004c 00000000 		.space	4
+ 1407              	M2:
+ 1408 0050 00000000 		.space	228
+ 1408      00000000 
+ 1408      00000000 
+ 1408      00000000 
+ 1408      00000000 
+ 1411              	M1:
+ 1412 0134 00000000 		.space	228
+ 1412      00000000 
+ 1412      00000000 
+ 1412      00000000 
+ 1412      00000000 
+ 1413              		.text
+ 1414              	.Letext0:
+ 1415              		.file 6 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ 1416              		.file 7 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+ 1417              		.file 8 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
+ 1418              		.file 9 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
+ 1419              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
+ 1420              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
+ 1421              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
+ 1422              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
+ 1423              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
+ 1424              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
+ 1425              		.file 16 "Lib/compute/ex_math.hpp"
+ 1426              		.file 17 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 1427              		.file 18 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 1428              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 1429              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 1430              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 1431              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
+ 1432              		.file 23 "Core/Inc/spi.h"
+ 1433              		.file 24 "My_Top/Step_Motor/Step.hpp"
+ 1434              		.file 25 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccNe6E36.s 			page 36
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 StepperMotor_Loop.cpp
-     /tmp/ccYdrV0b.s:19     .text._ZN13PID_Increment6updateEf:00000000 $t
-     /tmp/ccYdrV0b.s:25     .text._ZN13PID_Increment6updateEf:00000000 _ZN13PID_Increment6updateEf
-     /tmp/ccYdrV0b.s:191    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 $t
-     /tmp/ccYdrV0b.s:197    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 _ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
-     /tmp/ccYdrV0b.s:398    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:000000bc $d
-     /tmp/ccYdrV0b.s:197    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 _ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
-     /tmp/ccYdrV0b.s:409    .text:00000000 $t
-     /tmp/ccYdrV0b.s:414    .text:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccYdrV0b.s:573    .text:000000b0 $d
-     /tmp/ccYdrV0b.s:1416   .bss:00000134 M1
-     /tmp/ccYdrV0b.s:1412   .bss:00000050 M2
-     /tmp/ccYdrV0b.s:590    .text:000000e8 $t
-     /tmp/ccYdrV0b.s:596    .text:000000e8 _ZN12StepperMotor15My_Stepper_InitEv
-     /tmp/ccYdrV0b.s:687    .text:00000148 $d
-     /tmp/ccYdrV0b.s:691    .text:0000014c $t
-     /tmp/ccYdrV0b.s:697    .text:0000014c _ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
-     /tmp/ccYdrV0b.s:974    .text:00000278 $d
-     /tmp/ccYdrV0b.s:985    .text:00000298 $t
-     /tmp/ccYdrV0b.s:991    .text:00000298 _ZN12StepperMotor6setFreEv
-     /tmp/ccYdrV0b.s:1075   .text:000002de _ZN12StepperMotor10Speed_LoopEv
-     /tmp/ccYdrV0b.s:1156   .text:00000328 $d
-     /tmp/ccYdrV0b.s:1161   .text:00000330 $t
-     /tmp/ccYdrV0b.s:1167   .text:00000330 _ZN12StepperMotor13Position_LoopEv
-     /tmp/ccYdrV0b.s:1248   .text:00000378 $d
-     /tmp/ccYdrV0b.s:1253   .text:00000380 $t
-     /tmp/ccYdrV0b.s:1259   .text:00000380 _ZN12StepperMotor12Step_HandlerEv
-     /tmp/ccYdrV0b.s:1361   .text:000003dc _GLOBAL__sub_I_pll_conf
-     /tmp/ccYdrV0b.s:1380   .init_array:00000000 $d
-     /tmp/ccYdrV0b.s:1400   .bss:0000002c kth7111_B
-     /tmp/ccYdrV0b.s:1396   .bss:00000010 kth7111_A
-     /tmp/ccYdrV0b.s:1392   .bss:00000000 pll_conf
-     /tmp/ccYdrV0b.s:1388   .bss:00000000 $d
-     /tmp/ccYdrV0b.s:1404   .bss:00000048 _ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE9fudu_test
-     /tmp/ccYdrV0b.s:1408   .bss:0000004c _ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE18theta_m_offic_temp
+     /tmp/ccNe6E36.s:19     .text._ZN13PID_Increment6updateEf:00000000 $t
+     /tmp/ccNe6E36.s:25     .text._ZN13PID_Increment6updateEf:00000000 _ZN13PID_Increment6updateEf
+     /tmp/ccNe6E36.s:191    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 $t
+     /tmp/ccNe6E36.s:197    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 _ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
+     /tmp/ccNe6E36.s:393    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:000000b8 $d
+     /tmp/ccNe6E36.s:197    .text._ZN12StepperMotorC2EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft:00000000 _ZN12StepperMotorC1EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
+     /tmp/ccNe6E36.s:404    .text:00000000 $t
+     /tmp/ccNe6E36.s:409    .text:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccNe6E36.s:568    .text:000000b0 $d
+     /tmp/ccNe6E36.s:1411   .bss:00000134 M1
+     /tmp/ccNe6E36.s:1407   .bss:00000050 M2
+     /tmp/ccNe6E36.s:585    .text:000000e8 $t
+     /tmp/ccNe6E36.s:591    .text:000000e8 _ZN12StepperMotor15My_Stepper_InitEv
+     /tmp/ccNe6E36.s:682    .text:00000148 $d
+     /tmp/ccNe6E36.s:686    .text:0000014c $t
+     /tmp/ccNe6E36.s:692    .text:0000014c _ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
+     /tmp/ccNe6E36.s:969    .text:00000278 $d
+     /tmp/ccNe6E36.s:980    .text:00000298 $t
+     /tmp/ccNe6E36.s:986    .text:00000298 _ZN12StepperMotor6setFreEv
+     /tmp/ccNe6E36.s:1070   .text:000002de _ZN12StepperMotor10Speed_LoopEv
+     /tmp/ccNe6E36.s:1151   .text:00000328 $d
+     /tmp/ccNe6E36.s:1156   .text:00000330 $t
+     /tmp/ccNe6E36.s:1162   .text:00000330 _ZN12StepperMotor13Position_LoopEv
+     /tmp/ccNe6E36.s:1243   .text:00000378 $d
+     /tmp/ccNe6E36.s:1248   .text:00000380 $t
+     /tmp/ccNe6E36.s:1254   .text:00000380 _ZN12StepperMotor12Step_HandlerEv
+     /tmp/ccNe6E36.s:1356   .text:000003dc _GLOBAL__sub_I_pll_conf
+     /tmp/ccNe6E36.s:1375   .init_array:00000000 $d
+     /tmp/ccNe6E36.s:1395   .bss:0000002c kth7111_B
+     /tmp/ccNe6E36.s:1391   .bss:00000010 kth7111_A
+     /tmp/ccNe6E36.s:1387   .bss:00000000 pll_conf
+     /tmp/ccNe6E36.s:1383   .bss:00000000 $d
+     /tmp/ccNe6E36.s:1399   .bss:00000048 _ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE9fudu_test
+     /tmp/ccNe6E36.s:1403   .bss:0000004c _ZZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEvE18theta_m_offic_temp
                            .group:00000000 _ZN12StepperMotorC5EP10Step_MotorP7KTH7111ffffffbP12GPIO_TypeDeft
 
 UNDEFINED SYMBOLS
@@ -2155,7 +2148,7 @@ __aeabi_fcmpeq
 HAL_GPIO_WritePin
 _ZN7KTH711121KTH7111_Send_JIAO_CMDEv
 _ZN7KTH711118Get_KTH7111_RadianEv
-ARM GAS  /tmp/ccYdrV0b.s 			page 37
+ARM GAS  /tmp/ccNe6E36.s 			page 37
 
 
 __aeabi_f2d

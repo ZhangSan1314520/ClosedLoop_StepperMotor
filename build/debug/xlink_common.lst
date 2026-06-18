@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc03mDW8.s 			page 1
+ARM GAS  /tmp/ccFcbgSK.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc03mDW8.s 			page 1
   56              		.section	.bss._xl_rx_buffer,"aw",%nobits
   57              		.align	2
   60              	_xl_rx_buffer:
-ARM GAS  /tmp/cc03mDW8.s 			page 2
+ARM GAS  /tmp/ccFcbgSK.s 			page 2
 
 
   61 0000 00000000 		.space	352
@@ -72,16 +72,16 @@ ARM GAS  /tmp/cc03mDW8.s 			page 1
   65              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
   66              		.file 4 "Lib/protocol/xlink/xlink_define.h"
   67              		.file 5 "Lib/protocol/xlink/xlink_common.h"
-ARM GAS  /tmp/cc03mDW8.s 			page 3
+ARM GAS  /tmp/ccFcbgSK.s 			page 3
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 xlink_common.c
-     /tmp/cc03mDW8.s:23     .bss._xl_chan_write_func:00000000 _xl_chan_write_func
-     /tmp/cc03mDW8.s:20     .bss._xl_chan_write_func:00000000 $d
-     /tmp/cc03mDW8.s:30     .data._xl_chan_status:00000000 _xl_chan_status
-     /tmp/cc03mDW8.s:27     .data._xl_chan_status:00000000 $d
-     /tmp/cc03mDW8.s:60     .bss._xl_rx_buffer:00000000 _xl_rx_buffer
-     /tmp/cc03mDW8.s:57     .bss._xl_rx_buffer:00000000 $d
+     /tmp/ccFcbgSK.s:23     .bss._xl_chan_write_func:00000000 _xl_chan_write_func
+     /tmp/ccFcbgSK.s:20     .bss._xl_chan_write_func:00000000 $d
+     /tmp/ccFcbgSK.s:30     .data._xl_chan_status:00000000 _xl_chan_status
+     /tmp/ccFcbgSK.s:27     .data._xl_chan_status:00000000 $d
+     /tmp/ccFcbgSK.s:60     .bss._xl_rx_buffer:00000000 _xl_rx_buffer
+     /tmp/ccFcbgSK.s:57     .bss._xl_rx_buffer:00000000 $d
 
 NO UNDEFINED SYMBOLS
