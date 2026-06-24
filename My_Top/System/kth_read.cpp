@@ -83,7 +83,7 @@ void KTH7111::KTH7111_Send_JIAO_CMD() //读取角度
     crc = CRC8_ITU(rx_buff, 2); //校验CRC
     if(crc != rx_buff[2]) return; //CRC校验未通过
     single_turn = (uint16_t)(rx_buff[0] << 8) | (uint16_t)rx_buff[1]; //转成16位数据
-    if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+    // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
     theta = single_turn*RAW_TO_RAD;//转成弧度
     angle = theta*RAD_TO_DEG;//转成角度
 }
@@ -179,13 +179,14 @@ bool KTH7111::KTH7111_WriteReg(uint8_t addr, uint8_t data)
  */
 bool KTH7111::KTH7111_RotationDirection(bool RD)  //控制编码器旋转方向 返回是否修改成功
 {
+    //改编码器测角度 倒着装 
     uint8_t rx_temp = 0;
     uint8_t rx_new = 0;    
     uint8_t tx = 0;
-    if(RD == true)  //如果RD为1，设置为顺时针方向
+    if(RD == false)  //如果RD为1，设置为顺时针方向
     {
-        rx_temp = KTH7111_ReadReg(0x02); //最高位置1
-        tx = rx_temp|0x80;
+        rx_temp = KTH7111_ReadReg(0x02); 
+        tx = rx_temp|0x80;//最高位置1
         KTH7111_WriteReg(0x02,tx);
         rx_new = KTH7111_ReadReg(0x02);
         if(rx_new&0x80) return true;

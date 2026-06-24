@@ -62,7 +62,7 @@ void vofa_data_init()
 }
 
 /* 模式切换专用函数 */
-void vofa_update_mode(Work_Mode *target, Work_Mode default_val)
+void vofa_update_mode(Work_Mode *target, Work_Mode default_val ,uint8_t res_pid) // 只在值变了的时候，写入目标到target
 {
     static Work_Mode last_mode = default_val; // 默认模式 位置模式
     float val = vofa1.get("work_mode", (float)default_val);
@@ -72,8 +72,28 @@ void vofa_update_mode(Work_Mode *target, Work_Mode default_val)
     {
         // if(new_mode>=0 && new_mode<=5) M1.Start_FOC_Motor(FOC_Motor_HTIM);//
         // else M1.Stop_FOC_Motor(FOC_Motor_HTIM);
+        
+
         *target = new_mode;
         last_mode = new_mode;
+        switch (res_pid) // 是否复位PID
+        {
+        case 0:
+            
+            break;
+        case 1:
+            M1.motor_fre = 0; //切模式时先停电机
+            M1.pid_speed.reset();
+            M1.pid_location.reset();
+            break;
+        case 2:
+            M2.motor_fre = 0; //切模式时先停电机
+            M2.pid_speed.reset();
+            M2.pid_location.reset();
+            break;
+        }
+
+
     }
 }
 
@@ -89,20 +109,41 @@ void vofa_update_mode(Work_Mode *target, Work_Mode default_val)
 //     }
 // }
 
-void vofa_update_if_changed(Vafa_data *d, uint8_t idx, float *target, bool res_pid) // 只在值变了的时候，写入目标到target
-{
-    if (d->changed[idx])
-    {                                   // 只在值变了的时候
-        *target = d->val[idx];          // 写入目标        d->last[idx] = d->val[idx];  // 更新last，防止重复写入
-        d->last_val[idx] = d->val[idx]; // 同步上次的值
-        d->changed[idx] = false;        // 标记无变化
 
-        if (res_pid) // 是否复位PID
-        {
-            // VOFA 参数变了 自动复位积分项
-        }
+void vofa_update_if_changed(Vafa_data *d, uint8_t idx, float *target, uint8_t res_pid)
+{
+    if (!d->changed[idx]) return;// 只在值变了的时候
+
+    *target = d->val[idx];      // 写入目标
+
+    bool dir_reversed = (d->last_val[idx] * d->val[idx] < 0); // 检测正负号是否反转
+
+    d->last_val[idx] = d->val[idx]; // 更新last
+    d->changed[idx] = false; // 标记无变化
+
+    // 决定选哪个电机和是否全清
+    StepperMotor *m = nullptr;
+    bool force_reset = false;
+    switch (res_pid)
+    {
+    case 1: m = &M1; force_reset = true;  break;  // PID参数：永远清
+    case 2: m = &M2; force_reset = true;  break;
+    case 3: m = &M1; break;                        // 目标值：只有反方向才清
+    case 4: m = &M2; break;
+    default: return;
+    }
+
+    if (force_reset || dir_reversed)
+    {
+        m->motor_fre = 0;
+        m->motor_fre_last_ = 0;
+        m->pid_speed.reset();
+        m->pid_location.reset();
     }
 }
+
+
+
 
 void vofa_detect_changes(Vafa_data *d) // 检测数据的变化 写入标志位到changed
 {
@@ -153,37 +194,37 @@ void Task_VofaRx(void *argument)
         // vofa_update_mode(&foc1.work_mode,None_Mode); //未按 返回默认模式
 
         static float Motor_M1TOM2 = 0.0;
-        vofa_update_if_changed(&Vafa_Button, 0, &Motor_M1TOM2, false);
+        vofa_update_if_changed(&Vafa_Button, 0, &Motor_M1TOM2, 0);
 
         if ((uint16_t)Motor_M1TOM2 == 0) // 电机1
         {
-            vofa_update_if_changed(&Vafa_Button, 1, &M1.motor_fre, false);
-            vofa_update_if_changed(&Vafa_Button, 2, &M1.MS_FULL, false);
-            vofa_update_if_changed(&Vafa_Button, 3, &M1.motor_step_max, false);
-            vofa_update_if_changed(&Vafa_Speed, 0, &M1.pid_speed._kp, true);//速度PID
-            vofa_update_if_changed(&Vafa_Speed, 1, &M1.pid_speed._ki, true);
-            vofa_update_if_changed(&Vafa_Speed, 2, &M1.pid_speed._kd, true);
-            vofa_update_if_changed(&Vafa_Location,  0, &M1.pid_location._kp,  true);//位置PID
-            vofa_update_if_changed(&Vafa_Location,  1, &M1.pid_location._ki,  true);
-            vofa_update_if_changed(&Vafa_Location,  2, &M1.pid_location._kd,  true);
-            vofa_update_if_changed(&Vafa_Target, 2, &M1._target_speed,  false);//目标速度
-            vofa_update_if_changed(&Vafa_Target, 4, &M1._target_location1,  false);//目标位置0-2pi
-
+            if(M1.work_mode == Normal_Mode) vofa_update_if_changed(&Vafa_Button, 1, &M1.motor_fre, 0);
+            vofa_update_if_changed(&Vafa_Button, 2, &M1.MS_FULL, 0);
+            vofa_update_if_changed(&Vafa_Button, 3, &M1.motor_step_max, 0);
+            vofa_update_if_changed(&Vafa_Speed, 0, &M1.pid_speed._kp, 1);//速度PID
+            vofa_update_if_changed(&Vafa_Speed, 1, &M1.pid_speed._ki, 1);
+            vofa_update_if_changed(&Vafa_Speed, 2, &M1.pid_speed._kd, 1);
+            vofa_update_if_changed(&Vafa_Location,  0, &M1.pid_location._kp,  1);//位置PID
+            vofa_update_if_changed(&Vafa_Location,  1, &M1.pid_location._ki,  1);
+            vofa_update_if_changed(&Vafa_Location,  2, &M1.pid_location._kd,  1);
+            vofa_update_if_changed(&Vafa_Target, 2, &M1._target_speed,  3);//目标速度
+            vofa_update_if_changed(&Vafa_Target, 4, &M1._target_location2,3);//目标位置0-2pi
+            vofa_update_mode(&M1.work_mode,Normal_Mode,1); //未按 返回默认模式
         }
         else // 电机2
         {
-            vofa_update_if_changed(&Vafa_Button, 1, &M2.motor_fre, false);
-            vofa_update_if_changed(&Vafa_Button, 2, &M2.MS_FULL, false);
-            vofa_update_if_changed(&Vafa_Button, 3, &M2.motor_step_max, false);
-            vofa_update_if_changed(&Vafa_Speed, 0, &M2.pid_speed._kp, true);//速度PID
-            vofa_update_if_changed(&Vafa_Speed, 1, &M2.pid_speed._ki, true);
-            vofa_update_if_changed(&Vafa_Speed, 2, &M2.pid_speed._kd, true);
-            vofa_update_if_changed(&Vafa_Location,0, &M2.pid_location._kp,true);//位置PID
-            vofa_update_if_changed(&Vafa_Location,1, &M2.pid_location._ki,true);
-            vofa_update_if_changed(&Vafa_Location,2, &M2.pid_location._kd,true);
-            vofa_update_if_changed(&Vafa_Target, 2,&M2._target_speed,false);//目标速度
-            vofa_update_if_changed(&Vafa_Target, 4,&M2._target_location1,false);//目标位置0-2pi
-
+            if(M2.work_mode == Normal_Mode) vofa_update_if_changed(&Vafa_Button, 1, &M2.motor_fre, 0);
+            vofa_update_if_changed(&Vafa_Button, 2, &M2.MS_FULL, 0);
+            vofa_update_if_changed(&Vafa_Button, 3, &M2.motor_step_max, 0);
+            vofa_update_if_changed(&Vafa_Speed, 0, &M2.pid_speed._kp, 2);//速度PID
+            vofa_update_if_changed(&Vafa_Speed, 1, &M2.pid_speed._ki, 2);
+            vofa_update_if_changed(&Vafa_Speed, 2, &M2.pid_speed._kd, 2);
+            vofa_update_if_changed(&Vafa_Location,0, &M2.pid_location._kp,2);//位置PID
+            vofa_update_if_changed(&Vafa_Location,1, &M2.pid_location._ki,2);
+            vofa_update_if_changed(&Vafa_Location,2, &M2.pid_location._kd,2);
+            vofa_update_if_changed(&Vafa_Target, 2,&M2._target_speed,4);//目标速度
+            vofa_update_if_changed(&Vafa_Target, 4,&M2._target_location2,4);//目标位置0-2pi
+            vofa_update_mode(&M2.work_mode,Normal_Mode,2); //未按 返回默认模式
         }
 
         vTaskDelay(pdMS_TO_TICKS(10));

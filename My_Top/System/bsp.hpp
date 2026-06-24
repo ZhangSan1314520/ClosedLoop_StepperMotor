@@ -11,13 +11,14 @@
 #include "adc.h"  
 
 
-#define Stepper_VELOCITY_LOOP_FREQ_DIV 4  //速度环 
-#define Stepper_POSITION_LOOP_FREQ_DIV 4 //位置环
-#define Stepper_MAIN_LOOP_FREQ_HZ 16000
+#define Stepper_VELOCITY_LOOP_FREQ_DIV 8  //速度环 
+#define Stepper_POSITION_LOOP_FREQ_DIV 8 //位置环
+#define Stepper_MAIN_LOOP_FREQ_HZ 16000.0
 #define Stepper_VELOCITY_LOOP_FREQ_HZ (Stepper_MAIN_LOOP_FREQ_HZ / Stepper_VELOCITY_LOOP_FREQ_DIV)
 #define Stepper_POSITION_LOOP_FREQ_HZ (Stepper_MAIN_LOOP_FREQ_HZ / Stepper_POSITION_LOOP_FREQ_DIV)
 
-
+#define Speed_FV_MAX 2900.0f //
+#define Position_FV_MAX 2000.0f //最大频率
 
 #define M1_STEP_htim  &htim1  //M1电机 脉冲信号PWM定时器
 #define M1_STEP_TIM  TIM1  //M1电机 脉冲信号PWM定时器
@@ -62,6 +63,7 @@
 #define SP1_CS_PORT     SP1_CS_GPIO_Port //编码器SPI片选脚
 #define SP1_CS_PIN      SP1_CS_Pin
 
+#define Arr_Min 33 //极限3k的时候ARR的最小值
 
 
 // ==================== 电机2 ====================

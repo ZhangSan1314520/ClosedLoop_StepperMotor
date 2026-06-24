@@ -59,7 +59,10 @@ void MX_GPIO_Init(void)
   HAL_GPIO_WritePin(M1_DIR_GPIO_Port, M1_DIR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, M1_EN_Pin|ENC2_CAL_Pin|M2_EN_Pin|M2_DIR_Pin, GPIO_PIN_RESET);
+  HAL_GPIO_WritePin(GPIOB, M1_EN_Pin|M2_EN_Pin, GPIO_PIN_SET);
+
+  /*Configure GPIO pin Output Level */
+  HAL_GPIO_WritePin(GPIOB, ENC2_CAL_Pin|M2_DIR_Pin, GPIO_PIN_RESET);
 
   /*Configure GPIO pins : M2_MS1_Pin ENC1_CAL_Pin M1_MS1_Pin */
   GPIO_InitStruct.Pin = M2_MS1_Pin|ENC1_CAL_Pin|M1_MS1_Pin;
@@ -82,8 +85,15 @@ void MX_GPIO_Init(void)
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
   HAL_GPIO_Init(M1_DIR_GPIO_Port, &GPIO_InitStruct);
 
-  /*Configure GPIO pins : M1_EN_Pin ENC2_CAL_Pin M2_EN_Pin M2_DIR_Pin */
-  GPIO_InitStruct.Pin = M1_EN_Pin|ENC2_CAL_Pin|M2_EN_Pin|M2_DIR_Pin;
+  /*Configure GPIO pins : M1_EN_Pin M2_EN_Pin */
+  GPIO_InitStruct.Pin = M1_EN_Pin|M2_EN_Pin;
+  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
+  GPIO_InitStruct.Pull = GPIO_PULLUP;
+  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
+  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
+
+  /*Configure GPIO pins : ENC2_CAL_Pin M2_DIR_Pin */
+  GPIO_InitStruct.Pin = ENC2_CAL_Pin|M2_DIR_Pin;
   GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
   GPIO_InitStruct.Pull = GPIO_PULLDOWN;
   GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;

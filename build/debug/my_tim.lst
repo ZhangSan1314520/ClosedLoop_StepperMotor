@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cckyrMZQ.s 			page 1
+ARM GAS  /tmp/ccGw0LDP.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -41,508 +41,808 @@ ARM GAS  /tmp/cckyrMZQ.s 			page 1
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
   31              		.loc 1 10 1 is_stmt 0 view .LVU1
-  32 0000 10B5     		push	{r4, lr}
-  33              		.cfi_def_cfa_offset 8
-  34              		.cfi_offset 4, -8
-  35              		.cfi_offset 14, -4
-  11:My_Top/Step_Motor/my_tim.cpp ****     static uint16_t count = 0;  // 静态计数器，用于周期性任务调度
-  36              		.loc 1 11 5 is_stmt 1 view .LVU2
-  12:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t start_time = 0, end_time = 0; // 计时变量，用于性能测量（已注释�
-  37              		.loc 1 12 5 view .LVU3
-  13:My_Top/Step_Motor/my_tim.cpp **** 
-  14:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
-  38              		.loc 1 14 5 view .LVU4
-  39              		.loc 1 14 12 is_stmt 0 view .LVU5
-  40 0002 0A4B     		ldr	r3, .L4
-  41 0004 5B78     		ldrb	r3, [r3, #1]
-  42              		.loc 1 14 5 view .LVU6
-  43 0006 002B     		cmp	r3, #0
-  44 0008 0FD0     		beq	.L1
-ARM GAS  /tmp/cckyrMZQ.s 			page 2
+  32 0000 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+  33              		.cfi_def_cfa_offset 24
+  34              		.cfi_offset 3, -24
+  35              		.cfi_offset 4, -20
+  36              		.cfi_offset 5, -16
+  37              		.cfi_offset 6, -12
+  38              		.cfi_offset 7, -8
+  39              		.cfi_offset 14, -4
+  11:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t start_time, end_time = 0;//求计算时间
+  40              		.loc 1 11 5 is_stmt 1 view .LVU2
+  12:My_Top/Step_Motor/my_tim.cpp **** 
+  13:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t last_time = 0;//求中断间隔时间
+  41              		.loc 1 13 5 view .LVU3
+  14:My_Top/Step_Motor/my_tim.cpp ****     uint32_t now_time = 0;
+  42              		.loc 1 14 5 view .LVU4
+  43              	.LVL1:
+  15:My_Top/Step_Motor/my_tim.cpp **** 
+ARM GAS  /tmp/ccGw0LDP.s 			page 2
 
 
-  15:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
-  45              		.loc 1 15 5 is_stmt 1 view .LVU7
-  46              		.loc 1 15 12 is_stmt 0 view .LVU8
-  47 000a 094B     		ldr	r3, .L4+4
-  48 000c 5B78     		ldrb	r3, [r3, #1]
-  49              		.loc 1 15 5 view .LVU9
-  50 000e 002B     		cmp	r3, #0
-  51 0010 0BD0     		beq	.L1
-  16:My_Top/Step_Motor/my_tim.cpp ****     // if ((htim->Instance->CR1 & 0x10) == 0x10U) // 向下计数时，请求编码器位置信息
-  17:My_Top/Step_Motor/my_tim.cpp ****     if ((htim->Instance->CR1 & 0x10) == 0x00U) // 向上计数时，请求编码器位置信息
-  52              		.loc 1 17 5 is_stmt 1 view .LVU10
-  53              		.loc 1 17 16 is_stmt 0 view .LVU11
-  54 0012 0368     		ldr	r3, [r0]
-  55              		.loc 1 17 26 view .LVU12
-  56 0014 1B68     		ldr	r3, [r3]
-  57              		.loc 1 17 5 view .LVU13
-  58 0016 DB06     		lsls	r3, r3, #27
-  59 0018 07D4     		bmi	.L1
-  18:My_Top/Step_Motor/my_tim.cpp ****     {
-  19:My_Top/Step_Motor/my_tim.cpp ****         if (count % 4 == 1)// 每4个周期执行一次（4k频率）
-  60              		.loc 1 19 9 is_stmt 1 view .LVU14
-  61              		.loc 1 19 19 is_stmt 0 view .LVU15
-  62 001a 064C     		ldr	r4, .L4+8
-  63 001c 2088     		ldrh	r0, [r4]
-  64              	.LVL1:
-  20:My_Top/Step_Motor/my_tim.cpp ****         {
-  21:My_Top/Step_Motor/my_tim.cpp ****             // start_time = DWT->CYCCNT; //记录开始时间 每 1 个 CPU 周期自增 1
-  22:My_Top/Step_Motor/my_tim.cpp ****             // M1.Update_Speed_Angle_LPFAndPLL();//更新速度角度 耗时24us 一起37us
-  23:My_Top/Step_Motor/my_tim.cpp ****             // M2.Update_Speed_Angle_LPFAndPLL();//更新速度角度 耗时24us 一起37us
-  24:My_Top/Step_Motor/my_tim.cpp ****             // end_time = DWT->CYCCNT; // 记录结束时间
-  25:My_Top/Step_Motor/my_tim.cpp ****             // foc1.run_time_us = (float)(end_time - start_time) / 168.0f; // 计算运行时间（
-  26:My_Top/Step_Motor/my_tim.cpp **** 
-  27:My_Top/Step_Motor/my_tim.cpp ****         }
-  28:My_Top/Step_Motor/my_tim.cpp ****         if (count % Stepper_VELOCITY_LOOP_FREQ_DIV == 1 && M1.work_mode == speed)                  
-  65              		.loc 1 28 9 is_stmt 1 view .LVU16
-  29:My_Top/Step_Motor/my_tim.cpp ****         {
-  30:My_Top/Step_Motor/my_tim.cpp ****             // start_time = DWT->CYCCNT; //记录开始时间
-  31:My_Top/Step_Motor/my_tim.cpp ****             // M1.Speed_Loop();//速度环控制4k 耗时8.2us 
-  32:My_Top/Step_Motor/my_tim.cpp ****             // end_time = DWT->CYCCNT; // 记录结束时间 
-  33:My_Top/Step_Motor/my_tim.cpp ****             // M1.run_time_us = (float)(end_time - start_time) / 168.0f; // 计算运行时间（�
-  34:My_Top/Step_Motor/my_tim.cpp ****         }
-  35:My_Top/Step_Motor/my_tim.cpp ****         if (count % Stepper_POSITION_LOOP_FREQ_DIV == 1 && M1.work_mode == position)               
-  66              		.loc 1 35 9 view .LVU17
-  36:My_Top/Step_Motor/my_tim.cpp ****         {
-  37:My_Top/Step_Motor/my_tim.cpp ****             // start_time = DWT->CYCCNT; //记录开始时间
-  38:My_Top/Step_Motor/my_tim.cpp ****             // M1.Position_Loop();//位置环控制4k  耗时14.33us
-  39:My_Top/Step_Motor/my_tim.cpp ****             // end_time = DWT->CYCCNT; // 记录结束时间
-  40:My_Top/Step_Motor/my_tim.cpp ****             // M1.run_time_us = (float)(end_time - start_time) / 168.0f; // 计算运行时间（�
-  41:My_Top/Step_Motor/my_tim.cpp ****         }
-  42:My_Top/Step_Motor/my_tim.cpp ****         count = (count%10000)+1;
-  67              		.loc 1 42 9 view .LVU18
-  68              		.loc 1 42 23 is_stmt 0 view .LVU19
-  69 001e 0649     		ldr	r1, .L4+12
-  70 0020 FFF7FEFF 		bl	__aeabi_uidivmod
-  71              	.LVL2:
-  72 0024 89B2     		uxth	r1, r1
-  73              		.loc 1 42 30 view .LVU20
-ARM GAS  /tmp/cckyrMZQ.s 			page 3
+  16:My_Top/Step_Motor/my_tim.cpp ****     static uint16_t count = 0;
+  44              		.loc 1 16 5 view .LVU5
+  17:My_Top/Step_Motor/my_tim.cpp **** 
+  18:My_Top/Step_Motor/my_tim.cpp **** 
+  19:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
+  45              		.loc 1 19 5 view .LVU6
+  46              		.loc 1 19 12 is_stmt 0 view .LVU7
+  47 0002 3F4B     		ldr	r3, .L16
+  48 0004 5B78     		ldrb	r3, [r3, #1]
+  49              		.loc 1 19 5 view .LVU8
+  50 0006 002B     		cmp	r3, #0
+  51 0008 2BD0     		beq	.L1
+  20:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
+  52              		.loc 1 20 5 is_stmt 1 view .LVU9
+  53              		.loc 1 20 12 is_stmt 0 view .LVU10
+  54 000a 3E4B     		ldr	r3, .L16+4
+  55 000c 5B78     		ldrb	r3, [r3, #1]
+  56              		.loc 1 20 5 view .LVU11
+  57 000e 002B     		cmp	r3, #0
+  58 0010 27D0     		beq	.L1
+  21:My_Top/Step_Motor/my_tim.cpp ****     if ((htim->Instance->CR1 & 0x10) == 0x00U) // 向上计数时，请求编码器位置信息
+  59              		.loc 1 21 5 is_stmt 1 view .LVU12
+  60              	.LBB2:
+  61              		.loc 1 21 16 is_stmt 0 view .LVU13
+  62 0012 0368     		ldr	r3, [r0]
+  63              		.loc 1 21 26 view .LVU14
+  64 0014 1B68     		ldr	r3, [r3]
+  65              		.loc 1 21 5 view .LVU15
+  66 0016 DB06     		lsls	r3, r3, #27
+  67 0018 23D4     		bmi	.L1
+  68              	.LBB3:
+  22:My_Top/Step_Motor/my_tim.cpp ****     {
+  23:My_Top/Step_Motor/my_tim.cpp ****         if (count % Stepper_VELOCITY_LOOP_FREQ_DIV == 1)// 每4个周期执行一次（4k频率）
+  69              		.loc 1 23 9 is_stmt 1 view .LVU16
+  70              		.loc 1 23 19 is_stmt 0 view .LVU17
+  71 001a 3B4B     		ldr	r3, .L16+8
+  72 001c 1A88     		ldrh	r2, [r3]
+  73              		.loc 1 23 9 view .LVU18
+  74 001e 0723     		movs	r3, #7
+  75 0020 1340     		ands	r3, r2
+  76 0022 012B     		cmp	r3, #1
+  77 0024 1ED0     		beq	.L10
+  78              	.LVL2:
+  79              	.L3:
+  24:My_Top/Step_Motor/my_tim.cpp ****         {
+  25:My_Top/Step_Motor/my_tim.cpp ****             // start_time = HAL_System::get_tick_us(); //记录开始时间
+  26:My_Top/Step_Motor/my_tim.cpp ****             M1.Update_Speed_Angle_LPFAndPLL();//更新速度角度 耗时129*2US 最快3.85KHZ
+  27:My_Top/Step_Motor/my_tim.cpp ****             M2.Update_Speed_Angle_LPFAndPLL();//更新速度角度 
+  28:My_Top/Step_Motor/my_tim.cpp ****             // end_time = HAL_System::get_tick_us(); // 记录结束时间
+  29:My_Top/Step_Motor/my_tim.cpp ****             // M1.laji = (float)(end_time - start_time); 
+  30:My_Top/Step_Motor/my_tim.cpp **** 
+  31:My_Top/Step_Motor/my_tim.cpp ****         }
+  32:My_Top/Step_Motor/my_tim.cpp ****         if (count % Stepper_VELOCITY_LOOP_FREQ_DIV == 1)// 每8个周期执行一次（2k频率速�
+  80              		.loc 1 32 9 is_stmt 1 view .LVU19
+  81              		.loc 1 32 19 is_stmt 0 view .LVU20
+  82 0026 384B     		ldr	r3, .L16+8
+  83 0028 1A88     		ldrh	r2, [r3]
+ARM GAS  /tmp/ccGw0LDP.s 			page 3
 
 
-  74 0026 0131     		adds	r1, r1, #1
-  75              		.loc 1 42 15 view .LVU21
-  76 0028 2180     		strh	r1, [r4]
-  77              	.L1:
-  43:My_Top/Step_Motor/my_tim.cpp **** 
-  44:My_Top/Step_Motor/my_tim.cpp ****     }
-  45:My_Top/Step_Motor/my_tim.cpp **** }
-  78              		.loc 1 45 1 view .LVU22
-  79              		@ sp needed
-  80 002a 10BD     		pop	{r4, pc}
-  81              	.L5:
-  82              		.align	2
-  83              	.L4:
-  84 002c 00000000 		.word	M1
-  85 0030 00000000 		.word	M2
-  86 0034 00000000 		.word	.LANCHOR0
-  87 0038 10270000 		.word	10000
-  88              		.cfi_endproc
-  89              	.LFE1466:
-  91              		.align	1
-  92              		.global	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
-  93              		.syntax unified
-  94              		.code	16
-  95              		.thumb_func
-  97              	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef:
-  98              	.LVL3:
-  99              	.LFB1467:
-  46:My_Top/Step_Motor/my_tim.cpp **** 
-  47:My_Top/Step_Motor/my_tim.cpp **** 
-  48:My_Top/Step_Motor/my_tim.cpp **** void My_Tim_OC_Callback(TIM_HandleTypeDef *htim) // TIM3_CH1 的输出比较中断
-  49:My_Top/Step_Motor/my_tim.cpp **** {
- 100              		.loc 1 49 1 is_stmt 1 view -0
- 101              		.cfi_startproc
- 102              		@ args = 0, pretend = 0, frame = 0
- 103              		@ frame_needed = 0, uses_anonymous_args = 0
- 104              		.loc 1 49 1 is_stmt 0 view .LVU24
- 105 003c 10B5     		push	{r4, lr}
- 106              		.cfi_def_cfa_offset 8
- 107              		.cfi_offset 4, -8
- 108              		.cfi_offset 14, -4
-  50:My_Top/Step_Motor/my_tim.cpp ****     static uint16_t count = 0;
- 109              		.loc 1 50 5 is_stmt 1 view .LVU25
-  51:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t start_time = 0, end_time = 0; // 计时变量
- 110              		.loc 1 51 5 view .LVU26
-  52:My_Top/Step_Motor/my_tim.cpp **** 
-  53:My_Top/Step_Motor/my_tim.cpp ****     uint32_t psc = TIM3->PSC;   // 应该读出来是 39
- 111              		.loc 1 53 5 view .LVU27
- 112              		.loc 1 53 26 is_stmt 0 view .LVU28
- 113 003e 0D4B     		ldr	r3, .L9
- 114 0040 9A6A     		ldr	r2, [r3, #40]
-  54:My_Top/Step_Motor/my_tim.cpp ****     uint32_t arr = TIM3->ARR;   // 应该读出来是 99
- 115              		.loc 1 54 5 is_stmt 1 view .LVU29
- 116              		.loc 1 54 26 is_stmt 0 view .LVU30
- 117 0042 DB6A     		ldr	r3, [r3, #44]
-  55:My_Top/Step_Motor/my_tim.cpp **** 
-  56:My_Top/Step_Motor/my_tim.cpp **** 
-  57:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
-ARM GAS  /tmp/cckyrMZQ.s 			page 4
+  84              		.loc 1 32 9 view .LVU21
+  85 002a 0723     		movs	r3, #7
+  86 002c 1340     		ands	r3, r2
+  87 002e 012B     		cmp	r3, #1
+  88 0030 1FD0     		beq	.L11
+  89              	.L4:
+  33:My_Top/Step_Motor/my_tim.cpp ****         {
+  34:My_Top/Step_Motor/my_tim.cpp ****             if(M1.work_mode == speed)
+  35:My_Top/Step_Motor/my_tim.cpp ****             {
+  36:My_Top/Step_Motor/my_tim.cpp ****                 // start_time = HAL_System::get_tick_us(); //记录开始时间
+  37:My_Top/Step_Motor/my_tim.cpp ****                 M1.Speed_Loop();//速度环控制 耗时46*2US 最快10.KHZ 
+  38:My_Top/Step_Motor/my_tim.cpp ****                 // end_time = HAL_System::get_tick_us(); // 记录结束时间
+  39:My_Top/Step_Motor/my_tim.cpp ****                 // M1.laji = (float)(end_time - start_time);                 
+  40:My_Top/Step_Motor/my_tim.cpp ****             }
+  41:My_Top/Step_Motor/my_tim.cpp ****             if(M2.work_mode == speed)
+  42:My_Top/Step_Motor/my_tim.cpp ****             {
+  43:My_Top/Step_Motor/my_tim.cpp ****                 M2.Speed_Loop();//速度环控制 耗时46*2US 最快10.KHZ               
+  44:My_Top/Step_Motor/my_tim.cpp ****             }            
+  45:My_Top/Step_Motor/my_tim.cpp **** 
+  46:My_Top/Step_Motor/my_tim.cpp ****         }
+  47:My_Top/Step_Motor/my_tim.cpp ****         if (count % Stepper_POSITION_LOOP_FREQ_DIV == 1)    // 位置环
+  90              		.loc 1 47 9 is_stmt 1 view .LVU22
+  91              		.loc 1 47 19 is_stmt 0 view .LVU23
+  92 0032 354B     		ldr	r3, .L16+8
+  93 0034 1A88     		ldrh	r2, [r3]
+  94              		.loc 1 47 9 view .LVU24
+  95 0036 0723     		movs	r3, #7
+  96 0038 1340     		ands	r3, r2
+  97 003a 012B     		cmp	r3, #1
+  98 003c 29D0     		beq	.L12
+  99              	.L6:
+  48:My_Top/Step_Motor/my_tim.cpp ****         {
+  49:My_Top/Step_Motor/my_tim.cpp ****             if(M1.work_mode == position)
+  50:My_Top/Step_Motor/my_tim.cpp ****             {
+  51:My_Top/Step_Motor/my_tim.cpp ****                 start_time = HAL_System::get_tick_us(); //记录开始时间
+  52:My_Top/Step_Motor/my_tim.cpp ****                 M1.Position_Loop();//位置环控制4k  耗时
+  53:My_Top/Step_Motor/my_tim.cpp ****                 end_time = HAL_System::get_tick_us(); // 记录结束时间
+  54:My_Top/Step_Motor/my_tim.cpp ****                 M1.laji = (float)(end_time - start_time);                 
+  55:My_Top/Step_Motor/my_tim.cpp ****             }
+  56:My_Top/Step_Motor/my_tim.cpp ****             if(M2.work_mode == position)
+  57:My_Top/Step_Motor/my_tim.cpp ****             {
+  58:My_Top/Step_Motor/my_tim.cpp ****                 M2.Position_Loop();
+  59:My_Top/Step_Motor/my_tim.cpp ****             }
+  60:My_Top/Step_Motor/my_tim.cpp ****         }
+  61:My_Top/Step_Motor/my_tim.cpp ****         if (count % 1600 == 1 && M2.work_mode == EncoderCalibration) 
+ 100              		.loc 1 61 9 is_stmt 1 view .LVU25
+ 101              	.LBB4:
+ 102              		.loc 1 61 19 is_stmt 0 view .LVU26
+ 103 003e 324B     		ldr	r3, .L16+8
+ 104 0040 1C88     		ldrh	r4, [r3]
+ 105 0042 C821     		movs	r1, #200
+ 106 0044 C900     		lsls	r1, r1, #3
+ 107 0046 2000     		movs	r0, r4
+ 108 0048 FFF7FEFF 		bl	__aeabi_uidivmod
+ 109              	.LVL3:
+ 110 004c 89B2     		uxth	r1, r1
+ 111              		.loc 1 61 9 view .LVU27
+ARM GAS  /tmp/ccGw0LDP.s 			page 4
 
 
- 118              		.loc 1 57 5 is_stmt 1 view .LVU31
- 119              		.loc 1 57 12 is_stmt 0 view .LVU32
- 120 0044 0C4B     		ldr	r3, .L9+4
- 121 0046 5B78     		ldrb	r3, [r3, #1]
- 122              		.loc 1 57 5 view .LVU33
- 123 0048 002B     		cmp	r3, #0
- 124 004a 03D0     		beq	.L6
-  58:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
- 125              		.loc 1 58 5 is_stmt 1 view .LVU34
- 126              		.loc 1 58 12 is_stmt 0 view .LVU35
- 127 004c 0B4B     		ldr	r3, .L9+8
- 128 004e 5B78     		ldrb	r3, [r3, #1]
- 129              		.loc 1 58 5 view .LVU36
- 130 0050 002B     		cmp	r3, #0
- 131 0052 00D1     		bne	.L8
- 132              	.LVL4:
- 133              	.L6:
-  59:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre();
-  60:My_Top/Step_Motor/my_tim.cpp ****     M2.setFre(); 
-  61:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
-  62:My_Top/Step_Motor/my_tim.cpp **** 
-  63:My_Top/Step_Motor/my_tim.cpp **** }
- 134              		.loc 1 63 1 view .LVU37
- 135              		@ sp needed
- 136 0054 10BD     		pop	{r4, pc}
- 137              	.LVL5:
- 138              	.L8:
-  59:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre();
- 139              		.loc 1 59 5 is_stmt 1 view .LVU38
-  59:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre();
- 140              		.loc 1 59 14 is_stmt 0 view .LVU39
- 141 0056 0848     		ldr	r0, .L9+4
- 142              	.LVL6:
-  59:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre();
- 143              		.loc 1 59 14 view .LVU40
- 144 0058 FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
- 145              	.LVL7:
-  60:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
- 146              		.loc 1 60 5 is_stmt 1 view .LVU41
-  60:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
- 147              		.loc 1 60 14 is_stmt 0 view .LVU42
- 148 005c 0748     		ldr	r0, .L9+8
- 149 005e FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
- 150              	.LVL8:
-  61:My_Top/Step_Motor/my_tim.cpp **** 
- 151              		.loc 1 61 5 is_stmt 1 view .LVU43
-  61:My_Top/Step_Motor/my_tim.cpp **** 
- 152              		.loc 1 61 19 is_stmt 0 view .LVU44
- 153 0062 074C     		ldr	r4, .L9+12
- 154 0064 6088     		ldrh	r0, [r4, #2]
- 155 0066 0749     		ldr	r1, .L9+16
- 156 0068 FFF7FEFF 		bl	__aeabi_uidivmod
- 157              	.LVL9:
- 158 006c 89B2     		uxth	r1, r1
-  61:My_Top/Step_Motor/my_tim.cpp **** 
- 159              		.loc 1 61 26 view .LVU45
- 160 006e 0131     		adds	r1, r1, #1
-ARM GAS  /tmp/cckyrMZQ.s 			page 5
-
-
-  61:My_Top/Step_Motor/my_tim.cpp **** 
- 161              		.loc 1 61 11 view .LVU46
- 162 0070 6180     		strh	r1, [r4, #2]
- 163 0072 EFE7     		b	.L6
- 164              	.L10:
- 165              		.align	2
- 166              	.L9:
- 167 0074 00040040 		.word	1073742848
- 168 0078 00000000 		.word	M1
- 169 007c 00000000 		.word	M2
- 170 0080 00000000 		.word	.LANCHOR0
- 171 0084 10270000 		.word	10000
- 172              		.cfi_endproc
- 173              	.LFE1467:
- 175              		.align	1
- 176              		.global	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
- 177              		.syntax unified
- 178              		.code	16
- 179              		.thumb_func
- 181              	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef:
- 182              	.LVL10:
- 183              	.LFB1468:
-  64:My_Top/Step_Motor/my_tim.cpp **** 
-  65:My_Top/Step_Motor/my_tim.cpp **** 
-  66:My_Top/Step_Motor/my_tim.cpp **** /*
-  67:My_Top/Step_Motor/my_tim.cpp **** void laji()
-  68:My_Top/Step_Motor/my_tim.cpp **** {
-  69:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t last_time = 0;
-  70:My_Top/Step_Motor/my_tim.cpp ****     uint32_t now_time =  HAL_System::get_tick_us();
-  71:My_Top/Step_Motor/my_tim.cpp ****     if (last_time != 0) {
-  72:My_Top/Step_Motor/my_tim.cpp ****          M1.laji = (int32_t)(now_time - last_time);  // 单次中断间隔，单位us
-  73:My_Top/Step_Motor/my_tim.cpp ****     }
-  74:My_Top/Step_Motor/my_tim.cpp ****     last_time = now_time;
+ 112 004e 0129     		cmp	r1, #1
+ 113 0050 3ED0     		beq	.L13
+ 114              	.L8:
+ 115              	.LBE4:
+  62:My_Top/Step_Motor/my_tim.cpp ****         {
+  63:My_Top/Step_Motor/my_tim.cpp ****             static uint16_t temp = 800; 
+  64:My_Top/Step_Motor/my_tim.cpp ****             M2.motor_fre = temp;
+  65:My_Top/Step_Motor/my_tim.cpp ****             temp += 50;
+  66:My_Top/Step_Motor/my_tim.cpp ****             if(temp > 2900) 
+  67:My_Top/Step_Motor/my_tim.cpp ****             {
+  68:My_Top/Step_Motor/my_tim.cpp ****                 temp = 2900;
+  69:My_Top/Step_Motor/my_tim.cpp ****                 M2.laji_flag = 1;
+  70:My_Top/Step_Motor/my_tim.cpp ****             }
+  71:My_Top/Step_Motor/my_tim.cpp ****         }
+  72:My_Top/Step_Motor/my_tim.cpp ****         count = (count%10000)+1;
+ 116              		.loc 1 72 9 is_stmt 1 view .LVU28
+ 117              		.loc 1 72 23 is_stmt 0 view .LVU29
+ 118 0052 2E49     		ldr	r1, .L16+12
+ 119 0054 2000     		movs	r0, r4
+ 120 0056 FFF7FEFF 		bl	__aeabi_uidivmod
+ 121              	.LVL4:
+ 122 005a 89B2     		uxth	r1, r1
+ 123              		.loc 1 72 30 view .LVU30
+ 124 005c 0131     		adds	r1, r1, #1
+ 125              		.loc 1 72 15 view .LVU31
+ 126 005e 2A4B     		ldr	r3, .L16+8
+ 127 0060 1980     		strh	r1, [r3]
+ 128              	.L1:
+ 129              	.LBE3:
+ 130              	.LBE2:
+  73:My_Top/Step_Motor/my_tim.cpp **** 
+  74:My_Top/Step_Motor/my_tim.cpp ****     }
   75:My_Top/Step_Motor/my_tim.cpp **** }
-  76:My_Top/Step_Motor/my_tim.cpp **** */
-  77:My_Top/Step_Motor/my_tim.cpp **** 
-  78:My_Top/Step_Motor/my_tim.cpp **** /**
-  79:My_Top/Step_Motor/my_tim.cpp ****  * @brief 初始化定时器并设置回调函数
-  80:My_Top/Step_Motor/my_tim.cpp ****  * @param htim 定时器句柄指针，指向定时器配置结构体
-  81:My_Top/Step_Motor/my_tim.cpp ****  */
-  82:My_Top/Step_Motor/my_tim.cpp **** 
-  83:My_Top/Step_Motor/my_tim.cpp **** uint16_t ADC_Value[100]; // ADC采集值数组，长度为2
-  84:My_Top/Step_Motor/my_tim.cpp **** void My_Tim_Init(TIM_HandleTypeDef* htim,ADC_HandleTypeDef *hadc)
-  85:My_Top/Step_Motor/my_tim.cpp **** {
- 184              		.loc 1 85 1 is_stmt 1 view -0
- 185              		.cfi_startproc
- 186              		@ args = 0, pretend = 0, frame = 0
- 187              		@ frame_needed = 0, uses_anonymous_args = 0
- 188              		.loc 1 85 1 is_stmt 0 view .LVU48
- 189 0088 10B5     		push	{r4, lr}
- 190              		.cfi_def_cfa_offset 8
- 191              		.cfi_offset 4, -8
- 192              		.cfi_offset 14, -4
- 193 008a 0400     		movs	r4, r0
- 194 008c 0800     		movs	r0, r1
- 195              	.LVL11:
-  86:My_Top/Step_Motor/my_tim.cpp ****     HAL_ADC_Start_DMA(hadc,(uint32_t *)ADC_Value,100); //电池电压采集
-ARM GAS  /tmp/cckyrMZQ.s 			page 6
+ 131              		.loc 1 75 1 view .LVU32
+ 132              		@ sp needed
+ 133 0062 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 134              	.LVL5:
+ 135              	.L10:
+ 136              	.LBB8:
+ 137              	.LBB7:
+  26:My_Top/Step_Motor/my_tim.cpp ****             M2.Update_Speed_Angle_LPFAndPLL();//更新速度角度 
+ 138              		.loc 1 26 13 is_stmt 1 view .LVU33
+  26:My_Top/Step_Motor/my_tim.cpp ****             M2.Update_Speed_Angle_LPFAndPLL();//更新速度角度 
+ 139              		.loc 1 26 44 is_stmt 0 view .LVU34
+ 140 0064 2648     		ldr	r0, .L16
+ 141              	.LVL6:
+  26:My_Top/Step_Motor/my_tim.cpp ****             M2.Update_Speed_Angle_LPFAndPLL();//更新速度角度 
+ 142              		.loc 1 26 44 view .LVU35
+ 143 0066 FFF7FEFF 		bl	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
+ 144              	.LVL7:
+  27:My_Top/Step_Motor/my_tim.cpp ****             // end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 145              		.loc 1 27 13 is_stmt 1 view .LVU36
+  27:My_Top/Step_Motor/my_tim.cpp ****             // end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 146              		.loc 1 27 44 is_stmt 0 view .LVU37
+ 147 006a 2648     		ldr	r0, .L16+4
+ 148 006c FFF7FEFF 		bl	_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
+ 149              	.LVL8:
+ARM GAS  /tmp/ccGw0LDP.s 			page 5
 
 
- 196              		.loc 1 86 5 is_stmt 1 view .LVU49
- 197              		.loc 1 86 22 is_stmt 0 view .LVU50
- 198 008e 0A49     		ldr	r1, .L12
- 199              	.LVL12:
- 200              		.loc 1 86 22 view .LVU51
- 201 0090 6422     		movs	r2, #100
- 202 0092 FFF7FEFF 		bl	HAL_ADC_Start_DMA
- 203              	.LVL13:
-  87:My_Top/Step_Motor/my_tim.cpp ****     __HAL_TIM_SET_COMPARE(htim, TIM_CHANNEL_1, (uint32_t)(100 * 0.5f)); // 设置占空比为50% �
- 204              		.loc 1 87 5 is_stmt 1 view .LVU52
- 205 0096 2368     		ldr	r3, [r4]
- 206 0098 3222     		movs	r2, #50
- 207 009a 5A63     		str	r2, [r3, #52]
-  88:My_Top/Step_Motor/my_tim.cpp ****     HAL_TIM_Base_Start_IT(htim); //启动定时器周期中断
- 208              		.loc 1 88 5 view .LVU53
- 209              		.loc 1 88 26 is_stmt 0 view .LVU54
- 210 009c 2000     		movs	r0, r4
- 211 009e FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
- 212              	.LVL14:
-  89:My_Top/Step_Motor/my_tim.cpp ****     HAL_TIM_OC_Start_IT(htim, TIM_CHANNEL_1); //启动定时器比较中断
- 213              		.loc 1 89 5 is_stmt 1 view .LVU55
- 214              		.loc 1 89 24 is_stmt 0 view .LVU56
- 215 00a2 0021     		movs	r1, #0
- 216 00a4 2000     		movs	r0, r4
- 217 00a6 FFF7FEFF 		bl	HAL_TIM_OC_Start_IT
- 218              	.LVL15:
-  90:My_Top/Step_Motor/my_tim.cpp ****     htim->PeriodElapsedCallback = My_Tim_Callback;  // 设置定时器周期结束回调函数
- 219              		.loc 1 90 5 is_stmt 1 view .LVU57
- 220              		.loc 1 90 33 is_stmt 0 view .LVU58
- 221 00aa 044B     		ldr	r3, .L12+4
- 222 00ac 8422     		movs	r2, #132
- 223 00ae A350     		str	r3, [r4, r2]
-  91:My_Top/Step_Motor/my_tim.cpp ****     htim->PWM_PulseFinishedCallback = My_Tim_OC_Callback;// PWM的模式的比较匹配回调函数
- 224              		.loc 1 91 5 is_stmt 1 view .LVU59
- 225              		.loc 1 91 37 is_stmt 0 view .LVU60
- 226 00b0 034B     		ldr	r3, .L12+8
- 227 00b2 1C32     		adds	r2, r2, #28
- 228 00b4 A350     		str	r3, [r4, r2]
-  92:My_Top/Step_Motor/my_tim.cpp **** }
- 229              		.loc 1 92 1 view .LVU61
- 230              		@ sp needed
+ 150 0070 D9E7     		b	.L3
+ 151              	.L11:
+  34:My_Top/Step_Motor/my_tim.cpp ****             {
+ 152              		.loc 1 34 13 is_stmt 1 view .LVU38
+  34:My_Top/Step_Motor/my_tim.cpp ****             {
+ 153              		.loc 1 34 19 is_stmt 0 view .LVU39
+ 154 0072 234B     		ldr	r3, .L16
+ 155 0074 1B78     		ldrb	r3, [r3]
+  34:My_Top/Step_Motor/my_tim.cpp ****             {
+ 156              		.loc 1 34 13 view .LVU40
+ 157 0076 002B     		cmp	r3, #0
+ 158 0078 07D0     		beq	.L14
+ 159              	.L5:
+  41:My_Top/Step_Motor/my_tim.cpp ****             {
+ 160              		.loc 1 41 13 is_stmt 1 view .LVU41
+  41:My_Top/Step_Motor/my_tim.cpp ****             {
+ 161              		.loc 1 41 19 is_stmt 0 view .LVU42
+ 162 007a 224B     		ldr	r3, .L16+4
+ 163 007c 1B78     		ldrb	r3, [r3]
+  41:My_Top/Step_Motor/my_tim.cpp ****             {
+ 164              		.loc 1 41 13 view .LVU43
+ 165 007e 002B     		cmp	r3, #0
+ 166 0080 D7D1     		bne	.L4
+  43:My_Top/Step_Motor/my_tim.cpp ****             }            
+ 167              		.loc 1 43 17 is_stmt 1 view .LVU44
+  43:My_Top/Step_Motor/my_tim.cpp ****             }            
+ 168              		.loc 1 43 30 is_stmt 0 view .LVU45
+ 169 0082 2048     		ldr	r0, .L16+4
+ 170 0084 FFF7FEFF 		bl	_ZN12StepperMotor10Speed_LoopEv
+ 171              	.LVL9:
+ 172 0088 D3E7     		b	.L4
+ 173              	.L14:
+  37:My_Top/Step_Motor/my_tim.cpp ****                 // end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 174              		.loc 1 37 17 is_stmt 1 view .LVU46
+  37:My_Top/Step_Motor/my_tim.cpp ****                 // end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 175              		.loc 1 37 30 is_stmt 0 view .LVU47
+ 176 008a 1D48     		ldr	r0, .L16
+ 177 008c FFF7FEFF 		bl	_ZN12StepperMotor10Speed_LoopEv
+ 178              	.LVL10:
+ 179 0090 F3E7     		b	.L5
+ 180              	.L12:
+  49:My_Top/Step_Motor/my_tim.cpp ****             {
+ 181              		.loc 1 49 13 is_stmt 1 view .LVU48
+  49:My_Top/Step_Motor/my_tim.cpp ****             {
+ 182              		.loc 1 49 19 is_stmt 0 view .LVU49
+ 183 0092 1B4B     		ldr	r3, .L16
+ 184 0094 1B78     		ldrb	r3, [r3]
+  49:My_Top/Step_Motor/my_tim.cpp ****             {
+ 185              		.loc 1 49 13 view .LVU50
+ 186 0096 012B     		cmp	r3, #1
+ 187 0098 07D0     		beq	.L15
+ 188              	.L7:
+  56:My_Top/Step_Motor/my_tim.cpp ****             {
+ 189              		.loc 1 56 13 is_stmt 1 view .LVU51
+  56:My_Top/Step_Motor/my_tim.cpp ****             {
+ 190              		.loc 1 56 19 is_stmt 0 view .LVU52
+ 191 009a 1A4B     		ldr	r3, .L16+4
+ARM GAS  /tmp/ccGw0LDP.s 			page 6
+
+
+ 192 009c 1B78     		ldrb	r3, [r3]
+  56:My_Top/Step_Motor/my_tim.cpp ****             {
+ 193              		.loc 1 56 13 view .LVU53
+ 194 009e 012B     		cmp	r3, #1
+ 195 00a0 CDD1     		bne	.L6
+  58:My_Top/Step_Motor/my_tim.cpp ****             }
+ 196              		.loc 1 58 17 is_stmt 1 view .LVU54
+  58:My_Top/Step_Motor/my_tim.cpp ****             }
+ 197              		.loc 1 58 33 is_stmt 0 view .LVU55
+ 198 00a2 1848     		ldr	r0, .L16+4
+ 199 00a4 FFF7FEFF 		bl	_ZN12StepperMotor13Position_LoopEv
+ 200              	.LVL11:
+ 201 00a8 C9E7     		b	.L6
+ 202              	.L15:
+  51:My_Top/Step_Motor/my_tim.cpp ****                 M1.Position_Loop();//位置环控制4k  耗时
+ 203              		.loc 1 51 17 is_stmt 1 view .LVU56
+  51:My_Top/Step_Motor/my_tim.cpp ****                 M1.Position_Loop();//位置环控制4k  耗时
+ 204              		.loc 1 51 53 is_stmt 0 view .LVU57
+ 205 00aa FFF7FEFF 		bl	_ZN10HAL_System11get_tick_usEv
+ 206              	.LVL12:
+  51:My_Top/Step_Motor/my_tim.cpp ****                 M1.Position_Loop();//位置环控制4k  耗时
+ 207              		.loc 1 51 28 discriminator 1 view .LVU58
+ 208 00ae 164C     		ldr	r4, .L16+8
+ 209 00b0 6060     		str	r0, [r4, #4]
+  52:My_Top/Step_Motor/my_tim.cpp ****                 end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 210              		.loc 1 52 17 is_stmt 1 view .LVU59
+  52:My_Top/Step_Motor/my_tim.cpp ****                 end_time = HAL_System::get_tick_us(); // 记录结束时间
+ 211              		.loc 1 52 33 is_stmt 0 view .LVU60
+ 212 00b2 134D     		ldr	r5, .L16
+ 213 00b4 2800     		movs	r0, r5
+ 214 00b6 FFF7FEFF 		bl	_ZN12StepperMotor13Position_LoopEv
+ 215              	.LVL13:
+  53:My_Top/Step_Motor/my_tim.cpp ****                 M1.laji = (float)(end_time - start_time);                 
+ 216              		.loc 1 53 17 is_stmt 1 view .LVU61
+  53:My_Top/Step_Motor/my_tim.cpp ****                 M1.laji = (float)(end_time - start_time);                 
+ 217              		.loc 1 53 51 is_stmt 0 view .LVU62
+ 218 00ba FFF7FEFF 		bl	_ZN10HAL_System11get_tick_usEv
+ 219              	.LVL14:
+  53:My_Top/Step_Motor/my_tim.cpp ****                 M1.laji = (float)(end_time - start_time);                 
+ 220              		.loc 1 53 26 discriminator 1 view .LVU63
+ 221 00be A060     		str	r0, [r4, #8]
+  54:My_Top/Step_Motor/my_tim.cpp ****             }
+ 222              		.loc 1 54 17 is_stmt 1 view .LVU64
+  54:My_Top/Step_Motor/my_tim.cpp ****             }
+ 223              		.loc 1 54 44 is_stmt 0 view .LVU65
+ 224 00c0 6368     		ldr	r3, [r4, #4]
+ 225 00c2 C01A     		subs	r0, r0, r3
+  54:My_Top/Step_Motor/my_tim.cpp ****             }
+ 226              		.loc 1 54 27 view .LVU66
+ 227 00c4 FFF7FEFF 		bl	__aeabi_ui2f
+ 228              	.LVL15:
+  54:My_Top/Step_Motor/my_tim.cpp ****             }
+ 229              		.loc 1 54 25 view .LVU67
+ 230 00c8 FFF7FEFF 		bl	__aeabi_f2uiz
  231              	.LVL16:
- 232              		.loc 1 92 1 view .LVU62
- 233 00b6 10BD     		pop	{r4, pc}
+ 232 00cc A865     		str	r0, [r5, #88]
+ 233 00ce E4E7     		b	.L7
+ARM GAS  /tmp/ccGw0LDP.s 			page 7
+
+
  234              	.L13:
- 235              		.align	2
- 236              	.L12:
- 237 00b8 00000000 		.word	ADC_Value
- 238 00bc 00000000 		.word	_Z15My_Tim_CallbackP19__TIM_HandleTypeDef
- 239 00c0 00000000 		.word	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
- 240              		.cfi_endproc
- 241              	.LFE1468:
- 243              		.align	1
- 244              		.global	_Z15M1_Tim_CallbackP19__TIM_HandleTypeDef
- 245              		.syntax unified
- 246              		.code	16
- 247              		.thumb_func
-ARM GAS  /tmp/cckyrMZQ.s 			page 7
-
-
- 249              	_Z15M1_Tim_CallbackP19__TIM_HandleTypeDef:
- 250              	.LVL17:
- 251              	.LFB1469:
-  93:My_Top/Step_Motor/my_tim.cpp **** 
-  94:My_Top/Step_Motor/my_tim.cpp **** 
-  95:My_Top/Step_Motor/my_tim.cpp **** 
-  96:My_Top/Step_Motor/my_tim.cpp **** 
-  97:My_Top/Step_Motor/my_tim.cpp **** 
-  98:My_Top/Step_Motor/my_tim.cpp **** 
-  99:My_Top/Step_Motor/my_tim.cpp **** // ── M1 的独立定时器周期结束回调 ──
- 100:My_Top/Step_Motor/my_tim.cpp **** void M1_Tim_Callback(TIM_HandleTypeDef *htim)
- 101:My_Top/Step_Motor/my_tim.cpp **** {
- 252              		.loc 1 101 1 is_stmt 1 view -0
- 253              		.cfi_startproc
- 254              		@ args = 0, pretend = 0, frame = 0
- 255              		@ frame_needed = 0, uses_anonymous_args = 0
- 256              		.loc 1 101 1 is_stmt 0 view .LVU64
- 257 00c4 10B5     		push	{r4, lr}
- 258              		.cfi_def_cfa_offset 8
- 259              		.cfi_offset 4, -8
- 260              		.cfi_offset 14, -4
- 102:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
- 261              		.loc 1 102 5 is_stmt 1 view .LVU65
- 262              		.loc 1 102 12 is_stmt 0 view .LVU66
- 263 00c6 044B     		ldr	r3, .L17
- 264 00c8 5B78     		ldrb	r3, [r3, #1]
- 265              		.loc 1 102 5 view .LVU67
- 266 00ca 002B     		cmp	r3, #0
- 267 00cc 00D1     		bne	.L16
- 268              	.LVL18:
- 269              	.L14:
- 103:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
- 104:My_Top/Step_Motor/my_tim.cpp **** }
- 270              		.loc 1 104 1 view .LVU68
- 271              		@ sp needed
- 272 00ce 10BD     		pop	{r4, pc}
- 273              	.LVL19:
+ 235              	.LBB6:
+  61:My_Top/Step_Motor/my_tim.cpp ****         {
+ 236              		.loc 1 61 37 discriminator 1 view .LVU68
+ 237 00d0 0C4B     		ldr	r3, .L16+4
+ 238 00d2 1B78     		ldrb	r3, [r3]
+  61:My_Top/Step_Motor/my_tim.cpp ****         {
+ 239              		.loc 1 61 31 discriminator 1 view .LVU69
+ 240 00d4 632B     		cmp	r3, #99
+ 241 00d6 BCD1     		bne	.L8
+ 242              	.LBB5:
+  63:My_Top/Step_Motor/my_tim.cpp ****             M2.motor_fre = temp;
+ 243              		.loc 1 63 13 is_stmt 1 view .LVU70
+  64:My_Top/Step_Motor/my_tim.cpp ****             temp += 50;
+ 244              		.loc 1 64 13 view .LVU71
+  64:My_Top/Step_Motor/my_tim.cpp ****             temp += 50;
+ 245              		.loc 1 64 26 is_stmt 0 view .LVU72
+ 246 00d8 0D4E     		ldr	r6, .L16+16
+ 247 00da 3588     		ldrh	r5, [r6]
+ 248 00dc 094F     		ldr	r7, .L16+4
+ 249 00de 2800     		movs	r0, r5
+ 250 00e0 FFF7FEFF 		bl	__aeabi_ui2f
+ 251              	.LVL17:
+ 252 00e4 7863     		str	r0, [r7, #52]
+  65:My_Top/Step_Motor/my_tim.cpp ****             if(temp > 2900) 
+ 253              		.loc 1 65 13 is_stmt 1 view .LVU73
+  65:My_Top/Step_Motor/my_tim.cpp ****             if(temp > 2900) 
+ 254              		.loc 1 65 18 is_stmt 0 view .LVU74
+ 255 00e6 3235     		adds	r5, r5, #50
+ 256 00e8 ADB2     		uxth	r5, r5
+ 257 00ea 3580     		strh	r5, [r6]
+  66:My_Top/Step_Motor/my_tim.cpp ****             {
+ 258              		.loc 1 66 13 is_stmt 1 view .LVU75
+ 259 00ec 094B     		ldr	r3, .L16+20
+ 260 00ee 9D42     		cmp	r5, r3
+ 261 00f0 AFD9     		bls	.L8
+  68:My_Top/Step_Motor/my_tim.cpp ****                 M2.laji_flag = 1;
+ 262              		.loc 1 68 17 view .LVU76
+  68:My_Top/Step_Motor/my_tim.cpp ****                 M2.laji_flag = 1;
+ 263              		.loc 1 68 22 is_stmt 0 view .LVU77
+ 264 00f2 084A     		ldr	r2, .L16+20
+ 265 00f4 3280     		strh	r2, [r6]
+  69:My_Top/Step_Motor/my_tim.cpp ****             }
+ 266              		.loc 1 69 17 is_stmt 1 view .LVU78
+  69:My_Top/Step_Motor/my_tim.cpp ****             }
+ 267              		.loc 1 69 30 is_stmt 0 view .LVU79
+ 268 00f6 5C22     		movs	r2, #92
+ 269 00f8 0121     		movs	r1, #1
+ 270 00fa B954     		strb	r1, [r7, r2]
+ 271 00fc A9E7     		b	.L8
+ 272              	.L17:
+ 273 00fe C046     		.align	2
  274              	.L16:
- 103:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
- 275              		.loc 1 103 5 is_stmt 1 view .LVU69
- 103:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
- 276              		.loc 1 103 20 is_stmt 0 view .LVU70
- 277 00d0 0148     		ldr	r0, .L17
- 278              	.LVL20:
- 103:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
- 279              		.loc 1 103 20 view .LVU71
- 280 00d2 FFF7FEFF 		bl	_ZN12StepperMotor12Step_HandlerEv
- 281              	.LVL21:
- 282 00d6 FAE7     		b	.L14
- 283              	.L18:
- 284              		.align	2
- 285              	.L17:
- 286 00d8 00000000 		.word	M1
- 287              		.cfi_endproc
- 288              	.LFE1469:
- 290              		.align	1
- 291              		.global	_Z15M2_Tim_CallbackP19__TIM_HandleTypeDef
-ARM GAS  /tmp/cckyrMZQ.s 			page 8
+ 275 0100 00000000 		.word	M1
+ 276 0104 00000000 		.word	M2
+ 277 0108 00000000 		.word	.LANCHOR0
+ 278 010c 10270000 		.word	10000
+ARM GAS  /tmp/ccGw0LDP.s 			page 8
 
 
- 292              		.syntax unified
- 293              		.code	16
- 294              		.thumb_func
- 296              	_Z15M2_Tim_CallbackP19__TIM_HandleTypeDef:
- 297              	.LVL22:
- 298              	.LFB1470:
+ 279 0110 00000000 		.word	.LANCHOR1
+ 280 0114 540B0000 		.word	2900
+ 281              	.LBE5:
+ 282              	.LBE6:
+ 283              	.LBE7:
+ 284              	.LBE8:
+ 285              		.cfi_endproc
+ 286              	.LFE1466:
+ 288              		.align	1
+ 289              		.global	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
+ 290              		.syntax unified
+ 291              		.code	16
+ 292              		.thumb_func
+ 294              	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef:
+ 295              	.LVL18:
+ 296              	.LFB1467:
+  76:My_Top/Step_Motor/my_tim.cpp **** 
+  77:My_Top/Step_Motor/my_tim.cpp **** 
+  78:My_Top/Step_Motor/my_tim.cpp **** void My_Tim_OC_Callback(TIM_HandleTypeDef *htim) // TIM3_CH1 的输出比较中断
+  79:My_Top/Step_Motor/my_tim.cpp **** {
+ 297              		.loc 1 79 1 is_stmt 1 view -0
+ 298              		.cfi_startproc
+ 299              		@ args = 0, pretend = 0, frame = 0
+ 300              		@ frame_needed = 0, uses_anonymous_args = 0
+ 301              		.loc 1 79 1 is_stmt 0 view .LVU81
+ 302 0118 10B5     		push	{r4, lr}
+ 303              		.cfi_def_cfa_offset 8
+ 304              		.cfi_offset 4, -8
+ 305              		.cfi_offset 14, -4
+  80:My_Top/Step_Motor/my_tim.cpp ****     static uint16_t count = 0;
+ 306              		.loc 1 80 5 is_stmt 1 view .LVU82
+  81:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t start_time = 0, end_time = 0; // 计时变量
+ 307              		.loc 1 81 5 view .LVU83
+  82:My_Top/Step_Motor/my_tim.cpp **** 
+  83:My_Top/Step_Motor/my_tim.cpp **** 
+  84:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
+ 308              		.loc 1 84 5 view .LVU84
+ 309              		.loc 1 84 12 is_stmt 0 view .LVU85
+ 310 011a 0C4B     		ldr	r3, .L21
+ 311 011c 5B78     		ldrb	r3, [r3, #1]
+ 312              		.loc 1 84 5 view .LVU86
+ 313 011e 002B     		cmp	r3, #0
+ 314 0120 03D0     		beq	.L18
+  85:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
+ 315              		.loc 1 85 5 is_stmt 1 view .LVU87
+ 316              		.loc 1 85 12 is_stmt 0 view .LVU88
+ 317 0122 0B4B     		ldr	r3, .L21+4
+ 318 0124 5B78     		ldrb	r3, [r3, #1]
+ 319              		.loc 1 85 5 view .LVU89
+ 320 0126 002B     		cmp	r3, #0
+ 321 0128 00D1     		bne	.L20
+ 322              	.LVL19:
+ 323              	.L18:
+  86:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre(); 
+  87:My_Top/Step_Motor/my_tim.cpp ****     M2.setFre(); 
+  88:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
+  89:My_Top/Step_Motor/my_tim.cpp **** 
+ARM GAS  /tmp/ccGw0LDP.s 			page 9
+
+
+  90:My_Top/Step_Motor/my_tim.cpp **** }
+ 324              		.loc 1 90 1 view .LVU90
+ 325              		@ sp needed
+ 326 012a 10BD     		pop	{r4, pc}
+ 327              	.LVL20:
+ 328              	.L20:
+  86:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre(); 
+ 329              		.loc 1 86 5 is_stmt 1 view .LVU91
+  86:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre(); 
+ 330              		.loc 1 86 14 is_stmt 0 view .LVU92
+ 331 012c 0748     		ldr	r0, .L21
+ 332              	.LVL21:
+  86:My_Top/Step_Motor/my_tim.cpp ****     M1.setFre(); 
+ 333              		.loc 1 86 14 view .LVU93
+ 334 012e FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
+ 335              	.LVL22:
+  87:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
+ 336              		.loc 1 87 5 is_stmt 1 view .LVU94
+  87:My_Top/Step_Motor/my_tim.cpp ****     count = (count%10000)+1;
+ 337              		.loc 1 87 14 is_stmt 0 view .LVU95
+ 338 0132 0748     		ldr	r0, .L21+4
+ 339 0134 FFF7FEFF 		bl	_ZN12StepperMotor6setFreEv
+ 340              	.LVL23:
+  88:My_Top/Step_Motor/my_tim.cpp **** 
+ 341              		.loc 1 88 5 is_stmt 1 view .LVU96
+  88:My_Top/Step_Motor/my_tim.cpp **** 
+ 342              		.loc 1 88 19 is_stmt 0 view .LVU97
+ 343 0138 064C     		ldr	r4, .L21+8
+ 344 013a A089     		ldrh	r0, [r4, #12]
+ 345 013c 0649     		ldr	r1, .L21+12
+ 346 013e FFF7FEFF 		bl	__aeabi_uidivmod
+ 347              	.LVL24:
+ 348 0142 89B2     		uxth	r1, r1
+  88:My_Top/Step_Motor/my_tim.cpp **** 
+ 349              		.loc 1 88 26 view .LVU98
+ 350 0144 0131     		adds	r1, r1, #1
+  88:My_Top/Step_Motor/my_tim.cpp **** 
+ 351              		.loc 1 88 11 view .LVU99
+ 352 0146 A181     		strh	r1, [r4, #12]
+ 353 0148 EFE7     		b	.L18
+ 354              	.L22:
+ 355 014a C046     		.align	2
+ 356              	.L21:
+ 357 014c 00000000 		.word	M1
+ 358 0150 00000000 		.word	M2
+ 359 0154 00000000 		.word	.LANCHOR0
+ 360 0158 10270000 		.word	10000
+ 361              		.cfi_endproc
+ 362              	.LFE1467:
+ 364              		.align	1
+ 365              		.global	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
+ 366              		.syntax unified
+ 367              		.code	16
+ 368              		.thumb_func
+ 370              	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef:
+ 371              	.LVL25:
+ 372              	.LFB1468:
+ARM GAS  /tmp/ccGw0LDP.s 			page 10
+
+
+  91:My_Top/Step_Motor/my_tim.cpp **** 
+  92:My_Top/Step_Motor/my_tim.cpp **** 
+  93:My_Top/Step_Motor/my_tim.cpp **** /*
+  94:My_Top/Step_Motor/my_tim.cpp **** void laji()
+  95:My_Top/Step_Motor/my_tim.cpp **** {
+  96:My_Top/Step_Motor/my_tim.cpp ****     static uint32_t last_time = 0;
+  97:My_Top/Step_Motor/my_tim.cpp ****     uint32_t now_time = 0;
+  98:My_Top/Step_Motor/my_tim.cpp ****     now_time =  HAL_System::get_tick_us();
+  99:My_Top/Step_Motor/my_tim.cpp ****     if (last_time != 0) {
+ 100:My_Top/Step_Motor/my_tim.cpp ****          M1.laji = (int32_t)(now_time - last_time);  // 单次中断间隔，单位us
+ 101:My_Top/Step_Motor/my_tim.cpp ****     }
+ 102:My_Top/Step_Motor/my_tim.cpp ****     last_time = now_time;
+ 103:My_Top/Step_Motor/my_tim.cpp **** }
+ 104:My_Top/Step_Motor/my_tim.cpp **** */
  105:My_Top/Step_Motor/my_tim.cpp **** 
- 106:My_Top/Step_Motor/my_tim.cpp **** // ── M2电机 的独立定时器周期结束回调 ──
- 107:My_Top/Step_Motor/my_tim.cpp **** void M2_Tim_Callback(TIM_HandleTypeDef *htim)
- 108:My_Top/Step_Motor/my_tim.cpp **** {
- 299              		.loc 1 108 1 is_stmt 1 view -0
- 300              		.cfi_startproc
- 301              		@ args = 0, pretend = 0, frame = 0
- 302              		@ frame_needed = 0, uses_anonymous_args = 0
- 303              		.loc 1 108 1 is_stmt 0 view .LVU73
- 304 00dc 10B5     		push	{r4, lr}
- 305              		.cfi_def_cfa_offset 8
- 306              		.cfi_offset 4, -8
- 307              		.cfi_offset 14, -4
- 109:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
- 308              		.loc 1 109 5 is_stmt 1 view .LVU74
- 309              		.loc 1 109 12 is_stmt 0 view .LVU75
- 310 00de 044B     		ldr	r3, .L22
- 311 00e0 5B78     		ldrb	r3, [r3, #1]
- 312              		.loc 1 109 5 view .LVU76
- 313 00e2 002B     		cmp	r3, #0
- 314 00e4 00D1     		bne	.L21
- 315              	.LVL23:
- 316              	.L19:
- 110:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
- 111:My_Top/Step_Motor/my_tim.cpp **** }
- 317              		.loc 1 111 1 view .LVU77
- 318              		@ sp needed
- 319 00e6 10BD     		pop	{r4, pc}
- 320              	.LVL24:
- 321              	.L21:
- 110:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
- 322              		.loc 1 110 5 is_stmt 1 view .LVU78
- 110:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
- 323              		.loc 1 110 20 is_stmt 0 view .LVU79
- 324 00e8 0148     		ldr	r0, .L22
- 325              	.LVL25:
- 110:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
- 326              		.loc 1 110 20 view .LVU80
- 327 00ea FFF7FEFF 		bl	_ZN12StepperMotor12Step_HandlerEv
- 328              	.LVL26:
- 329 00ee FAE7     		b	.L19
- 330              	.L23:
- 331              		.align	2
- 332              	.L22:
- 333 00f0 00000000 		.word	M2
- 334              		.cfi_endproc
- 335              	.LFE1470:
- 337              		.global	ADC_Value
- 338              		.bss
- 339              		.align	2
- 340              		.set	.LANCHOR0,. + 0
-ARM GAS  /tmp/cckyrMZQ.s 			page 9
+ 106:My_Top/Step_Motor/my_tim.cpp **** /**
+ 107:My_Top/Step_Motor/my_tim.cpp ****  * @brief 初始化定时器并设置回调函数
+ 108:My_Top/Step_Motor/my_tim.cpp ****  * @param htim 定时器句柄指针，指向定时器配置结构体
+ 109:My_Top/Step_Motor/my_tim.cpp ****  */
+ 110:My_Top/Step_Motor/my_tim.cpp **** 
+ 111:My_Top/Step_Motor/my_tim.cpp **** uint16_t ADC_Value[100]; // ADC采集值数组，长度为2
+ 112:My_Top/Step_Motor/my_tim.cpp **** void My_Tim_Init(TIM_HandleTypeDef* htim,ADC_HandleTypeDef *hadc)
+ 113:My_Top/Step_Motor/my_tim.cpp **** {
+ 373              		.loc 1 113 1 is_stmt 1 view -0
+ 374              		.cfi_startproc
+ 375              		@ args = 0, pretend = 0, frame = 0
+ 376              		@ frame_needed = 0, uses_anonymous_args = 0
+ 377              		.loc 1 113 1 is_stmt 0 view .LVU101
+ 378 015c 10B5     		push	{r4, lr}
+ 379              		.cfi_def_cfa_offset 8
+ 380              		.cfi_offset 4, -8
+ 381              		.cfi_offset 14, -4
+ 382 015e 0400     		movs	r4, r0
+ 383 0160 0800     		movs	r0, r1
+ 384              	.LVL26:
+ 114:My_Top/Step_Motor/my_tim.cpp ****     HAL_ADC_Start_DMA(hadc,(uint32_t *)ADC_Value,100); //电池电压采集
+ 385              		.loc 1 114 5 is_stmt 1 view .LVU102
+ 386              		.loc 1 114 22 is_stmt 0 view .LVU103
+ 387 0162 0A49     		ldr	r1, .L24
+ 388              	.LVL27:
+ 389              		.loc 1 114 22 view .LVU104
+ 390 0164 6422     		movs	r2, #100
+ 391 0166 FFF7FEFF 		bl	HAL_ADC_Start_DMA
+ 392              	.LVL28:
+ 115:My_Top/Step_Motor/my_tim.cpp ****     __HAL_TIM_SET_COMPARE(htim, TIM_CHANNEL_1, (uint32_t)(100 * 0.5f)); // 设置占空比为50% �
+ 393              		.loc 1 115 5 is_stmt 1 view .LVU105
+ 394 016a 2368     		ldr	r3, [r4]
+ 395 016c 3222     		movs	r2, #50
+ 396 016e 5A63     		str	r2, [r3, #52]
+ 116:My_Top/Step_Motor/my_tim.cpp ****     HAL_TIM_Base_Start_IT(htim); //启动定时器周期中断
+ 397              		.loc 1 116 5 view .LVU106
+ 398              		.loc 1 116 26 is_stmt 0 view .LVU107
+ 399 0170 2000     		movs	r0, r4
+ 400 0172 FFF7FEFF 		bl	HAL_TIM_Base_Start_IT
+ 401              	.LVL29:
+ 117:My_Top/Step_Motor/my_tim.cpp ****     HAL_TIM_OC_Start_IT(htim, TIM_CHANNEL_1); //启动定时器比较中断
+ 402              		.loc 1 117 5 is_stmt 1 view .LVU108
+ARM GAS  /tmp/ccGw0LDP.s 			page 11
 
 
- 343              	_ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE5count:
- 344 0000 0000     		.space	2
- 347              	_ZZ18My_Tim_OC_CallbackP19__TIM_HandleTypeDefE5count:
- 348 0002 0000     		.space	2
- 351              	ADC_Value:
- 352 0004 00000000 		.space	200
- 352      00000000 
- 352      00000000 
- 352      00000000 
- 352      00000000 
- 353              		.text
- 354              	.Letext0:
- 355              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
- 356              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
- 357              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 358              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h"
- 359              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 360              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 361              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc.h"
- 362              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 363              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
- 364              		.file 11 "My_Top/System/pid_Increment.hpp"
- 365              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
- 366              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
- 367              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
- 368              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
- 369              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
- 370              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
- 371              		.file 18 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
- 372              		.file 19 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
- 373              		.file 20 "Lib/compute/ex_math.hpp"
- 374              		.file 21 "My_Top/System/kth_read.hpp"
- 375              		.file 22 "My_Top/Step_Motor/Step.hpp"
- 376              		.file 23 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
- 377              		.file 24 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/cckyrMZQ.s 			page 10
+ 403              		.loc 1 117 24 is_stmt 0 view .LVU109
+ 404 0176 0021     		movs	r1, #0
+ 405 0178 2000     		movs	r0, r4
+ 406 017a FFF7FEFF 		bl	HAL_TIM_OC_Start_IT
+ 407              	.LVL30:
+ 118:My_Top/Step_Motor/my_tim.cpp ****     htim->PeriodElapsedCallback = My_Tim_Callback;  // 设置定时器周期结束回调函数
+ 408              		.loc 1 118 5 is_stmt 1 view .LVU110
+ 409              		.loc 1 118 33 is_stmt 0 view .LVU111
+ 410 017e 044B     		ldr	r3, .L24+4
+ 411 0180 8422     		movs	r2, #132
+ 412 0182 A350     		str	r3, [r4, r2]
+ 119:My_Top/Step_Motor/my_tim.cpp ****     htim->PWM_PulseFinishedCallback = My_Tim_OC_Callback;// PWM的模式的比较匹配回调函数
+ 413              		.loc 1 119 5 is_stmt 1 view .LVU112
+ 414              		.loc 1 119 37 is_stmt 0 view .LVU113
+ 415 0184 034B     		ldr	r3, .L24+8
+ 416 0186 1C32     		adds	r2, r2, #28
+ 417 0188 A350     		str	r3, [r4, r2]
+ 120:My_Top/Step_Motor/my_tim.cpp **** }
+ 418              		.loc 1 120 1 view .LVU114
+ 419              		@ sp needed
+ 420              	.LVL31:
+ 421              		.loc 1 120 1 view .LVU115
+ 422 018a 10BD     		pop	{r4, pc}
+ 423              	.L25:
+ 424              		.align	2
+ 425              	.L24:
+ 426 018c 00000000 		.word	ADC_Value
+ 427 0190 00000000 		.word	_Z15My_Tim_CallbackP19__TIM_HandleTypeDef
+ 428 0194 00000000 		.word	_Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
+ 429              		.cfi_endproc
+ 430              	.LFE1468:
+ 432              		.align	1
+ 433              		.global	_Z15M1_Tim_CallbackP19__TIM_HandleTypeDef
+ 434              		.syntax unified
+ 435              		.code	16
+ 436              		.thumb_func
+ 438              	_Z15M1_Tim_CallbackP19__TIM_HandleTypeDef:
+ 439              	.LVL32:
+ 440              	.LFB1469:
+ 121:My_Top/Step_Motor/my_tim.cpp **** 
+ 122:My_Top/Step_Motor/my_tim.cpp **** 
+ 123:My_Top/Step_Motor/my_tim.cpp **** 
+ 124:My_Top/Step_Motor/my_tim.cpp **** 
+ 125:My_Top/Step_Motor/my_tim.cpp **** 
+ 126:My_Top/Step_Motor/my_tim.cpp **** // ── M1 的独立定时器周期结束回调 ──
+ 127:My_Top/Step_Motor/my_tim.cpp **** void M1_Tim_Callback(TIM_HandleTypeDef *htim)
+ 128:My_Top/Step_Motor/my_tim.cpp **** {
+ 441              		.loc 1 128 1 is_stmt 1 view -0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 0
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445              		.loc 1 128 1 is_stmt 0 view .LVU117
+ 446 0198 10B5     		push	{r4, lr}
+ 447              		.cfi_def_cfa_offset 8
+ 448              		.cfi_offset 4, -8
+ 449              		.cfi_offset 14, -4
+ 129:My_Top/Step_Motor/my_tim.cpp ****     if (M1.control_init_flag == false) return;// 初始化未完成时，不执行
+ARM GAS  /tmp/ccGw0LDP.s 			page 12
+
+
+ 450              		.loc 1 129 5 is_stmt 1 view .LVU118
+ 451              		.loc 1 129 12 is_stmt 0 view .LVU119
+ 452 019a 044B     		ldr	r3, .L29
+ 453 019c 5B78     		ldrb	r3, [r3, #1]
+ 454              		.loc 1 129 5 view .LVU120
+ 455 019e 002B     		cmp	r3, #0
+ 456 01a0 00D1     		bne	.L28
+ 457              	.LVL33:
+ 458              	.L26:
+ 130:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
+ 131:My_Top/Step_Motor/my_tim.cpp **** }
+ 459              		.loc 1 131 1 view .LVU121
+ 460              		@ sp needed
+ 461 01a2 10BD     		pop	{r4, pc}
+ 462              	.LVL34:
+ 463              	.L28:
+ 130:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
+ 464              		.loc 1 130 5 is_stmt 1 view .LVU122
+ 130:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
+ 465              		.loc 1 130 20 is_stmt 0 view .LVU123
+ 466 01a4 0148     		ldr	r0, .L29
+ 467              	.LVL35:
+ 130:My_Top/Step_Motor/my_tim.cpp ****     M1.Step_Handler(); 
+ 468              		.loc 1 130 20 view .LVU124
+ 469 01a6 FFF7FEFF 		bl	_ZN12StepperMotor12Step_HandlerEv
+ 470              	.LVL36:
+ 471 01aa FAE7     		b	.L26
+ 472              	.L30:
+ 473              		.align	2
+ 474              	.L29:
+ 475 01ac 00000000 		.word	M1
+ 476              		.cfi_endproc
+ 477              	.LFE1469:
+ 479              		.align	1
+ 480              		.global	_Z15M2_Tim_CallbackP19__TIM_HandleTypeDef
+ 481              		.syntax unified
+ 482              		.code	16
+ 483              		.thumb_func
+ 485              	_Z15M2_Tim_CallbackP19__TIM_HandleTypeDef:
+ 486              	.LVL37:
+ 487              	.LFB1470:
+ 132:My_Top/Step_Motor/my_tim.cpp **** 
+ 133:My_Top/Step_Motor/my_tim.cpp **** // ── M2电机 的独立定时器周期结束回调 ──
+ 134:My_Top/Step_Motor/my_tim.cpp **** void M2_Tim_Callback(TIM_HandleTypeDef *htim)
+ 135:My_Top/Step_Motor/my_tim.cpp **** {
+ 488              		.loc 1 135 1 is_stmt 1 view -0
+ 489              		.cfi_startproc
+ 490              		@ args = 0, pretend = 0, frame = 0
+ 491              		@ frame_needed = 0, uses_anonymous_args = 0
+ 492              		.loc 1 135 1 is_stmt 0 view .LVU126
+ 493 01b0 10B5     		push	{r4, lr}
+ 494              		.cfi_def_cfa_offset 8
+ 495              		.cfi_offset 4, -8
+ 496              		.cfi_offset 14, -4
+ 136:My_Top/Step_Motor/my_tim.cpp ****     if (M2.control_init_flag == false) return;
+ 497              		.loc 1 136 5 is_stmt 1 view .LVU127
+ 498              		.loc 1 136 12 is_stmt 0 view .LVU128
+ARM GAS  /tmp/ccGw0LDP.s 			page 13
+
+
+ 499 01b2 044B     		ldr	r3, .L34
+ 500 01b4 5B78     		ldrb	r3, [r3, #1]
+ 501              		.loc 1 136 5 view .LVU129
+ 502 01b6 002B     		cmp	r3, #0
+ 503 01b8 00D1     		bne	.L33
+ 504              	.LVL38:
+ 505              	.L31:
+ 137:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
+ 138:My_Top/Step_Motor/my_tim.cpp **** }
+ 506              		.loc 1 138 1 view .LVU130
+ 507              		@ sp needed
+ 508 01ba 10BD     		pop	{r4, pc}
+ 509              	.LVL39:
+ 510              	.L33:
+ 137:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
+ 511              		.loc 1 137 5 is_stmt 1 view .LVU131
+ 137:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
+ 512              		.loc 1 137 20 is_stmt 0 view .LVU132
+ 513 01bc 0148     		ldr	r0, .L34
+ 514              	.LVL40:
+ 137:My_Top/Step_Motor/my_tim.cpp ****     M2.Step_Handler(); 
+ 515              		.loc 1 137 20 view .LVU133
+ 516 01be FFF7FEFF 		bl	_ZN12StepperMotor12Step_HandlerEv
+ 517              	.LVL41:
+ 518 01c2 FAE7     		b	.L31
+ 519              	.L35:
+ 520              		.align	2
+ 521              	.L34:
+ 522 01c4 00000000 		.word	M2
+ 523              		.cfi_endproc
+ 524              	.LFE1470:
+ 526              		.global	ADC_Value
+ 527              		.data
+ 528              		.align	1
+ 529              		.set	.LANCHOR1,. + 0
+ 532              	_ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE4temp:
+ 533 0000 2003     		.short	800
+ 534              		.bss
+ 535              		.align	2
+ 536              		.set	.LANCHOR0,. + 0
+ 539              	_ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE5count:
+ 540 0000 0000     		.space	2
+ 541 0002 0000     		.space	2
+ 544              	_ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE10start_time:
+ 545 0004 00000000 		.space	4
+ 548              	_ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE8end_time:
+ 549 0008 00000000 		.space	4
+ 552              	_ZZ18My_Tim_OC_CallbackP19__TIM_HandleTypeDefE5count:
+ 553 000c 0000     		.space	2
+ 554 000e 0000     		.space	2
+ 557              	ADC_Value:
+ 558 0010 00000000 		.space	200
+ 558      00000000 
+ 558      00000000 
+ 558      00000000 
+ 558      00000000 
+ 559              		.text
+ARM GAS  /tmp/ccGw0LDP.s 			page 14
+
+
+ 560              	.Letext0:
+ 561              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ 562              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+ 563              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 564              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h"
+ 565              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 566              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 567              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc.h"
+ 568              		.file 9 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 569              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
+ 570              		.file 11 "My_Top/System/HAL_System.hpp"
+ 571              		.file 12 "My_Top/System/pid_Increment.hpp"
+ 572              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
+ 573              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
+ 574              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
+ 575              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
+ 576              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
+ 577              		.file 18 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
+ 578              		.file 19 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
+ 579              		.file 20 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
+ 580              		.file 21 "Lib/compute/ex_math.hpp"
+ 581              		.file 22 "My_Top/System/kth_read.hpp"
+ 582              		.file 23 "My_Top/Step_Motor/Step.hpp"
+ 583              		.file 24 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
+ 584              		.file 25 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccGw0LDP.s 			page 15
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 my_tim.cpp
-     /tmp/cckyrMZQ.s:18     .text:00000000 $t
-     /tmp/cckyrMZQ.s:24     .text:00000000 _Z15My_Tim_CallbackP19__TIM_HandleTypeDef
-     /tmp/cckyrMZQ.s:84     .text:0000002c $d
-     /tmp/cckyrMZQ.s:91     .text:0000003c $t
-     /tmp/cckyrMZQ.s:97     .text:0000003c _Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
-     /tmp/cckyrMZQ.s:167    .text:00000074 $d
-     /tmp/cckyrMZQ.s:175    .text:00000088 $t
-     /tmp/cckyrMZQ.s:181    .text:00000088 _Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
-     /tmp/cckyrMZQ.s:237    .text:000000b8 $d
-     /tmp/cckyrMZQ.s:351    .bss:00000004 ADC_Value
-     /tmp/cckyrMZQ.s:243    .text:000000c4 $t
-     /tmp/cckyrMZQ.s:249    .text:000000c4 _Z15M1_Tim_CallbackP19__TIM_HandleTypeDef
-     /tmp/cckyrMZQ.s:286    .text:000000d8 $d
-     /tmp/cckyrMZQ.s:290    .text:000000dc $t
-     /tmp/cckyrMZQ.s:296    .text:000000dc _Z15M2_Tim_CallbackP19__TIM_HandleTypeDef
-     /tmp/cckyrMZQ.s:333    .text:000000f0 $d
-     /tmp/cckyrMZQ.s:339    .bss:00000000 $d
-     /tmp/cckyrMZQ.s:343    .bss:00000000 _ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE5count
-     /tmp/cckyrMZQ.s:347    .bss:00000002 _ZZ18My_Tim_OC_CallbackP19__TIM_HandleTypeDefE5count
+     /tmp/ccGw0LDP.s:18     .text:00000000 $t
+     /tmp/ccGw0LDP.s:24     .text:00000000 _Z15My_Tim_CallbackP19__TIM_HandleTypeDef
+     /tmp/ccGw0LDP.s:275    .text:00000100 $d
+     /tmp/ccGw0LDP.s:288    .text:00000118 $t
+     /tmp/ccGw0LDP.s:294    .text:00000118 _Z18My_Tim_OC_CallbackP19__TIM_HandleTypeDef
+     /tmp/ccGw0LDP.s:357    .text:0000014c $d
+     /tmp/ccGw0LDP.s:364    .text:0000015c $t
+     /tmp/ccGw0LDP.s:370    .text:0000015c _Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
+     /tmp/ccGw0LDP.s:426    .text:0000018c $d
+     /tmp/ccGw0LDP.s:557    .bss:00000010 ADC_Value
+     /tmp/ccGw0LDP.s:432    .text:00000198 $t
+     /tmp/ccGw0LDP.s:438    .text:00000198 _Z15M1_Tim_CallbackP19__TIM_HandleTypeDef
+     /tmp/ccGw0LDP.s:475    .text:000001ac $d
+     /tmp/ccGw0LDP.s:479    .text:000001b0 $t
+     /tmp/ccGw0LDP.s:485    .text:000001b0 _Z15M2_Tim_CallbackP19__TIM_HandleTypeDef
+     /tmp/ccGw0LDP.s:522    .text:000001c4 $d
+     /tmp/ccGw0LDP.s:528    .data:00000000 $d
+     /tmp/ccGw0LDP.s:532    .data:00000000 _ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE4temp
+     /tmp/ccGw0LDP.s:535    .bss:00000000 $d
+     /tmp/ccGw0LDP.s:539    .bss:00000000 _ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE5count
+     /tmp/ccGw0LDP.s:544    .bss:00000004 _ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE10start_time
+     /tmp/ccGw0LDP.s:548    .bss:00000008 _ZZ15My_Tim_CallbackP19__TIM_HandleTypeDefE8end_time
+     /tmp/ccGw0LDP.s:552    .bss:0000000c _ZZ18My_Tim_OC_CallbackP19__TIM_HandleTypeDefE5count
 
 UNDEFINED SYMBOLS
 __aeabi_uidivmod
+_ZN12StepperMotor28Update_Speed_Angle_LPFAndPLLEv
+_ZN12StepperMotor10Speed_LoopEv
+_ZN12StepperMotor13Position_LoopEv
+_ZN10HAL_System11get_tick_usEv
+__aeabi_ui2f
+__aeabi_f2uiz
 M1
 M2
 _ZN12StepperMotor6setFreEv

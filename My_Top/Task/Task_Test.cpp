@@ -14,7 +14,7 @@ uint8_t bufff_rx[10];
 
 
 
-void lajio()
+void lajio1()
 {
     uint16_t x = 60;
     uint16_t y = 60;
@@ -29,15 +29,34 @@ void lajio()
 }
 
 
+void lajio2()
+{
+    static bool flag_temp = true;
+    if(M2.laji_flag == 1 &&flag_temp == true)
+    {
+        M2._encoder->KTH7111_ANLC_Calibration(60); //编码器校准
+        flag_temp = false;
+    }
+}
+
+
 void Task_Test(void *argument)
 {
     // 程序RAM占用10752/1024 = 10.5KB的RAM，剩余RAM 36KB-10.5KB  = 25.5KB 可分配给操作系统FreeRTOS
-
-    // lajio();
+    
+    // lajio1();
     while (1)
     {
-        // printf("laji1:%d laji2:%d \r\n",M1.laji,M2.laji);
-        vTaskDelay(pdMS_TO_TICKS(500));
+        // printf("laji1:%d \r\n",M1.laji);
+        // lajio2();
+        // Vofa_SendFireWater_VA(Vofa_huart, 5, M1.theta_m_speed, M1.filtered_speed, M1.theta_m_offic_filtered,
+        // M1.theta_m_speed,M1.filtered_speed);
+
+        Vofa_SendFireWater_VA(Vofa_huart, 10, M1.reg_final, deg2rad(M1._target_location2),M2.reg_final, deg2rad(M2._target_location2),
+        M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
+        M1._target_error_location,M1.motor_fre);
+        
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
 

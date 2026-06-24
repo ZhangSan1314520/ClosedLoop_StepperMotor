@@ -1,4 +1,4 @@
-ARM GAS  /tmp/cc5qDhQe.s 			page 1
+ARM GAS  /tmp/ccVpkkof.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
   20:My_Top/System/kth_read.cpp ****     HAL_GPIO_WritePin(_cs_port, _cs_pin, status ? GPIO_PIN_SET : GPIO_PIN_RESET);
   37              		.loc 1 20 5 is_stmt 1 view .LVU2
   38              		.loc 1 20 22 is_stmt 0 view .LVU3
-ARM GAS  /tmp/cc5qDhQe.s 			page 2
+ARM GAS  /tmp/ccVpkkof.s 			page 2
 
 
   39 0004 4069     		ldr	r0, [r0, #20]
@@ -118,7 +118,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
   89 0022 4021     		movs	r1, #64
   90 0024 8B43     		bics	r3, r1
   91 0026 1360     		str	r3, [r2]
-ARM GAS  /tmp/cc5qDhQe.s 			page 3
+ARM GAS  /tmp/ccVpkkof.s 			page 3
 
 
   26:My_Top/System/kth_read.cpp ****     SET_BIT(_hspi->Instance->CR1, SPI_CR1_BIDIOE);  // MOSI 输出（主机发送）
@@ -178,7 +178,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  140 0054 1368     		ldr	r3, [r2]
  141 0056 044C     		ldr	r4, .L6
  142 0058 2340     		ands	r3, r4
-ARM GAS  /tmp/cc5qDhQe.s 			page 4
+ARM GAS  /tmp/ccVpkkof.s 			page 4
 
 
  143 005a 1360     		str	r3, [r2]
@@ -238,7 +238,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  184              		.loc 1 48 18 is_stmt 0 view .LVU27
  185 0070 0024     		movs	r4, #0
  186              	.LBE2:
-ARM GAS  /tmp/cc5qDhQe.s 			page 5
+ARM GAS  /tmp/ccVpkkof.s 			page 5
 
 
   47:My_Top/System/kth_read.cpp ****     uint8_t crc = 0x00;  /* 初始值 */
@@ -298,7 +298,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  226 008c 4000     		lsls	r0, r0, #1
  227              	.LVL16:
  228              		.loc 1 56 21 view .LVU42
-ARM GAS  /tmp/cc5qDhQe.s 			page 6
+ARM GAS  /tmp/ccVpkkof.s 			page 6
 
 
  229 008e C0B2     		uxtb	r0, r0
@@ -358,7 +358,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  270              		.loc 1 59 9 view .LVU56
  271 00a6 C0B2     		uxtb	r0, r0
  272              	.LVL23:
-ARM GAS  /tmp/cc5qDhQe.s 			page 7
+ARM GAS  /tmp/ccVpkkof.s 			page 7
 
 
   60:My_Top/System/kth_read.cpp ****     return crc;
@@ -418,7 +418,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  320 00be FFF7FEFF 		bl	memset
  321              	.LVL29:
   69:My_Top/System/kth_read.cpp ****     uint8_t crc = 0;
-ARM GAS  /tmp/cc5qDhQe.s 			page 8
+ARM GAS  /tmp/ccVpkkof.s 			page 8
 
 
  322              		.loc 1 69 5 is_stmt 1 view .LVU68
@@ -442,7 +442,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
   73:My_Top/System/kth_read.cpp ****     if(status != HAL_OK) return;
  337              		.loc 1 73 5 is_stmt 1 view .LVU73
  338 00d6 0028     		cmp	r0, #0
- 339 00d8 01D0     		beq	.L22
+ 339 00d8 01D0     		beq	.L21
  340              	.LVL32:
  341              	.L18:
   74:My_Top/System/kth_read.cpp **** 
@@ -457,7 +457,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
   83:My_Top/System/kth_read.cpp ****     crc = CRC8_ITU(rx_buff, 2); //校验CRC
   84:My_Top/System/kth_read.cpp ****     if(crc != rx_buff[2]) return; //CRC校验未通过
   85:My_Top/System/kth_read.cpp ****     single_turn = (uint16_t)(rx_buff[0] << 8) | (uint16_t)rx_buff[1]; //转成16位数据
-  86:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  86:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
   87:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
   88:My_Top/System/kth_read.cpp ****     angle = theta*RAD_TO_DEG;//转成角度
   89:My_Top/System/kth_read.cpp **** }
@@ -468,7 +468,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  346              		.loc 1 89 1 view .LVU75
  347 00dc 30BD     		pop	{r4, r5, pc}
  348              	.LVL34:
- 349              	.L22:
+ 349              	.L21:
   75:My_Top/System/kth_read.cpp **** 
  350              		.loc 1 75 5 is_stmt 1 view .LVU76
   75:My_Top/System/kth_read.cpp **** 
@@ -478,7 +478,7 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
   75:My_Top/System/kth_read.cpp **** 
  354              		.loc 1 75 23 view .LVU78
  355 00e0 FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
-ARM GAS  /tmp/cc5qDhQe.s 			page 9
+ARM GAS  /tmp/ccVpkkof.s 			page 9
 
 
  356              	.LVL36:
@@ -533,270 +533,238 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  392              		.loc 1 84 5 view .LVU91
  393 0110 8342     		cmp	r3, r0
  394 0112 E2D1     		bne	.L18
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  395              		.loc 1 85 5 is_stmt 1 view .LVU92
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  396              		.loc 1 85 39 is_stmt 0 view .LVU93
  397 0114 2878     		ldrb	r0, [r5]
-ARM GAS  /tmp/cc5qDhQe.s 			page 10
+ARM GAS  /tmp/ccVpkkof.s 			page 10
 
 
  398              	.LVL42:
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  399              		.loc 1 85 41 view .LVU94
  400 0116 0002     		lsls	r0, r0, #8
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  401              		.loc 1 85 68 view .LVU95
  402 0118 6B78     		ldrb	r3, [r5, #1]
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  403              		.loc 1 85 47 view .LVU96
  404 011a 1843     		orrs	r0, r3
-  85:My_Top/System/kth_read.cpp ****     if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
+  85:My_Top/System/kth_read.cpp ****     // if(encoder_dir == false) single_turn = KTH7111_PRECISION - single_turn; //角度方向取反
  405              		.loc 1 85 17 view .LVU97
  406 011c 2080     		strh	r0, [r4]
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 407              		.loc 1 86 5 is_stmt 1 view .LVU98
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 408              		.loc 1 86 8 is_stmt 0 view .LVU99
- 409 011e 237B     		ldrb	r3, [r4, #12]
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 410              		.loc 1 86 5 view .LVU100
- 411 0120 002B     		cmp	r3, #0
- 412 0122 08D1     		bne	.L20
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 413              		.loc 1 86 30 is_stmt 1 discriminator 1 view .LVU101
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 414              		.loc 1 86 62 is_stmt 0 discriminator 1 view .LVU102
- 415 0124 FFF7FEFF 		bl	__aeabi_i2f
- 416              	.LVL43:
- 417 0128 011C     		adds	r1, r0, #0
- 418 012a 0948     		ldr	r0, .L23
- 419 012c FFF7FEFF 		bl	__aeabi_fsub
- 420              	.LVL44:
-  86:My_Top/System/kth_read.cpp ****     theta = single_turn*RAW_TO_RAD;//转成弧度
- 421              		.loc 1 86 42 discriminator 1 view .LVU103
- 422 0130 FFF7FEFF 		bl	__aeabi_f2uiz
- 423              	.LVL45:
- 424 0134 2080     		strh	r0, [r4]
- 425              	.L20:
   87:My_Top/System/kth_read.cpp ****     angle = theta*RAD_TO_DEG;//转成角度
- 426              		.loc 1 87 5 is_stmt 1 view .LVU104
+ 407              		.loc 1 87 5 is_stmt 1 view .LVU98
   87:My_Top/System/kth_read.cpp ****     angle = theta*RAD_TO_DEG;//转成角度
- 427              		.loc 1 87 13 is_stmt 0 view .LVU105
- 428 0136 2088     		ldrh	r0, [r4]
+ 408              		.loc 1 87 24 is_stmt 0 view .LVU99
+ 409 011e FFF7FEFF 		bl	__aeabi_i2f
+ 410              	.LVL43:
+ 411 0122 0449     		ldr	r1, .L22
+ 412 0124 FFF7FEFF 		bl	__aeabi_fmul
+ 413              	.LVL44:
   87:My_Top/System/kth_read.cpp ****     angle = theta*RAD_TO_DEG;//转成角度
- 429              		.loc 1 87 24 view .LVU106
- 430 0138 FFF7FEFF 		bl	__aeabi_i2f
- 431              	.LVL46:
- 432 013c 0549     		ldr	r1, .L23+4
- 433 013e FFF7FEFF 		bl	__aeabi_fmul
- 434              	.LVL47:
-  87:My_Top/System/kth_read.cpp ****     angle = theta*RAD_TO_DEG;//转成角度
- 435              		.loc 1 87 11 view .LVU107
- 436 0142 6060     		str	r0, [r4, #4]
+ 414              		.loc 1 87 11 view .LVU100
+ 415 0128 6060     		str	r0, [r4, #4]
   88:My_Top/System/kth_read.cpp **** }
- 437              		.loc 1 88 5 is_stmt 1 view .LVU108
+ 416              		.loc 1 88 5 is_stmt 1 view .LVU101
   88:My_Top/System/kth_read.cpp **** }
- 438              		.loc 1 88 18 is_stmt 0 view .LVU109
-ARM GAS  /tmp/cc5qDhQe.s 			page 11
-
-
- 439 0144 0449     		ldr	r1, .L23+8
- 440 0146 FFF7FEFF 		bl	__aeabi_fmul
- 441              	.LVL48:
+ 417              		.loc 1 88 18 is_stmt 0 view .LVU102
+ 418 012a 0349     		ldr	r1, .L22+4
+ 419 012c FFF7FEFF 		bl	__aeabi_fmul
+ 420              	.LVL45:
   88:My_Top/System/kth_read.cpp **** }
- 442              		.loc 1 88 11 view .LVU110
- 443 014a A060     		str	r0, [r4, #8]
- 444 014c C5E7     		b	.L18
- 445              	.L24:
- 446 014e C046     		.align	2
- 447              	.L23:
- 448 0150 00FF7F47 		.word	1199570688
- 449 0154 A410C938 		.word	952701092
- 450 0158 E02E6542 		.word	1113927392
- 451              		.cfi_endproc
- 452              	.LFE1443:
- 454              		.align	1
- 455              		.global	_ZN7KTH711118Get_KTH7111_RadianEv
- 456              		.syntax unified
- 457              		.code	16
- 458              		.thumb_func
- 460              	_ZN7KTH711118Get_KTH7111_RadianEv:
- 461              	.LVL49:
- 462              	.LFB1444:
+ 421              		.loc 1 88 11 view .LVU103
+ 422 0130 A060     		str	r0, [r4, #8]
+ 423 0132 D2E7     		b	.L18
+ 424              	.L23:
+ 425              		.align	2
+ 426              	.L22:
+ 427 0134 A410C938 		.word	952701092
+ 428 0138 E02E6542 		.word	1113927392
+ 429              		.cfi_endproc
+ 430              	.LFE1443:
+ 432              		.align	1
+ 433              		.global	_ZN7KTH711118Get_KTH7111_RadianEv
+ 434              		.syntax unified
+ 435              		.code	16
+ 436              		.thumb_func
+ 438              	_ZN7KTH711118Get_KTH7111_RadianEv:
+ 439              	.LVL46:
+ 440              	.LFB1444:
   90:My_Top/System/kth_read.cpp **** 
   91:My_Top/System/kth_read.cpp **** 
   92:My_Top/System/kth_read.cpp **** /**
   93:My_Top/System/kth_read.cpp ****  * @brief 获取KTH7111传感器的弧度值
   94:My_Top/System/kth_read.cpp ****  * @return float 返回当前存储的弧度值theta
   95:My_Top/System/kth_read.cpp ****  */
+ARM GAS  /tmp/ccVpkkof.s 			page 11
+
+
   96:My_Top/System/kth_read.cpp **** float KTH7111::Get_KTH7111_Radian(void) //获取弧度
   97:My_Top/System/kth_read.cpp **** {
- 463              		.loc 1 97 1 is_stmt 1 view -0
- 464              		.cfi_startproc
- 465              		@ args = 0, pretend = 0, frame = 0
- 466              		@ frame_needed = 0, uses_anonymous_args = 0
- 467              		@ link register save eliminated.
+ 441              		.loc 1 97 1 is_stmt 1 view -0
+ 442              		.cfi_startproc
+ 443              		@ args = 0, pretend = 0, frame = 0
+ 444              		@ frame_needed = 0, uses_anonymous_args = 0
+ 445              		@ link register save eliminated.
   98:My_Top/System/kth_read.cpp ****     return theta;  // 返回成员变量theta的值，该值存储了传感器的弧度测量值
- 468              		.loc 1 98 5 view .LVU112
- 469              		.loc 1 98 12 is_stmt 0 discriminator 1 view .LVU113
- 470 015c 4068     		ldr	r0, [r0, #4]
- 471              	.LVL50:
+ 446              		.loc 1 98 5 view .LVU105
+ 447              		.loc 1 98 12 is_stmt 0 discriminator 1 view .LVU106
+ 448 013c 4068     		ldr	r0, [r0, #4]
+ 449              	.LVL47:
   99:My_Top/System/kth_read.cpp **** }
- 472              		.loc 1 99 1 view .LVU114
- 473              		@ sp needed
- 474 015e 7047     		bx	lr
- 475              		.cfi_endproc
- 476              	.LFE1444:
- 478              		.align	1
- 479              		.global	_ZN7KTH711118Get_KTH7111_DegreeEv
- 480              		.syntax unified
- 481              		.code	16
- 482              		.thumb_func
- 484              	_ZN7KTH711118Get_KTH7111_DegreeEv:
- 485              	.LVL51:
- 486              	.LFB1445:
+ 450              		.loc 1 99 1 view .LVU107
+ 451              		@ sp needed
+ 452 013e 7047     		bx	lr
+ 453              		.cfi_endproc
+ 454              	.LFE1444:
+ 456              		.align	1
+ 457              		.global	_ZN7KTH711118Get_KTH7111_DegreeEv
+ 458              		.syntax unified
+ 459              		.code	16
+ 460              		.thumb_func
+ 462              	_ZN7KTH711118Get_KTH7111_DegreeEv:
+ 463              	.LVL48:
+ 464              	.LFB1445:
  100:My_Top/System/kth_read.cpp **** 
  101:My_Top/System/kth_read.cpp **** float KTH7111::Get_KTH7111_Degree(void) //获取角度
-ARM GAS  /tmp/cc5qDhQe.s 			page 12
-
-
  102:My_Top/System/kth_read.cpp **** {
- 487              		.loc 1 102 1 is_stmt 1 view -0
- 488              		.cfi_startproc
- 489              		@ args = 0, pretend = 0, frame = 0
- 490              		@ frame_needed = 0, uses_anonymous_args = 0
- 491              		@ link register save eliminated.
+ 465              		.loc 1 102 1 is_stmt 1 view -0
+ 466              		.cfi_startproc
+ 467              		@ args = 0, pretend = 0, frame = 0
+ 468              		@ frame_needed = 0, uses_anonymous_args = 0
+ 469              		@ link register save eliminated.
  103:My_Top/System/kth_read.cpp ****     return angle;
- 492              		.loc 1 103 5 view .LVU116
- 493              		.loc 1 103 12 is_stmt 0 discriminator 1 view .LVU117
- 494 0160 8068     		ldr	r0, [r0, #8]
- 495              	.LVL52:
+ 470              		.loc 1 103 5 view .LVU109
+ 471              		.loc 1 103 12 is_stmt 0 discriminator 1 view .LVU110
+ 472 0140 8068     		ldr	r0, [r0, #8]
+ 473              	.LVL49:
  104:My_Top/System/kth_read.cpp **** }
- 496              		.loc 1 104 1 view .LVU118
- 497              		@ sp needed
- 498 0162 7047     		bx	lr
- 499              		.cfi_endproc
- 500              	.LFE1445:
- 502              		.align	1
- 503              		.global	_ZN7KTH711115KTH7111_ReadRegEh
- 504              		.syntax unified
- 505              		.code	16
- 506              		.thumb_func
- 508              	_ZN7KTH711115KTH7111_ReadRegEh:
- 509              	.LVL53:
- 510              	.LFB1446:
+ 474              		.loc 1 104 1 view .LVU111
+ 475              		@ sp needed
+ 476 0142 7047     		bx	lr
+ 477              		.cfi_endproc
+ 478              	.LFE1445:
+ 480              		.align	1
+ 481              		.global	_ZN7KTH711115KTH7111_ReadRegEh
+ 482              		.syntax unified
+ 483              		.code	16
+ 484              		.thumb_func
+ 486              	_ZN7KTH711115KTH7111_ReadRegEh:
+ 487              	.LVL50:
+ 488              	.LFB1446:
  105:My_Top/System/kth_read.cpp **** 
  106:My_Top/System/kth_read.cpp **** /* ---------------------- 读寄存器 ---------------------- */
  107:My_Top/System/kth_read.cpp **** uint8_t KTH7111::KTH7111_ReadReg(uint8_t addr)
  108:My_Top/System/kth_read.cpp **** {
- 511              		.loc 1 108 1 is_stmt 1 view -0
- 512              		.cfi_startproc
- 513              		@ args = 0, pretend = 0, frame = 16
- 514              		@ frame_needed = 0, uses_anonymous_args = 0
- 515              		.loc 1 108 1 is_stmt 0 view .LVU120
- 516 0164 70B5     		push	{r4, r5, r6, lr}
- 517              		.cfi_def_cfa_offset 16
- 518              		.cfi_offset 4, -16
- 519              		.cfi_offset 5, -12
- 520              		.cfi_offset 6, -8
- 521              		.cfi_offset 14, -4
- 522 0166 84B0     		sub	sp, sp, #16
- 523              		.cfi_def_cfa_offset 32
- 524 0168 0400     		movs	r4, r0
+ARM GAS  /tmp/ccVpkkof.s 			page 12
+
+
+ 489              		.loc 1 108 1 is_stmt 1 view -0
+ 490              		.cfi_startproc
+ 491              		@ args = 0, pretend = 0, frame = 16
+ 492              		@ frame_needed = 0, uses_anonymous_args = 0
+ 493              		.loc 1 108 1 is_stmt 0 view .LVU113
+ 494 0144 70B5     		push	{r4, r5, r6, lr}
+ 495              		.cfi_def_cfa_offset 16
+ 496              		.cfi_offset 4, -16
+ 497              		.cfi_offset 5, -12
+ 498              		.cfi_offset 6, -8
+ 499              		.cfi_offset 14, -4
+ 500 0146 84B0     		sub	sp, sp, #16
+ 501              		.cfi_def_cfa_offset 32
+ 502 0148 0400     		movs	r4, r0
  109:My_Top/System/kth_read.cpp ****     uint8_t cmd[2] = {0x11, addr};  /*发送命令：8bit 0x11 + 8bit 寄存器地址*/
- 525              		.loc 1 109 5 is_stmt 1 view .LVU121
- 526              		.loc 1 109 13 is_stmt 0 view .LVU122
- 527 016a 03AD     		add	r5, sp, #12
- 528 016c 0023     		movs	r3, #0
- 529 016e 2B80     		strh	r3, [r5]
- 530 0170 1122     		movs	r2, #17
- 531 0172 2A70     		strb	r2, [r5]
- 532              		.loc 1 109 33 view .LVU123
- 533 0174 6970     		strb	r1, [r5, #1]
+ 503              		.loc 1 109 5 is_stmt 1 view .LVU114
+ 504              		.loc 1 109 13 is_stmt 0 view .LVU115
+ 505 014a 03AD     		add	r5, sp, #12
+ 506 014c 0023     		movs	r3, #0
+ 507 014e 2B80     		strh	r3, [r5]
+ 508 0150 1122     		movs	r2, #17
+ 509 0152 2A70     		strb	r2, [r5]
+ 510              		.loc 1 109 33 view .LVU116
+ 511 0154 6970     		strb	r1, [r5, #1]
  110:My_Top/System/kth_read.cpp ****     uint8_t rx_buff[2] = {0}; /* 收 8bit 寄存器值 + 8bitCRC */
- 534              		.loc 1 110 5 is_stmt 1 view .LVU124
- 535              		.loc 1 110 13 is_stmt 0 view .LVU125
- 536 0176 02AA     		add	r2, sp, #8
-ARM GAS  /tmp/cc5qDhQe.s 			page 13
-
-
- 537 0178 1380     		strh	r3, [r2]
+ 512              		.loc 1 110 5 is_stmt 1 view .LVU117
+ 513              		.loc 1 110 13 is_stmt 0 view .LVU118
+ 514 0156 02AA     		add	r2, sp, #8
+ 515 0158 1380     		strh	r3, [r2]
  111:My_Top/System/kth_read.cpp ****     uint8_t crc = 0; 
- 538              		.loc 1 111 5 is_stmt 1 view .LVU126
- 539              	.LVL54:
+ 516              		.loc 1 111 5 is_stmt 1 view .LVU119
+ 517              	.LVL51:
  112:My_Top/System/kth_read.cpp ****     HAL_StatusTypeDef status = HAL_ERROR;
- 540              		.loc 1 112 5 view .LVU127
+ 518              		.loc 1 112 5 view .LVU120
  113:My_Top/System/kth_read.cpp **** 
  114:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(false);
- 541              		.loc 1 114 5 view .LVU128
- 542              		.loc 1 114 17 is_stmt 0 view .LVU129
- 543 017a 0021     		movs	r1, #0
- 544              	.LVL55:
- 545              		.loc 1 114 17 view .LVU130
- 546 017c FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 547              	.LVL56:
+ 519              		.loc 1 114 5 view .LVU121
+ 520              		.loc 1 114 17 is_stmt 0 view .LVU122
+ 521 015a 0021     		movs	r1, #0
+ 522              	.LVL52:
+ 523              		.loc 1 114 17 view .LVU123
+ 524 015c FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 525              	.LVL53:
  115:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Transmit(_hspi,cmd, 2, 10);//发送命令：8bit 0x11 + 8bit 寄存器地址
- 548              		.loc 1 115 5 is_stmt 1 view .LVU131
- 549              		.loc 1 115 30 is_stmt 0 view .LVU132
- 550 0180 2069     		ldr	r0, [r4, #16]
- 551 0182 0A23     		movs	r3, #10
- 552 0184 0222     		movs	r2, #2
- 553 0186 2900     		movs	r1, r5
- 554 0188 FFF7FEFF 		bl	HAL_SPI_Transmit
- 555              	.LVL57:
- 556 018c 061E     		subs	r6, r0, #0
- 557              	.LVL58:
+ 526              		.loc 1 115 5 is_stmt 1 view .LVU124
+ 527              		.loc 1 115 30 is_stmt 0 view .LVU125
+ 528 0160 2069     		ldr	r0, [r4, #16]
+ 529 0162 0A23     		movs	r3, #10
+ 530 0164 0222     		movs	r2, #2
+ 531 0166 2900     		movs	r1, r5
+ 532 0168 FFF7FEFF 		bl	HAL_SPI_Transmit
+ 533              	.LVL54:
+ 534 016c 061E     		subs	r6, r0, #0
+ 535              	.LVL55:
  116:My_Top/System/kth_read.cpp ****     if(status != HAL_OK) 
- 558              		.loc 1 116 5 is_stmt 1 view .LVU133
- 559 018e 05D1     		bne	.L35
+ 536              		.loc 1 116 5 is_stmt 1 view .LVU126
+ 537 016e 05D1     		bne	.L34
+ARM GAS  /tmp/ccVpkkof.s 			page 13
+
+
  117:My_Top/System/kth_read.cpp ****     {
  118:My_Top/System/kth_read.cpp ****         KTH_CS_Enble(true);
  119:My_Top/System/kth_read.cpp ****         return 0;
  120:My_Top/System/kth_read.cpp ****     }
  121:My_Top/System/kth_read.cpp **** 
  122:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Input();//MOSI变为MISO
- 560              		.loc 1 122 5 view .LVU134
- 561              		.loc 1 122 23 is_stmt 0 view .LVU135
- 562 0190 2000     		movs	r0, r4
- 563              	.LVL59:
- 564              		.loc 1 122 23 view .LVU136
- 565 0192 FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
- 566              	.LVL60:
+ 538              		.loc 1 122 5 view .LVU127
+ 539              		.loc 1 122 23 is_stmt 0 view .LVU128
+ 540 0170 2000     		movs	r0, r4
+ 541              	.LVL56:
+ 542              		.loc 1 122 23 view .LVU129
+ 543 0172 FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
+ 544              	.LVL57:
  123:My_Top/System/kth_read.cpp **** 
  124:My_Top/System/kth_read.cpp ****     for(volatile uint32_t i = 0; i < 28; i++) { __NOP(); } //延时1us
- 567              		.loc 1 124 5 is_stmt 1 view .LVU137
- 568              	.LBB8:
- 569              		.loc 1 124 27 is_stmt 0 view .LVU138
- 570 0196 0023     		movs	r3, #0
- 571 0198 0093     		str	r3, [sp]
- 572              		.loc 1 124 5 view .LVU139
- 573 019a 0BE0     		b	.L30
- 574              	.LVL61:
- 575              	.L35:
- 576              		.loc 1 124 5 view .LVU140
- 577              	.LBE8:
+ 545              		.loc 1 124 5 is_stmt 1 view .LVU130
+ 546              	.LBB8:
+ 547              		.loc 1 124 27 is_stmt 0 view .LVU131
+ 548 0176 0023     		movs	r3, #0
+ 549 0178 0093     		str	r3, [sp]
+ 550              		.loc 1 124 5 view .LVU132
+ 551 017a 0BE0     		b	.L29
+ 552              	.LVL58:
+ 553              	.L34:
+ 554              		.loc 1 124 5 view .LVU133
+ 555              	.LBE8:
  118:My_Top/System/kth_read.cpp ****         return 0;
- 578              		.loc 1 118 9 is_stmt 1 view .LVU141
-ARM GAS  /tmp/cc5qDhQe.s 			page 14
-
-
+ 556              		.loc 1 118 9 is_stmt 1 view .LVU134
  118:My_Top/System/kth_read.cpp ****         return 0;
- 579              		.loc 1 118 21 is_stmt 0 view .LVU142
- 580 019c 0121     		movs	r1, #1
- 581 019e 2000     		movs	r0, r4
- 582              	.LVL62:
+ 557              		.loc 1 118 21 is_stmt 0 view .LVU135
+ 558 017c 0121     		movs	r1, #1
+ 559 017e 2000     		movs	r0, r4
+ 560              	.LVL59:
  118:My_Top/System/kth_read.cpp ****         return 0;
- 583              		.loc 1 118 21 view .LVU143
- 584 01a0 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 585              	.LVL63:
+ 561              		.loc 1 118 21 view .LVU136
+ 562 0180 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 563              	.LVL60:
  119:My_Top/System/kth_read.cpp ****     }
- 586              		.loc 1 119 9 is_stmt 1 view .LVU144
+ 564              		.loc 1 119 9 is_stmt 1 view .LVU137
  119:My_Top/System/kth_read.cpp ****     }
- 587              		.loc 1 119 16 is_stmt 0 view .LVU145
- 588 01a4 0025     		movs	r5, #0
- 589              	.LVL64:
- 590              	.L29:
+ 565              		.loc 1 119 16 is_stmt 0 view .LVU138
+ 566 0184 0025     		movs	r5, #0
+ 567              	.LVL61:
+ 568              	.L28:
  125:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
  126:My_Top/System/kth_read.cpp ****     if(status != HAL_OK)
  127:My_Top/System/kth_read.cpp ****     {
@@ -810,436 +778,439 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  135:My_Top/System/kth_read.cpp **** 
  136:My_Top/System/kth_read.cpp ****     
  137:My_Top/System/kth_read.cpp **** 
+ARM GAS  /tmp/ccVpkkof.s 			page 14
+
+
  138:My_Top/System/kth_read.cpp ****     crc = CRC8_ITU(rx_buff, 1); //校验CRC
  139:My_Top/System/kth_read.cpp ****     if(crc != rx_buff[1]) return 0; //CRC校验未通过 
  140:My_Top/System/kth_read.cpp ****     return rx_buff[0]; //返回寄存器值 
  141:My_Top/System/kth_read.cpp **** }
- 591              		.loc 1 141 1 view .LVU146
- 592 01a6 2800     		movs	r0, r5
- 593 01a8 04B0     		add	sp, sp, #16
- 594              		@ sp needed
- 595              	.LVL65:
- 596              		.loc 1 141 1 view .LVU147
- 597 01aa 70BD     		pop	{r4, r5, r6, pc}
- 598              	.LVL66:
- 599              	.L31:
- 600              	.LBB9:
+ 569              		.loc 1 141 1 view .LVU139
+ 570 0186 2800     		movs	r0, r5
+ 571 0188 04B0     		add	sp, sp, #16
+ 572              		@ sp needed
+ 573              	.LVL62:
+ 574              		.loc 1 141 1 view .LVU140
+ 575 018a 70BD     		pop	{r4, r5, r6, pc}
+ 576              	.LVL63:
+ 577              	.L30:
+ 578              	.LBB9:
  124:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
- 601              		.loc 1 124 49 is_stmt 1 discriminator 3 view .LVU148
- 602              		.syntax divided
- 603              	@ 124 "My_Top/System/kth_read.cpp" 1
- 604 01ac C046     		nop
- 605              	@ 0 "" 2
+ 579              		.loc 1 124 49 is_stmt 1 discriminator 3 view .LVU141
+ 580              		.syntax divided
+ 581              	@ 124 "My_Top/System/kth_read.cpp" 1
+ 582 018c C046     		nop
+ 583              	@ 0 "" 2
  124:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
- 606              		.loc 1 124 5 discriminator 3 view .LVU149
- 607              		.thumb
- 608              		.syntax unified
- 609 01ae 009B     		ldr	r3, [sp]
- 610 01b0 0133     		adds	r3, r3, #1
- 611 01b2 0093     		str	r3, [sp]
- 612              	.L30:
-ARM GAS  /tmp/cc5qDhQe.s 			page 15
-
-
+ 584              		.loc 1 124 5 discriminator 3 view .LVU142
+ 585              		.thumb
+ 586              		.syntax unified
+ 587 018e 009B     		ldr	r3, [sp]
+ 588 0190 0133     		adds	r3, r3, #1
+ 589 0192 0093     		str	r3, [sp]
+ 590              	.L29:
  124:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
- 613              		.loc 1 124 36 discriminator 1 view .LVU150
- 614 01b4 009B     		ldr	r3, [sp]
- 615 01b6 1B2B     		cmp	r3, #27
- 616 01b8 F8D9     		bls	.L31
- 617              	.LBE9:
+ 591              		.loc 1 124 36 discriminator 1 view .LVU143
+ 592 0194 009B     		ldr	r3, [sp]
+ 593 0196 1B2B     		cmp	r3, #27
+ 594 0198 F8D9     		bls	.L30
+ 595              	.LBE9:
  125:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
- 618              		.loc 1 125 5 view .LVU151
+ 596              		.loc 1 125 5 view .LVU144
  125:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Receive(_hspi,rx_buff, 2, 10); //接收数据：8bit 寄存器值 + 8bitCRC
- 619              		.loc 1 125 29 is_stmt 0 view .LVU152
- 620 01ba 2069     		ldr	r0, [r4, #16]
- 621 01bc 0A23     		movs	r3, #10
- 622 01be 0222     		movs	r2, #2
- 623 01c0 02A9     		add	r1, sp, #8
- 624 01c2 FFF7FEFF 		bl	HAL_SPI_Receive
- 625              	.LVL67:
- 626 01c6 051E     		subs	r5, r0, #0
- 627              	.LVL68:
+ 597              		.loc 1 125 29 is_stmt 0 view .LVU145
+ 598 019a 2069     		ldr	r0, [r4, #16]
+ 599 019c 0A23     		movs	r3, #10
+ 600 019e 0222     		movs	r2, #2
+ 601 01a0 02A9     		add	r1, sp, #8
+ 602 01a2 FFF7FEFF 		bl	HAL_SPI_Receive
+ 603              	.LVL64:
+ 604 01a6 051E     		subs	r5, r0, #0
+ 605              	.LVL65:
  126:My_Top/System/kth_read.cpp ****     {
- 628              		.loc 1 126 5 is_stmt 1 view .LVU153
- 629 01c8 02D1     		bne	.L36
+ 606              		.loc 1 126 5 is_stmt 1 view .LVU146
+ 607 01a8 02D1     		bne	.L35
  132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 630              		.loc 1 132 5 view .LVU154
- 631              	.LBB10:
+ 608              		.loc 1 132 5 view .LVU147
+ 609              	.LBB10:
  132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 632              		.loc 1 132 27 is_stmt 0 view .LVU155
- 633 01ca 0023     		movs	r3, #0
- 634 01cc 0193     		str	r3, [sp, #4]
+ 610              		.loc 1 132 27 is_stmt 0 view .LVU148
+ 611 01aa 0023     		movs	r3, #0
+ 612 01ac 0193     		str	r3, [sp, #4]
  132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 635              		.loc 1 132 5 view .LVU156
- 636 01ce 0CE0     		b	.L33
- 637              	.L36:
- 638              	.LBE10:
+ARM GAS  /tmp/ccVpkkof.s 			page 15
+
+
+ 613              		.loc 1 132 5 view .LVU149
+ 614 01ae 0CE0     		b	.L32
+ 615              	.L35:
+ 616              	.LBE10:
  128:My_Top/System/kth_read.cpp ****         SPI_Set_MOSI_Output();//MISO 变为MOSI
- 639              		.loc 1 128 9 is_stmt 1 view .LVU157
+ 617              		.loc 1 128 9 is_stmt 1 view .LVU150
  128:My_Top/System/kth_read.cpp ****         SPI_Set_MOSI_Output();//MISO 变为MOSI
- 640              		.loc 1 128 21 is_stmt 0 view .LVU158
- 641 01d0 0121     		movs	r1, #1
- 642 01d2 2000     		movs	r0, r4
- 643              	.LVL69:
+ 618              		.loc 1 128 21 is_stmt 0 view .LVU151
+ 619 01b0 0121     		movs	r1, #1
+ 620 01b2 2000     		movs	r0, r4
+ 621              	.LVL66:
  128:My_Top/System/kth_read.cpp ****         SPI_Set_MOSI_Output();//MISO 变为MOSI
- 644              		.loc 1 128 21 view .LVU159
- 645 01d4 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 646              	.LVL70:
+ 622              		.loc 1 128 21 view .LVU152
+ 623 01b4 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 624              	.LVL67:
  129:My_Top/System/kth_read.cpp ****         return 0;
- 647              		.loc 1 129 9 is_stmt 1 view .LVU160
+ 625              		.loc 1 129 9 is_stmt 1 view .LVU153
  129:My_Top/System/kth_read.cpp ****         return 0;
- 648              		.loc 1 129 28 is_stmt 0 view .LVU161
- 649 01d8 2000     		movs	r0, r4
- 650 01da FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
- 651              	.LVL71:
+ 626              		.loc 1 129 28 is_stmt 0 view .LVU154
+ 627 01b8 2000     		movs	r0, r4
+ 628 01ba FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
+ 629              	.LVL68:
  130:My_Top/System/kth_read.cpp ****     }
- 652              		.loc 1 130 9 is_stmt 1 view .LVU162
+ 630              		.loc 1 130 9 is_stmt 1 view .LVU155
  130:My_Top/System/kth_read.cpp ****     }
- 653              		.loc 1 130 16 is_stmt 0 view .LVU163
- 654 01de 3500     		movs	r5, r6
- 655              	.LVL72:
-ARM GAS  /tmp/cc5qDhQe.s 			page 16
+ 631              		.loc 1 130 16 is_stmt 0 view .LVU156
+ 632 01be 3500     		movs	r5, r6
+ 633              	.LVL69:
+ 130:My_Top/System/kth_read.cpp ****     }
+ 634              		.loc 1 130 16 view .LVU157
+ 635 01c0 E1E7     		b	.L28
+ 636              	.LVL70:
+ 637              	.L33:
+ 638              	.LBB11:
+ 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
+ 639              		.loc 1 132 49 is_stmt 1 discriminator 3 view .LVU158
+ 640              		.syntax divided
+ 641              	@ 132 "My_Top/System/kth_read.cpp" 1
+ 642 01c2 C046     		nop
+ 643              	@ 0 "" 2
+ 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
+ 644              		.loc 1 132 5 discriminator 3 view .LVU159
+ 645              		.thumb
+ 646              		.syntax unified
+ 647 01c4 019B     		ldr	r3, [sp, #4]
+ 648 01c6 0133     		adds	r3, r3, #1
+ 649 01c8 0193     		str	r3, [sp, #4]
+ 650              	.L32:
+ 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
+ 651              		.loc 1 132 36 discriminator 1 view .LVU160
+ 652 01ca 019B     		ldr	r3, [sp, #4]
+ 653 01cc 1B2B     		cmp	r3, #27
+ 654 01ce F8D9     		bls	.L33
+ 655              	.LBE11:
+ 133:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
+ 656              		.loc 1 133 5 view .LVU161
+ 133:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
+ARM GAS  /tmp/ccVpkkof.s 			page 16
 
 
- 130:My_Top/System/kth_read.cpp ****     }
- 656              		.loc 1 130 16 view .LVU164
- 657 01e0 E1E7     		b	.L29
- 658              	.LVL73:
- 659              	.L34:
- 660              	.LBB11:
- 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 661              		.loc 1 132 49 is_stmt 1 discriminator 3 view .LVU165
- 662              		.syntax divided
- 663              	@ 132 "My_Top/System/kth_read.cpp" 1
- 664 01e2 C046     		nop
- 665              	@ 0 "" 2
- 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 666              		.loc 1 132 5 discriminator 3 view .LVU166
- 667              		.thumb
- 668              		.syntax unified
- 669 01e4 019B     		ldr	r3, [sp, #4]
- 670 01e6 0133     		adds	r3, r3, #1
- 671 01e8 0193     		str	r3, [sp, #4]
- 672              	.L33:
- 132:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 673              		.loc 1 132 36 discriminator 1 view .LVU167
- 674 01ea 019B     		ldr	r3, [sp, #4]
- 675 01ec 1B2B     		cmp	r3, #27
- 676 01ee F8D9     		bls	.L34
- 677              	.LBE11:
+ 657              		.loc 1 133 24 is_stmt 0 view .LVU162
+ 658 01d0 2000     		movs	r0, r4
+ 659              	.LVL71:
  133:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 678              		.loc 1 133 5 view .LVU168
- 133:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 679              		.loc 1 133 24 is_stmt 0 view .LVU169
- 680 01f0 2000     		movs	r0, r4
- 681              	.LVL74:
- 133:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 682              		.loc 1 133 24 view .LVU170
- 683 01f2 FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
- 684              	.LVL75:
+ 660              		.loc 1 133 24 view .LVU163
+ 661 01d2 FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
+ 662              	.LVL72:
  134:My_Top/System/kth_read.cpp **** 
- 685              		.loc 1 134 5 is_stmt 1 view .LVU171
+ 663              		.loc 1 134 5 is_stmt 1 view .LVU164
  134:My_Top/System/kth_read.cpp **** 
- 686              		.loc 1 134 17 is_stmt 0 view .LVU172
- 687 01f6 0121     		movs	r1, #1
- 688 01f8 2000     		movs	r0, r4
- 689 01fa FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 690              	.LVL76:
+ 664              		.loc 1 134 17 is_stmt 0 view .LVU165
+ 665 01d6 0121     		movs	r1, #1
+ 666 01d8 2000     		movs	r0, r4
+ 667 01da FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 668              	.LVL73:
  138:My_Top/System/kth_read.cpp ****     if(crc != rx_buff[1]) return 0; //CRC校验未通过 
- 691              		.loc 1 138 5 is_stmt 1 view .LVU173
+ 669              		.loc 1 138 5 is_stmt 1 view .LVU166
  138:My_Top/System/kth_read.cpp ****     if(crc != rx_buff[1]) return 0; //CRC校验未通过 
- 692              		.loc 1 138 19 is_stmt 0 view .LVU174
- 693 01fe 02AE     		add	r6, sp, #8
- 694 0200 0122     		movs	r2, #1
- 695 0202 3100     		movs	r1, r6
- 696 0204 2000     		movs	r0, r4
- 697 0206 FFF7FEFF 		bl	_ZN7KTH71118CRC8_ITUEPKhh
- 698              	.LVL77:
+ 670              		.loc 1 138 19 is_stmt 0 view .LVU167
+ 671 01de 02AE     		add	r6, sp, #8
+ 672 01e0 0122     		movs	r2, #1
+ 673 01e2 3100     		movs	r1, r6
+ 674 01e4 2000     		movs	r0, r4
+ 675 01e6 FFF7FEFF 		bl	_ZN7KTH71118CRC8_ITUEPKhh
+ 676              	.LVL74:
  139:My_Top/System/kth_read.cpp ****     return rx_buff[0]; //返回寄存器值 
- 699              		.loc 1 139 5 is_stmt 1 view .LVU175
+ 677              		.loc 1 139 5 is_stmt 1 view .LVU168
  139:My_Top/System/kth_read.cpp ****     return rx_buff[0]; //返回寄存器值 
-ARM GAS  /tmp/cc5qDhQe.s 			page 17
-
-
- 700              		.loc 1 139 24 is_stmt 0 view .LVU176
- 701 020a 7378     		ldrb	r3, [r6, #1]
+ 678              		.loc 1 139 24 is_stmt 0 view .LVU169
+ 679 01ea 7378     		ldrb	r3, [r6, #1]
  139:My_Top/System/kth_read.cpp ****     return rx_buff[0]; //返回寄存器值 
- 702              		.loc 1 139 5 view .LVU177
- 703 020c 8342     		cmp	r3, r0
- 704 020e CAD1     		bne	.L29
+ 680              		.loc 1 139 5 view .LVU170
+ 681 01ec 8342     		cmp	r3, r0
+ 682 01ee CAD1     		bne	.L28
  140:My_Top/System/kth_read.cpp **** }
- 705              		.loc 1 140 5 is_stmt 1 view .LVU178
+ 683              		.loc 1 140 5 is_stmt 1 view .LVU171
  140:My_Top/System/kth_read.cpp **** }
- 706              		.loc 1 140 21 is_stmt 0 view .LVU179
- 707 0210 3578     		ldrb	r5, [r6]
- 708              	.LVL78:
+ 684              		.loc 1 140 21 is_stmt 0 view .LVU172
+ 685 01f0 3578     		ldrb	r5, [r6]
+ 686              	.LVL75:
  140:My_Top/System/kth_read.cpp **** }
- 709              		.loc 1 140 21 view .LVU180
- 710 0212 C8E7     		b	.L29
- 711              		.cfi_endproc
- 712              	.LFE1446:
- 714              		.align	1
- 715              		.global	_ZN7KTH711116KTH7111_WriteRegEhh
- 716              		.syntax unified
- 717              		.code	16
- 718              		.thumb_func
- 720              	_ZN7KTH711116KTH7111_WriteRegEhh:
- 721              	.LVL79:
- 722              	.LFB1447:
+ 687              		.loc 1 140 21 view .LVU173
+ 688 01f2 C8E7     		b	.L28
+ 689              		.cfi_endproc
+ 690              	.LFE1446:
+ 692              		.align	1
+ 693              		.global	_ZN7KTH711116KTH7111_WriteRegEhh
+ 694              		.syntax unified
+ 695              		.code	16
+ 696              		.thumb_func
+ 698              	_ZN7KTH711116KTH7111_WriteRegEhh:
+ 699              	.LVL76:
+ 700              	.LFB1447:
  142:My_Top/System/kth_read.cpp **** 
  143:My_Top/System/kth_read.cpp **** 
  144:My_Top/System/kth_read.cpp **** 
  145:My_Top/System/kth_read.cpp **** /* ---------------------- 写寄存器 ---------------------- */
+ARM GAS  /tmp/ccVpkkof.s 			page 17
+
+
  146:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_WriteReg(uint8_t addr, uint8_t data)
  147:My_Top/System/kth_read.cpp **** {
- 723              		.loc 1 147 1 is_stmt 1 view -0
- 724              		.cfi_startproc
- 725              		@ args = 0, pretend = 0, frame = 24
- 726              		@ frame_needed = 0, uses_anonymous_args = 0
- 727              		.loc 1 147 1 is_stmt 0 view .LVU182
- 728 0214 F0B5     		push	{r4, r5, r6, r7, lr}
- 729              		.cfi_def_cfa_offset 20
- 730              		.cfi_offset 4, -20
- 731              		.cfi_offset 5, -16
- 732              		.cfi_offset 6, -12
- 733              		.cfi_offset 7, -8
- 734              		.cfi_offset 14, -4
- 735 0216 87B0     		sub	sp, sp, #28
- 736              		.cfi_def_cfa_offset 48
- 737 0218 0400     		movs	r4, r0
- 738 021a 0F00     		movs	r7, r1
- 739 021c 1500     		movs	r5, r2
+ 701              		.loc 1 147 1 is_stmt 1 view -0
+ 702              		.cfi_startproc
+ 703              		@ args = 0, pretend = 0, frame = 24
+ 704              		@ frame_needed = 0, uses_anonymous_args = 0
+ 705              		.loc 1 147 1 is_stmt 0 view .LVU175
+ 706 01f4 F0B5     		push	{r4, r5, r6, r7, lr}
+ 707              		.cfi_def_cfa_offset 20
+ 708              		.cfi_offset 4, -20
+ 709              		.cfi_offset 5, -16
+ 710              		.cfi_offset 6, -12
+ 711              		.cfi_offset 7, -8
+ 712              		.cfi_offset 14, -4
+ 713 01f6 87B0     		sub	sp, sp, #28
+ 714              		.cfi_def_cfa_offset 48
+ 715 01f8 0400     		movs	r4, r0
+ 716 01fa 0F00     		movs	r7, r1
+ 717 01fc 1500     		movs	r5, r2
  148:My_Top/System/kth_read.cpp ****     uint8_t unlock[4] = {0x20, 0x24, 0x01, 0x01};  /* 解锁密码 0x20240101 */
- 740              		.loc 1 148 5 is_stmt 1 view .LVU183
- 741              		.loc 1 148 13 is_stmt 0 view .LVU184
- 742 021e 2F4B     		ldr	r3, .L44
- 743 0220 0593     		str	r3, [sp, #20]
+ 718              		.loc 1 148 5 is_stmt 1 view .LVU176
+ 719              		.loc 1 148 13 is_stmt 0 view .LVU177
+ 720 01fe 2F4B     		ldr	r3, .L43
+ 721 0200 0593     		str	r3, [sp, #20]
  149:My_Top/System/kth_read.cpp ****     uint8_t cmd[3] = {0x33, addr, data};            /* 命令：0x33 + addr + data */
- 744              		.loc 1 149 5 is_stmt 1 view .LVU185
- 745              		.loc 1 149 13 is_stmt 0 view .LVU186
- 746 0222 04AE     		add	r6, sp, #16
-ARM GAS  /tmp/cc5qDhQe.s 			page 18
-
-
- 747 0224 0322     		movs	r2, #3
- 748              	.LVL80:
- 749              		.loc 1 149 13 view .LVU187
- 750 0226 0021     		movs	r1, #0
- 751              	.LVL81:
- 752              		.loc 1 149 13 view .LVU188
- 753 0228 3000     		movs	r0, r6
- 754              	.LVL82:
- 755              		.loc 1 149 13 view .LVU189
- 756 022a FFF7FEFF 		bl	memset
- 757              	.LVL83:
- 758 022e 3323     		movs	r3, #51
- 759 0230 3370     		strb	r3, [r6]
- 760              		.loc 1 149 39 view .LVU190
- 761 0232 7770     		strb	r7, [r6, #1]
- 762 0234 B570     		strb	r5, [r6, #2]
+ 722              		.loc 1 149 5 is_stmt 1 view .LVU178
+ 723              		.loc 1 149 13 is_stmt 0 view .LVU179
+ 724 0202 04AE     		add	r6, sp, #16
+ 725 0204 0322     		movs	r2, #3
+ 726              	.LVL77:
+ 727              		.loc 1 149 13 view .LVU180
+ 728 0206 0021     		movs	r1, #0
+ 729              	.LVL78:
+ 730              		.loc 1 149 13 view .LVU181
+ 731 0208 3000     		movs	r0, r6
+ 732              	.LVL79:
+ 733              		.loc 1 149 13 view .LVU182
+ 734 020a FFF7FEFF 		bl	memset
+ 735              	.LVL80:
+ 736 020e 3323     		movs	r3, #51
+ 737 0210 3370     		strb	r3, [r6]
+ 738              		.loc 1 149 39 view .LVU183
+ 739 0212 7770     		strb	r7, [r6, #1]
+ 740 0214 B570     		strb	r5, [r6, #2]
  150:My_Top/System/kth_read.cpp ****     uint8_t rx = 0;
- 763              		.loc 1 150 5 is_stmt 1 view .LVU191
- 764              		.loc 1 150 13 is_stmt 0 view .LVU192
- 765 0236 0026     		movs	r6, #0
- 766 0238 243B     		subs	r3, r3, #36
- 767 023a 6B44     		add	r3, r3, sp
- 768 023c 1E70     		strb	r6, [r3]
+ 741              		.loc 1 150 5 is_stmt 1 view .LVU184
+ 742              		.loc 1 150 13 is_stmt 0 view .LVU185
+ 743 0216 0026     		movs	r6, #0
+ 744 0218 243B     		subs	r3, r3, #36
+ 745 021a 6B44     		add	r3, r3, sp
+ 746 021c 1E70     		strb	r6, [r3]
  151:My_Top/System/kth_read.cpp **** 
  152:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(false);
- 769              		.loc 1 152 5 is_stmt 1 view .LVU193
- 770              		.loc 1 152 17 is_stmt 0 view .LVU194
- 771 023e 0021     		movs	r1, #0
- 772 0240 2000     		movs	r0, r4
- 773 0242 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 774              	.LVL84:
+ 747              		.loc 1 152 5 is_stmt 1 view .LVU186
+ 748              		.loc 1 152 17 is_stmt 0 view .LVU187
+ 749 021e 0021     		movs	r1, #0
+ 750 0220 2000     		movs	r0, r4
+ARM GAS  /tmp/ccVpkkof.s 			page 18
+
+
+ 751 0222 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 752              	.LVL81:
  153:My_Top/System/kth_read.cpp ****     /* 第一帧：解锁 */
  154:My_Top/System/kth_read.cpp ****     HAL_SPI_Transmit(_hspi, unlock, 4, 10);
- 775              		.loc 1 154 5 is_stmt 1 view .LVU195
- 776              		.loc 1 154 21 is_stmt 0 view .LVU196
- 777 0246 2069     		ldr	r0, [r4, #16]
- 778 0248 0A23     		movs	r3, #10
- 779 024a 0422     		movs	r2, #4
- 780 024c 05A9     		add	r1, sp, #20
- 781 024e FFF7FEFF 		bl	HAL_SPI_Transmit
- 782              	.LVL85:
+ 753              		.loc 1 154 5 is_stmt 1 view .LVU188
+ 754              		.loc 1 154 21 is_stmt 0 view .LVU189
+ 755 0226 2069     		ldr	r0, [r4, #16]
+ 756 0228 0A23     		movs	r3, #10
+ 757 022a 0422     		movs	r2, #4
+ 758 022c 05A9     		add	r1, sp, #20
+ 759 022e FFF7FEFF 		bl	HAL_SPI_Transmit
+ 760              	.LVL82:
  155:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 783              		.loc 1 155 5 is_stmt 1 view .LVU197
- 784              		.loc 1 155 17 is_stmt 0 view .LVU198
- 785 0252 0121     		movs	r1, #1
- 786 0254 2000     		movs	r0, r4
- 787 0256 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 788              	.LVL86:
+ 761              		.loc 1 155 5 is_stmt 1 view .LVU190
+ 762              		.loc 1 155 17 is_stmt 0 view .LVU191
+ 763 0232 0121     		movs	r1, #1
+ 764 0234 2000     		movs	r0, r4
+ 765 0236 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 766              	.LVL83:
  156:My_Top/System/kth_read.cpp **** 
  157:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(false);
- 789              		.loc 1 157 5 is_stmt 1 view .LVU199
- 790              		.loc 1 157 17 is_stmt 0 view .LVU200
- 791 025a 0021     		movs	r1, #0
- 792 025c 2000     		movs	r0, r4
- 793 025e FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 794              	.LVL87:
+ 767              		.loc 1 157 5 is_stmt 1 view .LVU192
+ 768              		.loc 1 157 17 is_stmt 0 view .LVU193
+ 769 023a 0021     		movs	r1, #0
+ 770 023c 2000     		movs	r0, r4
+ 771 023e FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 772              	.LVL84:
  158:My_Top/System/kth_read.cpp ****     for(volatile uint32_t i = 0; i < 28; i++) { __NOP(); } //延时1us
-ARM GAS  /tmp/cc5qDhQe.s 			page 19
-
-
- 795              		.loc 1 158 5 is_stmt 1 view .LVU201
- 796              	.LBB12:
- 797              		.loc 1 158 27 is_stmt 0 view .LVU202
- 798 0262 0096     		str	r6, [sp]
- 799              		.loc 1 158 5 view .LVU203
- 800 0264 03E0     		b	.L38
- 801              	.L39:
- 802              		.loc 1 158 49 is_stmt 1 discriminator 3 view .LVU204
- 803              		.syntax divided
- 804              	@ 158 "My_Top/System/kth_read.cpp" 1
- 805 0266 C046     		nop
- 806              	@ 0 "" 2
- 807              		.loc 1 158 5 discriminator 3 view .LVU205
- 808              		.thumb
- 809              		.syntax unified
- 810 0268 009B     		ldr	r3, [sp]
- 811 026a 0133     		adds	r3, r3, #1
- 812 026c 0093     		str	r3, [sp]
- 813              	.L38:
- 814              		.loc 1 158 36 discriminator 1 view .LVU206
- 815 026e 009B     		ldr	r3, [sp]
- 816 0270 1B2B     		cmp	r3, #27
- 817 0272 F8D9     		bls	.L39
- 818              	.LBE12:
+ 773              		.loc 1 158 5 is_stmt 1 view .LVU194
+ 774              	.LBB12:
+ 775              		.loc 1 158 27 is_stmt 0 view .LVU195
+ 776 0242 0096     		str	r6, [sp]
+ 777              		.loc 1 158 5 view .LVU196
+ 778 0244 03E0     		b	.L37
+ 779              	.L38:
+ 780              		.loc 1 158 49 is_stmt 1 discriminator 3 view .LVU197
+ 781              		.syntax divided
+ 782              	@ 158 "My_Top/System/kth_read.cpp" 1
+ 783 0246 C046     		nop
+ 784              	@ 0 "" 2
+ 785              		.loc 1 158 5 discriminator 3 view .LVU198
+ 786              		.thumb
+ 787              		.syntax unified
+ 788 0248 009B     		ldr	r3, [sp]
+ 789 024a 0133     		adds	r3, r3, #1
+ 790 024c 0093     		str	r3, [sp]
+ 791              	.L37:
+ 792              		.loc 1 158 36 discriminator 1 view .LVU199
+ 793 024e 009B     		ldr	r3, [sp]
+ 794 0250 1B2B     		cmp	r3, #27
+ 795 0252 F8D9     		bls	.L38
+ 796              	.LBE12:
  159:My_Top/System/kth_read.cpp ****     /* 第二帧：发写命令 */
  160:My_Top/System/kth_read.cpp ****     HAL_SPI_Transmit(_hspi, cmd, 3, 10);
- 819              		.loc 1 160 5 view .LVU207
- 820              		.loc 1 160 21 is_stmt 0 view .LVU208
- 821 0274 2069     		ldr	r0, [r4, #16]
- 822 0276 0A23     		movs	r3, #10
- 823 0278 0322     		movs	r2, #3
- 824 027a 04A9     		add	r1, sp, #16
- 825 027c FFF7FEFF 		bl	HAL_SPI_Transmit
- 826              	.LVL88:
+ 797              		.loc 1 160 5 view .LVU200
+ 798              		.loc 1 160 21 is_stmt 0 view .LVU201
+ 799 0254 2069     		ldr	r0, [r4, #16]
+ARM GAS  /tmp/ccVpkkof.s 			page 19
+
+
+ 800 0256 0A23     		movs	r3, #10
+ 801 0258 0322     		movs	r2, #3
+ 802 025a 04A9     		add	r1, sp, #16
+ 803 025c FFF7FEFF 		bl	HAL_SPI_Transmit
+ 804              	.LVL85:
  161:My_Top/System/kth_read.cpp ****     for(volatile uint32_t i = 0; i < 28; i++) { __NOP(); } //延时1us
- 827              		.loc 1 161 5 is_stmt 1 view .LVU209
- 828              	.LBB13:
- 829              		.loc 1 161 27 is_stmt 0 view .LVU210
- 830 0280 0023     		movs	r3, #0
- 831 0282 0193     		str	r3, [sp, #4]
- 832              		.loc 1 161 5 view .LVU211
- 833 0284 03E0     		b	.L40
- 834              	.L41:
- 835              		.loc 1 161 49 is_stmt 1 discriminator 3 view .LVU212
- 836              		.syntax divided
- 837              	@ 161 "My_Top/System/kth_read.cpp" 1
- 838 0286 C046     		nop
- 839              	@ 0 "" 2
- 840              		.loc 1 161 5 discriminator 3 view .LVU213
- 841              		.thumb
- 842              		.syntax unified
- 843 0288 019B     		ldr	r3, [sp, #4]
- 844 028a 0133     		adds	r3, r3, #1
- 845 028c 0193     		str	r3, [sp, #4]
- 846              	.L40:
- 847              		.loc 1 161 36 discriminator 1 view .LVU214
- 848 028e 019B     		ldr	r3, [sp, #4]
-ARM GAS  /tmp/cc5qDhQe.s 			page 20
-
-
- 849 0290 1B2B     		cmp	r3, #27
- 850 0292 F8D9     		bls	.L41
- 851              	.LBE13:
+ 805              		.loc 1 161 5 is_stmt 1 view .LVU202
+ 806              	.LBB13:
+ 807              		.loc 1 161 27 is_stmt 0 view .LVU203
+ 808 0260 0023     		movs	r3, #0
+ 809 0262 0193     		str	r3, [sp, #4]
+ 810              		.loc 1 161 5 view .LVU204
+ 811 0264 03E0     		b	.L39
+ 812              	.L40:
+ 813              		.loc 1 161 49 is_stmt 1 discriminator 3 view .LVU205
+ 814              		.syntax divided
+ 815              	@ 161 "My_Top/System/kth_read.cpp" 1
+ 816 0266 C046     		nop
+ 817              	@ 0 "" 2
+ 818              		.loc 1 161 5 discriminator 3 view .LVU206
+ 819              		.thumb
+ 820              		.syntax unified
+ 821 0268 019B     		ldr	r3, [sp, #4]
+ 822 026a 0133     		adds	r3, r3, #1
+ 823 026c 0193     		str	r3, [sp, #4]
+ 824              	.L39:
+ 825              		.loc 1 161 36 discriminator 1 view .LVU207
+ 826 026e 019B     		ldr	r3, [sp, #4]
+ 827 0270 1B2B     		cmp	r3, #27
+ 828 0272 F8D9     		bls	.L40
+ 829              	.LBE13:
  162:My_Top/System/kth_read.cpp **** 
  163:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Input();//MOSI变为MISO
- 852              		.loc 1 163 5 view .LVU215
- 853              		.loc 1 163 23 is_stmt 0 view .LVU216
- 854 0294 2000     		movs	r0, r4
- 855 0296 FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
- 856              	.LVL89:
+ 830              		.loc 1 163 5 view .LVU208
+ 831              		.loc 1 163 23 is_stmt 0 view .LVU209
+ 832 0274 2000     		movs	r0, r4
+ 833 0276 FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
+ 834              	.LVL86:
  164:My_Top/System/kth_read.cpp ****     /* 第三帧：收确认（同一帧返回的寄存器值） */
  165:My_Top/System/kth_read.cpp ****     HAL_SPI_Receive(_hspi, &rx, 1, 10);
- 857              		.loc 1 165 5 is_stmt 1 view .LVU217
- 858              		.loc 1 165 20 is_stmt 0 view .LVU218
- 859 029a 2069     		ldr	r0, [r4, #16]
- 860 029c 0A23     		movs	r3, #10
- 861 029e 0122     		movs	r2, #1
- 862 02a0 0F21     		movs	r1, #15
- 863 02a2 6944     		add	r1, r1, sp
- 864 02a4 FFF7FEFF 		bl	HAL_SPI_Receive
- 865              	.LVL90:
+ 835              		.loc 1 165 5 is_stmt 1 view .LVU210
+ 836              		.loc 1 165 20 is_stmt 0 view .LVU211
+ 837 027a 2069     		ldr	r0, [r4, #16]
+ 838 027c 0A23     		movs	r3, #10
+ 839 027e 0122     		movs	r2, #1
+ 840 0280 0F21     		movs	r1, #15
+ 841 0282 6944     		add	r1, r1, sp
+ 842 0284 FFF7FEFF 		bl	HAL_SPI_Receive
+ 843              	.LVL87:
  166:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 866              		.loc 1 166 5 is_stmt 1 view .LVU219
- 867              		.loc 1 166 17 is_stmt 0 view .LVU220
- 868 02a8 0121     		movs	r1, #1
- 869 02aa 2000     		movs	r0, r4
- 870 02ac FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 871              	.LVL91:
+ 844              		.loc 1 166 5 is_stmt 1 view .LVU212
+ 845              		.loc 1 166 17 is_stmt 0 view .LVU213
+ 846 0288 0121     		movs	r1, #1
+ 847 028a 2000     		movs	r0, r4
+ 848 028c FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 849              	.LVL88:
  167:My_Top/System/kth_read.cpp ****     for(volatile uint32_t i = 0; i < 28; i++) { __NOP(); } //延时1us
- 872              		.loc 1 167 5 is_stmt 1 view .LVU221
- 873              	.LBB14:
- 874              		.loc 1 167 27 is_stmt 0 view .LVU222
- 875 02b0 0023     		movs	r3, #0
- 876 02b2 0293     		str	r3, [sp, #8]
- 877              		.loc 1 167 5 view .LVU223
- 878 02b4 03E0     		b	.L42
- 879              	.L43:
- 880              		.loc 1 167 49 is_stmt 1 discriminator 3 view .LVU224
- 881              		.syntax divided
- 882              	@ 167 "My_Top/System/kth_read.cpp" 1
- 883 02b6 C046     		nop
- 884              	@ 0 "" 2
- 885              		.loc 1 167 5 discriminator 3 view .LVU225
- 886              		.thumb
- 887              		.syntax unified
- 888 02b8 029B     		ldr	r3, [sp, #8]
- 889 02ba 0133     		adds	r3, r3, #1
- 890 02bc 0293     		str	r3, [sp, #8]
- 891              	.L42:
- 892              		.loc 1 167 36 discriminator 1 view .LVU226
- 893 02be 029B     		ldr	r3, [sp, #8]
- 894 02c0 1B2B     		cmp	r3, #27
- 895 02c2 F8D9     		bls	.L43
- 896              	.LBE14:
+ARM GAS  /tmp/ccVpkkof.s 			page 20
+
+
+ 850              		.loc 1 167 5 is_stmt 1 view .LVU214
+ 851              	.LBB14:
+ 852              		.loc 1 167 27 is_stmt 0 view .LVU215
+ 853 0290 0023     		movs	r3, #0
+ 854 0292 0293     		str	r3, [sp, #8]
+ 855              		.loc 1 167 5 view .LVU216
+ 856 0294 03E0     		b	.L41
+ 857              	.L42:
+ 858              		.loc 1 167 49 is_stmt 1 discriminator 3 view .LVU217
+ 859              		.syntax divided
+ 860              	@ 167 "My_Top/System/kth_read.cpp" 1
+ 861 0296 C046     		nop
+ 862              	@ 0 "" 2
+ 863              		.loc 1 167 5 discriminator 3 view .LVU218
+ 864              		.thumb
+ 865              		.syntax unified
+ 866 0298 029B     		ldr	r3, [sp, #8]
+ 867 029a 0133     		adds	r3, r3, #1
+ 868 029c 0293     		str	r3, [sp, #8]
+ 869              	.L41:
+ 870              		.loc 1 167 36 discriminator 1 view .LVU219
+ 871 029e 029B     		ldr	r3, [sp, #8]
+ 872 02a0 1B2B     		cmp	r3, #27
+ 873 02a2 F8D9     		bls	.L42
+ 874              	.LBE14:
  168:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Output();//MISO 变为MOSI
- 897              		.loc 1 168 5 view .LVU227
- 898              		.loc 1 168 24 is_stmt 0 view .LVU228
-ARM GAS  /tmp/cc5qDhQe.s 			page 21
-
-
- 899 02c4 2000     		movs	r0, r4
- 900 02c6 FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
- 901              	.LVL92:
+ 875              		.loc 1 168 5 view .LVU220
+ 876              		.loc 1 168 24 is_stmt 0 view .LVU221
+ 877 02a4 2000     		movs	r0, r4
+ 878 02a6 FFF7FEFF 		bl	_ZN7KTH711119SPI_Set_MOSI_OutputEv
+ 879              	.LVL89:
  169:My_Top/System/kth_read.cpp ****     
  170:My_Top/System/kth_read.cpp ****     
  171:My_Top/System/kth_read.cpp ****     return rx == data;
- 902              		.loc 1 171 5 is_stmt 1 view .LVU229
- 903              		.loc 1 171 15 is_stmt 0 view .LVU230
- 904 02ca 0F23     		movs	r3, #15
- 905 02cc 6B44     		add	r3, r3, sp
- 906 02ce 1878     		ldrb	r0, [r3]
- 907              		.loc 1 171 18 view .LVU231
- 908 02d0 401B     		subs	r0, r0, r5
- 909 02d2 4342     		rsbs	r3, r0, #0
- 910 02d4 5841     		adcs	r0, r0, r3
- 911 02d6 C0B2     		uxtb	r0, r0
+ 880              		.loc 1 171 5 is_stmt 1 view .LVU222
+ 881              		.loc 1 171 15 is_stmt 0 view .LVU223
+ 882 02aa 0F23     		movs	r3, #15
+ 883 02ac 6B44     		add	r3, r3, sp
+ 884 02ae 1878     		ldrb	r0, [r3]
+ 885              		.loc 1 171 18 view .LVU224
+ 886 02b0 401B     		subs	r0, r0, r5
+ 887 02b2 4342     		rsbs	r3, r0, #0
+ 888 02b4 5841     		adcs	r0, r0, r3
+ 889 02b6 C0B2     		uxtb	r0, r0
  172:My_Top/System/kth_read.cpp **** }
- 912              		.loc 1 172 1 view .LVU232
- 913 02d8 07B0     		add	sp, sp, #28
- 914              		@ sp needed
- 915              	.LVL93:
- 916              	.LVL94:
- 917              	.LVL95:
- 918              		.loc 1 172 1 view .LVU233
- 919 02da F0BD     		pop	{r4, r5, r6, r7, pc}
- 920              	.L45:
- 921              		.align	2
- 922              	.L44:
- 923 02dc 20240101 		.word	16852000
- 924              		.cfi_endproc
- 925              	.LFE1447:
- 927              		.align	1
- 928              		.global	_ZN7KTH711125KTH7111_RotationDirectionEb
- 929              		.syntax unified
- 930              		.code	16
- 931              		.thumb_func
- 933              	_ZN7KTH711125KTH7111_RotationDirectionEb:
- 934              	.LVL96:
- 935              	.LFB1448:
+ 890              		.loc 1 172 1 view .LVU225
+ 891 02b8 07B0     		add	sp, sp, #28
+ 892              		@ sp needed
+ 893              	.LVL90:
+ 894              	.LVL91:
+ 895              	.LVL92:
+ 896              		.loc 1 172 1 view .LVU226
+ 897 02ba F0BD     		pop	{r4, r5, r6, r7, pc}
+ 898              	.L44:
+ 899              		.align	2
+ 900              	.L43:
+ 901 02bc 20240101 		.word	16852000
+ARM GAS  /tmp/ccVpkkof.s 			page 21
+
+
+ 902              		.cfi_endproc
+ 903              	.LFE1447:
+ 905              		.align	1
+ 906              		.global	_ZN7KTH711125KTH7111_RotationDirectionEb
+ 907              		.syntax unified
+ 908              		.code	16
+ 909              		.thumb_func
+ 911              	_ZN7KTH711125KTH7111_RotationDirectionEb:
+ 912              	.LVL93:
+ 913              	.LFB1448:
  173:My_Top/System/kth_read.cpp **** 
  174:My_Top/System/kth_read.cpp **** 
  175:My_Top/System/kth_read.cpp **** 
@@ -1249,1004 +1220,991 @@ ARM GAS  /tmp/cc5qDhQe.s 			page 1
  179:My_Top/System/kth_read.cpp ****  */
  180:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_RotationDirection(bool RD)  //控制编码器旋转方向 返回是否修改�
  181:My_Top/System/kth_read.cpp **** {
- 936              		.loc 1 181 1 is_stmt 1 view -0
- 937              		.cfi_startproc
- 938              		@ args = 0, pretend = 0, frame = 0
- 939              		@ frame_needed = 0, uses_anonymous_args = 0
- 940              		.loc 1 181 1 is_stmt 0 view .LVU235
- 941 02e0 70B5     		push	{r4, r5, r6, lr}
- 942              		.cfi_def_cfa_offset 16
- 943              		.cfi_offset 4, -16
- 944              		.cfi_offset 5, -12
-ARM GAS  /tmp/cc5qDhQe.s 			page 22
+ 914              		.loc 1 181 1 is_stmt 1 view -0
+ 915              		.cfi_startproc
+ 916              		@ args = 0, pretend = 0, frame = 0
+ 917              		@ frame_needed = 0, uses_anonymous_args = 0
+ 918              		.loc 1 181 1 is_stmt 0 view .LVU228
+ 919 02c0 70B5     		push	{r4, r5, r6, lr}
+ 920              		.cfi_def_cfa_offset 16
+ 921              		.cfi_offset 4, -16
+ 922              		.cfi_offset 5, -12
+ 923              		.cfi_offset 6, -8
+ 924              		.cfi_offset 14, -4
+ 925 02c2 0400     		movs	r4, r0
+ 926 02c4 0D1E     		subs	r5, r1, #0
+ 182:My_Top/System/kth_read.cpp ****     //改编码器测角度 倒着装 
+ 183:My_Top/System/kth_read.cpp ****     uint8_t rx_temp = 0;
+ 927              		.loc 1 183 5 is_stmt 1 view .LVU229
+ 928              	.LVL94:
+ 184:My_Top/System/kth_read.cpp ****     uint8_t rx_new = 0;    
+ 929              		.loc 1 184 5 view .LVU230
+ 185:My_Top/System/kth_read.cpp ****     uint8_t tx = 0;
+ 930              		.loc 1 185 5 view .LVU231
+ 186:My_Top/System/kth_read.cpp ****     if(RD == false)  //如果RD为1，设置为顺时针方向
+ 931              		.loc 1 186 5 view .LVU232
+ 932 02c6 15D1     		bne	.L46
+ 187:My_Top/System/kth_read.cpp ****     {
+ 188:My_Top/System/kth_read.cpp ****         rx_temp = KTH7111_ReadReg(0x02); 
+ 933              		.loc 1 188 9 view .LVU233
+ 934              		.loc 1 188 34 is_stmt 0 view .LVU234
+ 935 02c8 0221     		movs	r1, #2
+ 936              	.LVL95:
+ 937              		.loc 1 188 34 view .LVU235
+ 938 02ca FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 939              	.LVL96:
+ 189:My_Top/System/kth_read.cpp ****         tx = rx_temp|0x80;//最高位置1
+ 940              		.loc 1 189 9 is_stmt 1 view .LVU236
+ 941              		.loc 1 189 12 is_stmt 0 view .LVU237
+ 942 02ce 8022     		movs	r2, #128
+ 943 02d0 5242     		rsbs	r2, r2, #0
+ARM GAS  /tmp/ccVpkkof.s 			page 22
 
 
- 945              		.cfi_offset 6, -8
- 946              		.cfi_offset 14, -4
- 947 02e2 0500     		movs	r5, r0
- 948 02e4 0C1E     		subs	r4, r1, #0
- 182:My_Top/System/kth_read.cpp ****     uint8_t rx_temp = 0;
- 949              		.loc 1 182 5 is_stmt 1 view .LVU236
- 950              	.LVL97:
- 183:My_Top/System/kth_read.cpp ****     uint8_t rx_new = 0;    
- 951              		.loc 1 183 5 view .LVU237
- 184:My_Top/System/kth_read.cpp ****     uint8_t tx = 0;
- 952              		.loc 1 184 5 view .LVU238
- 185:My_Top/System/kth_read.cpp ****     if(RD == true)  //如果RD为1，设置为顺时针方向
- 953              		.loc 1 185 5 view .LVU239
- 954 02e6 15D0     		beq	.L47
- 186:My_Top/System/kth_read.cpp ****     {
- 187:My_Top/System/kth_read.cpp ****         rx_temp = KTH7111_ReadReg(0x02); //最高位置1
- 955              		.loc 1 187 9 view .LVU240
- 956              		.loc 1 187 34 is_stmt 0 view .LVU241
- 957 02e8 0221     		movs	r1, #2
- 958              	.LVL98:
- 959              		.loc 1 187 34 view .LVU242
- 960 02ea FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 961              	.LVL99:
- 188:My_Top/System/kth_read.cpp ****         tx = rx_temp|0x80;
- 962              		.loc 1 188 9 is_stmt 1 view .LVU243
- 963              		.loc 1 188 12 is_stmt 0 view .LVU244
- 964 02ee 8022     		movs	r2, #128
- 965 02f0 5242     		rsbs	r2, r2, #0
- 966 02f2 0243     		orrs	r2, r0
- 967 02f4 D2B2     		uxtb	r2, r2
- 968              	.LVL100:
- 189:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
- 969              		.loc 1 189 9 is_stmt 1 view .LVU245
- 970              		.loc 1 189 25 is_stmt 0 view .LVU246
- 971 02f6 0221     		movs	r1, #2
- 972 02f8 2800     		movs	r0, r5
- 973              	.LVL101:
- 974              		.loc 1 189 25 view .LVU247
- 975 02fa FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 976              	.LVL102:
- 190:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
- 977              		.loc 1 190 9 is_stmt 1 view .LVU248
- 978              		.loc 1 190 33 is_stmt 0 view .LVU249
- 979 02fe 0221     		movs	r1, #2
- 980 0300 2800     		movs	r0, r5
- 981 0302 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 982              	.LVL103:
- 191:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return true;
- 983              		.loc 1 191 9 is_stmt 1 view .LVU250
- 984              		.loc 1 191 18 is_stmt 0 view .LVU251
- 985 0306 40B2     		sxtb	r0, r0
- 986              		.loc 1 191 9 view .LVU252
- 987 0308 0028     		cmp	r0, #0
- 988 030a 01DB     		blt	.L51
- 192:My_Top/System/kth_read.cpp ****         else return false;
- 989              		.loc 1 192 21 view .LVU253
- 990 030c 0020     		movs	r0, #0
-ARM GAS  /tmp/cc5qDhQe.s 			page 23
-
-
- 991              	.LVL104:
- 992              	.L48:
- 193:My_Top/System/kth_read.cpp ****     }else
- 194:My_Top/System/kth_read.cpp ****     {
- 195:My_Top/System/kth_read.cpp ****         rx_temp = KTH7111_ReadReg(0x02);
+ 944 02d2 0243     		orrs	r2, r0
+ 945 02d4 D2B2     		uxtb	r2, r2
+ 946              	.LVL97:
+ 190:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
+ 947              		.loc 1 190 9 is_stmt 1 view .LVU238
+ 948              		.loc 1 190 25 is_stmt 0 view .LVU239
+ 949 02d6 0221     		movs	r1, #2
+ 950 02d8 2000     		movs	r0, r4
+ 951              	.LVL98:
+ 952              		.loc 1 190 25 view .LVU240
+ 953 02da FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 954              	.LVL99:
+ 191:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
+ 955              		.loc 1 191 9 is_stmt 1 view .LVU241
+ 956              		.loc 1 191 33 is_stmt 0 view .LVU242
+ 957 02de 0221     		movs	r1, #2
+ 958 02e0 2000     		movs	r0, r4
+ 959 02e2 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 960              	.LVL100:
+ 192:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return true;
+ 961              		.loc 1 192 9 is_stmt 1 view .LVU243
+ 962              		.loc 1 192 18 is_stmt 0 view .LVU244
+ 963 02e6 40B2     		sxtb	r0, r0
+ 964              		.loc 1 192 9 view .LVU245
+ 965 02e8 0028     		cmp	r0, #0
+ 966 02ea 01DB     		blt	.L48
+ 967              	.LVL101:
+ 968              	.L47:
+ 193:My_Top/System/kth_read.cpp ****         else return false;
+ 194:My_Top/System/kth_read.cpp ****     }else
+ 195:My_Top/System/kth_read.cpp ****     {
+ 196:My_Top/System/kth_read.cpp ****         rx_temp = KTH7111_ReadReg(0x02);
+ 197:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
+ 198:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
+ 199:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
+ 200:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return false;
+ 201:My_Top/System/kth_read.cpp ****         else return true;
+ 202:My_Top/System/kth_read.cpp ****     }
+ 203:My_Top/System/kth_read.cpp **** }
+ 969              		.loc 1 203 1 view .LVU246
+ 970 02ec 2800     		movs	r0, r5
+ 971              		@ sp needed
+ 972              	.LVL102:
+ 973              		.loc 1 203 1 view .LVU247
+ 974 02ee 70BD     		pop	{r4, r5, r6, pc}
+ 975              	.LVL103:
+ 976              	.L48:
+ 192:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return true;
+ 977              		.loc 1 192 32 discriminator 1 view .LVU248
+ 978 02f0 0135     		adds	r5, r5, #1
+ 979 02f2 FBE7     		b	.L47
+ 980              	.LVL104:
+ 981              	.L46:
  196:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
+ 982              		.loc 1 196 9 is_stmt 1 view .LVU249
+ 196:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
+ 983              		.loc 1 196 34 is_stmt 0 view .LVU250
+ARM GAS  /tmp/ccVpkkof.s 			page 23
+
+
+ 984 02f4 0221     		movs	r1, #2
+ 985              	.LVL105:
+ 196:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
+ 986              		.loc 1 196 34 view .LVU251
+ 987 02f6 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 988              	.LVL106:
  197:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
+ 989              		.loc 1 197 9 is_stmt 1 view .LVU252
+ 197:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
+ 990              		.loc 1 197 12 is_stmt 0 view .LVU253
+ 991 02fa 7F22     		movs	r2, #127
+ 992 02fc 0240     		ands	r2, r0
+ 993              	.LVL107:
  198:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
+ 994              		.loc 1 198 9 is_stmt 1 view .LVU254
+ 198:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
+ 995              		.loc 1 198 25 is_stmt 0 view .LVU255
+ 996 02fe 0221     		movs	r1, #2
+ 997 0300 2000     		movs	r0, r4
+ 998              	.LVL108:
+ 198:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
+ 999              		.loc 1 198 25 view .LVU256
+ 1000 0302 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1001              	.LVL109:
  199:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return false;
+ 1002              		.loc 1 199 9 is_stmt 1 view .LVU257
+ 199:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return false;
+ 1003              		.loc 1 199 33 is_stmt 0 view .LVU258
+ 1004 0306 0221     		movs	r1, #2
+ 1005 0308 2000     		movs	r0, r4
+ 1006 030a FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1007              	.LVL110:
  200:My_Top/System/kth_read.cpp ****         else return true;
- 201:My_Top/System/kth_read.cpp ****     }
- 202:My_Top/System/kth_read.cpp **** }
- 993              		.loc 1 202 1 view .LVU254
- 994              		@ sp needed
- 995              	.LVL105:
- 996              	.LVL106:
- 997              		.loc 1 202 1 view .LVU255
- 998 030e 70BD     		pop	{r4, r5, r6, pc}
- 999              	.LVL107:
- 1000              	.L51:
- 191:My_Top/System/kth_read.cpp ****         else return false;
- 1001              		.loc 1 191 32 discriminator 1 view .LVU256
- 1002 0310 2000     		movs	r0, r4
- 1003              	.LVL108:
- 191:My_Top/System/kth_read.cpp ****         else return false;
- 1004              		.loc 1 191 32 discriminator 1 view .LVU257
- 1005 0312 FCE7     		b	.L48
- 1006              	.LVL109:
- 1007              	.L47:
- 195:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
- 1008              		.loc 1 195 9 is_stmt 1 view .LVU258
- 195:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
- 1009              		.loc 1 195 34 is_stmt 0 view .LVU259
- 1010 0314 0221     		movs	r1, #2
- 1011              	.LVL110:
- 195:My_Top/System/kth_read.cpp ****         tx = rx_temp&(~0x80);//最高位清零
- 1012              		.loc 1 195 34 view .LVU260
- 1013 0316 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1014              	.LVL111:
- 196:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
- 1015              		.loc 1 196 9 is_stmt 1 view .LVU261
- 196:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(0x02,tx);
- 1016              		.loc 1 196 12 is_stmt 0 view .LVU262
- 1017 031a 7F22     		movs	r2, #127
- 1018 031c 0240     		ands	r2, r0
- 1019              	.LVL112:
- 197:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
- 1020              		.loc 1 197 9 is_stmt 1 view .LVU263
- 197:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
- 1021              		.loc 1 197 25 is_stmt 0 view .LVU264
- 1022 031e 0221     		movs	r1, #2
- 1023 0320 2800     		movs	r0, r5
- 1024              	.LVL113:
- 197:My_Top/System/kth_read.cpp ****         rx_new = KTH7111_ReadReg(0x02);
- 1025              		.loc 1 197 25 view .LVU265
- 1026 0322 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1027              	.LVL114:
-ARM GAS  /tmp/cc5qDhQe.s 			page 24
+ 1008              		.loc 1 200 9 is_stmt 1 view .LVU259
+ 200:My_Top/System/kth_read.cpp ****         else return true;
+ 1009              		.loc 1 200 18 is_stmt 0 view .LVU260
+ 1010 030e 40B2     		sxtb	r0, r0
+ 200:My_Top/System/kth_read.cpp ****         else return true;
+ 1011              		.loc 1 200 9 view .LVU261
+ 1012 0310 0028     		cmp	r0, #0
+ 1013 0312 EBDA     		bge	.L47
+ 200:My_Top/System/kth_read.cpp ****         else return true;
+ 1014              		.loc 1 200 32 discriminator 1 view .LVU262
+ 1015 0314 0025     		movs	r5, #0
+ 1016              	.LVL111:
+ 200:My_Top/System/kth_read.cpp ****         else return true;
+ 1017              		.loc 1 200 32 discriminator 1 view .LVU263
+ 1018 0316 E9E7     		b	.L47
+ 1019              		.cfi_endproc
+ 1020              	.LFE1448:
+ 1022              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 1023              		.align	2
+ 1024              	.LC0:
+ 1025 0000 2255AA00 		.ascii	"\"U\252\000"
+ 1026              		.text
+ 1027              		.align	1
+ 1028              		.global	_ZN7KTH711115KTH7111_BurnMTPEv
+ARM GAS  /tmp/ccVpkkof.s 			page 24
 
 
- 198:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return false;
- 1028              		.loc 1 198 9 is_stmt 1 view .LVU266
- 198:My_Top/System/kth_read.cpp ****         if(rx_new&0x80) return false;
- 1029              		.loc 1 198 33 is_stmt 0 view .LVU267
- 1030 0326 0221     		movs	r1, #2
- 1031 0328 2800     		movs	r0, r5
- 1032 032a FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1033              	.LVL115:
- 199:My_Top/System/kth_read.cpp ****         else return true;
- 1034              		.loc 1 199 9 is_stmt 1 view .LVU268
- 199:My_Top/System/kth_read.cpp ****         else return true;
- 1035              		.loc 1 199 18 is_stmt 0 view .LVU269
- 1036 032e 40B2     		sxtb	r0, r0
- 199:My_Top/System/kth_read.cpp ****         else return true;
- 1037              		.loc 1 199 9 view .LVU270
- 1038 0330 0028     		cmp	r0, #0
- 1039 0332 01DB     		blt	.L52
- 200:My_Top/System/kth_read.cpp ****     }
- 1040              		.loc 1 200 21 view .LVU271
- 1041 0334 0120     		movs	r0, #1
- 1042              	.LVL116:
- 200:My_Top/System/kth_read.cpp ****     }
- 1043              		.loc 1 200 21 view .LVU272
- 1044 0336 EAE7     		b	.L48
- 1045              	.LVL117:
- 1046              	.L52:
- 199:My_Top/System/kth_read.cpp ****         else return true;
- 1047              		.loc 1 199 32 discriminator 1 view .LVU273
- 1048 0338 2000     		movs	r0, r4
- 1049              	.LVL118:
- 199:My_Top/System/kth_read.cpp ****         else return true;
- 1050              		.loc 1 199 32 discriminator 1 view .LVU274
- 1051 033a E8E7     		b	.L48
- 1052              		.cfi_endproc
- 1053              	.LFE1448:
- 1055              		.section	.rodata.str1.4,"aMS",%progbits,1
- 1056              		.align	2
- 1057              	.LC0:
- 1058 0000 2255AA00 		.ascii	"\"U\252\000"
- 1059              		.text
- 1060              		.align	1
- 1061              		.global	_ZN7KTH711115KTH7111_BurnMTPEv
- 1062              		.syntax unified
- 1063              		.code	16
- 1064              		.thumb_func
- 1066              	_ZN7KTH711115KTH7111_BurnMTPEv:
- 1067              	.LVL119:
- 1068              	.LFB1449:
- 203:My_Top/System/kth_read.cpp **** 
+ 1029              		.syntax unified
+ 1030              		.code	16
+ 1031              		.thumb_func
+ 1033              	_ZN7KTH711115KTH7111_BurnMTPEv:
+ 1034              	.LVL112:
+ 1035              	.LFB1449:
  204:My_Top/System/kth_read.cpp **** 
  205:My_Top/System/kth_read.cpp **** 
- 206:My_Top/System/kth_read.cpp **** HAL_StatusTypeDef KTH7111::KTH7111_BurnMTP(void)//保存当前参数到MTP
- 207:My_Top/System/kth_read.cpp **** {
- 1069              		.loc 1 207 1 is_stmt 1 view -0
- 1070              		.cfi_startproc
- 1071              		@ args = 0, pretend = 0, frame = 8
- 1072              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc5qDhQe.s 			page 25
+ 206:My_Top/System/kth_read.cpp **** 
+ 207:My_Top/System/kth_read.cpp **** HAL_StatusTypeDef KTH7111::KTH7111_BurnMTP(void)//保存当前参数到MTP
+ 208:My_Top/System/kth_read.cpp **** {
+ 1036              		.loc 1 208 1 is_stmt 1 view -0
+ 1037              		.cfi_startproc
+ 1038              		@ args = 0, pretend = 0, frame = 8
+ 1039              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1040              		.loc 1 208 1 is_stmt 0 view .LVU265
+ 1041 0318 30B5     		push	{r4, r5, lr}
+ 1042              		.cfi_def_cfa_offset 12
+ 1043              		.cfi_offset 4, -12
+ 1044              		.cfi_offset 5, -8
+ 1045              		.cfi_offset 14, -4
+ 1046 031a 83B0     		sub	sp, sp, #12
+ 1047              		.cfi_def_cfa_offset 24
+ 1048 031c 0400     		movs	r4, r0
+ 209:My_Top/System/kth_read.cpp ****     uint8_t burn_cmd[3] = {0x22, 0x55, 0xAA}; //
+ 1049              		.loc 1 209 5 is_stmt 1 view .LVU266
+ 1050              		.loc 1 209 13 is_stmt 0 view .LVU267
+ 1051 031e 01AD     		add	r5, sp, #4
+ 1052 0320 0E4B     		ldr	r3, .L50
+ 1053 0322 1A88     		ldrh	r2, [r3]
+ 1054 0324 2A80     		strh	r2, [r5]
+ 1055 0326 9B78     		ldrb	r3, [r3, #2]
+ 1056 0328 AB70     		strb	r3, [r5, #2]
+ 210:My_Top/System/kth_read.cpp ****     HAL_StatusTypeDef status = HAL_ERROR;
+ 1057              		.loc 1 210 5 is_stmt 1 view .LVU268
+ 1058              	.LVL113:
+ 211:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Input();//MOSI变为MISO
+ 1059              		.loc 1 211 5 view .LVU269
+ 1060              		.loc 1 211 23 is_stmt 0 view .LVU270
+ 1061 032a FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
+ 1062              	.LVL114:
+ 212:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(false);
+ 1063              		.loc 1 212 5 is_stmt 1 view .LVU271
+ 1064              		.loc 1 212 17 is_stmt 0 view .LVU272
+ 1065 032e 0021     		movs	r1, #0
+ 1066 0330 2000     		movs	r0, r4
+ 1067 0332 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 1068              	.LVL115:
+ 213:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Transmit(_hspi, burn_cmd, 3, 10);
+ 1069              		.loc 1 213 5 is_stmt 1 view .LVU273
+ 1070              		.loc 1 213 30 is_stmt 0 view .LVU274
+ 1071 0336 2069     		ldr	r0, [r4, #16]
+ 1072 0338 0A23     		movs	r3, #10
+ 1073 033a 0322     		movs	r2, #3
+ 1074 033c 2900     		movs	r1, r5
+ 1075 033e FFF7FEFF 		bl	HAL_SPI_Transmit
+ 1076              	.LVL116:
+ARM GAS  /tmp/ccVpkkof.s 			page 25
 
 
- 1073              		.loc 1 207 1 is_stmt 0 view .LVU276
- 1074 033c 30B5     		push	{r4, r5, lr}
- 1075              		.cfi_def_cfa_offset 12
- 1076              		.cfi_offset 4, -12
- 1077              		.cfi_offset 5, -8
- 1078              		.cfi_offset 14, -4
- 1079 033e 83B0     		sub	sp, sp, #12
- 1080              		.cfi_def_cfa_offset 24
- 1081 0340 0400     		movs	r4, r0
- 208:My_Top/System/kth_read.cpp ****     uint8_t burn_cmd[3] = {0x22, 0x55, 0xAA}; //
- 1082              		.loc 1 208 5 is_stmt 1 view .LVU277
- 1083              		.loc 1 208 13 is_stmt 0 view .LVU278
- 1084 0342 01AD     		add	r5, sp, #4
- 1085 0344 0E4B     		ldr	r3, .L54
- 1086 0346 1A88     		ldrh	r2, [r3]
- 1087 0348 2A80     		strh	r2, [r5]
- 1088 034a 9B78     		ldrb	r3, [r3, #2]
- 1089 034c AB70     		strb	r3, [r5, #2]
- 209:My_Top/System/kth_read.cpp ****     HAL_StatusTypeDef status = HAL_ERROR;
- 1090              		.loc 1 209 5 is_stmt 1 view .LVU279
- 1091              	.LVL120:
- 210:My_Top/System/kth_read.cpp ****     SPI_Set_MOSI_Input();//MOSI变为MISO
- 1092              		.loc 1 210 5 view .LVU280
- 1093              		.loc 1 210 23 is_stmt 0 view .LVU281
- 1094 034e FFF7FEFF 		bl	_ZN7KTH711118SPI_Set_MOSI_InputEv
- 1095              	.LVL121:
- 211:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(false);
- 1096              		.loc 1 211 5 is_stmt 1 view .LVU282
- 1097              		.loc 1 211 17 is_stmt 0 view .LVU283
- 1098 0352 0021     		movs	r1, #0
- 1099 0354 2000     		movs	r0, r4
- 1100 0356 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 1101              	.LVL122:
- 212:My_Top/System/kth_read.cpp ****     status = HAL_SPI_Transmit(_hspi, burn_cmd, 3, 10);
- 1102              		.loc 1 212 5 is_stmt 1 view .LVU284
- 1103              		.loc 1 212 30 is_stmt 0 view .LVU285
- 1104 035a 2069     		ldr	r0, [r4, #16]
- 1105 035c 0A23     		movs	r3, #10
- 1106 035e 0322     		movs	r2, #3
- 1107 0360 2900     		movs	r1, r5
- 1108 0362 FFF7FEFF 		bl	HAL_SPI_Transmit
- 1109              	.LVL123:
- 1110 0366 0500     		movs	r5, r0
- 1111              	.LVL124:
- 213:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
- 1112              		.loc 1 213 5 is_stmt 1 view .LVU286
- 1113              		.loc 1 213 17 is_stmt 0 view .LVU287
- 1114 0368 0121     		movs	r1, #1
- 1115 036a 2000     		movs	r0, r4
- 1116 036c FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
- 1117              	.LVL125:
- 214:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(500));//两次保存400ms以上
- 1118              		.loc 1 214 5 is_stmt 1 view .LVU288
- 1119              		.loc 1 214 15 is_stmt 0 view .LVU289
- 1120 0370 FA20     		movs	r0, #250
- 1121 0372 4000     		lsls	r0, r0, #1
- 1122 0374 FFF7FEFF 		bl	vTaskDelay
-ARM GAS  /tmp/cc5qDhQe.s 			page 26
-
-
- 1123              	.LVL126:
- 215:My_Top/System/kth_read.cpp ****     return status;
- 1124              		.loc 1 215 5 is_stmt 1 view .LVU290
- 216:My_Top/System/kth_read.cpp **** }
- 1125              		.loc 1 216 1 is_stmt 0 view .LVU291
- 1126 0378 2800     		movs	r0, r5
- 1127 037a 03B0     		add	sp, sp, #12
- 1128              		@ sp needed
- 1129              	.LVL127:
- 1130              	.LVL128:
- 1131              		.loc 1 216 1 view .LVU292
- 1132 037c 30BD     		pop	{r4, r5, pc}
- 1133              	.L55:
- 1134 037e C046     		.align	2
- 1135              	.L54:
- 1136 0380 00000000 		.word	.LC0
- 1137              		.cfi_endproc
- 1138              	.LFE1449:
- 1140              		.align	1
- 1141              		.global	_ZN7KTH711112KTH7111_InitEb
- 1142              		.syntax unified
- 1143              		.code	16
- 1144              		.thumb_func
- 1146              	_ZN7KTH711112KTH7111_InitEb:
- 1147              	.LVL129:
- 1148              	.LFB1438:
-   5:My_Top/System/kth_read.cpp ****     bool write_ok = false;
- 1149              		.loc 1 5 1 is_stmt 1 view -0
- 1150              		.cfi_startproc
- 1151              		@ args = 0, pretend = 0, frame = 0
- 1152              		@ frame_needed = 0, uses_anonymous_args = 0
-   5:My_Top/System/kth_read.cpp ****     bool write_ok = false;
- 1153              		.loc 1 5 1 is_stmt 0 view .LVU294
- 1154 0384 70B5     		push	{r4, r5, r6, lr}
- 1155              		.cfi_def_cfa_offset 16
- 1156              		.cfi_offset 4, -16
- 1157              		.cfi_offset 5, -12
- 1158              		.cfi_offset 6, -8
- 1159              		.cfi_offset 14, -4
- 1160 0386 0400     		movs	r4, r0
+ 1077 0342 0500     		movs	r5, r0
+ 1078              	.LVL117:
+ 214:My_Top/System/kth_read.cpp ****     KTH_CS_Enble(true);
+ 1079              		.loc 1 214 5 is_stmt 1 view .LVU275
+ 1080              		.loc 1 214 17 is_stmt 0 view .LVU276
+ 1081 0344 0121     		movs	r1, #1
+ 1082 0346 2000     		movs	r0, r4
+ 1083 0348 FFF7FEFF 		bl	_ZN7KTH711112KTH_CS_EnbleEb
+ 1084              	.LVL118:
+ 215:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(500));//两次保存400ms以上
+ 1085              		.loc 1 215 5 is_stmt 1 view .LVU277
+ 1086              		.loc 1 215 15 is_stmt 0 view .LVU278
+ 1087 034c FA20     		movs	r0, #250
+ 1088 034e 4000     		lsls	r0, r0, #1
+ 1089 0350 FFF7FEFF 		bl	vTaskDelay
+ 1090              	.LVL119:
+ 216:My_Top/System/kth_read.cpp ****     return status;
+ 1091              		.loc 1 216 5 is_stmt 1 view .LVU279
+ 217:My_Top/System/kth_read.cpp **** }
+ 1092              		.loc 1 217 1 is_stmt 0 view .LVU280
+ 1093 0354 2800     		movs	r0, r5
+ 1094 0356 03B0     		add	sp, sp, #12
+ 1095              		@ sp needed
+ 1096              	.LVL120:
+ 1097              	.LVL121:
+ 1098              		.loc 1 217 1 view .LVU281
+ 1099 0358 30BD     		pop	{r4, r5, pc}
+ 1100              	.L51:
+ 1101 035a C046     		.align	2
+ 1102              	.L50:
+ 1103 035c 00000000 		.word	.LC0
+ 1104              		.cfi_endproc
+ 1105              	.LFE1449:
+ 1107              		.align	1
+ 1108              		.global	_ZN7KTH711112KTH7111_InitEb
+ 1109              		.syntax unified
+ 1110              		.code	16
+ 1111              		.thumb_func
+ 1113              	_ZN7KTH711112KTH7111_InitEb:
+ 1114              	.LVL122:
+ 1115              	.LFB1438:
+   5:My_Top/System/kth_read.cpp ****     uint16_t angle_zero = 0;
+ 1116              		.loc 1 5 1 is_stmt 1 view -0
+ 1117              		.cfi_startproc
+ 1118              		@ args = 0, pretend = 0, frame = 0
+ 1119              		@ frame_needed = 0, uses_anonymous_args = 0
+   5:My_Top/System/kth_read.cpp ****     uint16_t angle_zero = 0;
+ 1120              		.loc 1 5 1 is_stmt 0 view .LVU283
+ 1121 0360 70B5     		push	{r4, r5, r6, lr}
+ 1122              		.cfi_def_cfa_offset 16
+ 1123              		.cfi_offset 4, -16
+ 1124              		.cfi_offset 5, -12
+ 1125              		.cfi_offset 6, -8
+ 1126              		.cfi_offset 14, -4
+ 1127 0362 0400     		movs	r4, r0
    6:My_Top/System/kth_read.cpp ****     uint16_t angle_zero = 0;
- 1161              		.loc 1 6 5 is_stmt 1 view .LVU295
- 1162              	.LVL130:
+ 1128              		.loc 1 6 5 is_stmt 1 view .LVU284
+ARM GAS  /tmp/ccVpkkof.s 			page 26
+
+
+ 1129              	.LVL123:
    7:My_Top/System/kth_read.cpp ****     encoder_dir = fx;
- 1163              		.loc 1 7 5 view .LVU296
+ 1130              		.loc 1 7 5 view .LVU285
    8:My_Top/System/kth_read.cpp ****     write_ok =KTH7111_RotationDirection(fx); //写入编码器角度方向
- 1164              		.loc 1 8 5 view .LVU297
+ 1131              		.loc 1 8 5 view .LVU286
    8:My_Top/System/kth_read.cpp ****     write_ok =KTH7111_RotationDirection(fx); //写入编码器角度方向
- 1165              		.loc 1 8 17 is_stmt 0 view .LVU298
- 1166 0388 0173     		strb	r1, [r0, #12]
+ 1132              		.loc 1 8 17 is_stmt 0 view .LVU287
+ 1133 0364 0173     		strb	r1, [r0, #12]
    9:My_Top/System/kth_read.cpp ****     // KTH7111_WriteReg(0x00, 0x00); //设置零点
- 1167              		.loc 1 9 5 is_stmt 1 view .LVU299
+ 1134              		.loc 1 9 5 is_stmt 1 view .LVU288
    9:My_Top/System/kth_read.cpp ****     // KTH7111_WriteReg(0x00, 0x00); //设置零点
- 1168              		.loc 1 9 40 is_stmt 0 view .LVU300
- 1169 038a FFF7FEFF 		bl	_ZN7KTH711125KTH7111_RotationDirectionEb
- 1170              	.LVL131:
+ 1135              		.loc 1 9 40 is_stmt 0 view .LVU289
+ 1136 0366 FFF7FEFF 		bl	_ZN7KTH711125KTH7111_RotationDirectionEb
+ 1137              	.LVL124:
    9:My_Top/System/kth_read.cpp ****     // KTH7111_WriteReg(0x00, 0x00); //设置零点
-ARM GAS  /tmp/cc5qDhQe.s 			page 27
-
-
- 1171              		.loc 1 9 40 view .LVU301
- 1172 038e 0500     		movs	r5, r0
- 1173              	.LVL132:
+ 1138              		.loc 1 9 40 view .LVU290
+ 1139 036a 0500     		movs	r5, r0
+ 1140              	.LVL125:
   12:My_Top/System/kth_read.cpp **** 
- 1174              		.loc 1 12 5 is_stmt 1 view .LVU302
+ 1141              		.loc 1 12 5 is_stmt 1 view .LVU291
   12:My_Top/System/kth_read.cpp **** 
- 1175              		.loc 1 12 21 is_stmt 0 view .LVU303
- 1176 0390 8822     		movs	r2, #136
- 1177 0392 0D21     		movs	r1, #13
- 1178 0394 2000     		movs	r0, r4
- 1179 0396 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1180              	.LVL133:
+ 1142              		.loc 1 12 21 is_stmt 0 view .LVU292
+ 1143 036c 8822     		movs	r2, #136
+ 1144 036e 0D21     		movs	r1, #13
+ 1145 0370 2000     		movs	r0, r4
+ 1146 0372 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1147              	.LVL126:
   14:My_Top/System/kth_read.cpp ****     return write_ok;
- 1181              		.loc 1 14 5 is_stmt 1 view .LVU304
+ 1148              		.loc 1 14 5 is_stmt 1 view .LVU293
   14:My_Top/System/kth_read.cpp ****     return write_ok;
- 1182              		.loc 1 14 20 is_stmt 0 view .LVU305
- 1183 039a 2000     		movs	r0, r4
- 1184 039c FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
- 1185              	.LVL134:
+ 1149              		.loc 1 14 20 is_stmt 0 view .LVU294
+ 1150 0376 2000     		movs	r0, r4
+ 1151 0378 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
+ 1152              	.LVL127:
   15:My_Top/System/kth_read.cpp **** }
- 1186              		.loc 1 15 5 is_stmt 1 view .LVU306
+ 1153              		.loc 1 15 5 is_stmt 1 view .LVU295
   16:My_Top/System/kth_read.cpp **** 
- 1187              		.loc 1 16 1 is_stmt 0 view .LVU307
- 1188 03a0 2800     		movs	r0, r5
- 1189              		@ sp needed
- 1190              	.LVL135:
- 1191              	.LVL136:
+ 1154              		.loc 1 16 1 is_stmt 0 view .LVU296
+ 1155 037c 2800     		movs	r0, r5
+ 1156              		@ sp needed
+ 1157              	.LVL128:
+ 1158              	.LVL129:
   16:My_Top/System/kth_read.cpp **** 
- 1192              		.loc 1 16 1 view .LVU308
- 1193 03a2 70BD     		pop	{r4, r5, r6, pc}
- 1194              		.cfi_endproc
- 1195              	.LFE1438:
- 1197              		.align	1
- 1198              		.global	_ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h
- 1199              		.syntax unified
- 1200              		.code	16
- 1201              		.thumb_func
- 1203              	_ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h:
- 1204              	.LVL137:
- 1205              	.LFB1450:
- 217:My_Top/System/kth_read.cpp **** 
+ 1159              		.loc 1 16 1 view .LVU297
+ 1160 037e 70BD     		pop	{r4, r5, r6, pc}
+ 1161              		.cfi_endproc
+ 1162              	.LFE1438:
+ 1164              		.align	1
+ 1165              		.global	_ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h
+ 1166              		.syntax unified
+ 1167              		.code	16
+ 1168              		.thumb_func
+ 1170              	_ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h:
+ 1171              	.LVL130:
+ 1172              	.LFB1450:
  218:My_Top/System/kth_read.cpp **** 
  219:My_Top/System/kth_read.cpp **** 
- 220:My_Top/System/kth_read.cpp **** // uint8_t add[]= {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0a,0x0d,0x10,0x11,0x12,0x16,
- 221:My_Top/System/kth_read.cpp **** // uint8_t data_tx[]= {0x00,0x00,0x00,0xff,0x03,0x00,0x07,0x00,0x00,0xa5,0xa5,0x88,0x00,0xaC,0x02,0
- 222:My_Top/System/kth_read.cpp **** 
- 223:My_Top/System/kth_read.cpp **** // uint8_t len = sizeof(data_tx)/sizeof(data_tx[0]);
- 224:My_Top/System/kth_read.cpp **** // uint8_t data_rx[20];
- 225:My_Top/System/kth_read.cpp **** 
+ARM GAS  /tmp/ccVpkkof.s 			page 27
+
+
+ 220:My_Top/System/kth_read.cpp **** 
+ 221:My_Top/System/kth_read.cpp **** // uint8_t add[]= {0x00,0x01,0x02,0x03,0x04,0x05,0x06,0x07,0x08,0x09,0x0a,0x0d,0x10,0x11,0x12,0x16,
+ 222:My_Top/System/kth_read.cpp **** // uint8_t data_tx[]= {0x00,0x00,0x00,0xff,0x03,0x00,0x07,0x00,0x00,0xa5,0xa5,0x88,0x00,0xaC,0x02,0
+ 223:My_Top/System/kth_read.cpp **** 
+ 224:My_Top/System/kth_read.cpp **** // uint8_t len = sizeof(data_tx)/sizeof(data_tx[0]);
+ 225:My_Top/System/kth_read.cpp **** // uint8_t data_rx[20];
  226:My_Top/System/kth_read.cpp **** 
- 227:My_Top/System/kth_read.cpp **** /* ---------------------- 读多个寄存器 ---------------------- */
- 228:My_Top/System/kth_read.cpp **** void KTH7111::KTH7111_Read_MoreRegs(uint8_t *add, uint8_t *data_rx, uint8_t len)
- 229:My_Top/System/kth_read.cpp **** {
- 1206              		.loc 1 229 1 is_stmt 1 view -0
- 1207              		.cfi_startproc
- 1208              		@ args = 0, pretend = 0, frame = 0
- 1209              		@ frame_needed = 0, uses_anonymous_args = 0
-ARM GAS  /tmp/cc5qDhQe.s 			page 28
+ 227:My_Top/System/kth_read.cpp **** 
+ 228:My_Top/System/kth_read.cpp **** /* ---------------------- 读多个寄存器 ---------------------- */
+ 229:My_Top/System/kth_read.cpp **** void KTH7111::KTH7111_Read_MoreRegs(uint8_t *add, uint8_t *data_rx, uint8_t len)
+ 230:My_Top/System/kth_read.cpp **** {
+ 1173              		.loc 1 230 1 is_stmt 1 view -0
+ 1174              		.cfi_startproc
+ 1175              		@ args = 0, pretend = 0, frame = 0
+ 1176              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1177              		.loc 1 230 1 is_stmt 0 view .LVU299
+ 1178 0380 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1179              		.cfi_def_cfa_offset 24
+ 1180              		.cfi_offset 3, -24
+ 1181              		.cfi_offset 4, -20
+ 1182              		.cfi_offset 5, -16
+ 1183              		.cfi_offset 6, -12
+ 1184              		.cfi_offset 7, -8
+ 1185              		.cfi_offset 14, -4
+ 1186 0382 CE46     		mov	lr, r9
+ 1187 0384 4746     		mov	r7, r8
+ 1188 0386 80B5     		push	{r7, lr}
+ 1189              		.cfi_def_cfa_offset 32
+ 1190              		.cfi_offset 8, -32
+ 1191              		.cfi_offset 9, -28
+ 1192 0388 8146     		mov	r9, r0
+ 1193 038a 8846     		mov	r8, r1
+ 1194 038c 1700     		movs	r7, r2
+ 1195 038e 1E00     		movs	r6, r3
+ 231:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1196              		.loc 1 231 5 is_stmt 1 view .LVU300
+ 1197              	.LVL131:
+ 1198              	.LBB15:
+ 1199              		.loc 1 231 18 is_stmt 0 view .LVU301
+ 1200 0390 0024     		movs	r4, #0
+ 1201              		.loc 1 231 5 view .LVU302
+ 1202 0392 08E0     		b	.L54
+ 1203              	.LVL132:
+ 1204              	.L55:
+ 232:My_Top/System/kth_read.cpp ****     {
+ 233:My_Top/System/kth_read.cpp ****         data_rx[i] = KTH7111_ReadReg(add[i]);
+ 1205              		.loc 1 233 9 is_stmt 1 view .LVU303
+ 1206              		.loc 1 233 18 is_stmt 0 view .LVU304
+ 1207 0394 3D19     		adds	r5, r7, r4
+ 1208              		.loc 1 233 37 view .LVU305
+ 1209 0396 4346     		mov	r3, r8
+ 1210 0398 195D     		ldrb	r1, [r3, r4]
+ 1211 039a 4846     		mov	r0, r9
+ 1212 039c FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1213              	.LVL133:
+ 1214              		.loc 1 233 20 discriminator 1 view .LVU306
+ 1215 03a0 2870     		strb	r0, [r5]
+ARM GAS  /tmp/ccVpkkof.s 			page 28
 
 
- 1210              		.loc 1 229 1 is_stmt 0 view .LVU310
- 1211 03a4 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1212              		.cfi_def_cfa_offset 24
- 1213              		.cfi_offset 3, -24
- 1214              		.cfi_offset 4, -20
- 1215              		.cfi_offset 5, -16
- 1216              		.cfi_offset 6, -12
- 1217              		.cfi_offset 7, -8
- 1218              		.cfi_offset 14, -4
- 1219 03a6 CE46     		mov	lr, r9
- 1220 03a8 4746     		mov	r7, r8
- 1221 03aa 80B5     		push	{r7, lr}
- 1222              		.cfi_def_cfa_offset 32
- 1223              		.cfi_offset 8, -32
- 1224              		.cfi_offset 9, -28
- 1225 03ac 8146     		mov	r9, r0
- 1226 03ae 8846     		mov	r8, r1
- 1227 03b0 1700     		movs	r7, r2
- 1228 03b2 1E00     		movs	r6, r3
- 230:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1229              		.loc 1 230 5 is_stmt 1 view .LVU311
- 1230              	.LVL138:
- 1231              	.LBB15:
- 1232              		.loc 1 230 18 is_stmt 0 view .LVU312
- 1233 03b4 0024     		movs	r4, #0
- 1234              		.loc 1 230 5 view .LVU313
- 1235 03b6 08E0     		b	.L58
- 1236              	.LVL139:
- 1237              	.L59:
- 231:My_Top/System/kth_read.cpp ****     {
- 232:My_Top/System/kth_read.cpp ****         data_rx[i] = KTH7111_ReadReg(add[i]);
- 1238              		.loc 1 232 9 is_stmt 1 view .LVU314
- 1239              		.loc 1 232 18 is_stmt 0 view .LVU315
- 1240 03b8 3D19     		adds	r5, r7, r4
- 1241              		.loc 1 232 37 view .LVU316
- 1242 03ba 4346     		mov	r3, r8
- 1243 03bc 195D     		ldrb	r1, [r3, r4]
- 1244 03be 4846     		mov	r0, r9
- 1245 03c0 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1246              	.LVL140:
- 1247              		.loc 1 232 20 discriminator 1 view .LVU317
- 1248 03c4 2870     		strb	r0, [r5]
- 230:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1249              		.loc 1 230 5 is_stmt 1 discriminator 3 view .LVU318
- 1250 03c6 0134     		adds	r4, r4, #1
- 1251              	.LVL141:
- 230:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1252              		.loc 1 230 5 is_stmt 0 discriminator 3 view .LVU319
- 1253 03c8 E4B2     		uxtb	r4, r4
- 1254              	.LVL142:
- 1255              	.L58:
- 230:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1256              		.loc 1 230 27 is_stmt 1 discriminator 1 view .LVU320
- 1257 03ca B442     		cmp	r4, r6
- 1258 03cc F4D3     		bcc	.L59
- 1259              	.LBE15:
- 233:My_Top/System/kth_read.cpp ****     }
-ARM GAS  /tmp/cc5qDhQe.s 			page 29
+ 231:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1216              		.loc 1 231 5 is_stmt 1 discriminator 3 view .LVU307
+ 1217 03a2 0134     		adds	r4, r4, #1
+ 1218              	.LVL134:
+ 231:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1219              		.loc 1 231 5 is_stmt 0 discriminator 3 view .LVU308
+ 1220 03a4 E4B2     		uxtb	r4, r4
+ 1221              	.LVL135:
+ 1222              	.L54:
+ 231:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1223              		.loc 1 231 27 is_stmt 1 discriminator 1 view .LVU309
+ 1224 03a6 B442     		cmp	r4, r6
+ 1225 03a8 F4D3     		bcc	.L55
+ 1226              	.LBE15:
+ 234:My_Top/System/kth_read.cpp ****     }
+ 235:My_Top/System/kth_read.cpp **** }
+ 1227              		.loc 1 235 1 is_stmt 0 view .LVU310
+ 1228              		@ sp needed
+ 1229              	.LVL136:
+ 1230              	.LVL137:
+ 1231              	.LVL138:
+ 1232              	.LVL139:
+ 1233              	.LVL140:
+ 1234              		.loc 1 235 1 view .LVU311
+ 1235 03aa C0BC     		pop	{r6, r7}
+ 1236 03ac B946     		mov	r9, r7
+ 1237 03ae B046     		mov	r8, r6
+ 1238 03b0 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1239              		.cfi_endproc
+ 1240              	.LFE1450:
+ 1242              		.align	1
+ 1243              		.global	_ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb
+ 1244              		.syntax unified
+ 1245              		.code	16
+ 1246              		.thumb_func
+ 1248              	_ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb:
+ 1249              	.LVL141:
+ 1250              	.LFB1451:
+ 236:My_Top/System/kth_read.cpp **** 
+ 237:My_Top/System/kth_read.cpp **** /* ---------------------- 写多个寄存器 是否保存---------------------- */
+ 238:My_Top/System/kth_read.cpp **** void KTH7111::KTH7111_Write_MoreRegs(uint8_t *add, uint8_t *data_tx, uint8_t len,bool save)
+ 239:My_Top/System/kth_read.cpp **** {
+ 1251              		.loc 1 239 1 is_stmt 1 view -0
+ 1252              		.cfi_startproc
+ 1253              		@ args = 4, pretend = 0, frame = 0
+ 1254              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1255              		.loc 1 239 1 is_stmt 0 view .LVU313
+ 1256 03b2 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1257              		.cfi_def_cfa_offset 24
+ 1258              		.cfi_offset 3, -24
+ 1259              		.cfi_offset 4, -20
+ 1260              		.cfi_offset 5, -16
+ 1261              		.cfi_offset 6, -12
+ 1262              		.cfi_offset 7, -8
+ 1263              		.cfi_offset 14, -4
+ 1264 03b4 CE46     		mov	lr, r9
+ 1265 03b6 4746     		mov	r7, r8
+ARM GAS  /tmp/ccVpkkof.s 			page 29
 
 
- 234:My_Top/System/kth_read.cpp **** }
- 1260              		.loc 1 234 1 is_stmt 0 view .LVU321
- 1261              		@ sp needed
- 1262              	.LVL143:
- 1263              	.LVL144:
- 1264              	.LVL145:
- 1265              	.LVL146:
- 1266              	.LVL147:
- 1267              		.loc 1 234 1 view .LVU322
- 1268 03ce C0BC     		pop	{r6, r7}
- 1269 03d0 B946     		mov	r9, r7
- 1270 03d2 B046     		mov	r8, r6
- 1271 03d4 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1272              		.cfi_endproc
- 1273              	.LFE1450:
- 1275              		.align	1
- 1276              		.global	_ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb
- 1277              		.syntax unified
- 1278              		.code	16
- 1279              		.thumb_func
- 1281              	_ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb:
- 1282              	.LVL148:
- 1283              	.LFB1451:
- 235:My_Top/System/kth_read.cpp **** 
- 236:My_Top/System/kth_read.cpp **** /* ---------------------- 写多个寄存器 是否保存---------------------- */
- 237:My_Top/System/kth_read.cpp **** void KTH7111::KTH7111_Write_MoreRegs(uint8_t *add, uint8_t *data_tx, uint8_t len,bool save)
- 238:My_Top/System/kth_read.cpp **** {
- 1284              		.loc 1 238 1 is_stmt 1 view -0
- 1285              		.cfi_startproc
- 1286              		@ args = 4, pretend = 0, frame = 0
- 1287              		@ frame_needed = 0, uses_anonymous_args = 0
- 1288              		.loc 1 238 1 is_stmt 0 view .LVU324
- 1289 03d6 F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1290              		.cfi_def_cfa_offset 24
- 1291              		.cfi_offset 3, -24
- 1292              		.cfi_offset 4, -20
- 1293              		.cfi_offset 5, -16
- 1294              		.cfi_offset 6, -12
- 1295              		.cfi_offset 7, -8
- 1296              		.cfi_offset 14, -4
- 1297 03d8 CE46     		mov	lr, r9
- 1298 03da 4746     		mov	r7, r8
- 1299 03dc 80B5     		push	{r7, lr}
- 1300              		.cfi_def_cfa_offset 32
- 1301              		.cfi_offset 8, -32
- 1302              		.cfi_offset 9, -28
- 1303 03de 0600     		movs	r6, r0
- 1304 03e0 8846     		mov	r8, r1
- 1305 03e2 1700     		movs	r7, r2
- 1306 03e4 1D00     		movs	r5, r3
- 1307 03e6 08AB     		add	r3, sp, #32
- 1308              	.LVL149:
- 1309              		.loc 1 238 1 view .LVU325
- 1310 03e8 1B78     		ldrb	r3, [r3]
- 1311              	.LVL150:
- 1312              		.loc 1 238 1 view .LVU326
- 1313 03ea 9946     		mov	r9, r3
-ARM GAS  /tmp/cc5qDhQe.s 			page 30
+ 1266 03b8 80B5     		push	{r7, lr}
+ 1267              		.cfi_def_cfa_offset 32
+ 1268              		.cfi_offset 8, -32
+ 1269              		.cfi_offset 9, -28
+ 1270 03ba 0600     		movs	r6, r0
+ 1271 03bc 8846     		mov	r8, r1
+ 1272 03be 1700     		movs	r7, r2
+ 1273 03c0 1D00     		movs	r5, r3
+ 1274 03c2 08AB     		add	r3, sp, #32
+ 1275              	.LVL142:
+ 1276              		.loc 1 239 1 view .LVU314
+ 1277 03c4 1B78     		ldrb	r3, [r3]
+ 1278              	.LVL143:
+ 1279              		.loc 1 239 1 view .LVU315
+ 1280 03c6 9946     		mov	r9, r3
+ 240:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1281              		.loc 1 240 5 is_stmt 1 view .LVU316
+ 1282              	.LVL144:
+ 1283              	.LBB16:
+ 1284              		.loc 1 240 18 is_stmt 0 view .LVU317
+ 1285 03c8 0024     		movs	r4, #0
+ 1286              		.loc 1 240 5 view .LVU318
+ 1287 03ca 07E0     		b	.L57
+ 1288              	.LVL145:
+ 1289              	.L58:
+ 241:My_Top/System/kth_read.cpp ****     {
+ 242:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(add[i], data_tx[i]);
+ 1290              		.loc 1 242 9 is_stmt 1 view .LVU319
+ 1291              		.loc 1 242 25 is_stmt 0 view .LVU320
+ 1292 03cc 3A5D     		ldrb	r2, [r7, r4]
+ 1293 03ce 4346     		mov	r3, r8
+ 1294 03d0 195D     		ldrb	r1, [r3, r4]
+ 1295 03d2 3000     		movs	r0, r6
+ 1296 03d4 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1297              	.LVL146:
+ 240:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1298              		.loc 1 240 5 is_stmt 1 discriminator 3 view .LVU321
+ 1299 03d8 0134     		adds	r4, r4, #1
+ 1300              	.LVL147:
+ 240:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1301              		.loc 1 240 5 is_stmt 0 discriminator 3 view .LVU322
+ 1302 03da E4B2     		uxtb	r4, r4
+ 1303              	.LVL148:
+ 1304              	.L57:
+ 240:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
+ 1305              		.loc 1 240 27 is_stmt 1 discriminator 1 view .LVU323
+ 1306 03dc AC42     		cmp	r4, r5
+ 1307 03de F5D3     		bcc	.L58
+ 1308              	.LBE16:
+ 243:My_Top/System/kth_read.cpp ****     }
+ 244:My_Top/System/kth_read.cpp ****     if (save == true)
+ 1309              		.loc 1 244 5 view .LVU324
+ 1310 03e0 4B46     		mov	r3, r9
+ 1311 03e2 002B     		cmp	r3, #0
+ 1312 03e4 03D1     		bne	.L60
+ 1313              	.L56:
+ 245:My_Top/System/kth_read.cpp ****     {
+ARM GAS  /tmp/ccVpkkof.s 			page 30
 
 
- 239:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1314              		.loc 1 239 5 is_stmt 1 view .LVU327
- 1315              	.LVL151:
- 1316              	.LBB16:
- 1317              		.loc 1 239 18 is_stmt 0 view .LVU328
- 1318 03ec 0024     		movs	r4, #0
- 1319              		.loc 1 239 5 view .LVU329
- 1320 03ee 07E0     		b	.L61
- 1321              	.LVL152:
- 1322              	.L62:
- 240:My_Top/System/kth_read.cpp ****     {
- 241:My_Top/System/kth_read.cpp ****         KTH7111_WriteReg(add[i], data_tx[i]);
- 1323              		.loc 1 241 9 is_stmt 1 view .LVU330
- 1324              		.loc 1 241 25 is_stmt 0 view .LVU331
- 1325 03f0 3A5D     		ldrb	r2, [r7, r4]
- 1326 03f2 4346     		mov	r3, r8
- 1327 03f4 195D     		ldrb	r1, [r3, r4]
- 1328 03f6 3000     		movs	r0, r6
- 1329 03f8 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1330              	.LVL153:
- 239:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1331              		.loc 1 239 5 is_stmt 1 discriminator 3 view .LVU332
- 1332 03fc 0134     		adds	r4, r4, #1
- 1333              	.LVL154:
- 239:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1334              		.loc 1 239 5 is_stmt 0 discriminator 3 view .LVU333
- 1335 03fe E4B2     		uxtb	r4, r4
- 1336              	.LVL155:
- 1337              	.L61:
- 239:My_Top/System/kth_read.cpp ****     for (uint8_t i = 0; i < len; i++)
- 1338              		.loc 1 239 27 is_stmt 1 discriminator 1 view .LVU334
- 1339 0400 AC42     		cmp	r4, r5
- 1340 0402 F5D3     		bcc	.L62
- 1341              	.LBE16:
- 242:My_Top/System/kth_read.cpp ****     }
- 243:My_Top/System/kth_read.cpp ****     if (save == true)
- 1342              		.loc 1 243 5 view .LVU335
- 1343 0404 4B46     		mov	r3, r9
- 1344 0406 002B     		cmp	r3, #0
- 1345 0408 03D1     		bne	.L64
- 1346              	.L60:
- 244:My_Top/System/kth_read.cpp ****     {
- 245:My_Top/System/kth_read.cpp ****         KTH7111_BurnMTP();
+ 246:My_Top/System/kth_read.cpp ****         KTH7111_BurnMTP();
+ 247:My_Top/System/kth_read.cpp ****     }
+ 248:My_Top/System/kth_read.cpp ****     
+ 249:My_Top/System/kth_read.cpp **** }
+ 1314              		.loc 1 249 1 is_stmt 0 view .LVU325
+ 1315              		@ sp needed
+ 1316              	.LVL149:
+ 1317              	.LVL150:
+ 1318              	.LVL151:
+ 1319              	.LVL152:
+ 1320              	.LVL153:
+ 1321              		.loc 1 249 1 view .LVU326
+ 1322 03e6 C0BC     		pop	{r6, r7}
+ 1323 03e8 B946     		mov	r9, r7
+ 1324 03ea B046     		mov	r8, r6
+ 1325 03ec F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1326              	.LVL154:
+ 1327              	.L60:
  246:My_Top/System/kth_read.cpp ****     }
- 247:My_Top/System/kth_read.cpp ****     
- 248:My_Top/System/kth_read.cpp **** }
- 1347              		.loc 1 248 1 is_stmt 0 view .LVU336
- 1348              		@ sp needed
- 1349              	.LVL156:
- 1350              	.LVL157:
- 1351              	.LVL158:
- 1352              	.LVL159:
- 1353              	.LVL160:
- 1354              		.loc 1 248 1 view .LVU337
- 1355 040a C0BC     		pop	{r6, r7}
- 1356 040c B946     		mov	r9, r7
- 1357 040e B046     		mov	r8, r6
-ARM GAS  /tmp/cc5qDhQe.s 			page 31
-
-
- 1358 0410 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1359              	.LVL161:
- 1360              	.L64:
- 245:My_Top/System/kth_read.cpp ****     }
- 1361              		.loc 1 245 9 is_stmt 1 view .LVU338
- 245:My_Top/System/kth_read.cpp ****     }
- 1362              		.loc 1 245 24 is_stmt 0 view .LVU339
- 1363 0412 3000     		movs	r0, r6
- 1364 0414 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
- 1365              	.LVL162:
- 1366              		.loc 1 248 1 view .LVU340
- 1367 0418 F7E7     		b	.L60
- 1368              		.cfi_endproc
- 1369              	.LFE1451:
- 1371              		.align	1
- 1372              		.global	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv
- 1373              		.syntax unified
- 1374              		.code	16
- 1375              		.thumb_func
- 1377              	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv:
- 1378              	.LVL163:
- 1379              	.LFB1452:
- 249:My_Top/System/kth_read.cpp **** 
+ 1328              		.loc 1 246 9 is_stmt 1 view .LVU327
+ 246:My_Top/System/kth_read.cpp ****     }
+ 1329              		.loc 1 246 24 is_stmt 0 view .LVU328
+ 1330 03ee 3000     		movs	r0, r6
+ 1331 03f0 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
+ 1332              	.LVL155:
+ 1333              		.loc 1 249 1 view .LVU329
+ 1334 03f4 F7E7     		b	.L56
+ 1335              		.cfi_endproc
+ 1336              	.LFE1451:
+ 1338              		.align	1
+ 1339              		.global	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv
+ 1340              		.syntax unified
+ 1341              		.code	16
+ 1342              		.thumb_func
+ 1344              	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv:
+ 1345              	.LVL156:
+ 1346              	.LFB1452:
  250:My_Top/System/kth_read.cpp **** 
- 251:My_Top/System/kth_read.cpp **** /* ---------------------- 寄存器方式校准编码器 ---------------------- */
- 252:My_Top/System/kth_read.cpp **** uint8_t KTH7111::KTH7111_Get_ANLC_Status(void) //获取校准状态 0：未校准 1：校准中 2�
- 253:My_Top/System/kth_read.cpp **** {
- 1380              		.loc 1 253 1 is_stmt 1 view -0
- 1381              		.cfi_startproc
- 1382              		@ args = 0, pretend = 0, frame = 0
- 1383              		@ frame_needed = 0, uses_anonymous_args = 0
- 1384              		.loc 1 253 1 is_stmt 0 view .LVU342
- 1385 041a 10B5     		push	{r4, lr}
- 1386              		.cfi_def_cfa_offset 8
- 1387              		.cfi_offset 4, -8
- 1388              		.cfi_offset 14, -4
- 254:My_Top/System/kth_read.cpp ****     return (KTH7111_ReadReg(0x72) >> 4) & 0x03;
- 1389              		.loc 1 254 5 is_stmt 1 view .LVU343
- 1390              		.loc 1 254 28 is_stmt 0 view .LVU344
- 1391 041c 7221     		movs	r1, #114
- 1392 041e FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1393              	.LVL164:
- 1394              		.loc 1 254 35 discriminator 1 view .LVU345
- 1395 0422 0009     		lsrs	r0, r0, #4
- 1396              		.loc 1 254 43 discriminator 1 view .LVU346
- 1397 0424 0323     		movs	r3, #3
- 1398 0426 1840     		ands	r0, r3
- 255:My_Top/System/kth_read.cpp **** }
- 1399              		.loc 1 255 1 view .LVU347
- 1400              		@ sp needed
- 1401 0428 10BD     		pop	{r4, pc}
- 1402              		.cfi_endproc
- 1403              	.LFE1452:
- 1405              		.align	1
- 1406              		.global	_ZN7KTH711124KTH7111_ANLC_CalibrationEm
- 1407              		.syntax unified
- 1408              		.code	16
-ARM GAS  /tmp/cc5qDhQe.s 			page 32
+ 251:My_Top/System/kth_read.cpp **** 
+ 252:My_Top/System/kth_read.cpp **** /* ---------------------- 寄存器方式校准编码器 ---------------------- */
+ 253:My_Top/System/kth_read.cpp **** uint8_t KTH7111::KTH7111_Get_ANLC_Status(void) //获取校准状态 0：未校准 1：校准中 2�
+ 254:My_Top/System/kth_read.cpp **** {
+ 1347              		.loc 1 254 1 is_stmt 1 view -0
+ 1348              		.cfi_startproc
+ 1349              		@ args = 0, pretend = 0, frame = 0
+ 1350              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1351              		.loc 1 254 1 is_stmt 0 view .LVU331
+ 1352 03f6 10B5     		push	{r4, lr}
+ 1353              		.cfi_def_cfa_offset 8
+ 1354              		.cfi_offset 4, -8
+ 1355              		.cfi_offset 14, -4
+ 255:My_Top/System/kth_read.cpp ****     return (KTH7111_ReadReg(0x72) >> 4) & 0x03;
+ 1356              		.loc 1 255 5 is_stmt 1 view .LVU332
+ 1357              		.loc 1 255 28 is_stmt 0 view .LVU333
+ 1358 03f8 7221     		movs	r1, #114
+ 1359 03fa FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1360              	.LVL157:
+ARM GAS  /tmp/ccVpkkof.s 			page 31
 
 
- 1409              		.thumb_func
- 1411              	_ZN7KTH711124KTH7111_ANLC_CalibrationEm:
- 1412              	.LVL165:
- 1413              	.LFB1453:
- 256:My_Top/System/kth_read.cpp **** 
+ 1361              		.loc 1 255 35 discriminator 1 view .LVU334
+ 1362 03fe 0009     		lsrs	r0, r0, #4
+ 1363              		.loc 1 255 43 discriminator 1 view .LVU335
+ 1364 0400 0323     		movs	r3, #3
+ 1365 0402 1840     		ands	r0, r3
+ 256:My_Top/System/kth_read.cpp **** }
+ 1366              		.loc 1 256 1 view .LVU336
+ 1367              		@ sp needed
+ 1368 0404 10BD     		pop	{r4, pc}
+ 1369              		.cfi_endproc
+ 1370              	.LFE1452:
+ 1372              		.align	1
+ 1373              		.global	_ZN7KTH711124KTH7111_ANLC_CalibrationEm
+ 1374              		.syntax unified
+ 1375              		.code	16
+ 1376              		.thumb_func
+ 1378              	_ZN7KTH711124KTH7111_ANLC_CalibrationEm:
+ 1379              	.LVL158:
+ 1380              	.LFB1453:
  257:My_Top/System/kth_read.cpp **** 
- 258:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_ANLC_Calibration(uint32_t timeout_s)
- 259:My_Top/System/kth_read.cpp **** {
- 1414              		.loc 1 259 1 is_stmt 1 view -0
- 1415              		.cfi_startproc
- 1416              		@ args = 0, pretend = 0, frame = 0
- 1417              		@ frame_needed = 0, uses_anonymous_args = 0
- 1418              		.loc 1 259 1 is_stmt 0 view .LVU349
- 1419 042a F8B5     		push	{r3, r4, r5, r6, r7, lr}
- 1420              		.cfi_def_cfa_offset 24
- 1421              		.cfi_offset 3, -24
- 1422              		.cfi_offset 4, -20
- 1423              		.cfi_offset 5, -16
- 1424              		.cfi_offset 6, -12
- 1425              		.cfi_offset 7, -8
- 1426              		.cfi_offset 14, -4
- 1427 042c CE46     		mov	lr, r9
- 1428 042e 4746     		mov	r7, r8
- 1429 0430 80B5     		push	{r7, lr}
- 1430              		.cfi_def_cfa_offset 32
- 1431              		.cfi_offset 8, -32
- 1432              		.cfi_offset 9, -28
- 1433 0432 0700     		movs	r7, r0
- 1434 0434 0E00     		movs	r6, r1
- 260:My_Top/System/kth_read.cpp ****     // foc1.work_mode = open1_Mode; //设置工作模式为开环模式
- 261:My_Top/System/kth_read.cpp ****     
- 262:My_Top/System/kth_read.cpp ****     uint8_t reg16 = KTH7111_ReadReg(0x16) | 0x08; //自校准效果使能到角度输出
- 1435              		.loc 1 262 5 is_stmt 1 view .LVU350
- 1436              		.loc 1 262 36 is_stmt 0 view .LVU351
- 1437 0436 1621     		movs	r1, #22
- 1438              	.LVL166:
- 1439              		.loc 1 262 36 view .LVU352
- 1440 0438 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1441              	.LVL167:
- 1442              		.loc 1 262 36 view .LVU353
- 1443 043c 8146     		mov	r9, r0
- 1444              		.loc 1 262 45 discriminator 1 view .LVU354
- 1445 043e 0822     		movs	r2, #8
- 1446 0440 0243     		orrs	r2, r0
- 1447 0442 D2B2     		uxtb	r2, r2
- 1448              	.LVL168:
- 263:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
- 1449              		.loc 1 263 5 is_stmt 1 view .LVU355
- 1450              		.loc 1 263 21 is_stmt 0 view .LVU356
- 1451 0444 1621     		movs	r1, #22
- 1452 0446 3800     		movs	r0, r7
- 1453 0448 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1454              	.LVL169:
- 264:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(5));
- 1455              		.loc 1 264 5 is_stmt 1 view .LVU357
- 1456              		.loc 1 264 15 is_stmt 0 view .LVU358
- 1457 044c 0520     		movs	r0, #5
-ARM GAS  /tmp/cc5qDhQe.s 			page 33
+ 258:My_Top/System/kth_read.cpp **** 
+ 259:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_ANLC_Calibration(uint32_t timeout_s)
+ 260:My_Top/System/kth_read.cpp **** {
+ 1381              		.loc 1 260 1 is_stmt 1 view -0
+ 1382              		.cfi_startproc
+ 1383              		@ args = 0, pretend = 0, frame = 0
+ 1384              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1385              		.loc 1 260 1 is_stmt 0 view .LVU338
+ 1386 0406 F8B5     		push	{r3, r4, r5, r6, r7, lr}
+ 1387              		.cfi_def_cfa_offset 24
+ 1388              		.cfi_offset 3, -24
+ 1389              		.cfi_offset 4, -20
+ 1390              		.cfi_offset 5, -16
+ 1391              		.cfi_offset 6, -12
+ 1392              		.cfi_offset 7, -8
+ 1393              		.cfi_offset 14, -4
+ 1394 0408 CE46     		mov	lr, r9
+ 1395 040a 4746     		mov	r7, r8
+ 1396 040c 80B5     		push	{r7, lr}
+ 1397              		.cfi_def_cfa_offset 32
+ 1398              		.cfi_offset 8, -32
+ 1399              		.cfi_offset 9, -28
+ 1400 040e 0700     		movs	r7, r0
+ 1401 0410 0E00     		movs	r6, r1
+ 261:My_Top/System/kth_read.cpp ****     // foc1.work_mode = open1_Mode; //设置工作模式为开环模式
+ 262:My_Top/System/kth_read.cpp ****     
+ 263:My_Top/System/kth_read.cpp ****     uint8_t reg16 = KTH7111_ReadReg(0x16) | 0x08; //自校准效果使能到角度输出
+ 1402              		.loc 1 263 5 is_stmt 1 view .LVU339
+ 1403              		.loc 1 263 36 is_stmt 0 view .LVU340
+ 1404 0412 1621     		movs	r1, #22
+ 1405              	.LVL159:
+ 1406              		.loc 1 263 36 view .LVU341
+ 1407 0414 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1408              	.LVL160:
+ 1409              		.loc 1 263 36 view .LVU342
+ 1410 0418 8146     		mov	r9, r0
+ 1411              		.loc 1 263 45 discriminator 1 view .LVU343
+ARM GAS  /tmp/ccVpkkof.s 			page 32
 
 
- 1458 044e FFF7FEFF 		bl	vTaskDelay
- 1459              	.LVL170:
- 265:My_Top/System/kth_read.cpp ****     
- 266:My_Top/System/kth_read.cpp ****     reg16 |= 0x10; // 将 REG_CAL 寄存器设置为 1，启动非线性校准
- 1460              		.loc 1 266 5 is_stmt 1 view .LVU359
- 1461              		.loc 1 266 11 is_stmt 0 view .LVU360
- 1462 0452 1822     		movs	r2, #24
- 1463 0454 4B46     		mov	r3, r9
- 1464 0456 1A43     		orrs	r2, r3
- 1465 0458 D2B2     		uxtb	r2, r2
- 1466              	.LVL171:
- 267:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
- 1467              		.loc 1 267 5 is_stmt 1 view .LVU361
- 1468              		.loc 1 267 21 is_stmt 0 view .LVU362
- 1469 045a 1621     		movs	r1, #22
- 1470 045c 3800     		movs	r0, r7
- 1471 045e FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1472              	.LVL172:
- 268:My_Top/System/kth_read.cpp ****     
- 269:My_Top/System/kth_read.cpp ****     uint32_t start = xTaskGetTickCount();
- 1473              		.loc 1 269 5 is_stmt 1 view .LVU363
- 1474              		.loc 1 269 39 is_stmt 0 view .LVU364
- 1475 0462 FFF7FEFF 		bl	xTaskGetTickCount
- 1476              	.LVL173:
- 1477 0466 8046     		mov	r8, r0
- 1478              	.LVL174:
- 1479              	.L70:
- 270:My_Top/System/kth_read.cpp ****     uint8_t status;
- 1480              		.loc 1 270 5 is_stmt 1 view .LVU365
- 271:My_Top/System/kth_read.cpp ****     do {
- 1481              		.loc 1 271 5 view .LVU366
- 272:My_Top/System/kth_read.cpp ****         vTaskDelay(pdMS_TO_TICKS(10));
- 1482              		.loc 1 272 9 view .LVU367
- 1483              		.loc 1 272 19 is_stmt 0 view .LVU368
- 1484 0468 0A20     		movs	r0, #10
- 1485 046a FFF7FEFF 		bl	vTaskDelay
- 1486              	.LVL175:
- 273:My_Top/System/kth_read.cpp ****         status = KTH7111_Get_ANLC_Status();
- 1487              		.loc 1 273 9 is_stmt 1 view .LVU369
- 1488              		.loc 1 273 41 is_stmt 0 view .LVU370
- 1489 046e 3800     		movs	r0, r7
- 1490 0470 FFF7FEFF 		bl	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv
- 1491              	.LVL176:
- 1492 0474 0400     		movs	r4, r0
- 1493              	.LVL177:
- 274:My_Top/System/kth_read.cpp ****         if (status == 2 || (xTaskGetTickCount() - start) > pdMS_TO_TICKS(timeout_s*1000)) {
- 1494              		.loc 1 274 9 is_stmt 1 view .LVU371
- 1495              		.loc 1 274 25 is_stmt 0 view .LVU372
- 1496 0476 0228     		cmp	r0, #2
- 1497 0478 21D0     		beq	.L67
- 1498              		.loc 1 274 46 discriminator 2 view .LVU373
- 1499 047a FFF7FEFF 		bl	xTaskGetTickCount
- 1500              	.LVL178:
- 1501              		.loc 1 274 49 discriminator 1 view .LVU374
- 1502 047e 4346     		mov	r3, r8
- 1503 0480 C51A     		subs	r5, r0, r3
- 1504              		.loc 1 274 60 discriminator 1 view .LVU375
-ARM GAS  /tmp/cc5qDhQe.s 			page 34
+ 1412 041a 0822     		movs	r2, #8
+ 1413 041c 0243     		orrs	r2, r0
+ 1414 041e D2B2     		uxtb	r2, r2
+ 1415              	.LVL161:
+ 264:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
+ 1416              		.loc 1 264 5 is_stmt 1 view .LVU344
+ 1417              		.loc 1 264 21 is_stmt 0 view .LVU345
+ 1418 0420 1621     		movs	r1, #22
+ 1419 0422 3800     		movs	r0, r7
+ 1420 0424 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1421              	.LVL162:
+ 265:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(5));
+ 1422              		.loc 1 265 5 is_stmt 1 view .LVU346
+ 1423              		.loc 1 265 15 is_stmt 0 view .LVU347
+ 1424 0428 0520     		movs	r0, #5
+ 1425 042a FFF7FEFF 		bl	vTaskDelay
+ 1426              	.LVL163:
+ 266:My_Top/System/kth_read.cpp ****     
+ 267:My_Top/System/kth_read.cpp ****     reg16 |= 0x10; // 将 REG_CAL 寄存器设置为 1，启动非线性校准
+ 1427              		.loc 1 267 5 is_stmt 1 view .LVU348
+ 1428              		.loc 1 267 11 is_stmt 0 view .LVU349
+ 1429 042e 1822     		movs	r2, #24
+ 1430 0430 4B46     		mov	r3, r9
+ 1431 0432 1A43     		orrs	r2, r3
+ 1432 0434 D2B2     		uxtb	r2, r2
+ 1433              	.LVL164:
+ 268:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
+ 1434              		.loc 1 268 5 is_stmt 1 view .LVU350
+ 1435              		.loc 1 268 21 is_stmt 0 view .LVU351
+ 1436 0436 1621     		movs	r1, #22
+ 1437 0438 3800     		movs	r0, r7
+ 1438 043a FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1439              	.LVL165:
+ 269:My_Top/System/kth_read.cpp ****     
+ 270:My_Top/System/kth_read.cpp ****     uint32_t start = xTaskGetTickCount();
+ 1440              		.loc 1 270 5 is_stmt 1 view .LVU352
+ 1441              		.loc 1 270 39 is_stmt 0 view .LVU353
+ 1442 043e FFF7FEFF 		bl	xTaskGetTickCount
+ 1443              	.LVL166:
+ 1444 0442 8046     		mov	r8, r0
+ 1445              	.LVL167:
+ 1446              	.L66:
+ 271:My_Top/System/kth_read.cpp ****     uint8_t status;
+ 1447              		.loc 1 271 5 is_stmt 1 view .LVU354
+ 272:My_Top/System/kth_read.cpp ****     do {
+ 1448              		.loc 1 272 5 view .LVU355
+ 273:My_Top/System/kth_read.cpp ****         vTaskDelay(pdMS_TO_TICKS(10));
+ 1449              		.loc 1 273 9 view .LVU356
+ 1450              		.loc 1 273 19 is_stmt 0 view .LVU357
+ 1451 0444 0A20     		movs	r0, #10
+ 1452 0446 FFF7FEFF 		bl	vTaskDelay
+ 1453              	.LVL168:
+ 274:My_Top/System/kth_read.cpp ****         status = KTH7111_Get_ANLC_Status();
+ 1454              		.loc 1 274 9 is_stmt 1 view .LVU358
+ 1455              		.loc 1 274 41 is_stmt 0 view .LVU359
+ 1456 044a 3800     		movs	r0, r7
+ 1457 044c FFF7FEFF 		bl	_ZN7KTH711123KTH7111_Get_ANLC_StatusEv
+ARM GAS  /tmp/ccVpkkof.s 			page 33
 
 
- 1505 0482 7301     		lsls	r3, r6, #5
- 1506 0484 9B1B     		subs	r3, r3, r6
- 1507 0486 9801     		lsls	r0, r3, #6
- 1508 0488 C01A     		subs	r0, r0, r3
- 1509 048a C000     		lsls	r0, r0, #3
- 1510 048c 8019     		adds	r0, r0, r6
- 1511 048e 8001     		lsls	r0, r0, #6
- 1512 0490 FA21     		movs	r1, #250
- 1513 0492 8900     		lsls	r1, r1, #2
- 1514 0494 FFF7FEFF 		bl	__aeabi_uidiv
- 1515              	.LVL179:
- 1516              		.loc 1 274 25 discriminator 1 view .LVU376
- 1517 0498 8542     		cmp	r5, r0
- 1518 049a 10D8     		bhi	.L67
- 275:My_Top/System/kth_read.cpp ****             reg16 &= ~0x10; //将 REG_CAL 寄存器设置为 0，停止非线性校准
+ 1458              	.LVL169:
+ 1459 0450 0400     		movs	r4, r0
+ 1460              	.LVL170:
+ 275:My_Top/System/kth_read.cpp ****         if (status == 2 || (xTaskGetTickCount() - start) > pdMS_TO_TICKS(timeout_s*1000)) {
+ 1461              		.loc 1 275 9 is_stmt 1 view .LVU360
+ 1462              		.loc 1 275 25 is_stmt 0 view .LVU361
+ 1463 0452 0228     		cmp	r0, #2
+ 1464 0454 21D0     		beq	.L63
+ 1465              		.loc 1 275 46 discriminator 2 view .LVU362
+ 1466 0456 FFF7FEFF 		bl	xTaskGetTickCount
+ 1467              	.LVL171:
+ 1468              		.loc 1 275 49 discriminator 1 view .LVU363
+ 1469 045a 4346     		mov	r3, r8
+ 1470 045c C51A     		subs	r5, r0, r3
+ 1471              		.loc 1 275 60 discriminator 1 view .LVU364
+ 1472 045e 7301     		lsls	r3, r6, #5
+ 1473 0460 9B1B     		subs	r3, r3, r6
+ 1474 0462 9801     		lsls	r0, r3, #6
+ 1475 0464 C01A     		subs	r0, r0, r3
+ 1476 0466 C000     		lsls	r0, r0, #3
+ 1477 0468 8019     		adds	r0, r0, r6
+ 1478 046a 8001     		lsls	r0, r0, #6
+ 1479 046c FA21     		movs	r1, #250
+ 1480 046e 8900     		lsls	r1, r1, #2
+ 1481 0470 FFF7FEFF 		bl	__aeabi_uidiv
+ 1482              	.LVL172:
+ 1483              		.loc 1 275 25 discriminator 1 view .LVU365
+ 1484 0474 8542     		cmp	r5, r0
+ 1485 0476 10D8     		bhi	.L63
+ 276:My_Top/System/kth_read.cpp ****             reg16 &= ~0x10; //将 REG_CAL 寄存器设置为 0，停止非线性校准
+ 277:My_Top/System/kth_read.cpp ****             KTH7111_WriteReg(0x16, reg16);
+ 278:My_Top/System/kth_read.cpp ****             return false;
+ 279:My_Top/System/kth_read.cpp ****         }
+ 280:My_Top/System/kth_read.cpp ****     } while (status == 1);//校准中  如果status等于0也会跳出来 ?????
+ 1486              		.loc 1 280 21 is_stmt 1 view .LVU366
+ 1487 0478 012C     		cmp	r4, #1
+ 1488 047a E3D0     		beq	.L66
+ 281:My_Top/System/kth_read.cpp ****     
+ 282:My_Top/System/kth_read.cpp ****     reg16 &= ~0x10;//将 REG_CAL 寄存器设置为 0，停止非线性校准
+ 1489              		.loc 1 282 5 view .LVU367
+ 1490              		.loc 1 282 11 is_stmt 0 view .LVU368
+ 1491 047c 1023     		movs	r3, #16
+ 1492 047e 4A46     		mov	r2, r9
+ 1493 0480 9A43     		bics	r2, r3
+ 1494 0482 0823     		movs	r3, #8
+ 1495 0484 1A43     		orrs	r2, r3
+ 1496 0486 D2B2     		uxtb	r2, r2
+ 1497              	.LVL173:
+ 283:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
+ 1498              		.loc 1 283 5 is_stmt 1 view .LVU369
+ 1499              		.loc 1 283 21 is_stmt 0 view .LVU370
+ 1500 0488 1621     		movs	r1, #22
+ 1501 048a 3800     		movs	r0, r7
+ 1502 048c FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1503              	.LVL174:
+ 284:My_Top/System/kth_read.cpp ****     KTH7111_BurnMTP(); //保存校准参数到MTP
+ 1504              		.loc 1 284 5 is_stmt 1 view .LVU371
+ARM GAS  /tmp/ccVpkkof.s 			page 34
+
+
+ 1505              		.loc 1 284 20 is_stmt 0 view .LVU372
+ 1506 0490 3800     		movs	r0, r7
+ 1507 0492 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
+ 1508              	.LVL175:
+ 285:My_Top/System/kth_read.cpp ****     return true;
+ 1509              		.loc 1 285 5 is_stmt 1 view .LVU373
+ 1510              		.loc 1 285 12 is_stmt 0 view .LVU374
+ 1511 0496 0120     		movs	r0, #1
+ 1512 0498 0AE0     		b	.L65
+ 1513              	.L63:
  276:My_Top/System/kth_read.cpp ****             KTH7111_WriteReg(0x16, reg16);
+ 1514              		.loc 1 276 13 is_stmt 1 view .LVU375
+ 276:My_Top/System/kth_read.cpp ****             KTH7111_WriteReg(0x16, reg16);
+ 1515              		.loc 1 276 19 is_stmt 0 view .LVU376
+ 1516 049a 1023     		movs	r3, #16
+ 1517 049c 4A46     		mov	r2, r9
+ 1518 049e 9A43     		bics	r2, r3
+ 1519 04a0 0823     		movs	r3, #8
+ 1520 04a2 1A43     		orrs	r2, r3
+ 1521 04a4 D2B2     		uxtb	r2, r2
+ 1522              	.LVL176:
  277:My_Top/System/kth_read.cpp ****             return false;
+ 1523              		.loc 1 277 13 is_stmt 1 view .LVU377
+ 277:My_Top/System/kth_read.cpp ****             return false;
+ 1524              		.loc 1 277 29 is_stmt 0 view .LVU378
+ 1525 04a6 1621     		movs	r1, #22
+ 1526 04a8 3800     		movs	r0, r7
+ 1527 04aa FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1528              	.LVL177:
  278:My_Top/System/kth_read.cpp ****         }
- 279:My_Top/System/kth_read.cpp ****     } while (status == 1);//校准中  如果status等于0也会跳出来 ?????
- 1519              		.loc 1 279 21 is_stmt 1 view .LVU377
- 1520 049c 012C     		cmp	r4, #1
- 1521 049e E3D0     		beq	.L70
- 280:My_Top/System/kth_read.cpp ****     
- 281:My_Top/System/kth_read.cpp ****     reg16 &= ~0x10;//将 REG_CAL 寄存器设置为 0，停止非线性校准
- 1522              		.loc 1 281 5 view .LVU378
- 1523              		.loc 1 281 11 is_stmt 0 view .LVU379
- 1524 04a0 1023     		movs	r3, #16
- 1525 04a2 4A46     		mov	r2, r9
- 1526 04a4 9A43     		bics	r2, r3
- 1527 04a6 0823     		movs	r3, #8
- 1528 04a8 1A43     		orrs	r2, r3
- 1529 04aa D2B2     		uxtb	r2, r2
- 1530              	.LVL180:
- 282:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x16, reg16);
- 1531              		.loc 1 282 5 is_stmt 1 view .LVU380
- 1532              		.loc 1 282 21 is_stmt 0 view .LVU381
- 1533 04ac 1621     		movs	r1, #22
- 1534 04ae 3800     		movs	r0, r7
- 1535 04b0 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1536              	.LVL181:
- 283:My_Top/System/kth_read.cpp ****     KTH7111_BurnMTP(); //保存校准参数到MTP
- 1537              		.loc 1 283 5 is_stmt 1 view .LVU382
- 1538              		.loc 1 283 20 is_stmt 0 view .LVU383
- 1539 04b4 3800     		movs	r0, r7
- 1540 04b6 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_BurnMTPEv
- 1541              	.LVL182:
- 284:My_Top/System/kth_read.cpp ****     return true;
- 1542              		.loc 1 284 5 is_stmt 1 view .LVU384
- 1543              		.loc 1 284 12 is_stmt 0 view .LVU385
- 1544 04ba 0120     		movs	r0, #1
- 1545 04bc 0AE0     		b	.L69
- 1546              	.L67:
- 275:My_Top/System/kth_read.cpp ****             KTH7111_WriteReg(0x16, reg16);
- 1547              		.loc 1 275 13 is_stmt 1 view .LVU386
- 275:My_Top/System/kth_read.cpp ****             KTH7111_WriteReg(0x16, reg16);
- 1548              		.loc 1 275 19 is_stmt 0 view .LVU387
- 1549 04be 1023     		movs	r3, #16
-ARM GAS  /tmp/cc5qDhQe.s 			page 35
-
-
- 1550 04c0 4A46     		mov	r2, r9
- 1551 04c2 9A43     		bics	r2, r3
- 1552 04c4 0823     		movs	r3, #8
- 1553 04c6 1A43     		orrs	r2, r3
- 1554 04c8 D2B2     		uxtb	r2, r2
+ 1529              		.loc 1 278 13 is_stmt 1 view .LVU379
+ 278:My_Top/System/kth_read.cpp ****         }
+ 1530              		.loc 1 278 20 is_stmt 0 view .LVU380
+ 1531 04ae 0020     		movs	r0, #0
+ 1532              	.LVL178:
+ 1533              	.L65:
+ 286:My_Top/System/kth_read.cpp **** }
+ 1534              		.loc 1 286 1 view .LVU381
+ 1535              		@ sp needed
+ 1536              	.LVL179:
+ 1537              	.LVL180:
+ 1538              	.LVL181:
+ 1539              	.LVL182:
+ 1540              		.loc 1 286 1 view .LVU382
+ 1541 04b0 C0BC     		pop	{r6, r7}
+ 1542 04b2 B946     		mov	r9, r7
+ 1543 04b4 B046     		mov	r8, r6
+ 1544 04b6 F8BD     		pop	{r3, r4, r5, r6, r7, pc}
+ 1545              		.cfi_endproc
+ 1546              	.LFE1453:
+ 1548              		.align	1
+ 1549              		.global	_ZN7KTH711121SetZeroAngle_RuanJianEf
+ 1550              		.syntax unified
+ 1551              		.code	16
+ 1552              		.thumb_func
+ 1554              	_ZN7KTH711121SetZeroAngle_RuanJianEf:
  1555              	.LVL183:
- 276:My_Top/System/kth_read.cpp ****             return false;
- 1556              		.loc 1 276 13 is_stmt 1 view .LVU388
- 276:My_Top/System/kth_read.cpp ****             return false;
- 1557              		.loc 1 276 29 is_stmt 0 view .LVU389
- 1558 04ca 1621     		movs	r1, #22
- 1559 04cc 3800     		movs	r0, r7
- 1560 04ce FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1561              	.LVL184:
- 277:My_Top/System/kth_read.cpp ****         }
- 1562              		.loc 1 277 13 is_stmt 1 view .LVU390
- 277:My_Top/System/kth_read.cpp ****         }
- 1563              		.loc 1 277 20 is_stmt 0 view .LVU391
- 1564 04d2 0020     		movs	r0, #0
- 1565              	.LVL185:
- 1566              	.L69:
- 285:My_Top/System/kth_read.cpp **** }
- 1567              		.loc 1 285 1 view .LVU392
- 1568              		@ sp needed
- 1569              	.LVL186:
- 1570              	.LVL187:
- 1571              	.LVL188:
- 1572              	.LVL189:
- 1573              		.loc 1 285 1 view .LVU393
- 1574 04d4 C0BC     		pop	{r6, r7}
- 1575 04d6 B946     		mov	r9, r7
- 1576 04d8 B046     		mov	r8, r6
- 1577 04da F8BD     		pop	{r3, r4, r5, r6, r7, pc}
- 1578              		.cfi_endproc
- 1579              	.LFE1453:
- 1581              		.align	1
- 1582              		.global	_ZN7KTH711121SetZeroAngle_RuanJianEf
- 1583              		.syntax unified
- 1584              		.code	16
- 1585              		.thumb_func
- 1587              	_ZN7KTH711121SetZeroAngle_RuanJianEf:
- 1588              	.LVL190:
- 1589              	.LFB1454:
- 286:My_Top/System/kth_read.cpp **** 
+ARM GAS  /tmp/ccVpkkof.s 			page 35
+
+
+ 1556              	.LFB1454:
  287:My_Top/System/kth_read.cpp **** 
- 288:My_Top/System/kth_read.cpp **** void KTH7111::SetZeroAngle_RuanJian(float zero) //设置软件零点
- 289:My_Top/System/kth_read.cpp **** {
- 1590              		.loc 1 289 1 is_stmt 1 view -0
- 1591              		.cfi_startproc
- 1592              		@ args = 0, pretend = 0, frame = 0
- 1593              		@ frame_needed = 0, uses_anonymous_args = 0
- 1594              		@ link register save eliminated.
- 290:My_Top/System/kth_read.cpp ****     //待做 ????
- 291:My_Top/System/kth_read.cpp **** }
- 1595              		.loc 1 291 1 is_stmt 0 view .LVU395
- 1596              		@ sp needed
- 1597 04dc 7047     		bx	lr
-ARM GAS  /tmp/cc5qDhQe.s 			page 36
-
-
- 1598              		.cfi_endproc
- 1599              	.LFE1454:
- 1601              		.align	1
- 1602              		.global	_ZN7KTH711118KTH7111_SetNowZeroEv
- 1603              		.syntax unified
- 1604              		.code	16
- 1605              		.thumb_func
- 1607              	_ZN7KTH711118KTH7111_SetNowZeroEv:
- 1608              	.LVL191:
- 1609              	.LFB1455:
- 292:My_Top/System/kth_read.cpp **** 
+ 288:My_Top/System/kth_read.cpp **** 
+ 289:My_Top/System/kth_read.cpp **** void KTH7111::SetZeroAngle_RuanJian(float zero) //设置软件零点
+ 290:My_Top/System/kth_read.cpp **** {
+ 1557              		.loc 1 290 1 is_stmt 1 view -0
+ 1558              		.cfi_startproc
+ 1559              		@ args = 0, pretend = 0, frame = 0
+ 1560              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1561              		@ link register save eliminated.
+ 291:My_Top/System/kth_read.cpp ****     //待做 ????
+ 292:My_Top/System/kth_read.cpp **** }
+ 1562              		.loc 1 292 1 is_stmt 0 view .LVU384
+ 1563              		@ sp needed
+ 1564 04b8 7047     		bx	lr
+ 1565              		.cfi_endproc
+ 1566              	.LFE1454:
+ 1568              		.align	1
+ 1569              		.global	_ZN7KTH711118KTH7111_SetNowZeroEv
+ 1570              		.syntax unified
+ 1571              		.code	16
+ 1572              		.thumb_func
+ 1574              	_ZN7KTH711118KTH7111_SetNowZeroEv:
+ 1575              	.LVL184:
+ 1576              	.LFB1455:
  293:My_Top/System/kth_read.cpp **** 
- 294:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_SetNowZero(void)  //设置当前位置为零点 返回是否修改成功
- 295:My_Top/System/kth_read.cpp **** {
- 1610              		.loc 1 295 1 is_stmt 1 view -0
- 1611              		.cfi_startproc
- 1612              		@ args = 0, pretend = 0, frame = 0
- 1613              		@ frame_needed = 0, uses_anonymous_args = 0
- 1614              		.loc 1 295 1 is_stmt 0 view .LVU397
- 1615 04de 10B5     		push	{r4, lr}
- 1616              		.cfi_def_cfa_offset 8
- 1617              		.cfi_offset 4, -8
- 1618              		.cfi_offset 14, -4
- 1619 04e0 0400     		movs	r4, r0
- 296:My_Top/System/kth_read.cpp ****     uint8_t rx_temp = 0;
- 1620              		.loc 1 296 5 is_stmt 1 view .LVU398
- 1621              	.LVL192:
- 297:My_Top/System/kth_read.cpp ****     uint8_t rx_new = 0;    
- 1622              		.loc 1 297 5 view .LVU399
- 298:My_Top/System/kth_read.cpp ****     uint8_t tx = 0;
- 1623              		.loc 1 298 5 view .LVU400
- 299:My_Top/System/kth_read.cpp ****     rx_temp = KTH7111_ReadReg(0x02); //读寄存器值 1000 0000
- 1624              		.loc 1 299 5 view .LVU401
- 1625              		.loc 1 299 30 is_stmt 0 view .LVU402
- 1626 04e2 0221     		movs	r1, #2
- 1627 04e4 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1628              	.LVL193:
- 300:My_Top/System/kth_read.cpp ****     tx = rx_temp|0x40;//AUTO_ZERO_SET 置1
- 1629              		.loc 1 300 5 is_stmt 1 view .LVU403
- 1630              		.loc 1 300 8 is_stmt 0 view .LVU404
- 1631 04e8 4023     		movs	r3, #64
- 1632 04ea 1843     		orrs	r0, r3
+ 294:My_Top/System/kth_read.cpp **** 
+ 295:My_Top/System/kth_read.cpp **** bool KTH7111::KTH7111_SetNowZero(void)  //设置当前位置为零点 返回是否修改成功
+ 296:My_Top/System/kth_read.cpp **** {
+ 1577              		.loc 1 296 1 is_stmt 1 view -0
+ 1578              		.cfi_startproc
+ 1579              		@ args = 0, pretend = 0, frame = 0
+ 1580              		@ frame_needed = 0, uses_anonymous_args = 0
+ 1581              		.loc 1 296 1 is_stmt 0 view .LVU386
+ 1582 04ba 10B5     		push	{r4, lr}
+ 1583              		.cfi_def_cfa_offset 8
+ 1584              		.cfi_offset 4, -8
+ 1585              		.cfi_offset 14, -4
+ 1586 04bc 0400     		movs	r4, r0
+ 297:My_Top/System/kth_read.cpp ****     uint8_t rx_temp = 0;
+ 1587              		.loc 1 297 5 is_stmt 1 view .LVU387
+ 1588              	.LVL185:
+ 298:My_Top/System/kth_read.cpp ****     uint8_t rx_new = 0;    
+ 1589              		.loc 1 298 5 view .LVU388
+ 299:My_Top/System/kth_read.cpp ****     uint8_t tx = 0;
+ 1590              		.loc 1 299 5 view .LVU389
+ 300:My_Top/System/kth_read.cpp ****     rx_temp = KTH7111_ReadReg(0x02); //读寄存器值 1000 0000
+ 1591              		.loc 1 300 5 view .LVU390
+ 1592              		.loc 1 300 30 is_stmt 0 view .LVU391
+ 1593 04be 0221     		movs	r1, #2
+ 1594 04c0 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1595              	.LVL186:
+ 301:My_Top/System/kth_read.cpp ****     tx = rx_temp|0x40;//AUTO_ZERO_SET 置1
+ 1596              		.loc 1 301 5 is_stmt 1 view .LVU392
+ 1597              		.loc 1 301 8 is_stmt 0 view .LVU393
+ 1598 04c4 4023     		movs	r3, #64
+ 1599 04c6 1843     		orrs	r0, r3
+ARM GAS  /tmp/ccVpkkof.s 			page 36
+
+
+ 1600              	.LVL187:
+ 1601              		.loc 1 301 8 view .LVU394
+ 1602 04c8 C2B2     		uxtb	r2, r0
+ 1603              	.LVL188:
+ 302:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x02,tx); //写寄存器值 1100 0000
+ 1604              		.loc 1 302 5 is_stmt 1 view .LVU395
+ 1605              		.loc 1 302 21 is_stmt 0 view .LVU396
+ 1606 04ca 0221     		movs	r1, #2
+ 1607 04cc 2000     		movs	r0, r4
+ 1608 04ce FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
+ 1609              	.LVL189:
+ 303:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(50));//等待零点写入
+ 1610              		.loc 1 303 5 is_stmt 1 view .LVU397
+ 1611              		.loc 1 303 15 is_stmt 0 view .LVU398
+ 1612 04d2 3220     		movs	r0, #50
+ 1613 04d4 FFF7FEFF 		bl	vTaskDelay
+ 1614              	.LVL190:
+ 304:My_Top/System/kth_read.cpp ****     rx_new = KTH7111_ReadReg(0x02);//读寄存器值 1010 0100
+ 1615              		.loc 1 304 5 is_stmt 1 view .LVU399
+ 1616              		.loc 1 304 29 is_stmt 0 view .LVU400
+ 1617 04d8 0221     		movs	r1, #2
+ 1618 04da 2000     		movs	r0, r4
+ 1619 04dc FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
+ 1620              	.LVL191:
+ 305:My_Top/System/kth_read.cpp ****     if(rx_new&0x40) return true;
+ 1621              		.loc 1 305 5 is_stmt 1 view .LVU401
+ 1622 04e0 4006     		lsls	r0, r0, #25
+ 1623 04e2 01D5     		bpl	.L70
+ 1624              	.LVL192:
+ 1625              		.loc 1 305 28 is_stmt 0 discriminator 1 view .LVU402
+ 1626 04e4 0120     		movs	r0, #1
+ 1627              	.L69:
+ 306:My_Top/System/kth_read.cpp ****     else return false;
+ 307:My_Top/System/kth_read.cpp **** 
+ 308:My_Top/System/kth_read.cpp **** }
+ 1628              		.loc 1 308 1 view .LVU403
+ 1629              		@ sp needed
+ 1630              	.LVL193:
+ 1631              		.loc 1 308 1 view .LVU404
+ 1632 04e6 10BD     		pop	{r4, pc}
  1633              	.LVL194:
- 1634              		.loc 1 300 8 view .LVU405
- 1635 04ec C2B2     		uxtb	r2, r0
- 1636              	.LVL195:
- 301:My_Top/System/kth_read.cpp ****     KTH7111_WriteReg(0x02,tx); //写寄存器值 1100 0000
- 1637              		.loc 1 301 5 is_stmt 1 view .LVU406
- 1638              		.loc 1 301 21 is_stmt 0 view .LVU407
- 1639 04ee 0221     		movs	r1, #2
- 1640 04f0 2000     		movs	r0, r4
- 1641 04f2 FFF7FEFF 		bl	_ZN7KTH711116KTH7111_WriteRegEhh
- 1642              	.LVL196:
- 302:My_Top/System/kth_read.cpp ****     vTaskDelay(pdMS_TO_TICKS(50));//等待零点写入
- 1643              		.loc 1 302 5 is_stmt 1 view .LVU408
- 1644              		.loc 1 302 15 is_stmt 0 view .LVU409
- 1645 04f6 3220     		movs	r0, #50
-ARM GAS  /tmp/cc5qDhQe.s 			page 37
+ 1634              	.L70:
+ 306:My_Top/System/kth_read.cpp ****     else return false;
+ 1635              		.loc 1 306 17 view .LVU405
+ 1636 04e8 0020     		movs	r0, #0
+ 1637 04ea FCE7     		b	.L69
+ 1638              		.cfi_endproc
+ 1639              	.LFE1455:
+ 1641              	.Letext0:
+ 1642              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ 1643              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+ 1644              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 1645              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 1646              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
+ 1647              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 1648              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 1649              		.file 9 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
+ARM GAS  /tmp/ccVpkkof.s 			page 37
 
 
- 1646 04f8 FFF7FEFF 		bl	vTaskDelay
- 1647              	.LVL197:
- 303:My_Top/System/kth_read.cpp ****     rx_new = KTH7111_ReadReg(0x02);//读寄存器值 1010 0100
- 1648              		.loc 1 303 5 is_stmt 1 view .LVU410
- 1649              		.loc 1 303 29 is_stmt 0 view .LVU411
- 1650 04fc 0221     		movs	r1, #2
- 1651 04fe 2000     		movs	r0, r4
- 1652 0500 FFF7FEFF 		bl	_ZN7KTH711115KTH7111_ReadRegEh
- 1653              	.LVL198:
- 304:My_Top/System/kth_read.cpp ****     if(rx_new&0x40) return true;
- 1654              		.loc 1 304 5 is_stmt 1 view .LVU412
- 1655 0504 4006     		lsls	r0, r0, #25
- 1656 0506 01D5     		bpl	.L74
- 1657              	.LVL199:
- 1658              		.loc 1 304 28 is_stmt 0 discriminator 1 view .LVU413
- 1659 0508 0120     		movs	r0, #1
- 1660              	.L73:
- 305:My_Top/System/kth_read.cpp ****     else return false;
- 306:My_Top/System/kth_read.cpp **** 
- 307:My_Top/System/kth_read.cpp **** }
- 1661              		.loc 1 307 1 view .LVU414
- 1662              		@ sp needed
- 1663              	.LVL200:
- 1664              		.loc 1 307 1 view .LVU415
- 1665 050a 10BD     		pop	{r4, pc}
- 1666              	.LVL201:
- 1667              	.L74:
- 305:My_Top/System/kth_read.cpp ****     else return false;
- 1668              		.loc 1 305 17 view .LVU416
- 1669 050c 0020     		movs	r0, #0
- 1670 050e FCE7     		b	.L73
- 1671              		.cfi_endproc
- 1672              	.LFE1455:
- 1674              	.Letext0:
- 1675              		.file 2 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
- 1676              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
- 1677              		.file 4 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 1678              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 1679              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
- 1680              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 1681              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 1682              		.file 9 "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0/portmacro.h"
- 1683              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
- 1684              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
- 1685              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
- 1686              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
- 1687              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
- 1688              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
- 1689              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
- 1690              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
- 1691              		.file 18 "My_Top/System/kth_read.hpp"
- 1692              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
- 1693              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/cc5qDhQe.s 			page 38
+ 1650              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
+ 1651              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
+ 1652              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
+ 1653              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
+ 1654              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
+ 1655              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
+ 1656              		.file 16 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
+ 1657              		.file 17 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
+ 1658              		.file 18 "My_Top/System/kth_read.hpp"
+ 1659              		.file 19 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+ 1660              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ARM GAS  /tmp/ccVpkkof.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 kth_read.cpp
-     /tmp/cc5qDhQe.s:18     .text:00000000 $t
-     /tmp/cc5qDhQe.s:24     .text:00000000 _ZN7KTH711112KTH_CS_EnbleEb
-     /tmp/cc5qDhQe.s:73     .text:0000001a _ZN7KTH711119SPI_Set_MOSI_OutputEv
-     /tmp/cc5qDhQe.s:118    .text:00000042 _ZN7KTH711118SPI_Set_MOSI_InputEv
-     /tmp/cc5qDhQe.s:156    .text:00000068 $d
-     /tmp/cc5qDhQe.s:160    .text:0000006c $t
-     /tmp/cc5qDhQe.s:166    .text:0000006c _ZN7KTH71118CRC8_ITUEPKhh
-     /tmp/cc5qDhQe.s:289    .text:000000aa _ZN7KTH711121KTH7111_Send_JIAO_CMDEv
-     /tmp/cc5qDhQe.s:448    .text:00000150 $d
-     /tmp/cc5qDhQe.s:454    .text:0000015c $t
-     /tmp/cc5qDhQe.s:460    .text:0000015c _ZN7KTH711118Get_KTH7111_RadianEv
-     /tmp/cc5qDhQe.s:484    .text:00000160 _ZN7KTH711118Get_KTH7111_DegreeEv
-     /tmp/cc5qDhQe.s:508    .text:00000164 _ZN7KTH711115KTH7111_ReadRegEh
-     /tmp/cc5qDhQe.s:720    .text:00000214 _ZN7KTH711116KTH7111_WriteRegEhh
-     /tmp/cc5qDhQe.s:923    .text:000002dc $d
-     /tmp/cc5qDhQe.s:927    .text:000002e0 $t
-     /tmp/cc5qDhQe.s:933    .text:000002e0 _ZN7KTH711125KTH7111_RotationDirectionEb
-     /tmp/cc5qDhQe.s:1056   .rodata.str1.4:00000000 $d
-     /tmp/cc5qDhQe.s:1066   .text:0000033c _ZN7KTH711115KTH7111_BurnMTPEv
-     /tmp/cc5qDhQe.s:1136   .text:00000380 $d
-     /tmp/cc5qDhQe.s:1140   .text:00000384 $t
-     /tmp/cc5qDhQe.s:1146   .text:00000384 _ZN7KTH711112KTH7111_InitEb
-     /tmp/cc5qDhQe.s:1203   .text:000003a4 _ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h
-     /tmp/cc5qDhQe.s:1281   .text:000003d6 _ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb
-     /tmp/cc5qDhQe.s:1377   .text:0000041a _ZN7KTH711123KTH7111_Get_ANLC_StatusEv
-     /tmp/cc5qDhQe.s:1411   .text:0000042a _ZN7KTH711124KTH7111_ANLC_CalibrationEm
-     /tmp/cc5qDhQe.s:1587   .text:000004dc _ZN7KTH711121SetZeroAngle_RuanJianEf
-     /tmp/cc5qDhQe.s:1607   .text:000004de _ZN7KTH711118KTH7111_SetNowZeroEv
+     /tmp/ccVpkkof.s:18     .text:00000000 $t
+     /tmp/ccVpkkof.s:24     .text:00000000 _ZN7KTH711112KTH_CS_EnbleEb
+     /tmp/ccVpkkof.s:73     .text:0000001a _ZN7KTH711119SPI_Set_MOSI_OutputEv
+     /tmp/ccVpkkof.s:118    .text:00000042 _ZN7KTH711118SPI_Set_MOSI_InputEv
+     /tmp/ccVpkkof.s:156    .text:00000068 $d
+     /tmp/ccVpkkof.s:160    .text:0000006c $t
+     /tmp/ccVpkkof.s:166    .text:0000006c _ZN7KTH71118CRC8_ITUEPKhh
+     /tmp/ccVpkkof.s:289    .text:000000aa _ZN7KTH711121KTH7111_Send_JIAO_CMDEv
+     /tmp/ccVpkkof.s:427    .text:00000134 $d
+     /tmp/ccVpkkof.s:432    .text:0000013c $t
+     /tmp/ccVpkkof.s:438    .text:0000013c _ZN7KTH711118Get_KTH7111_RadianEv
+     /tmp/ccVpkkof.s:462    .text:00000140 _ZN7KTH711118Get_KTH7111_DegreeEv
+     /tmp/ccVpkkof.s:486    .text:00000144 _ZN7KTH711115KTH7111_ReadRegEh
+     /tmp/ccVpkkof.s:698    .text:000001f4 _ZN7KTH711116KTH7111_WriteRegEhh
+     /tmp/ccVpkkof.s:901    .text:000002bc $d
+     /tmp/ccVpkkof.s:905    .text:000002c0 $t
+     /tmp/ccVpkkof.s:911    .text:000002c0 _ZN7KTH711125KTH7111_RotationDirectionEb
+     /tmp/ccVpkkof.s:1023   .rodata.str1.4:00000000 $d
+     /tmp/ccVpkkof.s:1033   .text:00000318 _ZN7KTH711115KTH7111_BurnMTPEv
+     /tmp/ccVpkkof.s:1103   .text:0000035c $d
+     /tmp/ccVpkkof.s:1107   .text:00000360 $t
+     /tmp/ccVpkkof.s:1113   .text:00000360 _ZN7KTH711112KTH7111_InitEb
+     /tmp/ccVpkkof.s:1170   .text:00000380 _ZN7KTH711121KTH7111_Read_MoreRegsEPhS0_h
+     /tmp/ccVpkkof.s:1248   .text:000003b2 _ZN7KTH711122KTH7111_Write_MoreRegsEPhS0_hb
+     /tmp/ccVpkkof.s:1344   .text:000003f6 _ZN7KTH711123KTH7111_Get_ANLC_StatusEv
+     /tmp/ccVpkkof.s:1378   .text:00000406 _ZN7KTH711124KTH7111_ANLC_CalibrationEm
+     /tmp/ccVpkkof.s:1554   .text:000004b8 _ZN7KTH711121SetZeroAngle_RuanJianEf
+     /tmp/ccVpkkof.s:1574   .text:000004ba _ZN7KTH711118KTH7111_SetNowZeroEv
 
 UNDEFINED SYMBOLS
 HAL_GPIO_WritePin
@@ -2254,8 +2212,6 @@ memset
 HAL_SPI_Transmit
 HAL_SPI_Receive
 __aeabi_i2f
-__aeabi_fsub
-__aeabi_f2uiz
 __aeabi_fmul
 vTaskDelay
 xTaskGetTickCount

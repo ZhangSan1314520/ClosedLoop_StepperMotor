@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccGICSfC.s 			page 1
+ARM GAS  /tmp/ccarGYrE.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
   30:Core/Src/spi.c **** /* SPI1 init function */
   31:Core/Src/spi.c **** void MX_SPI1_Init(void)
   32:Core/Src/spi.c **** {
-ARM GAS  /tmp/ccGICSfC.s 			page 2
+ARM GAS  /tmp/ccarGYrE.s 			page 2
 
 
   27              		.loc 1 32 1 view -0
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
   66 0024 9B00     		lsls	r3, r3, #2
   67 0026 8361     		str	r3, [r0, #24]
   48:Core/Src/spi.c ****   hspi1.Init.BaudRatePrescaler = SPI_BAUDRATEPRESCALER_8;
-ARM GAS  /tmp/ccGICSfC.s 			page 3
+ARM GAS  /tmp/ccarGYrE.s 			page 3
 
 
   68              		.loc 1 48 3 is_stmt 1 view .LVU15
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  106 0048 FFF7FEFF 		bl	Error_Handler
  107              	.LVL1:
  108              		.loc 1 63 1 is_stmt 0 view .LVU34
-ARM GAS  /tmp/ccGICSfC.s 			page 4
+ARM GAS  /tmp/ccarGYrE.s 			page 4
 
 
  109 004c FBE7     		b	.L1
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  150              		.loc 1 78 3 is_stmt 1 view .LVU42
  151              		.loc 1 78 23 is_stmt 0 view .LVU43
  152 0014 E023     		movs	r3, #224
-ARM GAS  /tmp/ccGICSfC.s 			page 5
+ARM GAS  /tmp/ccarGYrE.s 			page 5
 
 
  153 0016 DB00     		lsls	r3, r3, #3
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  196              	.LVL2:
  197              		.loc 1 89 6 discriminator 1 view .LVU66
  198 0042 0028     		cmp	r0, #0
-ARM GAS  /tmp/ccGICSfC.s 			page 6
+ARM GAS  /tmp/ccarGYrE.s 			page 6
 
 
  199 0044 00D1     		bne	.L8
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  241              		.loc 1 102 20 is_stmt 0 view .LVU73
  242 0006 1422     		movs	r2, #20
  243 0008 0021     		movs	r1, #0
-ARM GAS  /tmp/ccGICSfC.s 			page 7
+ARM GAS  /tmp/ccarGYrE.s 			page 7
 
 
  244 000a 05A8     		add	r0, sp, #20
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  139:Core/Src/spi.c ****     */
  140:Core/Src/spi.c ****     GPIO_InitStruct.Pin = GPIO_PIN_7|GPIO_PIN_8;
  141:Core/Src/spi.c ****     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
-ARM GAS  /tmp/ccGICSfC.s 			page 8
+ARM GAS  /tmp/ccarGYrE.s 			page 8
 
 
  142:Core/Src/spi.c ****     GPIO_InitStruct.Pull = GPIO_NOPULL;
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  296              		.loc 1 111 5 view .LVU91
  297 003e 5B6B     		ldr	r3, [r3, #52]
  298 0040 1A40     		ands	r2, r3
-ARM GAS  /tmp/ccGICSfC.s 			page 9
+ARM GAS  /tmp/ccarGYrE.s 			page 9
 
 
  299 0042 0292     		str	r2, [sp, #8]
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  338 006c 039A     		ldr	r2, [sp, #12]
  339              	.LBE4:
  133:Core/Src/spi.c **** 
-ARM GAS  /tmp/ccGICSfC.s 			page 10
+ARM GAS  /tmp/ccarGYrE.s 			page 10
 
 
  340              		.loc 1 133 5 view .LVU107
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  379              	.L17:
  380 0096 C046     		.align	2
  381              	.L16:
-ARM GAS  /tmp/ccGICSfC.s 			page 11
+ARM GAS  /tmp/ccarGYrE.s 			page 11
 
 
  382 0098 00300140 		.word	1073819648
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  415              		.loc 1 174 8 is_stmt 1 view .LVU129
  416              		.loc 1 174 10 is_stmt 0 view .LVU130
  417 000a 0E4A     		ldr	r2, .L23+4
-ARM GAS  /tmp/ccGICSfC.s 			page 12
+ARM GAS  /tmp/ccarGYrE.s 			page 12
 
 
  418 000c 9342     		cmp	r3, r2
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  186:Core/Src/spi.c **** 
  450              		.loc 1 186 5 view .LVU136
  451 0032 C021     		movs	r1, #192
-ARM GAS  /tmp/ccGICSfC.s 			page 13
+ARM GAS  /tmp/ccarGYrE.s 			page 13
 
 
  452 0034 4900     		lsls	r1, r1, #1
@@ -772,27 +772,27 @@ ARM GAS  /tmp/ccGICSfC.s 			page 1
  496              		.file 10 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  497              		.file 11 "Core/Inc/main.h"
  498              		.file 12 "<built-in>"
-ARM GAS  /tmp/ccGICSfC.s 			page 14
+ARM GAS  /tmp/ccarGYrE.s 			page 14
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 spi.c
-     /tmp/ccGICSfC.s:19     .text.MX_SPI1_Init:00000000 $t
-     /tmp/ccGICSfC.s:25     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
-     /tmp/ccGICSfC.s:113    .text.MX_SPI1_Init:00000050 $d
-     /tmp/ccGICSfC.s:484    .bss.hspi1:00000000 hspi1
-     /tmp/ccGICSfC.s:119    .text.MX_SPI2_Init:00000000 $t
-     /tmp/ccGICSfC.s:125    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
-     /tmp/ccGICSfC.s:213    .text.MX_SPI2_Init:00000050 $d
-     /tmp/ccGICSfC.s:477    .bss.hspi2:00000000 hspi2
-     /tmp/ccGICSfC.s:219    .text.HAL_SPI_MspInit:00000000 $t
-     /tmp/ccGICSfC.s:225    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
-     /tmp/ccGICSfC.s:382    .text.HAL_SPI_MspInit:00000098 $d
-     /tmp/ccGICSfC.s:390    .text.HAL_SPI_MspDeInit:00000000 $t
-     /tmp/ccGICSfC.s:396    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
-     /tmp/ccGICSfC.s:463    .text.HAL_SPI_MspDeInit:00000040 $d
-     /tmp/ccGICSfC.s:474    .bss.hspi2:00000000 $d
-     /tmp/ccGICSfC.s:481    .bss.hspi1:00000000 $d
+     /tmp/ccarGYrE.s:19     .text.MX_SPI1_Init:00000000 $t
+     /tmp/ccarGYrE.s:25     .text.MX_SPI1_Init:00000000 MX_SPI1_Init
+     /tmp/ccarGYrE.s:113    .text.MX_SPI1_Init:00000050 $d
+     /tmp/ccarGYrE.s:484    .bss.hspi1:00000000 hspi1
+     /tmp/ccarGYrE.s:119    .text.MX_SPI2_Init:00000000 $t
+     /tmp/ccarGYrE.s:125    .text.MX_SPI2_Init:00000000 MX_SPI2_Init
+     /tmp/ccarGYrE.s:213    .text.MX_SPI2_Init:00000050 $d
+     /tmp/ccarGYrE.s:477    .bss.hspi2:00000000 hspi2
+     /tmp/ccarGYrE.s:219    .text.HAL_SPI_MspInit:00000000 $t
+     /tmp/ccarGYrE.s:225    .text.HAL_SPI_MspInit:00000000 HAL_SPI_MspInit
+     /tmp/ccarGYrE.s:382    .text.HAL_SPI_MspInit:00000098 $d
+     /tmp/ccarGYrE.s:390    .text.HAL_SPI_MspDeInit:00000000 $t
+     /tmp/ccarGYrE.s:396    .text.HAL_SPI_MspDeInit:00000000 HAL_SPI_MspDeInit
+     /tmp/ccarGYrE.s:463    .text.HAL_SPI_MspDeInit:00000040 $d
+     /tmp/ccarGYrE.s:474    .bss.hspi2:00000000 $d
+     /tmp/ccarGYrE.s:481    .bss.hspi1:00000000 $d
 
 UNDEFINED SYMBOLS
 HAL_SPI_Init

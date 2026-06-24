@@ -4,22 +4,26 @@
 #include "bsp.hpp"
 
 
-#define Motor_RPM (3000) //电机最大转速 实测电机最高38.2圈/s =2292rpm
-#define Motor_PolesNub (7) //极对数
-#define Motor_Fe (Motor_RPM*Motor_PolesNub/60) //电频率Fe = 最大转速(rpm) * 极对数 / 60
-#define Wn_min  (M_2PI*Motor_Fe/10) //最小自然频率 = 2pi*Fe/10 = 219.911482 
-#define Wn_max  (M_2PI*PLL_FREQ_HZ/10) //最大自然频率 = 2pi*采样周期/10   2513.2 
-#define Ts_min  (3.0/(PLL_ZETA*Wn_max)*1000) //最小收敛时间 Ts = 3/(ζ*Wn_max) = 0.0016883480s = 1.688ms
-#define Ts_max  (3.0/(PLL_ZETA*Wn_min)*1000) //最大收敛时间 Ts = 3/(ζ*Wn_min) = 0.0192954s = 19.2954ms
+#define Motor_RPM (315) //电机最大转速 实测电机最高5.252圈/s =315rpm
+// #define Motor_PolesNub (7) //极对数 ???
+// #define Motor_Fe (Motor_RPM*Motor_PolesNub/60) //
+// #define Wn_min  (M_2PI*Motor_Fe/10) //最小自然频率 = 2pi*Fe/10 = 219.911482 
 
+
+#define Stepper_Max_RPS (Motor_RPM / 60.0f) //电机最大转速 每秒转的圈数
+#define Wn_min  (M_2PI * Stepper_Max_RPS / 10) // 最小带宽 3.30
+
+#define Wn_max  (M_2PI*PLL_FREQ_HZ/10) //最大自然频率 = 2pi*采样周期/10   2513.2 
+#define Ts_min  (3.0/(PLL_ZETA*Wn_max)*1000) //最小收敛时间 Ts = 3/(ζ*Wn_max) = 1.688ms 
+#define Ts_max  (3.0/(PLL_ZETA*Wn_min)*1000) //最大收敛时间 Ts = 3/(ζ*Wn_min) =19.2954ms /1286
 
 
 #define PLL_FREQ_HZ   (Stepper_VELOCITY_LOOP_FREQ_HZ)  //采样频率必须 ≥ 带宽频率的 2 倍，否则信号会混叠。（带宽频率的<采样频率/2）
 #define PLL_FREQ_Dt   (1.0/PLL_FREQ_HZ)
-#define PLL_ts_temp   (19.2954) //收敛时间 单位ms 
+#define PLL_ts_temp   (100) //收敛时间 单位ms 
 #define PLL_ts  constraint_value(PLL_ts_temp, Ts_min, Ts_max) //约束收敛时间在最小和最大值之间
 
-
+// #define PLL_ts 1 
 #define PLL_ZETA (0.707) //阻尼比
 #define PLL_Wn   (3.0/(PLL_ZETA*PLL_ts*0.001)) //223.33hz自然频率 计算公式 wn = 3/(ζ*ts)  4k时ts最低要大于等于1.688ms
 #define FOC_PLL_KP    (2*PLL_ZETA*PLL_Wn) //PI参数计算公式 kp = 2ζωn = 310.9548 

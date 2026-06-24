@@ -42,7 +42,8 @@ void Step_Motor::Set_Motor_DutyCycle(float DutyCycle)   //设置占空比
 
 
 
-#include "MC_Serial.hpp"
+#include "ex_math.hpp"
+
 
 bool Step_Motor::Set_Motor_Frequency(float Fre) //返回 true:频率改变 false:频率未改变
 {
@@ -82,7 +83,7 @@ bool Step_Motor::Set_Motor_Frequency(float Fre) //返回 true:频率改变 false
         Set_Motor_DTR(new_dir);
         motor_direction = new_dir;
     }
-
+    if(freq > 4000){freq = 4000;} // 限制最大频率
     // 4. 算 ARR
     arr = timer_clock_freq_ / freq;
 
@@ -92,7 +93,8 @@ bool Step_Motor::Set_Motor_Frequency(float Fre) //返回 true:频率改变 false
     if (arr == 0) arr = 1;
     htim_->Instance->CNT = 0; // 清零计数器
     __HAL_TIM_SET_AUTORELOAD(htim_, (uint16_t)(arr - 1));//设置周期 
-    __HAL_TIM_SET_COMPARE(htim_, channel_, (uint16_t)(arr/2));//设置占空比 
+    // __HAL_TIM_SET_COMPARE(htim_, channel_, (uint16_t)(arr/2));//设置占空比 
+    __HAL_TIM_SET_COMPARE(htim_, channel_,10);//设置占空比  ???? 
     return true;
 }
 
@@ -103,11 +105,11 @@ extern void M2_Tim_Callback(TIM_HandleTypeDef *htim);
 void Step_Motor::Motor_Init()
 {
     uint32_t sysclk = HAL_RCC_GetSysClockFreq();  // 返回 64000000 ???
+    Set_Motor_EN(false);//默认关闭电机
     timer_clock_freq_ = sysclk / (htim_->Instance->PSC + 1);  //获取定时器时钟频率
     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
     __HAL_TIM_SET_COMPARE(htim_, channel_, 0);//默认占空比为0
     HAL_TIM_PWM_Start(htim_, channel_); //启动PWM输出和中断
-    Set_Motor_EN(false);//默认关闭电机
     HAL_TIM_Base_Start_IT(htim_); //启动定时器周期中断 
     // 根据实例绑定不同的定时器周期结束回调 
     if (this == &Motor_M1) htim_->PeriodElapsedCallback = M1_Tim_Callback;
@@ -115,4 +117,5 @@ void Step_Motor::Motor_Init()
         
     init_flag = true; //设置电机初始化完成标志位
 }
+
 
