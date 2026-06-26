@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccQsnbn2.s 			page 1
+ARM GAS  /tmp/ccp2GjXf.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
   32:My_Top/Task/Task_Test.cpp **** void lajio2()
   33:My_Top/Task/Task_Test.cpp **** {
   34:My_Top/Task/Task_Test.cpp ****     static bool flag_temp = true;
-ARM GAS  /tmp/ccQsnbn2.s 			page 2
+ARM GAS  /tmp/ccp2GjXf.s 			page 2
 
 
   35:My_Top/Task/Task_Test.cpp ****     if(M2.laji_flag == 1 &&flag_temp == true)
@@ -83,7 +83,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
   54:My_Top/Task/Task_Test.cpp **** 
   55:My_Top/Task/Task_Test.cpp ****         Vofa_SendFireWater_VA(Vofa_huart, 10, M1.reg_final, deg2rad(M1._target_location2),M2.reg_fi
   56:My_Top/Task/Task_Test.cpp ****         M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
-  57:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre);
+  57:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre_applied_);
   58:My_Top/Task/Task_Test.cpp ****         
   59:My_Top/Task/Task_Test.cpp ****         vTaskDelay(pdMS_TO_TICKS(10));
   60:My_Top/Task/Task_Test.cpp ****     }
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
   19:My_Top/System/BL24C16F.hpp **** //   BL24C16F::read(0x0000, buf, 32);
   20:My_Top/System/BL24C16F.hpp **** // ============================================================
   21:My_Top/System/BL24C16F.hpp **** 
-ARM GAS  /tmp/ccQsnbn2.s 			page 3
+ARM GAS  /tmp/ccp2GjXf.s 			page 3
 
 
   22:My_Top/System/BL24C16F.hpp **** class BL24C16F
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
   79 0012 104D     		ldr	r5, .L5
   80 0014 0021     		movs	r1, #0
   81 0016 2800     		movs	r0, r5
-ARM GAS  /tmp/ccQsnbn2.s 			page 4
+ARM GAS  /tmp/ccp2GjXf.s 			page 4
 
 
   82 0018 FFF7FEFF 		bl	HAL_TIM_PWM_Start
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  121              		.loc 1 27 5 view .LVU25
  122 004a 1E3B     		subs	r3, r3, #30
  123 004c 4B63     		str	r3, [r1, #52]
-ARM GAS  /tmp/ccQsnbn2.s 			page 5
+ARM GAS  /tmp/ccp2GjXf.s 			page 5
 
 
   28:My_Top/Task/Task_Test.cpp **** }
@@ -279,7 +279,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
   35:My_Top/Task/Task_Test.cpp ****     {
  156              		.loc 1 35 11 is_stmt 0 view .LVU31
  157 0062 0A4B     		ldr	r3, .L10
- 158 0064 5C22     		movs	r2, #92
+ 158 0064 6022     		movs	r2, #96
  159 0066 9B5C     		ldrb	r3, [r3, r2]
   35:My_Top/Task/Task_Test.cpp ****     {
  160              		.loc 1 35 5 view .LVU32
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  170              		.loc 1 40 1 view .LVU35
  171              		@ sp needed
  172 0074 10BD     		pop	{r4, pc}
-ARM GAS  /tmp/ccQsnbn2.s 			page 6
+ARM GAS  /tmp/ccp2GjXf.s 			page 6
 
 
  173              	.L9:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  221 0098 5746     		mov	r7, r10
  222 009a 4E46     		mov	r6, r9
  223 009c 4546     		mov	r5, r8
-ARM GAS  /tmp/ccQsnbn2.s 			page 7
+ARM GAS  /tmp/ccp2GjXf.s 			page 7
 
 
  224 009e E0B5     		push	{r5, r6, r7, lr}
@@ -382,7 +382,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  239 00a6 9A46     		mov	r10, r3
   55:My_Top/Task/Task_Test.cpp ****         M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
  240              		.loc 1 55 61 view .LVU47
- 241 00a8 206D     		ldr	r0, [r4, #80]
+ 241 00a8 606D     		ldr	r0, [r4, #84]
  242 00aa FFF7FEFF 		bl	__aeabi_f2d
  243              	.LVL10:
  244 00ae 1290     		str	r0, [sp, #72]
@@ -394,34 +394,34 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  249 00b6 9B46     		mov	fp, r3
   55:My_Top/Task/Task_Test.cpp ****         M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
  250              		.loc 1 55 105 view .LVU49
- 251 00b8 306D     		ldr	r0, [r6, #80]
+ 251 00b8 706D     		ldr	r0, [r6, #84]
  252 00ba FFF7FEFF 		bl	__aeabi_f2d
  253              	.LVL11:
  254 00be 1490     		str	r0, [sp, #80]
  255 00c0 1591     		str	r1, [sp, #84]
-  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre);
+  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre_applied_);
  256              		.loc 1 56 12 view .LVU50
  257 00c2 236B     		ldr	r3, [r4, #48]
  258 00c4 9846     		mov	r8, r3
-  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre);
+  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre_applied_);
  259              		.loc 1 56 39 view .LVU51
- 260 00c6 A36C     		ldr	r3, [r4, #72]
+ 260 00c6 E36C     		ldr	r3, [r4, #76]
  261 00c8 1793     		str	r3, [sp, #92]
-  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre);
+  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre_applied_);
  262              		.loc 1 56 56 view .LVU52
  263 00ca 356B     		ldr	r5, [r6, #48]
-  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre);
+  56:My_Top/Task/Task_Test.cpp ****         M1._target_error_location,M1.motor_fre_applied_);
  264              		.loc 1 56 83 view .LVU53
- 265 00cc B66C     		ldr	r6, [r6, #72]
+ 265 00cc F66C     		ldr	r6, [r6, #76]
   57:My_Top/Task/Task_Test.cpp ****         
  266              		.loc 1 57 12 view .LVU54
- 267 00ce 676D     		ldr	r7, [r4, #84]
+ 267 00ce A76D     		ldr	r7, [r4, #88]
   57:My_Top/Task/Task_Test.cpp ****         
  268              		.loc 1 57 38 view .LVU55
-ARM GAS  /tmp/ccQsnbn2.s 			page 8
+ARM GAS  /tmp/ccp2GjXf.s 			page 8
 
 
- 269 00d0 626B     		ldr	r2, [r4, #52]
+ 269 00d0 E26B     		ldr	r2, [r4, #60]
  270 00d2 9146     		mov	r9, r2
   55:My_Top/Task/Task_Test.cpp ****         M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
  271              		.loc 1 55 30 view .LVU56
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  322 0138 1298     		ldr	r0, [sp, #72]
  323 013a 1399     		ldr	r1, [sp, #76]
  324 013c FFF7FEFF 		bl	__aeabi_dmul
-ARM GAS  /tmp/ccQsnbn2.s 			page 9
+ARM GAS  /tmp/ccp2GjXf.s 			page 9
 
 
  325              	.LVL21:
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  379              		.global	bufff_tx
  380              		.global	test2
  381              		.global	test1
-ARM GAS  /tmp/ccQsnbn2.s 			page 10
+ARM GAS  /tmp/ccp2GjXf.s 			page 10
 
 
  382              		.global	EEPROM1
@@ -598,39 +598,39 @@ ARM GAS  /tmp/ccQsnbn2.s 			page 1
  444              		.file 32 "My_Top/Step_Motor/Step.hpp"
  445              		.file 33 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
  446              		.file 34 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-ARM GAS  /tmp/ccQsnbn2.s 			page 11
+ARM GAS  /tmp/ccp2GjXf.s 			page 11
 
 
  447              		.file 35 "My_Top/MC/My_Vofa.hpp"
  448              		.file 36 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccQsnbn2.s 			page 12
+ARM GAS  /tmp/ccp2GjXf.s 			page 12
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Task_Test.cpp
-     /tmp/ccQsnbn2.s:18     .text:00000000 $t
-     /tmp/ccQsnbn2.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccQsnbn2.s:51     .text:00000008 $d
-     /tmp/ccQsnbn2.s:56     .text:00000010 $t
-     /tmp/ccQsnbn2.s:62     .text:00000010 _Z6lajio1v
-     /tmp/ccQsnbn2.s:132    .text:00000054 $d
-     /tmp/ccQsnbn2.s:138    .text:00000060 $t
-     /tmp/ccQsnbn2.s:144    .text:00000060 _Z6lajio2v
-     /tmp/ccQsnbn2.s:193    .text:0000008c $d
-     /tmp/ccQsnbn2.s:198    .text:00000094 $t
-     /tmp/ccQsnbn2.s:204    .text:00000094 _Z9Task_TestPv
-     /tmp/ccQsnbn2.s:344    .text:00000158 $d
-     /tmp/ccQsnbn2.s:352    .text:0000016c $t
-     /tmp/ccQsnbn2.s:357    .text:0000016c _GLOBAL__sub_I_EEPROM1
-     /tmp/ccQsnbn2.s:376    .init_array:00000000 $d
-     /tmp/ccQsnbn2.s:399    .bss:00000000 bufff_rx
-     /tmp/ccQsnbn2.s:393    .data:00000004 bufff_tx
-     /tmp/ccQsnbn2.s:403    .bss:0000000a test2
-     /tmp/ccQsnbn2.s:407    .bss:0000000b test1
-     /tmp/ccQsnbn2.s:411    .bss:0000000c EEPROM1
-     /tmp/ccQsnbn2.s:384    .data:00000000 $d
-     /tmp/ccQsnbn2.s:388    .data:00000000 _ZZ6lajio2vE9flag_temp
-     /tmp/ccQsnbn2.s:396    .bss:00000000 $d
+     /tmp/ccp2GjXf.s:18     .text:00000000 $t
+     /tmp/ccp2GjXf.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/ccp2GjXf.s:51     .text:00000008 $d
+     /tmp/ccp2GjXf.s:56     .text:00000010 $t
+     /tmp/ccp2GjXf.s:62     .text:00000010 _Z6lajio1v
+     /tmp/ccp2GjXf.s:132    .text:00000054 $d
+     /tmp/ccp2GjXf.s:138    .text:00000060 $t
+     /tmp/ccp2GjXf.s:144    .text:00000060 _Z6lajio2v
+     /tmp/ccp2GjXf.s:193    .text:0000008c $d
+     /tmp/ccp2GjXf.s:198    .text:00000094 $t
+     /tmp/ccp2GjXf.s:204    .text:00000094 _Z9Task_TestPv
+     /tmp/ccp2GjXf.s:344    .text:00000158 $d
+     /tmp/ccp2GjXf.s:352    .text:0000016c $t
+     /tmp/ccp2GjXf.s:357    .text:0000016c _GLOBAL__sub_I_EEPROM1
+     /tmp/ccp2GjXf.s:376    .init_array:00000000 $d
+     /tmp/ccp2GjXf.s:399    .bss:00000000 bufff_rx
+     /tmp/ccp2GjXf.s:393    .data:00000004 bufff_tx
+     /tmp/ccp2GjXf.s:403    .bss:0000000a test2
+     /tmp/ccp2GjXf.s:407    .bss:0000000b test1
+     /tmp/ccp2GjXf.s:411    .bss:0000000c EEPROM1
+     /tmp/ccp2GjXf.s:384    .data:00000000 $d
+     /tmp/ccp2GjXf.s:388    .data:00000000 _ZZ6lajio2vE9flag_temp
+     /tmp/ccp2GjXf.s:396    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZN8BL24C16F5_hi2cE

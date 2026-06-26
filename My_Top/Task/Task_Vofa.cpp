@@ -136,6 +136,7 @@ void vofa_update_if_changed(Vafa_data *d, uint8_t idx, float *target, uint8_t re
     if (force_reset || dir_reversed)
     {
         m->motor_fre = 0;
+        m->motor_fre_applied_ = 0;
         m->motor_fre_last_ = 0;
         m->pid_speed.reset();
         m->pid_location.reset();

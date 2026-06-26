@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccbjM5b7.s 			page 1
+ARM GAS  /tmp/ccaoiynb.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
   30:Core/Src/gpio.c **** /*----------------------------------------------------------------------------*/
   31:Core/Src/gpio.c **** /* USER CODE BEGIN 1 */
   32:Core/Src/gpio.c **** 
-ARM GAS  /tmp/ccbjM5b7.s 			page 2
+ARM GAS  /tmp/ccaoiynb.s 			page 2
 
 
   33:Core/Src/gpio.c **** /* USER CODE END 1 */
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
   65 0020 1143     		orrs	r1, r2
   66 0022 5963     		str	r1, [r3, #52]
   67              		.loc 1 48 3 view .LVU6
-ARM GAS  /tmp/ccbjM5b7.s 			page 3
+ARM GAS  /tmp/ccaoiynb.s 			page 3
 
 
   68 0024 596B     		ldr	r1, [r3, #52]
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
   55:Core/Src/gpio.c ****   /*Configure GPIO pin Output Level */
   56:Core/Src/gpio.c ****   HAL_GPIO_WritePin(GPIOA, SP1_CS_Pin|SPI2_CS_Pin, GPIO_PIN_SET);
  116              		.loc 1 56 3 view .LVU22
-ARM GAS  /tmp/ccbjM5b7.s 			page 4
+ARM GAS  /tmp/ccaoiynb.s 			page 4
 
 
  117 005c 2A4B     		ldr	r3, .L2+12
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
  156              		.loc 1 71 3 is_stmt 1 view .LVU32
  157              		.loc 1 71 25 is_stmt 0 view .LVU33
  158 0098 0026     		movs	r6, #0
-ARM GAS  /tmp/ccbjM5b7.s 			page 5
+ARM GAS  /tmp/ccaoiynb.s 			page 5
 
 
  159 009a E660     		str	r6, [r4, #12]
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
  198 00c2 4846     		mov	r0, r9
  199 00c4 FFF7FEFF 		bl	HAL_GPIO_Init
  200              	.LVL8:
-ARM GAS  /tmp/ccbjM5b7.s 			page 6
+ARM GAS  /tmp/ccaoiynb.s 			page 6
 
 
   87:Core/Src/gpio.c **** 
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
  239              		@ sp needed
  240 00ee F0BC     		pop	{r4, r5, r6, r7}
  241 00f0 BB46     		mov	fp, r7
-ARM GAS  /tmp/ccbjM5b7.s 			page 7
+ARM GAS  /tmp/ccaoiynb.s 			page 7
 
 
  242 00f2 B246     		mov	r10, r6
@@ -383,14 +383,14 @@ ARM GAS  /tmp/ccbjM5b7.s 			page 1
  262              		.file 5 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
  263              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  264              		.file 7 "<built-in>"
-ARM GAS  /tmp/ccbjM5b7.s 			page 8
+ARM GAS  /tmp/ccaoiynb.s 			page 8
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 gpio.c
-     /tmp/ccbjM5b7.s:19     .text.MX_GPIO_Init:00000000 $t
-     /tmp/ccbjM5b7.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
-     /tmp/ccbjM5b7.s:249    .text.MX_GPIO_Init:000000fc $d
+     /tmp/ccaoiynb.s:19     .text.MX_GPIO_Init:00000000 $t
+     /tmp/ccaoiynb.s:25     .text.MX_GPIO_Init:00000000 MX_GPIO_Init
+     /tmp/ccaoiynb.s:249    .text.MX_GPIO_Init:000000fc $d
 
 UNDEFINED SYMBOLS
 memset

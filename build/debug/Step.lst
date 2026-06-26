@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccE6Qm8y.s 			page 1
+ARM GAS  /tmp/cc4kiLop.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   32:My_Top/Step_Motor/Step.cpp **** 
   33:My_Top/Step_Motor/Step.cpp **** 
   34:My_Top/Step_Motor/Step.cpp **** void Step_Motor::Set_Motor_DutyCycle(float DutyCycle)   //设置占空比
-ARM GAS  /tmp/ccE6Qm8y.s 			page 2
+ARM GAS  /tmp/cc4kiLop.s 			page 2
 
 
   35:My_Top/Step_Motor/Step.cpp **** {
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   89:My_Top/Step_Motor/Step.cpp **** 
   90:My_Top/Step_Motor/Step.cpp ****     // 5. 16位定时器保护: ARR 最大 65535，最小 1
   91:My_Top/Step_Motor/Step.cpp ****     if (arr >= 65535) arr = 65535;
-ARM GAS  /tmp/ccE6Qm8y.s 			page 3
+ARM GAS  /tmp/cc4kiLop.s 			page 3
 
 
   92:My_Top/Step_Motor/Step.cpp **** 
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
    8:My_Top/Step_Motor/Step.hpp **** 
    9:My_Top/Step_Motor/Step.hpp **** public:
   10:My_Top/Step_Motor/Step.hpp ****     
-ARM GAS  /tmp/ccE6Qm8y.s 			page 4
+ARM GAS  /tmp/cc4kiLop.s 			page 4
 
 
   11:My_Top/Step_Motor/Step.hpp ****     bool motor_direction = true; //电机方向，true:正转，false:反转
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   80              		.loc 2 20 34 view .LVU11
   81 0036 9862     		str	r0, [r3, #40]
   82              		.loc 2 22 50 view .LVU12
-ARM GAS  /tmp/ccE6Qm8y.s 			page 5
+ARM GAS  /tmp/cc4kiLop.s 			page 5
 
 
   83 0038 FF24     		movs	r4, #255
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  130 006c 4C32     		adds	r2, r2, #76
  131 006e 4146     		mov	r1, r8
  132 0070 9952     		strh	r1, [r3, r2]
-ARM GAS  /tmp/ccE6Qm8y.s 			page 6
+ARM GAS  /tmp/cc4kiLop.s 			page 6
 
 
  133              	.LVL2:
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   16:My_Top/Step_Motor/Step.cpp ****     for(int i=0;i<200;i++){__asm("nop");} //短暂延时，确保方向信号稳定
  183              		.loc 1 16 22 discriminator 1 view .LVU34
  184 0098 0022     		movs	r2, #0
-ARM GAS  /tmp/ccE6Qm8y.s 			page 7
+ARM GAS  /tmp/cc4kiLop.s 			page 7
 
 
  185              	.L5:
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  229              		.align	1
  230              		.global	_ZN10Step_Motor12Set_Motor_ENEb
  231              		.syntax unified
-ARM GAS  /tmp/ccE6Qm8y.s 			page 8
+ARM GAS  /tmp/cc4kiLop.s 			page 8
 
 
  232              		.code	16
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   29:My_Top/Step_Motor/Step.cpp ****     
  276              		.loc 1 29 5 is_stmt 1 view .LVU57
  277              	.LBB16:
-ARM GAS  /tmp/ccE6Qm8y.s 			page 9
+ARM GAS  /tmp/cc4kiLop.s 			page 9
 
 
   29:My_Top/Step_Motor/Step.cpp ****     
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  320 00ec FBDD     		ble	.L14
  321              	.LBE17:
   31:My_Top/Step_Motor/Step.cpp **** 
-ARM GAS  /tmp/ccE6Qm8y.s 			page 10
+ARM GAS  /tmp/cc4kiLop.s 			page 10
 
 
  322              		.loc 1 31 1 is_stmt 0 view .LVU70
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  370              	.LVL28:
   38:My_Top/Step_Motor/Step.cpp ****     CCR_VAL = (uint32_t)(Motor_ARR*DutyCycle);
  371              		.loc 1 38 5 is_stmt 1 view .LVU79
-ARM GAS  /tmp/ccE6Qm8y.s 			page 11
+ARM GAS  /tmp/cc4kiLop.s 			page 11
 
 
   38:My_Top/Step_Motor/Step.cpp ****     CCR_VAL = (uint32_t)(Motor_ARR*DutyCycle);
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  419              	.L28:
   37:My_Top/Step_Motor/Step.cpp ****     Motor_ARR = __HAL_TIM_GET_AUTORELOAD(htim_);
  420              		.loc 1 37 23 is_stmt 0 discriminator 2 view .LVU87
-ARM GAS  /tmp/ccE6Qm8y.s 			page 12
+ARM GAS  /tmp/cc4kiLop.s 			page 12
 
 
  421 012a 0021     		movs	r1, #0
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  465              		.align	2
  466              	.L29:
  467 0154 00000000 		.word	.L20
-ARM GAS  /tmp/ccE6Qm8y.s 			page 13
+ARM GAS  /tmp/cc4kiLop.s 			page 13
 
 
  468              		.cfi_endproc
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   57:My_Top/Step_Motor/Step.cpp **** 
  512              		.loc 1 57 14 is_stmt 0 view .LVU110
  513 016c A585     		strh	r5, [r4, #44]
-ARM GAS  /tmp/ccE6Qm8y.s 			page 14
+ARM GAS  /tmp/cc4kiLop.s 			page 14
 
 
   60:My_Top/Step_Motor/Step.cpp ****     {
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  553              		.loc 1 88 11 is_stmt 0 view .LVU125
  554 0192 256A     		ldr	r5, [r4, #32]
  555              	.LVL48:
-ARM GAS  /tmp/ccE6Qm8y.s 			page 15
+ARM GAS  /tmp/cc4kiLop.s 			page 15
 
 
   88:My_Top/Step_Motor/Step.cpp **** 
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
   77:My_Top/Step_Motor/Step.cpp ****     }
  597              		.loc 1 77 9 view .LVU139
   77:My_Top/Step_Motor/Step.cpp ****     }
-ARM GAS  /tmp/ccE6Qm8y.s 			page 16
+ARM GAS  /tmp/cc4kiLop.s 			page 16
 
 
  598              		.loc 1 77 17 is_stmt 0 view .LVU140
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  638              		.loc 1 95 5 view .LVU154
  639 01de A368     		ldr	r3, [r4, #8]
  640 01e0 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccE6Qm8y.s 			page 17
+ARM GAS  /tmp/cc4kiLop.s 			page 17
 
 
  641 01e2 D862     		str	r0, [r3, #44]
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  689 0208 9A63     		str	r2, [r3, #56]
   98:My_Top/Step_Motor/Step.cpp **** }
  690              		.loc 1 98 12 view .LVU161
-ARM GAS  /tmp/ccE6Qm8y.s 			page 18
+ARM GAS  /tmp/cc4kiLop.s 			page 18
 
 
  691 020a 0120     		movs	r0, #1
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  735              	.LVL65:
  736              	.L46:
   56:My_Top/Step_Motor/Step.cpp ****     Fre_last = Fre_temp;
-ARM GAS  /tmp/ccE6Qm8y.s 			page 19
+ARM GAS  /tmp/cc4kiLop.s 			page 19
 
 
  737              		.loc 1 56 38 discriminator 1 view .LVU172
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  109:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
  785              		.loc 1 109 5 is_stmt 1 view .LVU181
  109:My_Top/Step_Motor/Step.cpp ****     Set_Motor_Frequency(motor_frequency); //默认0Hz频率
-ARM GAS  /tmp/ccE6Qm8y.s 			page 20
+ARM GAS  /tmp/cc4kiLop.s 			page 20
 
 
  786              		.loc 1 109 35 is_stmt 0 view .LVU182
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  831 00b0 C0020000 		.word	.L57
  832 00b4 C0020000 		.word	.L57
  833 00b8 AC020000 		.word	.L60
-ARM GAS  /tmp/ccE6Qm8y.s 			page 21
+ARM GAS  /tmp/cc4kiLop.s 			page 21
 
 
  834 00bc C0020000 		.word	.L57
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  881              		.loc 1 112 5 is_stmt 1 view .LVU198
  112:My_Top/Step_Motor/Step.cpp ****     HAL_TIM_Base_Start_IT(htim_); //启动定时器周期中断 
  882              		.loc 1 112 22 is_stmt 0 view .LVU199
-ARM GAS  /tmp/ccE6Qm8y.s 			page 22
+ARM GAS  /tmp/cc4kiLop.s 			page 22
 
 
  883 02c8 E168     		ldr	r1, [r4, #12]
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  927 02f8 8B50     		str	r3, [r1, r2]
  928 02fa F2E7     		b	.L66
  929              	.L70:
-ARM GAS  /tmp/ccE6Qm8y.s 			page 23
+ARM GAS  /tmp/cc4kiLop.s 			page 23
 
 
  930              		.align	2
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  983              		.file 5 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
  984              		.file 6 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
  985              		.file 7 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_gpio.h"
-ARM GAS  /tmp/ccE6Qm8y.s 			page 24
+ARM GAS  /tmp/cc4kiLop.s 			page 24
 
 
  986              		.file 8 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
@@ -1395,32 +1395,32 @@ ARM GAS  /tmp/ccE6Qm8y.s 			page 1
  997              		.file 19 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
  998              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  999              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_rcc.h"
-ARM GAS  /tmp/ccE6Qm8y.s 			page 25
+ARM GAS  /tmp/cc4kiLop.s 			page 25
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Step.cpp
-     /tmp/ccE6Qm8y.s:18     .text:00000000 $t
-     /tmp/ccE6Qm8y.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
-     /tmp/ccE6Qm8y.s:146    .text:00000078 $d
-     /tmp/ccE6Qm8y.s:154    .text:0000008c $t
-     /tmp/ccE6Qm8y.s:160    .text:0000008c _ZN10Step_Motor13Set_Motor_DTREb
-     /tmp/ccE6Qm8y.s:235    .text:000000b2 _ZN10Step_Motor12Set_Motor_ENEb
-     /tmp/ccE6Qm8y.s:334    .text:000000f0 _ZN10Step_Motor19Set_Motor_DutyCycleEf
-     /tmp/ccE6Qm8y.s:398    .rodata:00000000 $d
-     /tmp/ccE6Qm8y.s:467    .text:00000154 $d
-     /tmp/ccE6Qm8y.s:471    .text:00000158 $t
-     /tmp/ccE6Qm8y.s:477    .text:00000158 _ZN10Step_Motor19Set_Motor_FrequencyEf
-     /tmp/ccE6Qm8y.s:743    .text:00000244 $d
-     /tmp/ccE6Qm8y.s:749    .text:00000250 $t
-     /tmp/ccE6Qm8y.s:755    .text:00000250 _ZN10Step_Motor10Motor_InitEv
-     /tmp/ccE6Qm8y.s:932    .text:000002fc $d
-     /tmp/ccE6Qm8y.s:940    .text:00000310 $t
-     /tmp/ccE6Qm8y.s:945    .text:00000310 _GLOBAL__sub_I_Motor_M1
-     /tmp/ccE6Qm8y.s:964    .init_array:00000000 $d
-     /tmp/ccE6Qm8y.s:977    .bss:00000030 Motor_M2
-     /tmp/ccE6Qm8y.s:973    .bss:00000000 Motor_M1
-     /tmp/ccE6Qm8y.s:969    .bss:00000000 $d
+     /tmp/cc4kiLop.s:18     .text:00000000 $t
+     /tmp/cc4kiLop.s:23     .text:00000000 _Z41__static_initialization_and_destruction_0v
+     /tmp/cc4kiLop.s:146    .text:00000078 $d
+     /tmp/cc4kiLop.s:154    .text:0000008c $t
+     /tmp/cc4kiLop.s:160    .text:0000008c _ZN10Step_Motor13Set_Motor_DTREb
+     /tmp/cc4kiLop.s:235    .text:000000b2 _ZN10Step_Motor12Set_Motor_ENEb
+     /tmp/cc4kiLop.s:334    .text:000000f0 _ZN10Step_Motor19Set_Motor_DutyCycleEf
+     /tmp/cc4kiLop.s:398    .rodata:00000000 $d
+     /tmp/cc4kiLop.s:467    .text:00000154 $d
+     /tmp/cc4kiLop.s:471    .text:00000158 $t
+     /tmp/cc4kiLop.s:477    .text:00000158 _ZN10Step_Motor19Set_Motor_FrequencyEf
+     /tmp/cc4kiLop.s:743    .text:00000244 $d
+     /tmp/cc4kiLop.s:749    .text:00000250 $t
+     /tmp/cc4kiLop.s:755    .text:00000250 _ZN10Step_Motor10Motor_InitEv
+     /tmp/cc4kiLop.s:932    .text:000002fc $d
+     /tmp/cc4kiLop.s:940    .text:00000310 $t
+     /tmp/cc4kiLop.s:945    .text:00000310 _GLOBAL__sub_I_Motor_M1
+     /tmp/cc4kiLop.s:964    .init_array:00000000 $d
+     /tmp/cc4kiLop.s:977    .bss:00000030 Motor_M2
+     /tmp/cc4kiLop.s:973    .bss:00000000 Motor_M1
+     /tmp/cc4kiLop.s:969    .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 htim1

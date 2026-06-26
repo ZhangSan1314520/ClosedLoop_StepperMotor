@@ -54,7 +54,7 @@ void Task_Test(void *argument)
 
         Vofa_SendFireWater_VA(Vofa_huart, 10, M1.reg_final, deg2rad(M1._target_location2),M2.reg_final, deg2rad(M2._target_location2),
         M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
-        M1._target_error_location,M1.motor_fre);
+        M1._target_error_location,M1.motor_fre_applied_);
         
         vTaskDelay(pdMS_TO_TICKS(10));
     }

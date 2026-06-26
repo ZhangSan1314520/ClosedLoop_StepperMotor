@@ -11,6 +11,11 @@
 #include "adc.h"  
 
 
+#define Fre_Accel_Fast  800.0f    // Hz/s，低速加速度（<1500Hz）
+#define Fre_Accel_Slow  100.0f    // Hz/s，高速加速度（≥1500Hz）
+#define Fre_Accel_Threshold   1500.0f  // 快慢分界线（Hz）
+
+
 #define Stepper_VELOCITY_LOOP_FREQ_DIV 8  //速度环 
 #define Stepper_POSITION_LOOP_FREQ_DIV 8 //位置环
 #define Stepper_MAIN_LOOP_FREQ_HZ 16000.0

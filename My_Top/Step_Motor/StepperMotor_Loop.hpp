@@ -52,6 +52,7 @@ public:
     
     float motor_fre = 0; //电机频率
     float motor_fre_last_ = 0; //上次电机频率
+    float motor_fre_applied_ = 0;  // 斜坡后的实际输出频率
     bool motor_encoder_dir; //电机编码器方向
     float MS_FULL = 0;//0:全步模式, 1:半步模式
     float _error_speed = 0.0f; //速度误差
