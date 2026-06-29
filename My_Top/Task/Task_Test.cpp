@@ -3,16 +3,12 @@
 #include "task.h"
 #include "MC_Serial.hpp"
 #include "My_Vofa.hpp"
-
+ #include "uorb.h"
+#include "task_topics.h"
 #include "StepperMotor_Loop.hpp"
 
 BL24C16F EEPROM1(EEPROM_hi2c);
-
-uint8_t test1,test2 = 0;
 uint8_t bufff_tx[10] = {0x01, 0x02, 0xa3, 0xb4, 0x05, 0x06, 0xc7, 0xf8, 0x09, 0x0a};
-uint8_t bufff_rx[10];
-
-
 
 void lajio1()
 {
@@ -43,18 +39,29 @@ void lajio2()
 void Task_Test(void *argument)
 {
     // 程序RAM占用10752/1024 = 10.5KB的RAM，剩余RAM 36KB-10.5KB  = 25.5KB 可分配给操作系统FreeRTOS
-    
     // lajio1();
+    // motor_topic 如果为 -1 说明失败（一般不会，除非表满）
+    uorb_handle_t motor_topic = uorb_advertise("motor_state", sizeof(motor_state_t)); // ← 注册发布者
+    if (motor_topic == -1) {
+        return;
+    }
+    printf("uord注册成功\r\n");
+    motor_state_t motor_data;
     while (1)
     {
-        // printf("laji1:%d \r\n",M1.laji);
-        // lajio2();
-        // Vofa_SendFireWater_VA(Vofa_huart, 5, M1.theta_m_speed, M1.filtered_speed, M1.theta_m_offic_filtered,
-        // M1.theta_m_speed,M1.filtered_speed);
+        // 填充数据并发布到 uORB（Vofa 发送交由订阅端处理）
+        motor_data[kRegFinal]           = M1.reg_final;
+        motor_data[kTargetLocation]     = deg2rad(M1._target_location2);
+        motor_data[kAngularVelocity]    = M1.Angular_velocity_final;
+        motor_data[kTargetSpeed]        = M1._target_speed;
+        motor_data[kMotorFreApplied]    = M1.motor_fre_applied_;
+        motor_data[kTargetErrorLocation]= M1._target_error_location;
+        motor_data[kM2RegFinal]         = M2.reg_final;
+        motor_data[kM2TargetLocation]   = deg2rad(M2._target_location2);
+        motor_data[kM2AngularVelocity]  = M2.Angular_velocity_final;
+        motor_data[kM2TargetSpeed]      = M2._target_speed;
 
-        Vofa_SendFireWater_VA(Vofa_huart, 10, M1.reg_final, deg2rad(M1._target_location2),M2.reg_final, deg2rad(M2._target_location2),
-        M1.Angular_velocity_final, M1._target_speed,M2.Angular_velocity_final, M2._target_speed,
-        M1._target_error_location,M1.motor_fre_applied_);
+        uorb_publish(motor_topic, &motor_data);// ← 发布数据 (没有指定给谁发，放在公共区域里)
         
         vTaskDelay(pdMS_TO_TICKS(10));
     }

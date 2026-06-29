@@ -97,6 +97,7 @@ private:
 
 extern VoFA_Rx vofa1;
 void Vofa_SendFireWater_VA(UART_HandleTypeDef *huart, uint16_t count, ...);
+void Vofa_SendFireWater(UART_HandleTypeDef *huart, float *data, uint16_t count, uint32_t timeout);
 void Vofa_Init(UART_HandleTypeDef *huart);
 
 

@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccEnsG33.s 			page 1
+ARM GAS  /tmp/ccauI8aw.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -58,7 +58,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
   31:My_Top/Modules/CLI_Module.cpp **** 
   32:My_Top/Modules/CLI_Module.cpp ****     // 配置 embedded-cli 库的初始化参数
   33:My_Top/Modules/CLI_Module.cpp ****     EmbeddedCliConfig cli_cfg = {
-ARM GAS  /tmp/ccEnsG33.s 			page 2
+ARM GAS  /tmp/ccauI8aw.s 			page 2
 
 
   34:My_Top/Modules/CLI_Module.cpp ****         .invitation = _invitation,        // 命令行提示符字符串
@@ -118,7 +118,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
   88:My_Top/Modules/CLI_Module.cpp ****     if (write_data == NULL)
   89:My_Top/Modules/CLI_Module.cpp ****         return false;
   90:My_Top/Modules/CLI_Module.cpp **** 
-ARM GAS  /tmp/ccEnsG33.s 			page 3
+ARM GAS  /tmp/ccauI8aw.s 			page 3
 
 
   91:My_Top/Modules/CLI_Module.cpp ****     // 保存写数据回调函数指针
@@ -178,7 +178,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  117:My_Top/Modules/CLI_Module.cpp ****             if (serial->send_data(data, size)) return; // 发送成功则返回
   54              		.loc 1 117 13 view .LVU6
   55              		.loc 1 117 34 is_stmt 0 view .LVU7
-ARM GAS  /tmp/ccEnsG33.s 			page 4
+ARM GAS  /tmp/ccauI8aw.s 			page 4
 
 
   56 000e 0023     		movs	r3, #0
@@ -238,7 +238,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  104              		@ frame_needed = 0, uses_anonymous_args = 0
  105 002c 10B5     		push	{r4, lr}
  106              		.cfi_def_cfa_offset 8
-ARM GAS  /tmp/ccEnsG33.s 			page 5
+ARM GAS  /tmp/ccauI8aw.s 			page 5
 
 
  107              		.cfi_offset 4, -8
@@ -298,7 +298,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  154:My_Top/Modules/CLI_Module.cpp **** // 将外部接收到的字符喂给embedded-cli库
  155:My_Top/Modules/CLI_Module.cpp **** void CLI_Module::_low_level_receive_char(EmbeddedCli *embeddedCli, char c)
  156:My_Top/Modules/CLI_Module.cpp **** {
-ARM GAS  /tmp/ccEnsG33.s 			page 6
+ARM GAS  /tmp/ccauI8aw.s 			page 6
 
 
  157:My_Top/Modules/CLI_Module.cpp ****     // embeddedCli为NULL则不处理
@@ -358,7 +358,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  211:My_Top/Modules/CLI_Module.cpp **** }
  212:My_Top/Modules/CLI_Module.cpp **** 
  213:My_Top/Modules/CLI_Module.cpp **** // 按Serial指针查找对应的CLI_Module实例（静态方法）
-ARM GAS  /tmp/ccEnsG33.s 			page 7
+ARM GAS  /tmp/ccauI8aw.s 			page 7
 
 
  214:My_Top/Modules/CLI_Module.cpp **** // 用于在串口回调中直接通过serial找到对应的CLI实例
@@ -418,7 +418,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  268:My_Top/Modules/CLI_Module.cpp **** 
  269:My_Top/Modules/CLI_Module.cpp ****     // 遍历所有实例，逐个调用start()；任意一个失败则最终返回false
  270:My_Top/Modules/CLI_Module.cpp ****     for (uint8_t i = 0; i < _cli_count; i++)
-ARM GAS  /tmp/ccEnsG33.s 			page 8
+ARM GAS  /tmp/ccauI8aw.s 			page 8
 
 
  271:My_Top/Modules/CLI_Module.cpp ****     {
@@ -478,7 +478,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  311:My_Top/Modules/CLI_Module.cpp ****         // 任务启动时打印欢迎信息，格式如 "DBG-CLI DBG-CLI Start!"
  312:My_Top/Modules/CLI_Module.cpp ****         // cli_module->print("%s%s Start!\r\n", cli_module->_invitation, cli_module->_name);
  313:My_Top/Modules/CLI_Module.cpp ****     }
-ARM GAS  /tmp/ccEnsG33.s 			page 9
+ARM GAS  /tmp/ccauI8aw.s 			page 9
 
 
  314:My_Top/Modules/CLI_Module.cpp ****     while (1)
@@ -538,7 +538,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  190              		@ frame_needed = 0, uses_anonymous_args = 0
   14:My_Top/Modules/CLI_Module.cpp ****     // 名称不能为空，否则初始化失败
  191              		.loc 1 14 1 is_stmt 0 view .LVU31
-ARM GAS  /tmp/ccEnsG33.s 			page 10
+ARM GAS  /tmp/ccauI8aw.s 			page 10
 
 
  192 0060 F0B5     		push	{r4, r5, r6, r7, lr}
@@ -598,7 +598,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  234              		.loc 1 25 12 view .LVU43
  235 008c 0922     		movs	r2, #9
  236 008e 2900     		movs	r1, r5
-ARM GAS  /tmp/ccEnsG33.s 			page 11
+ARM GAS  /tmp/ccauI8aw.s 			page 11
 
 
  237 0090 3800     		movs	r0, r7
@@ -658,7 +658,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  281 00d0 0597     		str	r7, [sp, #20]
   44:My_Top/Modules/CLI_Module.cpp **** 
  282              		.loc 1 44 5 is_stmt 1 view .LVU54
-ARM GAS  /tmp/ccEnsG33.s 			page 12
+ARM GAS  /tmp/ccauI8aw.s 			page 12
 
 
   44:My_Top/Modules/CLI_Module.cpp **** 
@@ -718,7 +718,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
   68:My_Top/Modules/CLI_Module.cpp **** 
  325              		.loc 1 68 1 view .LVU67
  326 0108 F0BD     		pop	{r4, r5, r6, r7, pc}
-ARM GAS  /tmp/ccEnsG33.s 			page 13
+ARM GAS  /tmp/ccauI8aw.s 			page 13
 
 
  327              	.LVL32:
@@ -778,7 +778,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  369 0138 00000000 		.word	_ZN10CLI_Module21_low_level_write_charEP11EmbeddedClic
  370 013c 00000000 		.word	_ZN10CLI_Module23_low_level_write_stringEP11EmbeddedCliPKc
  371 0140 00000000 		.word	_ZN10CLI_Module13_process_taskEPv
-ARM GAS  /tmp/ccEnsG33.s 			page 14
+ARM GAS  /tmp/ccauI8aw.s 			page 14
 
 
  372 0144 00000000 		.word	.LANCHOR0
@@ -838,7 +838,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  417 015a F9E7     		b	.L18
  418              		.cfi_endproc
  419              	.LFE464:
-ARM GAS  /tmp/ccEnsG33.s 			page 15
+ARM GAS  /tmp/ccauI8aw.s 			page 15
 
 
  421              		.align	1
@@ -898,7 +898,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  466              		.thumb_func
  468              	_ZN10CLI_Module15bind_write_dataEP6Serial:
  469              	.LVL46:
-ARM GAS  /tmp/ccEnsG33.s 			page 16
+ARM GAS  /tmp/ccauI8aw.s 			page 16
 
 
  470              	.LFB466:
@@ -958,7 +958,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  512              		.global	_ZN10CLI_Module23_low_level_receive_charEP11EmbeddedClic
  513              		.syntax unified
  514              		.code	16
-ARM GAS  /tmp/ccEnsG33.s 			page 17
+ARM GAS  /tmp/ccauI8aw.s 			page 17
 
 
  515              		.thumb_func
@@ -1018,7 +1018,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  564 0192 C646     		mov	lr, r8
  565 0194 00B5     		push	{lr}
  566              		.cfi_def_cfa_offset 24
-ARM GAS  /tmp/ccEnsG33.s 			page 18
+ARM GAS  /tmp/ccauI8aw.s 			page 18
 
 
  567              		.cfi_offset 8, -24
@@ -1078,7 +1078,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  609              	.LBE4:
  183:My_Top/Modules/CLI_Module.cpp **** 
  610              		.loc 1 183 1 view .LVU135
-ARM GAS  /tmp/ccEnsG33.s 			page 19
+ARM GAS  /tmp/ccauI8aw.s 			page 19
 
 
  611 01c0 4046     		mov	r0, r8
@@ -1138,7 +1138,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  659 01e2 8000     		lsls	r0, r0, #2
  660              	.LVL63:
  192:My_Top/Modules/CLI_Module.cpp **** }
-ARM GAS  /tmp/ccEnsG33.s 			page 20
+ARM GAS  /tmp/ccauI8aw.s 			page 20
 
 
  661              		.loc 1 192 27 view .LVU144
@@ -1198,7 +1198,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  709 01fc 0FD0     		beq	.L43
  710              	.LBB5:
  203:My_Top/Modules/CLI_Module.cpp ****     {
-ARM GAS  /tmp/ccEnsG33.s 			page 21
+ARM GAS  /tmp/ccauI8aw.s 			page 21
 
 
  711              		.loc 1 203 18 is_stmt 0 view .LVU153
@@ -1258,7 +1258,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  753              		.align	2
  754              	.L49:
  755 0220 00000000 		.word	.LANCHOR0
-ARM GAS  /tmp/ccEnsG33.s 			page 22
+ARM GAS  /tmp/ccauI8aw.s 			page 22
 
 
  756              		.cfi_endproc
@@ -1318,7 +1318,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  802              		@ sp needed
  803 0242 00BD     		pop	{pc}
  804              		.cfi_endproc
-ARM GAS  /tmp/ccEnsG33.s 			page 23
+ARM GAS  /tmp/ccauI8aw.s 			page 23
 
 
  805              	.LFE470:
@@ -1378,7 +1378,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  850 025e 2800     		movs	r0, r5
  851 0260 B047     		blx	r6
  852              	.LVL84:
-ARM GAS  /tmp/ccEnsG33.s 			page 24
+ARM GAS  /tmp/ccauI8aw.s 			page 24
 
 
  853              	.L53:
@@ -1438,7 +1438,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  224:My_Top/Modules/CLI_Module.cpp ****             return _cli_list[i];
  900              		.loc 1 224 27 view .LVU196
  901 027c 036B     		ldr	r3, [r0, #48]
-ARM GAS  /tmp/ccEnsG33.s 			page 25
+ARM GAS  /tmp/ccauI8aw.s 			page 25
 
 
  224:My_Top/Modules/CLI_Module.cpp ****             return _cli_list[i];
@@ -1498,7 +1498,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  949              		.cfi_offset 6, -8
  950              		.cfi_offset 14, -4
  267:My_Top/Modules/CLI_Module.cpp **** 
-ARM GAS  /tmp/ccEnsG33.s 			page 26
+ARM GAS  /tmp/ccauI8aw.s 			page 26
 
 
  951              		.loc 1 267 5 view .LVU206
@@ -1558,7 +1558,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  993              	.LVL100:
  994              	.LVL101:
  276:My_Top/Modules/CLI_Module.cpp **** 
-ARM GAS  /tmp/ccEnsG33.s 			page 27
+ARM GAS  /tmp/ccauI8aw.s 			page 27
 
 
  995              		.loc 1 276 1 view .LVU219
@@ -1618,7 +1618,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1049              		.cfi_offset 14, -4
  1050 02c0 C646     		mov	lr, r8
  1051 02c2 00B5     		push	{lr}
-ARM GAS  /tmp/ccEnsG33.s 			page 28
+ARM GAS  /tmp/ccauI8aw.s 			page 28
 
 
  1052              		.cfi_def_cfa_offset 24
@@ -1678,7 +1678,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1092              		.loc 1 299 19 is_stmt 0 view .LVU237
  1093 02e0 A500     		lsls	r5, r4, #2
  1094 02e2 7D19     		adds	r5, r7, r5
-ARM GAS  /tmp/ccEnsG33.s 			page 29
+ARM GAS  /tmp/ccauI8aw.s 			page 29
 
 
  299:My_Top/Modules/CLI_Module.cpp ****     }
@@ -1738,7 +1738,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  326:My_Top/Modules/CLI_Module.cpp **** {
  1138              		.loc 1 326 1 is_stmt 1 view -0
  1139              		.cfi_startproc
-ARM GAS  /tmp/ccEnsG33.s 			page 30
+ARM GAS  /tmp/ccauI8aw.s 			page 30
 
 
  1140              		@ args = 4, pretend = 12, frame = 8
@@ -1798,7 +1798,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1178 031e C821     		movs	r1, #200
  1179 0320 FFF7FEFF 		bl	vsnprintf_
  1180              	.LVL120:
-ARM GAS  /tmp/ccEnsG33.s 			page 31
+ARM GAS  /tmp/ccauI8aw.s 			page 31
 
 
  1181              		.loc 1 342 24 view .LVU258
@@ -1858,7 +1858,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1221 0348 0126     		movs	r6, #1
  1222 034a 7642     		rsbs	r6, r6, #0
  1223 034c F3E7     		b	.L77
-ARM GAS  /tmp/ccEnsG33.s 			page 32
+ARM GAS  /tmp/ccauI8aw.s 			page 32
 
 
  1224              		.cfi_endproc
@@ -1918,7 +1918,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  366:My_Top/Modules/CLI_Module.cpp **** 
  367:My_Top/Modules/CLI_Module.cpp ****     // 调用embedded-cli库接口将命令绑定注册到该CLI实例
  368:My_Top/Modules/CLI_Module.cpp ****     // 注意：总数受 maxBindingCount 限制（当前配置为16，含内置help实际可用15�
-ARM GAS  /tmp/ccEnsG33.s 			page 33
+ARM GAS  /tmp/ccauI8aw.s 			page 33
 
 
  369:My_Top/Modules/CLI_Module.cpp ****     return embeddedCliAddBinding(_cli, cmd_binding);
@@ -1978,7 +1978,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1321              		.cfi_offset 14, -20
  1322 0396 82B0     		sub	sp, sp, #8
  1323              		.cfi_def_cfa_offset 40
-ARM GAS  /tmp/ccEnsG33.s 			page 34
+ARM GAS  /tmp/ccauI8aw.s 			page 34
 
 
  1324 0398 0690     		str	r0, [sp, #24]
@@ -2038,7 +2038,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1367              		.loc 1 239 27 is_stmt 1 discriminator 1 view .LVU294
  1368 03c6 054B     		ldr	r3, .L88
  1369 03c8 1B68     		ldr	r3, [r3]
-ARM GAS  /tmp/ccEnsG33.s 			page 35
+ARM GAS  /tmp/ccauI8aw.s 			page 35
 
 
  1370 03ca 9C42     		cmp	r4, r3
@@ -2098,7 +2098,7 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1419 03ee 0A9A     		ldr	r2, [sp, #40]
  1420              	.LVL142:
  259:My_Top/Modules/CLI_Module.cpp ****     // 转发给结构体版本的add_command_to_all
-ARM GAS  /tmp/ccEnsG33.s 			page 36
+ARM GAS  /tmp/ccauI8aw.s 			page 36
 
 
  1421              		.loc 1 259 56 view .LVU302
@@ -2158,56 +2158,56 @@ ARM GAS  /tmp/ccEnsG33.s 			page 1
  1472              		.file 21 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/string.h"
  1473              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
  1474              		.file 23 "<built-in>"
-ARM GAS  /tmp/ccEnsG33.s 			page 37
+ARM GAS  /tmp/ccauI8aw.s 			page 37
 
 
-ARM GAS  /tmp/ccEnsG33.s 			page 38
+ARM GAS  /tmp/ccauI8aw.s 			page 38
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 CLI_Module.cpp
-     /tmp/ccEnsG33.s:18     .text:00000000 $t
-     /tmp/ccEnsG33.s:23     .text:00000000 _ZZN10CLI_Module15bind_write_dataEP6SerialENKUlPhtPvE_clES2_tS3_
-     /tmp/ccEnsG33.s:99     .text:0000002c _ZZN10CLI_Module15bind_write_dataEP6SerialENUlPhtPvE_4_FUNES2_tS3_
-     /tmp/ccEnsG33.s:127    .text:0000003c _ZN10CLI_Module13_process_taskEPv
-     /tmp/ccEnsG33.s:171    .rodata.str1.4:00000000 $d
-     /tmp/ccEnsG33.s:184    .text:00000060 _ZN10CLI_Module4initEPKct
-     /tmp/ccEnsG33.s:367    .text:00000130 $d
-     /tmp/ccEnsG33.s:765    .text:00000224 _ZN10CLI_Module21_low_level_write_charEP11EmbeddedClic
-     /tmp/ccEnsG33.s:813    .text:00000244 _ZN10CLI_Module23_low_level_write_stringEP11EmbeddedCliPKc
-     /tmp/ccEnsG33.s:376    .text:00000148 $t
-     /tmp/ccEnsG33.s:382    .text:00000148 _ZN10CLI_Module5startEv
-     /tmp/ccEnsG33.s:427    .text:0000015c _ZN10CLI_Module15bind_write_dataEPFvPhtPvES1_
-     /tmp/ccEnsG33.s:468    .text:0000016c _ZN10CLI_Module15bind_write_dataEP6Serial
-     /tmp/ccEnsG33.s:507    .text:00000180 $d
-     /tmp/ccEnsG33.s:511    .text:00000184 $t
-     /tmp/ccEnsG33.s:517    .text:00000184 _ZN10CLI_Module23_low_level_receive_charEP11EmbeddedClic
-     /tmp/ccEnsG33.s:549    .text:00000190 _ZN10CLI_Module12receive_dataEPht
-     /tmp/ccEnsG33.s:639    .text:000001d4 _ZN10CLI_Module14get_cli_moduleEi
-     /tmp/ccEnsG33.s:685    .text:000001f4 $d
-     /tmp/ccEnsG33.s:689    .text:000001f8 $t
-     /tmp/ccEnsG33.s:695    .text:000001f8 _ZN10CLI_Module14get_cli_moduleEP11EmbeddedCli
-     /tmp/ccEnsG33.s:755    .text:00000220 $d
-     /tmp/ccEnsG33.s:759    .text:00000224 $t
-     /tmp/ccEnsG33.s:869    .text:00000264 _ZN10CLI_Module14get_cli_moduleEP6Serial
-     /tmp/ccEnsG33.s:929    .text:0000028c $d
-     /tmp/ccEnsG33.s:933    .text:00000290 $t
-     /tmp/ccEnsG33.s:939    .text:00000290 _ZN10CLI_Module9start_allEv
-     /tmp/ccEnsG33.s:1000   .text:000002b8 $d
-     /tmp/ccEnsG33.s:1004   .text:000002bc $t
-     /tmp/ccEnsG33.s:1010   .text:000002bc _ZN10CLI_Module14execute_subcmdEPS_PKcPv
-     /tmp/ccEnsG33.s:1035   .text:000002be _ZN10CLI_Module13init_arg_listEPPKcS1_
-     /tmp/ccEnsG33.s:1125   .text:000002fc $d
-     /tmp/ccEnsG33.s:1129   .text:00000300 $t
-     /tmp/ccEnsG33.s:1135   .text:00000300 _ZN10CLI_Module5printEPKcz
-     /tmp/ccEnsG33.s:1233   .text:0000034e _ZN10CLI_Module11add_commandE17CliCommandBinding
-     /tmp/ccEnsG33.s:1308   .text:00000392 _ZN10CLI_Module18add_command_to_allE17CliCommandBinding
-     /tmp/ccEnsG33.s:1388   .text:000003dc $d
-     /tmp/ccEnsG33.s:1392   .text:000003e0 $t
-     /tmp/ccEnsG33.s:1398   .text:000003e0 _ZN10CLI_Module18add_command_to_allEPKcS1_bPvPFvP11EmbeddedCliPcS2_E
-     /tmp/ccEnsG33.s:1445   .bss:00000000 _ZN10CLI_Module10_cli_countE
-     /tmp/ccEnsG33.s:1449   .bss:00000004 _ZN10CLI_Module9_cli_listE
-     /tmp/ccEnsG33.s:1441   .bss:00000000 $d
+     /tmp/ccauI8aw.s:18     .text:00000000 $t
+     /tmp/ccauI8aw.s:23     .text:00000000 _ZZN10CLI_Module15bind_write_dataEP6SerialENKUlPhtPvE_clES2_tS3_
+     /tmp/ccauI8aw.s:99     .text:0000002c _ZZN10CLI_Module15bind_write_dataEP6SerialENUlPhtPvE_4_FUNES2_tS3_
+     /tmp/ccauI8aw.s:127    .text:0000003c _ZN10CLI_Module13_process_taskEPv
+     /tmp/ccauI8aw.s:171    .rodata.str1.4:00000000 $d
+     /tmp/ccauI8aw.s:184    .text:00000060 _ZN10CLI_Module4initEPKct
+     /tmp/ccauI8aw.s:367    .text:00000130 $d
+     /tmp/ccauI8aw.s:765    .text:00000224 _ZN10CLI_Module21_low_level_write_charEP11EmbeddedClic
+     /tmp/ccauI8aw.s:813    .text:00000244 _ZN10CLI_Module23_low_level_write_stringEP11EmbeddedCliPKc
+     /tmp/ccauI8aw.s:376    .text:00000148 $t
+     /tmp/ccauI8aw.s:382    .text:00000148 _ZN10CLI_Module5startEv
+     /tmp/ccauI8aw.s:427    .text:0000015c _ZN10CLI_Module15bind_write_dataEPFvPhtPvES1_
+     /tmp/ccauI8aw.s:468    .text:0000016c _ZN10CLI_Module15bind_write_dataEP6Serial
+     /tmp/ccauI8aw.s:507    .text:00000180 $d
+     /tmp/ccauI8aw.s:511    .text:00000184 $t
+     /tmp/ccauI8aw.s:517    .text:00000184 _ZN10CLI_Module23_low_level_receive_charEP11EmbeddedClic
+     /tmp/ccauI8aw.s:549    .text:00000190 _ZN10CLI_Module12receive_dataEPht
+     /tmp/ccauI8aw.s:639    .text:000001d4 _ZN10CLI_Module14get_cli_moduleEi
+     /tmp/ccauI8aw.s:685    .text:000001f4 $d
+     /tmp/ccauI8aw.s:689    .text:000001f8 $t
+     /tmp/ccauI8aw.s:695    .text:000001f8 _ZN10CLI_Module14get_cli_moduleEP11EmbeddedCli
+     /tmp/ccauI8aw.s:755    .text:00000220 $d
+     /tmp/ccauI8aw.s:759    .text:00000224 $t
+     /tmp/ccauI8aw.s:869    .text:00000264 _ZN10CLI_Module14get_cli_moduleEP6Serial
+     /tmp/ccauI8aw.s:929    .text:0000028c $d
+     /tmp/ccauI8aw.s:933    .text:00000290 $t
+     /tmp/ccauI8aw.s:939    .text:00000290 _ZN10CLI_Module9start_allEv
+     /tmp/ccauI8aw.s:1000   .text:000002b8 $d
+     /tmp/ccauI8aw.s:1004   .text:000002bc $t
+     /tmp/ccauI8aw.s:1010   .text:000002bc _ZN10CLI_Module14execute_subcmdEPS_PKcPv
+     /tmp/ccauI8aw.s:1035   .text:000002be _ZN10CLI_Module13init_arg_listEPPKcS1_
+     /tmp/ccauI8aw.s:1125   .text:000002fc $d
+     /tmp/ccauI8aw.s:1129   .text:00000300 $t
+     /tmp/ccauI8aw.s:1135   .text:00000300 _ZN10CLI_Module5printEPKcz
+     /tmp/ccauI8aw.s:1233   .text:0000034e _ZN10CLI_Module11add_commandE17CliCommandBinding
+     /tmp/ccauI8aw.s:1308   .text:00000392 _ZN10CLI_Module18add_command_to_allE17CliCommandBinding
+     /tmp/ccauI8aw.s:1388   .text:000003dc $d
+     /tmp/ccauI8aw.s:1392   .text:000003e0 $t
+     /tmp/ccauI8aw.s:1398   .text:000003e0 _ZN10CLI_Module18add_command_to_allEPKcS1_bPvPFvP11EmbeddedCliPcS2_E
+     /tmp/ccauI8aw.s:1445   .bss:00000000 _ZN10CLI_Module10_cli_countE
+     /tmp/ccauI8aw.s:1449   .bss:00000004 _ZN10CLI_Module9_cli_listE
+     /tmp/ccauI8aw.s:1441   .bss:00000000 $d
 
 UNDEFINED SYMBOLS
 _ZN6Serial9send_dataEPhtm
@@ -2221,7 +2221,7 @@ memset
 embeddedCliNew
 xTaskCreate
 vTaskSuspend
-ARM GAS  /tmp/ccEnsG33.s 			page 39
+ARM GAS  /tmp/ccauI8aw.s 			page 39
 
 
 vTaskResume

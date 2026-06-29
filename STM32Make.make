@@ -116,6 +116,7 @@ Drivers/STM32G0xx_HAL_Driver/Src/stm32g0xx_ll_rcc.c \
 Lib/embedded-cli/embedded_cli.c \
 Lib/protocol/xlink/xlink_common.c \
 Lib/serial/printf.c \
+Lib/uorb/uorb.c \
 Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2/cmsis_os2.c \
 Middlewares/Third_Party/FreeRTOS/Source/croutine.c \
 Middlewares/Third_Party/FreeRTOS/Source/event_groups.c \
@@ -153,8 +154,10 @@ My_Top/System/pid_Increment.cpp \
 My_Top/System/pll.cpp \
 My_Top/Task/Task_CLI.cpp \
 My_Top/Task/Task_Launch.cpp \
+My_Top/Task/Task_MsgQueueDemo.cpp \
 My_Top/Task/Task_SystemInit.cpp \
 My_Top/Task/Task_Test.cpp \
+My_Top/Task/Task_UorbDemo.cpp \
 My_Top/Task/Task_Vofa.cpp \
 build/main.cpp
 
@@ -259,13 +262,15 @@ C_INCLUDES =  \
 -ILib/protocol/xlink \
 -ILib/serial \
 -ILib/ulog \
+-ILib/uorb \
 -IMiddlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2 \
 -IMiddlewares/Third_Party/FreeRTOS/Source/include \
 -IMiddlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0 \
 -IMy_Top/MC \
 -IMy_Top/Modules \
 -IMy_Top/Step_Motor \
--IMy_Top/System
+-IMy_Top/System \
+-IMy_Top/Task
 
 
 

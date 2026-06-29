@@ -16,13 +16,15 @@
         "Lib/protocol/xlink",
         "Lib/serial",
         "Lib/ulog",
+        "Lib/uorb",
         "Middlewares/Third_Party/FreeRTOS/Source/CMSIS_RTOS_V2",
         "Middlewares/Third_Party/FreeRTOS/Source/include",
         "Middlewares/Third_Party/FreeRTOS/Source/portable/GCC/ARM_CM0",
         "My_Top/MC",
         "My_Top/Modules",
         "My_Top/Step_Motor",
-        "My_Top/System"
+        "My_Top/System",
+        "My_Top/Task"
       ],
       "defines": [
         "STM32G071xx",

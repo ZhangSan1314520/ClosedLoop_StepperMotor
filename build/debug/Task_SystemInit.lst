@@ -1,4 +1,4 @@
-ARM GAS  /tmp/ccdC6uT4.s 			page 1
+ARM GAS  /tmp/ccYIWC3t.s 			page 1
 
 
    1              		.cpu cortex-m0plus
@@ -37,128 +37,136 @@ ARM GAS  /tmp/ccdC6uT4.s 			page 1
    9:My_Top/Task/Task_SystemInit.cpp **** #include "StepperMotor_Loop.hpp"
   10:My_Top/Task/Task_SystemInit.cpp **** #include "my_tim.hpp"
   11:My_Top/Task/Task_SystemInit.cpp **** #include "My_Vofa.hpp"
-  12:My_Top/Task/Task_SystemInit.cpp **** 
-  13:My_Top/Task/Task_SystemInit.cpp **** void Task_SystemInit(void *argument)
-  14:My_Top/Task/Task_SystemInit.cpp **** {
-  27              		.loc 1 14 1 view -0
+  12:My_Top/Task/Task_SystemInit.cpp **** #include "uorb.h"
+  13:My_Top/Task/Task_SystemInit.cpp **** 
+  14:My_Top/Task/Task_SystemInit.cpp **** void Task_SystemInit(void *argument)
+  15:My_Top/Task/Task_SystemInit.cpp **** {
+  27              		.loc 1 15 1 view -0
   28              		.cfi_startproc
   29              		@ args = 0, pretend = 0, frame = 0
   30              		@ frame_needed = 0, uses_anonymous_args = 0
-  31              		.loc 1 14 1 is_stmt 0 view .LVU1
+  31              		.loc 1 15 1 is_stmt 0 view .LVU1
   32 0000 10B5     		push	{r4, lr}
   33              		.cfi_def_cfa_offset 8
   34              		.cfi_offset 4, -8
   35              		.cfi_offset 14, -4
-  15:My_Top/Task/Task_SystemInit.cpp ****     HAL_System::init(); //初始化计时器
-  36              		.loc 1 15 5 is_stmt 1 view .LVU2
-  37              		.loc 1 15 21 is_stmt 0 view .LVU3
-  38 0002 FFF7FEFF 		bl	_ZN10HAL_System4initEv
+  16:My_Top/Task/Task_SystemInit.cpp ****     uorb_init(); //初始化uORB消息中间件
+  36              		.loc 1 16 5 is_stmt 1 view .LVU2
+  37              		.loc 1 16 14 is_stmt 0 view .LVU3
+  38 0002 FFF7FEFF 		bl	uorb_init
   39              	.LVL1:
-  16:My_Top/Task/Task_SystemInit.cpp ****     MC_Serial::init(); //初始化串口 
-  40              		.loc 1 16 5 is_stmt 1 view .LVU4
-  41              		.loc 1 16 20 is_stmt 0 view .LVU5
-  42 0006 FFF7FEFF 		bl	_ZN9MC_Serial4initEv
-ARM GAS  /tmp/ccdC6uT4.s 			page 2
+  17:My_Top/Task/Task_SystemInit.cpp ****     HAL_System::init(); //初始化计时器
+  40              		.loc 1 17 5 is_stmt 1 view .LVU4
+  41              		.loc 1 17 21 is_stmt 0 view .LVU5
+ARM GAS  /tmp/ccYIWC3t.s 			page 2
 
 
+  42 0006 FFF7FEFF 		bl	_ZN10HAL_System4initEv
   43              	.LVL2:
-  17:My_Top/Task/Task_SystemInit.cpp ****     Vofa_Init(Vofa_huart); //初始化Vofa
-  44              		.loc 1 17 5 is_stmt 1 view .LVU6
-  45              		.loc 1 17 14 is_stmt 0 view .LVU7
-  46 000a 0848     		ldr	r0, .L2
-  47 000c FFF7FEFF 		bl	_Z9Vofa_InitP20__UART_HandleTypeDef
-  48              	.LVL3:
-  18:My_Top/Task/Task_SystemInit.cpp ****     My_Tim_Init(TIM3_htim,VM_hadc); //初始化定时器绑定中断
-  49              		.loc 1 18 5 is_stmt 1 view .LVU8
-  50              		.loc 1 18 16 is_stmt 0 view .LVU9
-  51 0010 0749     		ldr	r1, .L2+4
-  52 0012 0848     		ldr	r0, .L2+8
-  53 0014 FFF7FEFF 		bl	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
-  54              	.LVL4:
-  19:My_Top/Task/Task_SystemInit.cpp **** 
-  20:My_Top/Task/Task_SystemInit.cpp ****     M1.My_Stepper_Init(); //初始化步进电机控制参数
-  55              		.loc 1 20 5 is_stmt 1 view .LVU10
-  56              		.loc 1 20 23 is_stmt 0 view .LVU11
-  57 0018 0748     		ldr	r0, .L2+12
-  58 001a FFF7FEFF 		bl	_ZN12StepperMotor15My_Stepper_InitEv
-  59              	.LVL5:
-  21:My_Top/Task/Task_SystemInit.cpp ****     M2.My_Stepper_Init(); //初始化步进电机控制参数
-  60              		.loc 1 21 5 is_stmt 1 view .LVU12
-  61              		.loc 1 21 23 is_stmt 0 view .LVU13
-  62 001e 0748     		ldr	r0, .L2+16
-  63 0020 FFF7FEFF 		bl	_ZN12StepperMotor15My_Stepper_InitEv
-  64              	.LVL6:
-  22:My_Top/Task/Task_SystemInit.cpp **** 
-  23:My_Top/Task/Task_SystemInit.cpp ****     vTaskDelete(NULL); //删除任务
-  65              		.loc 1 23 5 is_stmt 1 view .LVU14
-  66              		.loc 1 23 16 is_stmt 0 view .LVU15
-  67 0024 0020     		movs	r0, #0
-  68 0026 FFF7FEFF 		bl	vTaskDelete
-  69              	.LVL7:
-  24:My_Top/Task/Task_SystemInit.cpp **** }
-  70              		.loc 1 24 1 view .LVU16
-  71              		@ sp needed
-  72 002a 10BD     		pop	{r4, pc}
-  73              	.L3:
-  74              		.align	2
-  75              	.L2:
-  76 002c 00000000 		.word	huart2
-  77 0030 00000000 		.word	hadc1
-  78 0034 00000000 		.word	htim3
-  79 0038 00000000 		.word	M1
-  80 003c 00000000 		.word	M2
-  81              		.cfi_endproc
-  82              	.LFE1479:
-  84              	.Letext0:
-  85              		.file 2 "/opt/arm-gnu-toolchain-14.2/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h"
-  86              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
-  87              		.file 4 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
-  88              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
-  89              		.file 6 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
-  90              		.file 7 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
-  91              		.file 8 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
-  92              		.file 9 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
-ARM GAS  /tmp/ccdC6uT4.s 			page 3
+  18:My_Top/Task/Task_SystemInit.cpp ****     MC_Serial::init(); //初始化串口 
+  44              		.loc 1 18 5 is_stmt 1 view .LVU6
+  45              		.loc 1 18 20 is_stmt 0 view .LVU7
+  46 000a FFF7FEFF 		bl	_ZN9MC_Serial4initEv
+  47              	.LVL3:
+  19:My_Top/Task/Task_SystemInit.cpp ****     Vofa_Init(Vofa_huart); //初始化Vofa
+  48              		.loc 1 19 5 is_stmt 1 view .LVU8
+  49              		.loc 1 19 14 is_stmt 0 view .LVU9
+  50 000e 0848     		ldr	r0, .L2
+  51 0010 FFF7FEFF 		bl	_Z9Vofa_InitP20__UART_HandleTypeDef
+  52              	.LVL4:
+  20:My_Top/Task/Task_SystemInit.cpp ****     My_Tim_Init(TIM3_htim,VM_hadc); //初始化定时器绑定中断
+  53              		.loc 1 20 5 is_stmt 1 view .LVU10
+  54              		.loc 1 20 16 is_stmt 0 view .LVU11
+  55 0014 0749     		ldr	r1, .L2+4
+  56 0016 0848     		ldr	r0, .L2+8
+  57 0018 FFF7FEFF 		bl	_Z11My_Tim_InitP19__TIM_HandleTypeDefP17ADC_HandleTypeDef
+  58              	.LVL5:
+  21:My_Top/Task/Task_SystemInit.cpp **** 
+  22:My_Top/Task/Task_SystemInit.cpp ****     M1.My_Stepper_Init(); //初始化步进电机控制参数
+  59              		.loc 1 22 5 is_stmt 1 view .LVU12
+  60              		.loc 1 22 23 is_stmt 0 view .LVU13
+  61 001c 0748     		ldr	r0, .L2+12
+  62 001e FFF7FEFF 		bl	_ZN12StepperMotor15My_Stepper_InitEv
+  63              	.LVL6:
+  23:My_Top/Task/Task_SystemInit.cpp ****     M2.My_Stepper_Init(); //初始化步进电机控制参数
+  64              		.loc 1 23 5 is_stmt 1 view .LVU14
+  65              		.loc 1 23 23 is_stmt 0 view .LVU15
+  66 0022 0748     		ldr	r0, .L2+16
+  67 0024 FFF7FEFF 		bl	_ZN12StepperMotor15My_Stepper_InitEv
+  68              	.LVL7:
+  24:My_Top/Task/Task_SystemInit.cpp **** 
+  25:My_Top/Task/Task_SystemInit.cpp ****     vTaskDelete(NULL); //删除任务
+  69              		.loc 1 25 5 is_stmt 1 view .LVU16
+  70              		.loc 1 25 16 is_stmt 0 view .LVU17
+  71 0028 0020     		movs	r0, #0
+  72 002a FFF7FEFF 		bl	vTaskDelete
+  73              	.LVL8:
+  26:My_Top/Task/Task_SystemInit.cpp **** }
+  74              		.loc 1 26 1 view .LVU18
+  75              		@ sp needed
+  76 002e 10BD     		pop	{r4, pc}
+  77              	.L3:
+  78              		.align	2
+  79              	.L2:
+  80 0030 00000000 		.word	huart2
+  81 0034 00000000 		.word	hadc1
+  82 0038 00000000 		.word	htim3
+  83 003c 00000000 		.word	M1
+  84 0040 00000000 		.word	M2
+  85              		.cfi_endproc
+  86              	.LFE1479:
+  88              	.Letext0:
+  89              		.file 2 "/opt/arm-gnu-toolchain-14.2/lib/gcc/arm-none-eabi/14.2.1/include/stddef.h"
+  90              		.file 3 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/machine/_default_types.h"
+ARM GAS  /tmp/ccYIWC3t.s 			page 3
 
 
-  93              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cstdlib"
-  94              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
-  95              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
-  96              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/stdlib.h"
-  97              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
-  98              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
-  99              		.file 16 "Lib/compute/ex_math.hpp"
- 100              		.file 17 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
- 101              		.file 18 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h"
- 102              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
- 103              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
- 104              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc.h"
- 105              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
- 106              		.file 23 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
- 107              		.file 24 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
- 108              		.file 25 "Core/Inc/tim.h"
- 109              		.file 26 "Core/Inc/usart.h"
- 110              		.file 27 "Core/Inc/adc.h"
- 111              		.file 28 "My_Top/System/HAL_System.hpp"
- 112              		.file 29 "My_Top/MC/MC_Serial.hpp"
- 113              		.file 30 "My_Top/Step_Motor/Step.hpp"
- 114              		.file 31 "My_Top/System/pid_Increment.hpp"
- 115              		.file 32 "My_Top/System/kth_read.hpp"
- 116              		.file 33 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
- 117              		.file 34 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/stdlib.h"
- 118              		.file 35 "My_Top/Step_Motor/my_tim.hpp"
- 119              		.file 36 "My_Top/MC/My_Vofa.hpp"
- 120              		.file 37 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
-ARM GAS  /tmp/ccdC6uT4.s 			page 4
+  91              		.file 4 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/sys/_stdint.h"
+  92              		.file 5 "Middlewares/Third_Party/FreeRTOS/Source/include/task.h"
+  93              		.file 6 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cmath"
+  94              		.file 7 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/type_traits"
+  95              		.file 8 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/debug/debug.h"
+  96              		.file 9 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/std_abs.h"
+  97              		.file 10 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/cstdlib"
+  98              		.file 11 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/bits/predefined_ops.h"
+  99              		.file 12 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/math.h"
+ 100              		.file 13 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/stdlib.h"
+ 101              		.file 14 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/arm-none-eabi/thumb/v6-m/no
+ 102              		.file 15 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/math.h"
+ 103              		.file 16 "Lib/compute/ex_math.hpp"
+ 104              		.file 17 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g071xx.h"
+ 105              		.file 18 "Drivers/CMSIS/Device/ST/STM32G0xx/Include/stm32g0xx.h"
+ 106              		.file 19 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_def.h"
+ 107              		.file 20 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_dma.h"
+ 108              		.file 21 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_adc.h"
+ 109              		.file 22 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_spi.h"
+ 110              		.file 23 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_tim.h"
+ 111              		.file 24 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_hal_uart.h"
+ 112              		.file 25 "Core/Inc/tim.h"
+ 113              		.file 26 "Core/Inc/usart.h"
+ 114              		.file 27 "Core/Inc/adc.h"
+ 115              		.file 28 "My_Top/System/HAL_System.hpp"
+ 116              		.file 29 "My_Top/MC/MC_Serial.hpp"
+ 117              		.file 30 "My_Top/Step_Motor/Step.hpp"
+ 118              		.file 31 "My_Top/System/pid_Increment.hpp"
+ 119              		.file 32 "My_Top/System/kth_read.hpp"
+ 120              		.file 33 "My_Top/Step_Motor/StepperMotor_Loop.hpp"
+ 121              		.file 34 "/opt/arm-gnu-toolchain-14.2/arm-none-eabi/include/c++/14.2.1/stdlib.h"
+ 122              		.file 35 "My_Top/Step_Motor/my_tim.hpp"
+ 123              		.file 36 "My_Top/MC/My_Vofa.hpp"
+ 124              		.file 37 "Drivers/STM32G0xx_HAL_Driver/Inc/stm32g0xx_ll_dma.h"
+ 125              		.file 38 "Lib/uorb/uorb.h"
+ARM GAS  /tmp/ccYIWC3t.s 			page 4
 
 
 DEFINED SYMBOLS
                             *ABS*:00000000 Task_SystemInit.cpp
-     /tmp/ccdC6uT4.s:18     .text:00000000 $t
-     /tmp/ccdC6uT4.s:24     .text:00000000 _Z15Task_SystemInitPv
-     /tmp/ccdC6uT4.s:76     .text:0000002c $d
+     /tmp/ccYIWC3t.s:18     .text:00000000 $t
+     /tmp/ccYIWC3t.s:24     .text:00000000 _Z15Task_SystemInitPv
+     /tmp/ccYIWC3t.s:80     .text:00000030 $d
 
 UNDEFINED SYMBOLS
+uorb_init
 _ZN10HAL_System4initEv
 _ZN9MC_Serial4initEv
 _Z9Vofa_InitP20__UART_HandleTypeDef

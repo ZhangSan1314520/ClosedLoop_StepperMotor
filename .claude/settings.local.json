@@ -1,0 +1,13 @@
+{
+  "permissions": {
+    "allow": [
+      "Read(///wsl.localhost/dev/home/zgj/servo_project/zgj_project/**)",
+      "Bash(mkdir -p Lib/uorb)",
+      "Bash(make -f STM32Make.make -j 8)",
+      "Bash(where make *)",
+      "Read(//c/Users/Administrator/Desktop//**)",
+      "Read(//mnt/c/Users/Administrator/**)",
+      "Bash(cat *)"
+    ]
+  }
+}
